@@ -57,28 +57,25 @@
             this.btnWorkingHours = new System.Windows.Forms.Button();
             this.btnDashBoard = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.Title = new System.Windows.Forms.Label();
+            this.textBoxTime = new System.Windows.Forms.TextBox();
             this.textBoxDate = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.textBoxTime = new System.Windows.Forms.TextBox();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel5 = new System.Windows.Forms.Panel();
             this.panelMain = new System.Windows.Forms.Panel();
+            this.devTeam = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu.SuspendLayout();
             this.panelLocationsSubMenu.SuspendLayout();
             this.panelTagsSubMenu.SuspendLayout();
@@ -87,10 +84,12 @@
             this.panelLecturersSubMenu.SuspendLayout();
             this.panelWorkingHoursSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.panelTitle.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panelMain.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -499,16 +498,6 @@
             this.panelLogo.Size = new System.Drawing.Size(265, 138);
             this.panelLogo.TabIndex = 0;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Time_Table_Management_System.Properties.Resources.abc_logo;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(123, 118);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -522,113 +511,55 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel3.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(286, 0);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(899, 10);
+            this.panel3.Size = new System.Drawing.Size(899, 7);
             this.panel3.TabIndex = 1;
-            // 
-            // bunifuElipse
-            // 
-            this.bunifuElipse.ElipseRadius = 25;
-            this.bunifuElipse.TargetControl = this;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.btnClose);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(286, 10);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(899, 41);
-            this.panel1.TabIndex = 2;
-            // 
-            // button4
-            // 
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Image = global::Time_Table_Management_System.Properties.Resources.icons8_info_32;
-            this.button4.Location = new System.Drawing.Point(678, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(33, 41);
-            this.button4.TabIndex = 5;
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::Time_Table_Management_System.Properties.Resources.icons8_settings_32;
-            this.button3.Location = new System.Drawing.Point(711, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(33, 41);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::Time_Table_Management_System.Properties.Resources.icons8_minus_32;
-            this.button2.Location = new System.Drawing.Point(792, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(33, 41);
-            this.button2.TabIndex = 3;
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = global::Time_Table_Management_System.Properties.Resources.icons8_maximize_window_32;
-            this.button1.Location = new System.Drawing.Point(825, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(33, 41);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btnClose
-            // 
-            this.btnClose.FlatAppearance.BorderSize = 0;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Image = global::Time_Table_Management_System.Properties.Resources.icons8_shutdown_32__1_;
-            this.btnClose.Location = new System.Drawing.Point(858, 0);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(33, 41);
-            this.btnClose.TabIndex = 1;
-            this.btnClose.UseVisualStyleBackColor = true;
             // 
             // panelTitle
             // 
+            this.panelTitle.BackColor = System.Drawing.Color.Black;
+            this.panelTitle.Controls.Add(this.button4);
             this.panelTitle.Controls.Add(this.Title);
             this.panelTitle.Controls.Add(this.textBoxTime);
             this.panelTitle.Controls.Add(this.textBoxDate);
             this.panelTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitle.Location = new System.Drawing.Point(286, 51);
+            this.panelTitle.Location = new System.Drawing.Point(286, 7);
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(899, 58);
             this.panelTitle.TabIndex = 3;
             // 
             // Title
             // 
+            this.Title.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.Title.AutoSize = true;
-            this.Title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.Title.BackColor = System.Drawing.Color.Black;
             this.Title.Font = new System.Drawing.Font("Century Gothic", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Title.Location = new System.Drawing.Point(0, 0);
+            this.Title.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Title.Location = new System.Drawing.Point(7, 7);
             this.Title.Name = "Title";
             this.Title.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.Title.Size = new System.Drawing.Size(618, 45);
             this.Title.TabIndex = 0;
             this.Title.Text = "Time Table Managment System";
             // 
+            // textBoxTime
+            // 
+            this.textBoxTime.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.textBoxTime.Enabled = false;
+            this.textBoxTime.Location = new System.Drawing.Point(745, 32);
+            this.textBoxTime.Name = "textBoxTime";
+            this.textBoxTime.Size = new System.Drawing.Size(151, 27);
+            this.textBoxTime.TabIndex = 2;
+            this.textBoxTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // textBoxDate
             // 
+            this.textBoxDate.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.textBoxDate.Enabled = false;
             this.textBoxDate.Location = new System.Drawing.Point(745, 3);
             this.textBoxDate.Name = "textBoxDate";
@@ -638,68 +569,21 @@
             // 
             // panel4
             // 
+            this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Controls.Add(this.button8);
             this.panel4.Controls.Add(this.button7);
             this.panel4.Controls.Add(this.button6);
             this.panel4.Controls.Add(this.button5);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(286, 109);
+            this.panel4.Location = new System.Drawing.Point(286, 65);
             this.panel4.Name = "panel4";
             this.panel4.Padding = new System.Windows.Forms.Padding(0, 0, 15, 0);
             this.panel4.Size = new System.Drawing.Size(899, 41);
             this.panel4.TabIndex = 4;
             // 
-            // textBoxTime
-            // 
-            this.textBoxTime.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxTime.Enabled = false;
-            this.textBoxTime.Location = new System.Drawing.Point(745, 32);
-            this.textBoxTime.Name = "textBoxTime";
-            this.textBoxTime.Size = new System.Drawing.Size(151, 27);
-            this.textBoxTime.TabIndex = 2;
-            this.textBoxTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // button5
-            // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Location = new System.Drawing.Point(0, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(224, 41);
-            this.button5.TabIndex = 5;
-            this.button5.Text = "Manage Sessions";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(224, 0);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(224, 41);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Allocate Sessions";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(448, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(224, 41);
-            this.button7.TabIndex = 7;
-            this.button7.Text = "Allocate Locations";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
             // button8
             // 
-            this.button8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.button8.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.Location = new System.Drawing.Point(672, 0);
             this.button8.Name = "button8";
@@ -708,41 +592,139 @@
             this.button8.Text = "Generate";
             this.button8.UseVisualStyleBackColor = true;
             // 
+            // button7
+            // 
+            this.button7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button7.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(448, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(224, 41);
+            this.button7.TabIndex = 7;
+            this.button7.Text = "Allocate Locations";
+            this.button7.UseVisualStyleBackColor = true;
+            // 
+            // button6
+            // 
+            this.button6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button6.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(224, 0);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(224, 41);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Allocate Sessions";
+            this.button6.UseVisualStyleBackColor = true;
+            // 
+            // button5
+            // 
+            this.button5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button5.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.Location = new System.Drawing.Point(0, 0);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(224, 41);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "Manage Sessions";
+            this.button5.UseVisualStyleBackColor = true;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // panel5
             // 
-            this.panel5.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel5.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(286, 150);
+            this.panel5.Location = new System.Drawing.Point(286, 106);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(899, 5);
             this.panel5.TabIndex = 5;
             // 
             // panelMain
             // 
+            this.panelMain.BackColor = System.Drawing.Color.Black;
+            this.panelMain.Controls.Add(this.devTeam);
+            this.panelMain.Controls.Add(this.pictureBox4);
+            this.panelMain.Controls.Add(this.pictureBox3);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(286, 155);
+            this.panelMain.Location = new System.Drawing.Point(286, 111);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(899, 445);
+            this.panelMain.Size = new System.Drawing.Size(899, 489);
             this.panelMain.TabIndex = 6;
+            // 
+            // devTeam
+            // 
+            this.devTeam.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.devTeam.AutoSize = true;
+            this.devTeam.BackColor = System.Drawing.Color.Transparent;
+            this.devTeam.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.devTeam.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.devTeam.Location = new System.Drawing.Point(543, 447);
+            this.devTeam.Name = "devTeam";
+            this.devTeam.Size = new System.Drawing.Size(296, 21);
+            this.devTeam.TabIndex = 7;
+            this.devTeam.Text = "Devaloped by Team </BackSlash>";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::Time_Table_Management_System.Properties.Resources.download;
+            this.pictureBox4.Location = new System.Drawing.Point(789, 388);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(83, 80);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 6;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = global::Time_Table_Management_System.Properties.Resources.background;
+            this.pictureBox3.Location = new System.Drawing.Point(8, 11);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(879, 417);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 5;
+            this.pictureBox3.TabStop = false;
+            // 
+            // button4
+            // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Image = global::Time_Table_Management_System.Properties.Resources.icons8_info_32;
+            this.button4.Location = new System.Drawing.Point(708, 0);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(33, 34);
+            this.button4.TabIndex = 5;
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Time_Table_Management_System.Properties.Resources.abc_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(123, 118);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Menu;
+            this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(1185, 600);
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panelTitle);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panelSideMenu);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.MinimumSize = new System.Drawing.Size(1150, 600);
+            this.MinimumSize = new System.Drawing.Size(1203, 647);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Time Table Management System";
@@ -755,11 +737,14 @@
             this.panelWorkingHoursSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             this.panelLogo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.panelTitle.ResumeLayout(false);
             this.panelTitle.PerformLayout();
             this.panel4.ResumeLayout(false);
+            this.panelMain.ResumeLayout(false);
+            this.panelMain.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -794,20 +779,14 @@
         private System.Windows.Forms.Button btnAddWorkingDaysHours;
         private System.Windows.Forms.Button btnWorkingHours;
         private System.Windows.Forms.Button btnDashBoard;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Panel panelTitle;
         private System.Windows.Forms.Label Title;
         private System.Windows.Forms.TextBox textBoxDate;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBoxTime;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button8;
@@ -815,6 +794,9 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panelMain;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label devTeam;
     }
 }
 

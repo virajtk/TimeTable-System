@@ -69,3 +69,8 @@ G:\Programming\Projects\Time Table Management System\Time Table Management Syste
 G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time Table Management System.exe
 G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time Table Management System.pdb
 G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time Table Management System.csprojAssemblyReference.cache
+G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time_Table_Management_System.AddSubject.resources
+G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time_Table_Management_System.DashBoard.resources
+G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time_Table_Management_System.ManageSubjects.resources
+G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time_Table_Management_System.Lecturers.AddLecturer.resources
+G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time_Table_Management_System.Lecturers.ManageLecturers.resources

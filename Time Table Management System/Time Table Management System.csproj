@@ -139,16 +139,61 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Lecturers\AddLecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturers\AddLecturer.Designer.cs">
+      <DependentUpon>AddLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturers\ManageLecturers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lecturers\ManageLecturers.Designer.cs">
+      <DependentUpon>ManageLecturers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Subjects\AddSubject.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subjects\AddSubject.Designer.cs">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DashBoard\DashBoard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashBoard\DashBoard.Designer.cs">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Subjects\ManageSubjects.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Subjects\ManageSubjects.Designer.cs">
+      <DependentUpon>ManageSubjects.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Lecturers\AddLecturer.resx">
+      <DependentUpon>AddLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lecturers\ManageLecturers.resx">
+      <DependentUpon>ManageLecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subjects\AddSubject.resx">
+      <DependentUpon>AddSubject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashBoard\DashBoard.resx">
+      <DependentUpon>DashBoard.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Subjects\ManageSubjects.resx">
+      <DependentUpon>ManageSubjects.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,6 +236,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-info-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backImg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

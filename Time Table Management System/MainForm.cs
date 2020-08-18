@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Time_Table_Management_System.Lecturers;
 
 namespace Time_Table_Management_System
 {
@@ -18,6 +19,7 @@ namespace Time_Table_Management_System
             customizeDesign();
             loadTimeDate();
         }
+
         #region Functions for NavBar
         private void customizeDesign()
         {
@@ -54,12 +56,25 @@ namespace Time_Table_Management_System
             else
                 subMenu.Visible = false;
         }
+
+        private void defaultBtn()
+        {
+            btnDashBoard.BackColor = Color.FromArgb(11, 7, 17);
+            btnWorkingHours.BackColor = Color.FromArgb(11, 7, 17);
+            btnLecturers.BackColor = Color.FromArgb(11, 7, 17);
+            btnSubjects.BackColor = Color.FromArgb(11, 7, 17);
+            btnStudents.BackColor = Color.FromArgb(11, 7, 17);
+            btnTags.BackColor = Color.FromArgb(11, 7, 17);
+            btnLocations.BackColor = Color.FromArgb(11, 7, 17);
+        }
         #endregion
 
         #region WorkingHours
 
         private void btnWorkingHours_Click(object sender, EventArgs e)
         {
+            defaultBtn();
+            btnWorkingHours.BackColor = Color.FromArgb(0, 25, 51);
             showSubMenu(panelWorkingHoursSubMenu);
         }
 
@@ -86,6 +101,10 @@ namespace Time_Table_Management_System
         #region DashBoard
         private void btnDashBoard_Click(object sender, EventArgs e)
         {
+            defaultBtn();
+            btnDashBoard.BackColor = Color.FromArgb(0, 25, 51);
+
+            openChildForm(new DashBoard());
             //..
             // your code
             //..
@@ -98,11 +117,14 @@ namespace Time_Table_Management_System
         #region Lecturers
         private void btnLecturers_Click(object sender, EventArgs e)
         {
+            defaultBtn();
+            btnLecturers.BackColor = Color.FromArgb(0, 25, 51);
             showSubMenu(panelLecturersSubMenu);
         }
 
         private void btnAddLecturer_Click(object sender, EventArgs e)
         {
+            openChildForm(new AddLecturer());
             //..
             // your code
             //..
@@ -112,6 +134,7 @@ namespace Time_Table_Management_System
 
         private void btnManageLecturers_Click(object sender, EventArgs e)
         {
+            openChildForm(new ManageLecturers());
             //..
             // your code
             //..
@@ -123,11 +146,14 @@ namespace Time_Table_Management_System
         #region Subjects
         private void btnSubjects_Click(object sender, EventArgs e)
         {
+            defaultBtn();
+            btnSubjects.BackColor = Color.FromArgb(0, 25, 51);
             showSubMenu(panelSubjectsSubMenu);
         }
 
         private void btnAddSubject_Click(object sender, EventArgs e)
         {
+            openChildForm(new AddSubject());
             //..
             // your code
             //..
@@ -137,6 +163,7 @@ namespace Time_Table_Management_System
 
         private void btnManageSubjects_Click(object sender, EventArgs e)
         {
+            openChildForm(new ManageSubjects());
             //..
             // your code
             //..
@@ -149,6 +176,8 @@ namespace Time_Table_Management_System
         #region Students
         private void btnStudents_Click(object sender, EventArgs e)
         {
+            defaultBtn();
+            btnStudents.BackColor = Color.FromArgb(0, 25, 51);
             showSubMenu(panelStudentsSubMenu);
         }
 
@@ -174,6 +203,8 @@ namespace Time_Table_Management_System
         #region Tags
         private void btnTags_Click(object sender, EventArgs e)
         {
+            defaultBtn();
+            btnTags.BackColor = Color.FromArgb(0, 25, 51);
             showSubMenu(panelTagsSubMenu);
         }
 
@@ -199,6 +230,8 @@ namespace Time_Table_Management_System
         #region Locations
         private void btnLocations_Click(object sender, EventArgs e)
         {
+            defaultBtn();
+            btnLocations.BackColor = Color.FromArgb(0, 25, 51);
             showSubMenu(panelLocationsSubMenu);
         }
 
@@ -236,7 +269,38 @@ namespace Time_Table_Management_System
         }
 
 
+
         #endregion
 
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private Form activeForm = null;
+
+        private void openChildForm(Form childForm)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelMain.Controls.Add(childForm);
+            panelMain.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
     }
 }
