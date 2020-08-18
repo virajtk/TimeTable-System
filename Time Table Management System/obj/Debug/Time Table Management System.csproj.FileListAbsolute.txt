@@ -74,3 +74,7 @@ G:\Programming\Projects\Time Table Management System\Time Table Management Syste
 G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time_Table_Management_System.ManageSubjects.resources
 G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time_Table_Management_System.Lecturers.AddLecturer.resources
 G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time_Table_Management_System.Lecturers.ManageLecturers.resources
+G:\Programming\Projects\Time Table Management System\Time Table Management System\bin\Debug\msvcr100.dll
+G:\Programming\Projects\Time Table Management System\Time Table Management System\bin\Debug\SQLite.Interop.dll
+G:\Programming\Projects\Time Table Management System\Time Table Management System\bin\Debug\System.Data.SQLite.dll
+G:\Programming\Projects\Time Table Management System\Time Table Management System\obj\Debug\Time_Table_Management_System.Students.AddStudent.resources

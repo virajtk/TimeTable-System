@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Time_Table_Management_System.Lecturers;
+using Time_Table_Management_System.Students;
 
 namespace Time_Table_Management_System
 {
@@ -183,6 +184,7 @@ namespace Time_Table_Management_System
 
         private void btnAddStudents_Click(object sender, EventArgs e)
         {
+            openChildForm(new AddStudent());
             //..
             // your code
             //..
@@ -272,20 +274,6 @@ namespace Time_Table_Management_System
 
         #endregion
 
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Maximized;
-        }
-
-        private void button2_Click_1(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
 
         private Form activeForm = null;
 
