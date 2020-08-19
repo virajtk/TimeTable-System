@@ -55,9 +55,10 @@
             this.title.ForeColor = System.Drawing.SystemColors.Info;
             this.title.Location = new System.Drawing.Point(116, 30);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(187, 34);
+            this.title.Size = new System.Drawing.Size(292, 34);
             this.title.TabIndex = 2;
-            this.title.Text = "Add Student";
+            this.title.Text = "Add Student Groups";
+            this.title.Click += new System.EventHandler(this.title_Click);
             // 
             // button2
             // 
@@ -71,6 +72,7 @@
             this.button2.TabIndex = 13;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -94,6 +96,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(219, 27);
             this.textBox1.TabIndex = 15;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label2
             // 
@@ -168,6 +171,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(219, 27);
             this.textBox3.TabIndex = 21;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label5
             // 
@@ -190,6 +194,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(219, 27);
             this.textBox4.TabIndex = 23;
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // label6
             // 
@@ -212,6 +217,7 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(219, 27);
             this.textBox5.TabIndex = 25;
+            this.textBox5.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // button3
             // 
@@ -224,6 +230,7 @@
             this.button3.TabIndex = 26;
             this.button3.Text = "Clear";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -236,6 +243,7 @@
             this.button1.TabIndex = 27;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // AddStudent
             // 
@@ -284,5 +292,6 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ErrorProvider errorAddStudent;
     }
 }
