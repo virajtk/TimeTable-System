@@ -16,5 +16,10 @@ namespace Time_Table_Management_System.Students
         {
             InitializeComponent();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

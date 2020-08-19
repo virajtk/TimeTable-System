@@ -49,6 +49,7 @@
             this.button4.TabIndex = 14;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // title
             // 
@@ -59,9 +60,9 @@
             this.title.ForeColor = System.Drawing.SystemColors.Info;
             this.title.Location = new System.Drawing.Point(156, 26);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(256, 34);
+            this.title.Size = new System.Drawing.Size(350, 34);
             this.title.TabIndex = 15;
-            this.title.Text = "Manage Students";
+            this.title.Text = "Manage Student Groups";
             // 
             // dataGridView1
             // 
