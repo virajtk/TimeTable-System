@@ -259,7 +259,7 @@ namespace Time_Table_Management_System
         #region Time and Date
         private void loadTimeDate()
         {
-            timer1.Start();
+            timerDateNTime.Start();
             textBoxTime.Text = DateTime.Now.ToLongTimeString();
             textBoxDate.Text = DateTime.Now.ToLongDateString();
         }
@@ -267,7 +267,7 @@ namespace Time_Table_Management_System
         private void timer1_Tick(object sender, EventArgs e)
         {
             textBoxTime.Text = DateTime.Now.ToLongTimeString();
-            timer1.Start();
+            timerDateNTime.Start();
         }
 
 
