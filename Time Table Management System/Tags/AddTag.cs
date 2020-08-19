@@ -8,21 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Time_Table_Management_System
+namespace Time_Table_Management_System.Tags
 {
-    public partial class ManageSubjects : Form
+    public partial class AddTag : Form
     {
-        public ManageSubjects()
+        public AddTag()
         {
             InitializeComponent();
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void AddTag_Load(object sender, EventArgs e)
         {
 
         }
