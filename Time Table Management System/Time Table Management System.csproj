@@ -160,6 +160,12 @@
     <Compile Include="Students\AddStudent.Designer.cs">
       <DependentUpon>AddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Students\ManageStudents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Students\ManageStudents.Designer.cs">
+      <DependentUpon>ManageStudents.cs</DependentUpon>
+    </Compile>
     <Compile Include="Subjects\AddSubject.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -186,6 +192,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tags\AddTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tags\AddTag.Designer.cs">
+      <DependentUpon>AddTag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tags\ManageTags.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tags\ManageTags.Designer.cs">
+      <DependentUpon>ManageTags.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Lecturers\AddLecturer.resx">
       <DependentUpon>AddLecturer.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +212,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Students\ManageStudents.resx">
+      <DependentUpon>ManageStudents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Subjects\AddSubject.resx">
       <DependentUpon>AddSubject.cs</DependentUpon>
@@ -211,6 +232,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tags\AddTag.resx">
+      <DependentUpon>AddTag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tags\ManageTags.resx">
+      <DependentUpon>ManageTags.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
