@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Time_Table_Management_System.Lecturers;
 using Time_Table_Management_System.Students;
 using Time_Table_Management_System.Tags;
+using Time_Table_Management_System.DaysAndHours;
 
 namespace Time_Table_Management_System
 {
@@ -82,18 +83,14 @@ namespace Time_Table_Management_System
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //..
-            // your code
-            //..
+            openChildForm(new AddWorkingDaysHours());
 
             hideSubMenu();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            //..
-            // your code
-            //..
+            openChildForm(new AddTimeSlots());
 
             hideSubMenu();
         }
