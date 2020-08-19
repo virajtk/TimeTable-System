@@ -274,7 +274,7 @@ namespace Time_Table_Management_System
 
         #endregion
 
-
+        #region child form function
         private Form activeForm = null;
 
         private void openChildForm(Form childForm)
@@ -290,5 +290,7 @@ namespace Time_Table_Management_System
             childForm.BringToFront();
             childForm.Show();
         }
+        #endregion
+
     }
 }

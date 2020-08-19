@@ -61,6 +61,19 @@
     <Compile Include="Lecturers\ManageLecturers.Designer.cs">
       <DependentUpon>ManageLecturers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Messages\ErrorMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\ErrorMessage.Designer.cs">
+      <DependentUpon>ErrorMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Messages\SuccessMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\SuccessMessage.Designer.cs">
+      <DependentUpon>SuccessMessage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Subject.cs" />
     <Compile Include="Students\AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +111,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturers\ManageLecturers.resx">
       <DependentUpon>ManageLecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\ErrorMessage.resx">
+      <DependentUpon>ErrorMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Messages\SuccessMessage.resx">
+      <DependentUpon>SuccessMessage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
@@ -168,6 +187,8 @@
     <Content Include="msvcr100.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\prize.png" />
+    <None Include="Resources\error.png" />
     <Content Include="SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

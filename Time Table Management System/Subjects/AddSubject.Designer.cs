@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.title = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxOfferdYear = new System.Windows.Forms.ComboBox();
@@ -35,24 +36,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButtonSem1 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.radioButtonSem2 = new System.Windows.Forms.RadioButton();
+            this.textBoxSubName = new System.Windows.Forms.TextBox();
+            this.textBoxSubCode = new System.Windows.Forms.TextBox();
+            this.numericLecHours = new System.Windows.Forms.NumericUpDown();
+            this.numericTuteHours = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericLabHours = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericEvaluationHours = new System.Windows.Forms.NumericUpDown();
             this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.errorAddSubject = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.numericLecHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTuteHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericLabHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericEvaluationHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAddSubject)).BeginInit();
             this.SuspendLayout();
             // 
             // title
@@ -149,18 +152,18 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "Number of Lecture Hours";
             // 
-            // radioButton1
+            // radioButtonSem1
             // 
-            this.radioButton1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.Info;
-            this.radioButton1.Location = new System.Drawing.Point(205, 170);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(112, 21);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "1st Semester";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButtonSem1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radioButtonSem1.AutoSize = true;
+            this.radioButtonSem1.ForeColor = System.Drawing.SystemColors.Info;
+            this.radioButtonSem1.Location = new System.Drawing.Point(205, 170);
+            this.radioButtonSem1.Name = "radioButtonSem1";
+            this.radioButtonSem1.Size = new System.Drawing.Size(112, 21);
+            this.radioButtonSem1.TabIndex = 11;
+            this.radioButtonSem1.TabStop = true;
+            this.radioButtonSem1.Text = "1st Semester";
+            this.radioButtonSem1.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -176,60 +179,60 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // radioButton2
+            // radioButtonSem2
             // 
-            this.radioButton2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.Info;
-            this.radioButton2.Location = new System.Drawing.Point(341, 170);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(112, 21);
-            this.radioButton2.TabIndex = 13;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "2st Semester";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButtonSem2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.radioButtonSem2.AutoSize = true;
+            this.radioButtonSem2.ForeColor = System.Drawing.SystemColors.Info;
+            this.radioButtonSem2.Location = new System.Drawing.Point(341, 170);
+            this.radioButtonSem2.Name = "radioButtonSem2";
+            this.radioButtonSem2.Size = new System.Drawing.Size(112, 21);
+            this.radioButtonSem2.TabIndex = 13;
+            this.radioButtonSem2.TabStop = true;
+            this.radioButtonSem2.Text = "2st Semester";
+            this.radioButtonSem2.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // textBoxSubName
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(205, 220);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 27);
-            this.textBox1.TabIndex = 14;
+            this.textBoxSubName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSubName.Location = new System.Drawing.Point(205, 220);
+            this.textBoxSubName.Name = "textBoxSubName";
+            this.textBoxSubName.Size = new System.Drawing.Size(248, 27);
+            this.textBoxSubName.TabIndex = 14;
             // 
-            // textBox2
+            // textBoxSubCode
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(205, 275);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(248, 27);
-            this.textBox2.TabIndex = 15;
+            this.textBoxSubCode.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSubCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSubCode.Location = new System.Drawing.Point(205, 275);
+            this.textBoxSubCode.Name = "textBoxSubCode";
+            this.textBoxSubCode.Size = new System.Drawing.Size(248, 27);
+            this.textBoxSubCode.TabIndex = 15;
             // 
-            // numericUpDown1
+            // numericLecHours
             // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(759, 110);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(79, 27);
-            this.numericUpDown1.TabIndex = 17;
-            this.numericUpDown1.Value = new decimal(new int[] {
-            1,
+            this.numericLecHours.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericLecHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericLecHours.Location = new System.Drawing.Point(759, 110);
+            this.numericLecHours.Name = "numericLecHours";
+            this.numericLecHours.Size = new System.Drawing.Size(79, 27);
+            this.numericLecHours.TabIndex = 17;
+            this.numericLecHours.Value = new decimal(new int[] {
+            2,
             0,
             0,
             0});
             // 
-            // numericUpDown2
+            // numericTuteHours
             // 
-            this.numericUpDown2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(759, 164);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(79, 27);
-            this.numericUpDown2.TabIndex = 19;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numericTuteHours.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericTuteHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericTuteHours.Location = new System.Drawing.Point(759, 164);
+            this.numericTuteHours.Name = "numericTuteHours";
+            this.numericTuteHours.Size = new System.Drawing.Size(79, 27);
+            this.numericTuteHours.TabIndex = 19;
+            this.numericTuteHours.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -248,16 +251,16 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Number of Tutorial Hours";
             // 
-            // numericUpDown3
+            // numericLabHours
             // 
-            this.numericUpDown3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(759, 220);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(79, 27);
-            this.numericUpDown3.TabIndex = 21;
-            this.numericUpDown3.Value = new decimal(new int[] {
-            1,
+            this.numericLabHours.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericLabHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericLabHours.Location = new System.Drawing.Point(759, 220);
+            this.numericLabHours.Name = "numericLabHours";
+            this.numericLabHours.Size = new System.Drawing.Size(79, 27);
+            this.numericLabHours.TabIndex = 21;
+            this.numericLabHours.Value = new decimal(new int[] {
+            2,
             0,
             0,
             0});
@@ -275,15 +278,15 @@
             this.label7.TabIndex = 20;
             this.label7.Text = "Number of Lab Hours";
             // 
-            // numericUpDown4
+            // numericEvaluationHours
             // 
-            this.numericUpDown4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(759, 275);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(79, 27);
-            this.numericUpDown4.TabIndex = 23;
-            this.numericUpDown4.Value = new decimal(new int[] {
+            this.numericEvaluationHours.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericEvaluationHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericEvaluationHours.Location = new System.Drawing.Point(759, 275);
+            this.numericEvaluationHours.Name = "numericEvaluationHours";
+            this.numericEvaluationHours.Size = new System.Drawing.Size(79, 27);
+            this.numericEvaluationHours.TabIndex = 23;
+            this.numericEvaluationHours.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -302,27 +305,33 @@
             this.label8.TabIndex = 22;
             this.label8.Text = "Number of Evaluation Hours";
             // 
-            // button2
+            // btnSave
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(718, 339);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(120, 40);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Save";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(718, 339);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(120, 40);
+            this.btnSave.TabIndex = 24;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // button3
+            // btnClear
             // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(579, 339);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 40);
-            this.button3.TabIndex = 25;
-            this.button3.Text = "Clear";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(579, 339);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(120, 40);
+            this.btnClear.TabIndex = 25;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // errorAddSubject
+            // 
+            this.errorAddSubject.ContainerControl = this;
             // 
             // AddSubject
             // 
@@ -330,20 +339,20 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(881, 442);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.numericUpDown4);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.numericEvaluationHours);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.numericUpDown3);
+            this.Controls.Add(this.numericLabHours);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.numericUpDown2);
+            this.Controls.Add(this.numericTuteHours);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.numericLecHours);
+            this.Controls.Add(this.textBoxSubCode);
+            this.Controls.Add(this.textBoxSubName);
+            this.Controls.Add(this.radioButtonSem2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButtonSem1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -353,10 +362,11 @@
             this.Controls.Add(this.title);
             this.Name = "AddSubject";
             this.Text = "Add Subject";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericLecHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericTuteHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericLabHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericEvaluationHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorAddSubject)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,19 +381,20 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButtonSem1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
+        private System.Windows.Forms.RadioButton radioButtonSem2;
+        private System.Windows.Forms.TextBox textBoxSubName;
+        private System.Windows.Forms.TextBox textBoxSubCode;
+        private System.Windows.Forms.NumericUpDown numericLecHours;
+        private System.Windows.Forms.NumericUpDown numericTuteHours;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.NumericUpDown numericLabHours;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numericEvaluationHours;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.ErrorProvider errorAddSubject;
     }
 }
