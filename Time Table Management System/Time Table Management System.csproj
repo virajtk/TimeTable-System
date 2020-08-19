@@ -76,7 +76,9 @@
     <Compile Include="Messages\SuccessMessage.Designer.cs">
       <DependentUpon>SuccessMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
+    <Compile Include="Models\Tag.cs" />
     <Compile Include="Services\ISubjectService.cs" />
     <Compile Include="Services\SubjectService.cs" />
     <Compile Include="Students\AddStudent.cs">
