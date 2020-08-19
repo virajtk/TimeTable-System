@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Time_Table_Management_System.Lecturers;
 using Time_Table_Management_System.Students;
+using Time_Table_Management_System.Tags;
 
 namespace Time_Table_Management_System
 {
@@ -194,6 +195,7 @@ namespace Time_Table_Management_System
 
         private void btnManageStudents_Click(object sender, EventArgs e)
         {
+            openChildForm(new ManageStudents());
             //..
             // your code
             //..
@@ -212,6 +214,7 @@ namespace Time_Table_Management_System
 
         private void btnAddTag_Click(object sender, EventArgs e)
         {
+            openChildForm(new AddTag());
             //..
             // your code
             //..
@@ -221,6 +224,7 @@ namespace Time_Table_Management_System
 
         private void btnManageTags_Click(object sender, EventArgs e)
         {
+            openChildForm(new ManageTags());
             //..
             // your code
             //..
