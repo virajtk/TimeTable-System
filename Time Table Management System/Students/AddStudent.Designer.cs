@@ -57,7 +57,7 @@
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.SystemColors.Info;
-            this.title.Location = new System.Drawing.Point(116, 30);
+            this.title.Location = new System.Drawing.Point(108, 36);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(292, 34);
             this.title.TabIndex = 2;
@@ -85,7 +85,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(54, 109);
+            this.label1.Location = new System.Drawing.Point(79, 116);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 20);
             this.label1.TabIndex = 14;
@@ -109,7 +109,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(54, 155);
+            this.label2.Location = new System.Drawing.Point(79, 167);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 16;
@@ -117,6 +117,7 @@
             // 
             // comboBoxProgramme
             // 
+            this.comboBoxProgramme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxProgramme.FormattingEnabled = true;
             this.comboBoxProgramme.Items.AddRange(new object[] {
             "IT",
@@ -124,7 +125,7 @@
             "CSE",
             "DS",
             "CN"});
-            this.comboBoxProgramme.Location = new System.Drawing.Point(299, 169);
+            this.comboBoxProgramme.Location = new System.Drawing.Point(289, 162);
             this.comboBoxProgramme.Name = "comboBoxProgramme";
             this.comboBoxProgramme.Size = new System.Drawing.Size(219, 24);
             this.comboBoxProgramme.TabIndex = 17;
@@ -138,7 +139,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(54, 202);
+            this.label3.Location = new System.Drawing.Point(79, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 20);
             this.label3.TabIndex = 18;
@@ -148,7 +149,7 @@
             // 
             this.textBoxGroupNo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxGroupNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGroupNo.Location = new System.Drawing.Point(289, 213);
+            this.textBoxGroupNo.Location = new System.Drawing.Point(289, 212);
             this.textBoxGroupNo.Name = "textBoxGroupNo";
             this.textBoxGroupNo.Size = new System.Drawing.Size(219, 27);
             this.textBoxGroupNo.TabIndex = 19;
@@ -161,7 +162,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(73, 325);
+            this.label4.Location = new System.Drawing.Point(79, 320);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 20;
@@ -171,7 +172,7 @@
             // 
             this.textBoxGroupID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxGroupID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxGroupID.Location = new System.Drawing.Point(289, 325);
+            this.textBoxGroupID.Location = new System.Drawing.Point(289, 318);
             this.textBoxGroupID.Name = "textBoxGroupID";
             this.textBoxGroupID.ReadOnly = true;
             this.textBoxGroupID.Size = new System.Drawing.Size(219, 27);
@@ -185,7 +186,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(63, 265);
+            this.label5.Location = new System.Drawing.Point(79, 269);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 20);
             this.label5.TabIndex = 22;
@@ -208,7 +209,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(73, 365);
+            this.label6.Location = new System.Drawing.Point(79, 371);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 20);
             this.label6.TabIndex = 24;
@@ -218,7 +219,7 @@
             // 
             this.textBoxSubGroupID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxSubGroupID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSubGroupID.Location = new System.Drawing.Point(289, 373);
+            this.textBoxSubGroupID.Location = new System.Drawing.Point(289, 371);
             this.textBoxSubGroupID.Name = "textBoxSubGroupID";
             this.textBoxSubGroupID.ReadOnly = true;
             this.textBoxSubGroupID.Size = new System.Drawing.Size(219, 27);
