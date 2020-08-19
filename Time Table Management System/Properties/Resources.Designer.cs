@@ -103,6 +103,16 @@ namespace Time_Table_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap error {
+            get {
+                object obj = ResourceManager.GetObject("error", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_info_32 {
             get {
                 object obj = ResourceManager.GetObject("icons8-info-32", resourceCulture);
@@ -146,6 +156,16 @@ namespace Time_Table_Management_System.Properties {
         internal static System.Drawing.Bitmap icons8_shutdown_32__1_ {
             get {
                 object obj = ResourceManager.GetObject("icons8-shutdown-32 (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap prize {
+            get {
+                object obj = ResourceManager.GetObject("prize", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
