@@ -36,12 +36,12 @@ namespace Time_Table_Management_System.Students
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            comboBox1.SelectedIndex = -1;
-            textBox2.Text = "";
-            textBox3.Text = "";
-            textBox4.Text = "";
-            textBox5.Text = "";
+            textBoxYearSem.Text = "";
+            comboBoxProgramme.SelectedIndex = -1;
+            textBoxGroupNo.Text = "";
+            textBoxGroupID.Text = "";
+            textBoxSubGroupNo.Text = "";
+            textBoxSubGroupID.Text = "";
 
         }
 
@@ -67,48 +67,48 @@ namespace Time_Table_Management_System.Students
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == String.Empty)
+            if (textBoxYearSem.Text == String.Empty)
             {
-                textBox1.Focus();
-                errorAddStudent.SetError(textBox1, "Please Enter Subject Name");
+                textBoxYearSem.Focus();
+                errorStudent.SetError(textBoxYearSem, "Please Enter Subject Name");
             }
-            else if (comboBox1.SelectedIndex == -1)
+            else if (comboBoxProgramme.SelectedIndex == -1)
             {
-                comboBox1.Focus();
-                errorAddStudent.SetError(comboBox1, "Please Select Programme");
+                comboBoxProgramme.Focus();
+                errorStudent.SetError(comboBoxProgramme, "Please Select Programme");
             }
-            else if (textBox2.Text == String.Empty)
+            else if (textBoxGroupNo.Text == String.Empty)
             {
-                textBox2.Focus();
-                errorAddStudent.SetError(textBox2, "Please Enter Group Number");
+                textBoxGroupNo.Focus();
+                errorStudent.SetError(textBoxGroupNo, "Please Enter Group Number");
             }
-            else if (textBox3.Text == String.Empty)
+            else if (textBoxGroupID.Text == String.Empty)
             {
-                textBox3.Focus();
-                errorAddStudent.SetError(textBox3, "Please Enter Group Id");
+                textBoxGroupID.Focus();
+                errorStudent.SetError(textBoxGroupID, "Please Enter Group Id");
             }
-            else if (textBox4.Text == String.Empty)
+            else if (textBoxSubGroupNo.Text == String.Empty)
             {
-                textBox4.Focus();
-                errorAddStudent.SetError(textBox4, "Please Enter Sub Group Number");
+                textBoxSubGroupNo.Focus();
+                errorStudent.SetError(textBoxSubGroupNo, "Please Enter Sub Group Number");
             }
-            else if (textBox5.Text == String.Empty)
+            else if (textBoxSubGroupID.Text == String.Empty)
             {
-                textBox5.Focus();
-                errorAddStudent.SetError(textBox5, "Please Enter Sub Group Id");
+                textBoxSubGroupID.Focus();
+                errorStudent.SetError(textBoxSubGroupID, "Please Enter Sub Group Id");
             }
             else
             {
                 Student student = new Student();
 
                 // Set Data
-                student.AcademicYear = textBox1.Text.Trim();
-                student.GroupNumber = textBox2.Text.Trim();
-                student.GroupId = textBox3.Text.Trim();
-                student.SubGroupNumber = textBox4.Text.Trim();
-                student.SubGroupId = textBox5.Text.Trim();
+                student.AcademicYear = textBoxYearSem.Text.Trim();
+                student.GroupNumber = textBoxGroupNo.Text.Trim();
+                student.GroupId = textBoxGroupID.Text.Trim();
+                student.SubGroupNumber = textBoxSubGroupNo.Text.Trim();
+                student.SubGroupId = textBoxSubGroupID.Text.Trim();
 
-                switch (comboBox1.SelectedIndex)
+                switch (comboBoxProgramme.SelectedIndex)
                 {
                     case 0:
                         student.Programme = "IT";
@@ -139,6 +139,15 @@ namespace Time_Table_Management_System.Students
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGenerateIDs_Click(object sender, EventArgs e)
+        {
+            String GroupID = textBoxYearSem.Text + "." + comboBoxProgramme.SelectedItem + "." + textBoxGroupNo.Text;
+            String SubGroupID = textBoxYearSem.Text + "." + comboBoxProgramme.SelectedItem + "." + textBoxGroupNo.Text + "." + textBoxSubGroupNo.Text;
+
+            textBoxGroupID.Text = GroupID;
+            textBoxSubGroupID.Text = SubGroupID;
         }
     }
 }

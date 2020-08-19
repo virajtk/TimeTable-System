@@ -21,6 +21,5 @@ namespace Time_Table_Management_System.Models
         public string GroupId { get => groupId; set => groupId = value; }
         public string SubGroupNumber { get => subGroupNumber; set => subGroupNumber = value; }
         public string SubGroupId { get => subGroupId; set => subGroupId = value; }
-
     }
 }
