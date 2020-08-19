@@ -35,7 +35,7 @@ namespace Time_Table_Management_System.Services
 
                 cmd.Prepare();
 
-                Console.WriteLine(cmd);
+                //Console.WriteLine(cmd);
 
                 if (cmd.ExecuteNonQuery() == 1)
                     result = true;
