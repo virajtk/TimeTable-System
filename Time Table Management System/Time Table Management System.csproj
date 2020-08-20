@@ -54,6 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DaysAndHours\AddTimeSlots.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaysAndHours\AddTimeSlots.Designer.cs">
+      <DependentUpon>AddTimeSlots.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaysAndHours\AddWorkingDaysHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaysAndHours\AddWorkingDaysHours.Designer.cs">
+      <DependentUpon>AddWorkingDaysHours.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturers\AddLecturer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +173,12 @@
     <Compile Include="Tags\ManageTags.Designer.cs">
       <DependentUpon>ManageTags.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DaysAndHours\AddTimeSlots.resx">
+      <DependentUpon>AddTimeSlots.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaysAndHours\AddWorkingDaysHours.resx">
+      <DependentUpon>AddWorkingDaysHours.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lecturers\AddLecturer.resx">
       <DependentUpon>AddLecturer.cs</DependentUpon>
     </EmbeddedResource>
