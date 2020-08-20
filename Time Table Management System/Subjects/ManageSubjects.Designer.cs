@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.dataGridSubjects = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjectCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.offeredYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.offeredSem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lecHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tuteHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.labHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.evaluationHours = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -51,6 +60,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxOfferdYear = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericEvaluationHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericLabHours)).BeginInit();
@@ -58,19 +68,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericLecHours)).BeginInit();
             this.SuspendLayout();
             // 
-            // button4
+            // btnClose
             // 
-            this.button4.BackColor = System.Drawing.Color.Maroon;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.ForeColor = System.Drawing.SystemColors.Info;
-            this.button4.Location = new System.Drawing.Point(3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 25);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click_1);
+            this.btnClose.BackColor = System.Drawing.Color.Maroon;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClose.Location = new System.Drawing.Point(3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(50, 25);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // title
             // 
@@ -86,18 +96,111 @@
             // 
             // dataGridSubjects
             // 
+            this.dataGridSubjects.AllowUserToAddRows = false;
+            this.dataGridSubjects.AllowUserToDeleteRows = false;
+            this.dataGridSubjects.AllowUserToResizeColumns = false;
+            this.dataGridSubjects.AllowUserToResizeRows = false;
             this.dataGridSubjects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridSubjects.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridSubjects.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.subjectName,
+            this.subjectCode,
+            this.offeredYear,
+            this.offeredSem,
+            this.lecHours,
+            this.tuteHours,
+            this.labHours,
+            this.evaluationHours});
+            this.dataGridSubjects.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridSubjects.Location = new System.Drawing.Point(31, 82);
             this.dataGridSubjects.Name = "dataGridSubjects";
             this.dataGridSubjects.ReadOnly = true;
             this.dataGridSubjects.RowHeadersWidth = 51;
             this.dataGridSubjects.RowTemplate.Height = 24;
+            this.dataGridSubjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridSubjects.Size = new System.Drawing.Size(679, 154);
             this.dataGridSubjects.TabIndex = 5;
+            this.dataGridSubjects.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 125;
+            // 
+            // subjectName
+            // 
+            this.subjectName.HeaderText = "Subject Name";
+            this.subjectName.MinimumWidth = 6;
+            this.subjectName.Name = "subjectName";
+            this.subjectName.ReadOnly = true;
+            this.subjectName.Width = 125;
+            // 
+            // subjectCode
+            // 
+            this.subjectCode.HeaderText = "Subject Code";
+            this.subjectCode.MinimumWidth = 6;
+            this.subjectCode.Name = "subjectCode";
+            this.subjectCode.ReadOnly = true;
+            this.subjectCode.Width = 125;
+            // 
+            // offeredYear
+            // 
+            this.offeredYear.HeaderText = "Offered Year";
+            this.offeredYear.MinimumWidth = 6;
+            this.offeredYear.Name = "offeredYear";
+            this.offeredYear.ReadOnly = true;
+            this.offeredYear.Width = 125;
+            // 
+            // offeredSem
+            // 
+            this.offeredSem.HeaderText = "Offered Sem";
+            this.offeredSem.MinimumWidth = 6;
+            this.offeredSem.Name = "offeredSem";
+            this.offeredSem.ReadOnly = true;
+            this.offeredSem.Width = 125;
+            // 
+            // lecHours
+            // 
+            this.lecHours.HeaderText = "Lec Hours";
+            this.lecHours.MinimumWidth = 6;
+            this.lecHours.Name = "lecHours";
+            this.lecHours.ReadOnly = true;
+            this.lecHours.Visible = false;
+            this.lecHours.Width = 125;
+            // 
+            // tuteHours
+            // 
+            this.tuteHours.HeaderText = "TuteHours";
+            this.tuteHours.MinimumWidth = 6;
+            this.tuteHours.Name = "tuteHours";
+            this.tuteHours.ReadOnly = true;
+            this.tuteHours.Visible = false;
+            this.tuteHours.Width = 125;
+            // 
+            // labHours
+            // 
+            this.labHours.HeaderText = "LabHours";
+            this.labHours.MinimumWidth = 6;
+            this.labHours.Name = "labHours";
+            this.labHours.ReadOnly = true;
+            this.labHours.Visible = false;
+            this.labHours.Width = 125;
+            // 
+            // evaluationHours
+            // 
+            this.evaluationHours.HeaderText = "EvaluationHours";
+            this.evaluationHours.MinimumWidth = 6;
+            this.evaluationHours.Name = "evaluationHours";
+            this.evaluationHours.ReadOnly = true;
+            this.evaluationHours.Visible = false;
+            this.evaluationHours.Width = 125;
             // 
             // btnClear
             // 
@@ -109,10 +212,12 @@
             this.btnClear.TabIndex = 52;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(716, 129);
             this.btnDelete.Name = "btnDelete";
@@ -120,10 +225,12 @@
             this.btnDelete.TabIndex = 51;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnUpdate.Enabled = false;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(716, 82);
             this.btnUpdate.Name = "btnUpdate";
@@ -131,6 +238,7 @@
             this.btnUpdate.TabIndex = 50;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // numericEvaluationHours
             // 
@@ -379,7 +487,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.title);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dataGridSubjects);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "ManageSubjects";
@@ -395,7 +503,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.DataGridView dataGridSubjects;
         private System.Windows.Forms.Button btnClear;
@@ -418,5 +526,15 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxOfferdYear;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjectCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn offeredYear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn offeredSem;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lecHours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tuteHours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn labHours;
+        private System.Windows.Forms.DataGridViewTextBoxColumn evaluationHours;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }

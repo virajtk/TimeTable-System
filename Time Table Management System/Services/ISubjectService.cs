@@ -11,6 +11,9 @@ namespace Time_Table_Management_System.Services
     interface ISubjectService
     {
         Boolean addSubject(Subject subject);
-        ArrayList getAllSubjects();
+        List<Subject> getAllSubjects();
+        Subject getSubject(int id);
+
+        Boolean deleteSubject(int id);
     }
 }

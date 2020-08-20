@@ -104,7 +104,7 @@ namespace Time_Table_Management_System.Lecturers
                 lecturer.Department = textBoxDepartment.Text.Trim();
                 lecturer.Center = comboBoxCenter.SelectedItem.ToString();
                 lecturer.Building = comboBoxBuilding.SelectedItem.ToString();
-                lecturer.Level = int.Parse(comboBoxLevel.SelectedIndex.ToString());
+                lecturer.Level = int.Parse(comboBoxLevel.SelectedItem.ToString());
                 lecturer.Rank = textBoxRank.Text.Trim();
                 #endregion
 
