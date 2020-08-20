@@ -27,6 +27,11 @@ namespace Time_Table_Management_System
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            clear();
+        }
+
+        private void clear()
+        {
             comboBoxOfferdYear.SelectedIndex = -1;
             radioButtonSem1.Checked = false;
             radioButtonSem2.Checked = false;
@@ -36,9 +41,6 @@ namespace Time_Table_Management_System
             numericTuteHours.Value = 1;
             numericLabHours.Value = 2;
             numericEvaluationHours.Value = 1;
-
-            //ErrorMessage em = new ErrorMessage("Please Enter Subject Code");
-            //em.Show();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -126,6 +128,7 @@ namespace Time_Table_Management_System
                     //MessageBox.Show(subject.SubjectName);
                     SuccessMessage sc = new SuccessMessage("Subject Added Successfully !");
                     sc.Show();
+                    clear();
                 }
                 else
                 {
