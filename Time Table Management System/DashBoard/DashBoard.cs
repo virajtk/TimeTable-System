@@ -21,5 +21,30 @@ namespace Time_Table_Management_System
         {
             this.Close();
         }
+
+        private void chart1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void title_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
