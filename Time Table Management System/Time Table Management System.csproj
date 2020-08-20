@@ -81,8 +81,10 @@
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Services\IStudentService.cs" />
     <Compile Include="Services\ISubjectService.cs" />
+    <Compile Include="Services\ITagService.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\SubjectService.cs" />
+    <Compile Include="Services\TagService.cs" />
     <Compile Include="Students\AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>

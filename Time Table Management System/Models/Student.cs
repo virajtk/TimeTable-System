@@ -10,16 +10,16 @@ namespace Time_Table_Management_System.Models
     {
         private String academicYear;
         private String programme;
-        private String groupNumber;
+        private int groupNumber;
         private String groupId;
-        private String subGroupNumber;
+        private int subGroupNumber;
         private String subGroupId;
 
         public string AcademicYear { get => academicYear; set => academicYear = value; }
         public string Programme { get => programme; set => programme = value; }
-        public string GroupNumber { get => groupNumber; set => groupNumber = value; }
+        public int GroupNumber { get => groupNumber; set => groupNumber = value; }
         public string GroupId { get => groupId; set => groupId = value; }
-        public string SubGroupNumber { get => subGroupNumber; set => subGroupNumber = value; }
+        public int SubGroupNumber { get => subGroupNumber; set => subGroupNumber = value; }
         public string SubGroupId { get => subGroupId; set => subGroupId = value; }
     }
 }
