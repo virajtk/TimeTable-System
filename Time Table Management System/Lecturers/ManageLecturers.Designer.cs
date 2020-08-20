@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.dataGridLecturers = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lecName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.employeeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.faculty = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.department = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.center = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.building = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.level = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rank = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBoxRank = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBoxLevel = new System.Windows.Forms.ComboBox();
@@ -50,22 +59,23 @@
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnGenerateRank = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLecturers)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // btnClose
             // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 25);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "X";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.Maroon;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClose.Location = new System.Drawing.Point(3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(50, 25);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.button1_Click);
             // 
             // title
             // 
@@ -81,17 +91,102 @@
             // 
             // dataGridLecturers
             // 
+            this.dataGridLecturers.AllowUserToAddRows = false;
+            this.dataGridLecturers.AllowUserToDeleteRows = false;
+            this.dataGridLecturers.AllowUserToResizeColumns = false;
+            this.dataGridLecturers.AllowUserToResizeRows = false;
             this.dataGridLecturers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridLecturers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridLecturers.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridLecturers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLecturers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.lecName,
+            this.employeeID,
+            this.faculty,
+            this.department,
+            this.center,
+            this.building,
+            this.level,
+            this.rank});
+            this.dataGridLecturers.GridColor = System.Drawing.SystemColors.ControlDarkDark;
             this.dataGridLecturers.Location = new System.Drawing.Point(56, 92);
             this.dataGridLecturers.Name = "dataGridLecturers";
             this.dataGridLecturers.RowHeadersWidth = 51;
             this.dataGridLecturers.RowTemplate.Height = 24;
+            this.dataGridLecturers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridLecturers.Size = new System.Drawing.Size(618, 131);
             this.dataGridLecturers.TabIndex = 17;
+            this.dataGridLecturers.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // lecName
+            // 
+            this.lecName.HeaderText = "Name";
+            this.lecName.MinimumWidth = 6;
+            this.lecName.Name = "lecName";
+            this.lecName.ReadOnly = true;
+            // 
+            // employeeID
+            // 
+            this.employeeID.HeaderText = "Emp. ID";
+            this.employeeID.MinimumWidth = 6;
+            this.employeeID.Name = "employeeID";
+            this.employeeID.ReadOnly = true;
+            // 
+            // faculty
+            // 
+            this.faculty.HeaderText = "Faculty";
+            this.faculty.MinimumWidth = 6;
+            this.faculty.Name = "faculty";
+            this.faculty.ReadOnly = true;
+            // 
+            // department
+            // 
+            this.department.HeaderText = "Department";
+            this.department.MinimumWidth = 6;
+            this.department.Name = "department";
+            this.department.ReadOnly = true;
+            this.department.Visible = false;
+            // 
+            // center
+            // 
+            this.center.HeaderText = "Center";
+            this.center.MinimumWidth = 6;
+            this.center.Name = "center";
+            this.center.ReadOnly = true;
+            this.center.Visible = false;
+            // 
+            // building
+            // 
+            this.building.HeaderText = "Building";
+            this.building.MinimumWidth = 6;
+            this.building.Name = "building";
+            this.building.ReadOnly = true;
+            this.building.Visible = false;
+            // 
+            // level
+            // 
+            this.level.HeaderText = "Level";
+            this.level.MinimumWidth = 6;
+            this.level.Name = "level";
+            this.level.ReadOnly = true;
+            // 
+            // rank
+            // 
+            this.rank.HeaderText = "Rank";
+            this.rank.MinimumWidth = 6;
+            this.rank.Name = "rank";
+            this.rank.ReadOnly = true;
+            this.rank.Visible = false;
             // 
             // textBoxRank
             // 
@@ -308,6 +403,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnUpdate.Enabled = false;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.Location = new System.Drawing.Point(703, 92);
             this.btnUpdate.Name = "btnUpdate";
@@ -315,10 +411,12 @@
             this.btnUpdate.TabIndex = 47;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btnDelete.Enabled = false;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.Location = new System.Drawing.Point(703, 139);
             this.btnDelete.Name = "btnDelete";
@@ -326,6 +424,7 @@
             this.btnDelete.TabIndex = 48;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -337,18 +436,19 @@
             this.btnClear.TabIndex = 49;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
-            // button2
+            // btnGenerateRank
             // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Image = global::Time_Table_Management_System.Properties.Resources.generate;
-            this.button2.Location = new System.Drawing.Point(801, 377);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(41, 35);
-            this.button2.TabIndex = 50;
-            this.button2.UseVisualStyleBackColor = false;
+            this.btnGenerateRank.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnGenerateRank.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerateRank.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGenerateRank.Image = global::Time_Table_Management_System.Properties.Resources.generate;
+            this.btnGenerateRank.Location = new System.Drawing.Point(801, 377);
+            this.btnGenerateRank.Name = "btnGenerateRank";
+            this.btnGenerateRank.Size = new System.Drawing.Size(41, 35);
+            this.btnGenerateRank.TabIndex = 50;
+            this.btnGenerateRank.UseVisualStyleBackColor = false;
             // 
             // ManageLecturers
             // 
@@ -357,7 +457,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(881, 442);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnGenerateRank);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
@@ -378,7 +478,7 @@
             this.Controls.Add(this.textBoxLecturerName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dataGridLecturers);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.title);
             this.Name = "ManageLecturers";
             this.Text = "ManageLecturers";
@@ -390,7 +490,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.DataGridView dataGridLecturers;
         private System.Windows.Forms.TextBox textBoxRank;
@@ -412,6 +512,15 @@
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnGenerateRank;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lecName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn employeeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn faculty;
+        private System.Windows.Forms.DataGridViewTextBoxColumn department;
+        private System.Windows.Forms.DataGridViewTextBoxColumn center;
+        private System.Windows.Forms.DataGridViewTextBoxColumn building;
+        private System.Windows.Forms.DataGridViewTextBoxColumn level;
+        private System.Windows.Forms.DataGridViewTextBoxColumn rank;
     }
 }

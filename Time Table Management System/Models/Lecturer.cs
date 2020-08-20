@@ -16,6 +16,7 @@ namespace Time_Table_Management_System.Models
         private String building;
         private int level;
         private String rank;
+        private int id;
 
         public string Name { get => name; set => name = value; }
         public string EmployeeID { get => employeeID; set => employeeID = value; }
@@ -25,5 +26,6 @@ namespace Time_Table_Management_System.Models
         public string Building { get => building; set => building = value; }
         public int Level { get => level; set => level = value; }
         public string Rank { get => rank; set => rank = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

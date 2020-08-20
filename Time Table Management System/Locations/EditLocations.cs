@@ -8,18 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Time_Table_Management_System
+namespace Time_Table_Management_System.Locations
 {
-    public partial class ManageSubjects : Form
+    public partial class EditLocations : Form
     {
-        public ManageSubjects()
+        public EditLocations()
         {
             InitializeComponent();
         }
 
-        private void button4_Click_1(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            this.Close();
+
+        }
+
+        private void textBoxSubName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
