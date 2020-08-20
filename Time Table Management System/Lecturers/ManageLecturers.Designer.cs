@@ -119,6 +119,7 @@
             this.dataGridLecturers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridLecturers.Size = new System.Drawing.Size(618, 131);
             this.dataGridLecturers.TabIndex = 17;
+            this.dataGridLecturers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridLecturers_CellContentClick);
             this.dataGridLecturers.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
             // 
             // id

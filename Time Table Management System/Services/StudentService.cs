@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Time_Table_Management_System.Models;
 using System.Data.SQLite;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Time_Table_Management_System.Services
 {
@@ -55,10 +56,83 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public ArrayList getAllStudents()
+        public List<Student> getAllStudents()
         {
-            throw new NotImplementedException();
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            List<Student> arrayStus = null;
+
+
+            try
+            {
+                string query = "SELECT * FROM students";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+                arrayStus = new List<Student>();
+
+                while (rdr.Read())
+                {
+                    Student stu = new Student();
+                    stu.Id = rdr.GetInt32(0);
+                    stu.AcademicYear = rdr.GetString(1);
+                    stu.Programme = rdr.GetString(2);
+                    stu.GroupNumber = rdr.GetInt32(3);
+                    stu.SubGroupNumber = rdr.GetInt32(4);
+                    stu.GroupId = rdr.GetString(5);
+                    stu.SubGroupId = rdr.GetString(6);
+                  
+                    arrayStus.Add(stu);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return arrayStus;
         }
 
+        public Student GetStudent(int id)
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            Student stu = new Student();
+
+            try
+            {
+                string query = "SELECT * FROM students WHERE id = @id";
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    stu.Id = rdr.GetInt32(0);
+                    stu.AcademicYear = rdr.GetString(1);
+                    stu.Programme = rdr.GetString(2);
+                    stu.GroupNumber = rdr.GetInt32(3);
+                    stu.SubGroupNumber = rdr.GetInt32(4);
+                    stu.GroupId = rdr.GetString(5);
+                    stu.SubGroupId = rdr.GetString(6);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return stu;
+        }
+
+      
     }
 }

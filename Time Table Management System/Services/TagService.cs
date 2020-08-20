@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Time_Table_Management_System.Models;
 using System.Data.SQLite;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Time_Table_Management_System.Services
 {
@@ -51,9 +52,79 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public ArrayList getAllTags()
+        public List<Tag> getAllTags()
         {
-            throw new NotImplementedException();
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            List<Tag> arrayTags = null;
+
+
+            try
+            {
+                string query = "SELECT * FROM tags";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+                arrayTags = new List<Tag>();
+
+                while (rdr.Read())
+                {
+                    Tag tag = new Tag();
+                    tag.Id = rdr.GetInt32(0);
+                    tag.SubjectName = rdr.GetString(1);
+                    tag.SubjectCode = rdr.GetString(2);
+                    tag.RelatedTag = rdr.GetString(3);
+                    
+
+                    arrayTags.Add(tag);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return arrayTags;
         }
+
+        public Tag GetTag(int id)
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            Tag tag = new Tag();
+
+            try
+            {
+                string query = "SELECT * FROM tags WHERE id = @id";
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    tag.Id = rdr.GetInt32(0);
+                    tag.SubjectName = rdr.GetString(1);
+                    tag.SubjectCode = rdr.GetString(2);
+                    tag.RelatedTag = rdr.GetString(3);
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return tag;
+        }
+
+      
     }
 }

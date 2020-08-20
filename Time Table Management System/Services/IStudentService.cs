@@ -11,6 +11,9 @@ namespace Time_Table_Management_System.Services
     interface IStudentService
     {
         Boolean addStudent(Student student);
-        ArrayList getAllStudents();
+        
+        List<Student> getAllStudents();
+
+        Student GetStudent(int id);
     }
 }

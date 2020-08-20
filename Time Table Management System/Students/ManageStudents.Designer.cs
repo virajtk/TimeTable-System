@@ -31,6 +31,13 @@
             this.button4 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.acYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.programme = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subgroupNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -82,12 +89,72 @@
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.acYear,
+            this.programme,
+            this.groupno,
+            this.groupid,
+            this.subgroupNo,
+            this.subId});
             this.dataGridView1.Location = new System.Drawing.Point(31, 82);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(679, 154);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Width = 125;
+            // 
+            // acYear
+            // 
+            this.acYear.HeaderText = "Academic Year and Sem";
+            this.acYear.MinimumWidth = 6;
+            this.acYear.Name = "acYear";
+            this.acYear.Width = 125;
+            // 
+            // programme
+            // 
+            this.programme.HeaderText = "Programme";
+            this.programme.MinimumWidth = 6;
+            this.programme.Name = "programme";
+            this.programme.Width = 125;
+            // 
+            // groupno
+            // 
+            this.groupno.HeaderText = "Group No";
+            this.groupno.MinimumWidth = 6;
+            this.groupno.Name = "groupno";
+            this.groupno.Width = 125;
+            // 
+            // groupid
+            // 
+            this.groupid.HeaderText = "Group ID";
+            this.groupid.MinimumWidth = 6;
+            this.groupid.Name = "groupid";
+            this.groupid.Width = 125;
+            // 
+            // subgroupNo
+            // 
+            this.subgroupNo.HeaderText = "SubGroup No";
+            this.subgroupNo.MinimumWidth = 6;
+            this.subgroupNo.Name = "subgroupNo";
+            this.subgroupNo.Width = 125;
+            // 
+            // subId
+            // 
+            this.subId.HeaderText = "SubGroup ID";
+            this.subId.MinimumWidth = 6;
+            this.subId.Name = "subId";
+            this.subId.Width = 125;
             // 
             // btnUpdate
             // 
@@ -100,6 +167,7 @@
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
@@ -112,6 +180,7 @@
             this.btnClear.TabIndex = 18;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -124,6 +193,7 @@
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label1
             // 
@@ -210,6 +280,7 @@
             this.textBoxAcYear.Name = "textBoxAcYear";
             this.textBoxAcYear.Size = new System.Drawing.Size(135, 22);
             this.textBoxAcYear.TabIndex = 26;
+            this.textBoxAcYear.TextChanged += new System.EventHandler(this.textBoxAcYear_TextChanged);
             // 
             // comboBoxProgramme
             // 
@@ -226,6 +297,7 @@
             this.comboBoxProgramme.Size = new System.Drawing.Size(135, 24);
             this.comboBoxProgramme.TabIndex = 27;
             this.comboBoxProgramme.Tag = "";
+            this.comboBoxProgramme.SelectedIndexChanged += new System.EventHandler(this.comboBoxProgramme_SelectedIndexChanged);
             // 
             // textBoxgroupId
             // 
@@ -234,6 +306,7 @@
             this.textBoxgroupId.Name = "textBoxgroupId";
             this.textBoxgroupId.Size = new System.Drawing.Size(135, 22);
             this.textBoxgroupId.TabIndex = 28;
+            this.textBoxgroupId.TextChanged += new System.EventHandler(this.textBoxgroupId_TextChanged);
             // 
             // textBoxSubGroup
             // 
@@ -242,6 +315,7 @@
             this.textBoxSubGroup.Name = "textBoxSubGroup";
             this.textBoxSubGroup.Size = new System.Drawing.Size(135, 22);
             this.textBoxSubGroup.TabIndex = 29;
+            this.textBoxSubGroup.TextChanged += new System.EventHandler(this.textBoxSubGroup_TextChanged);
             // 
             // numericGroupno
             // 
@@ -250,6 +324,7 @@
             this.numericGroupno.Name = "numericGroupno";
             this.numericGroupno.Size = new System.Drawing.Size(135, 22);
             this.numericGroupno.TabIndex = 30;
+            this.numericGroupno.ValueChanged += new System.EventHandler(this.numericGroupno_ValueChanged);
             // 
             // numericSubGroup
             // 
@@ -258,6 +333,7 @@
             this.numericSubGroup.Name = "numericSubGroup";
             this.numericSubGroup.Size = new System.Drawing.Size(135, 22);
             this.numericSubGroup.TabIndex = 31;
+            this.numericSubGroup.ValueChanged += new System.EventHandler(this.numericSubGroup_ValueChanged);
             // 
             // ManageStudents
             // 
@@ -313,5 +389,12 @@
         private System.Windows.Forms.TextBox textBoxSubGroup;
         private System.Windows.Forms.NumericUpDown numericGroupno;
         private System.Windows.Forms.NumericUpDown numericSubGroup;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn acYear;
+        private System.Windows.Forms.DataGridViewTextBoxColumn programme;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groupno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn groupid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subgroupNo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subId;
     }
 }

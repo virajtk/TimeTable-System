@@ -30,6 +30,10 @@
         {
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subjCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.relTag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.title = new System.Windows.Forms.Label();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -59,14 +63,54 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(31, 82);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.subjName,
+            this.subjCode,
+            this.relTag});
+            this.dataGridView1.Location = new System.Drawing.Point(129, 82);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(679, 154);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(555, 154);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.Width = 125;
+            // 
+            // subjName
+            // 
+            this.subjName.HeaderText = "Subject Name";
+            this.subjName.MinimumWidth = 6;
+            this.subjName.Name = "subjName";
+            this.subjName.Width = 125;
+            // 
+            // subjCode
+            // 
+            this.subjCode.HeaderText = "Subject Code";
+            this.subjCode.MinimumWidth = 6;
+            this.subjCode.Name = "subjCode";
+            this.subjCode.Width = 125;
+            // 
+            // relTag
+            // 
+            this.relTag.HeaderText = "Related Tag";
+            this.relTag.MinimumWidth = 6;
+            this.relTag.Name = "relTag";
+            this.relTag.Width = 125;
             // 
             // title
             // 
@@ -92,6 +136,7 @@
             this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
@@ -104,6 +149,7 @@
             this.btnClear.TabIndex = 19;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
@@ -116,6 +162,7 @@
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label1
             // 
@@ -164,6 +211,7 @@
             this.subName.Name = "subName";
             this.subName.Size = new System.Drawing.Size(225, 27);
             this.subName.TabIndex = 24;
+            this.subName.TextChanged += new System.EventHandler(this.subName_TextChanged);
             // 
             // subCode
             // 
@@ -173,6 +221,7 @@
             this.subCode.Name = "subCode";
             this.subCode.Size = new System.Drawing.Size(225, 27);
             this.subCode.TabIndex = 25;
+            this.subCode.TextChanged += new System.EventHandler(this.subCode_TextChanged);
             // 
             // comboBoxRelatedTag
             // 
@@ -187,6 +236,7 @@
             this.comboBoxRelatedTag.Size = new System.Drawing.Size(225, 24);
             this.comboBoxRelatedTag.TabIndex = 26;
             this.comboBoxRelatedTag.Tag = "";
+            this.comboBoxRelatedTag.SelectedIndexChanged += new System.EventHandler(this.comboBoxRelatedTag_SelectedIndexChanged);
             // 
             // ManageTags
             // 
@@ -228,5 +278,9 @@
         private System.Windows.Forms.TextBox subName;
         private System.Windows.Forms.TextBox subCode;
         private System.Windows.Forms.ComboBox comboBoxRelatedTag;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subjCode;
+        private System.Windows.Forms.DataGridViewTextBoxColumn relTag;
     }
 }
