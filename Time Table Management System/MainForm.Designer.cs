@@ -434,7 +434,7 @@
             this.btnAddTimeSlots.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnAddTimeSlots.Size = new System.Drawing.Size(265, 40);
             this.btnAddTimeSlots.TabIndex = 1;
-            this.btnAddTimeSlots.Text = "Add Time Slots";
+            this.btnAddTimeSlots.Text = "Manage Time Slots";
             this.btnAddTimeSlots.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddTimeSlots.UseVisualStyleBackColor = true;
             this.btnAddTimeSlots.Click += new System.EventHandler(this.button3_Click);

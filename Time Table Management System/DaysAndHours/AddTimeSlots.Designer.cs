@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dataGridTimeSlots = new System.Windows.Forms.DataGridView();
             this.title = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
@@ -42,11 +43,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAddTimeSlot = new System.Windows.Forms.Button();
+            this.errorProviderTimeSlot = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTimeSlots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSTMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSThours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericETMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericETHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTimeSlot)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridTimeSlots
@@ -233,6 +236,11 @@
             this.btnAddTimeSlot.TabIndex = 50;
             this.btnAddTimeSlot.Text = "Add Time Slot";
             this.btnAddTimeSlot.UseVisualStyleBackColor = true;
+            this.btnAddTimeSlot.Click += new System.EventHandler(this.btnAddTimeSlot_Click);
+            // 
+            // errorProviderTimeSlot
+            // 
+            this.errorProviderTimeSlot.ContainerControl = this;
             // 
             // AddTimeSlots
             // 
@@ -261,6 +269,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericSThours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericETMinutes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericETHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProviderTimeSlot)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,5 +291,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAddTimeSlot;
+        private System.Windows.Forms.ErrorProvider errorProviderTimeSlot;
     }
 }

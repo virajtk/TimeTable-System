@@ -92,14 +92,20 @@
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Tag.cs" />
+    <Compile Include="Models\TimeSlot.cs" />
+    <Compile Include="Models\WorkingDaysHours.cs" />
     <Compile Include="Services\ILecturerService.cs" />
     <Compile Include="Services\IStudentService.cs" />
     <Compile Include="Services\ISubjectService.cs" />
+    <Compile Include="Services\ITimeSlotService.cs" />
+    <Compile Include="Services\IWorkingDaysHoursService.cs" />
     <Compile Include="Services\LecturerService.cs" />
     <Compile Include="Services\ITagService.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\SubjectService.cs" />
     <Compile Include="Services\TagService.cs" />
+    <Compile Include="Services\TimeSlotService.cs" />
+    <Compile Include="Services\WorkingDaysHoursService.cs" />
     <Compile Include="Students\AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
