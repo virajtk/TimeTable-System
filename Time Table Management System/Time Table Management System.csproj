@@ -232,6 +232,7 @@
     </Content>
     <None Include="Resources\prize.png" />
     <None Include="Resources\error.png" />
+    <None Include="Resources\generate.png" />
     <Content Include="SQLite.Interop.dll">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
