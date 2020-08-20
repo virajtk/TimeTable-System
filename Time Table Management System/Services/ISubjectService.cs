@@ -15,5 +15,7 @@ namespace Time_Table_Management_System.Services
         Subject getSubject(int id);
 
         Boolean deleteSubject(int id);
+
+        Boolean updateSubject(int id, Subject subject);
     }
 }

@@ -67,7 +67,98 @@ namespace Time_Table_Management_System
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            #region Validation
+            //validation
+            if (comboBoxOfferdYear.SelectedIndex == -1)
+            {
+                comboBoxOfferdYear.Focus();
+                errorManageSubjects.SetError(comboBoxOfferdYear, "Please Select offered Year");
+            }
+            else if (radioButtonSem1.Checked == false & radioButtonSem2.Checked == false)
+            {
+                errorManageSubjects.SetError(radioButtonSem2, "Please Select offered Semester");
+            }
+            else if (textBoxSubName.Text == String.Empty)
+            {
+                textBoxSubName.Focus();
+                errorManageSubjects.SetError(textBoxSubName, "Please Enter Subject Name");
+            }
+            else if (textBoxSubCode.Text == String.Empty)
+            {
+                textBoxSubCode.Focus();
+                errorManageSubjects.SetError(textBoxSubCode, "Please Enter Subject Code");
+            }
+            else if (numericLecHours.Value <= 0 ^ numericLecHours.Value >= 5)
+            {
+                numericLecHours.Focus();
+                errorManageSubjects.SetError(numericLecHours, "Please Enter Valid Number of Hours");
+            }
+            else if (numericTuteHours.Value <= 0 ^ numericTuteHours.Value >= 5)
+            {
+                numericTuteHours.Focus();
+                errorManageSubjects.SetError(numericTuteHours, "Please Enter Valid Number of Hours");
+            }
+            else if (numericLabHours.Value <= 0 ^ numericLabHours.Value >= 5)
+            {
+                numericLabHours.Focus();
+                errorManageSubjects.SetError(numericLabHours, "Please Enter Valid Number of Hours");
+            }
+            else if (numericEvaluationHours.Value <= 0 ^ numericEvaluationHours.Value >= 5)
+            {
+                numericEvaluationHours.Focus();
+                errorManageSubjects.SetError(numericEvaluationHours, "Please Enter Valid Number of Hours");
+            }
+            #endregion
+            else
+            {
+                Subject subject = new Subject();
 
+                #region Set Data to Object
+                // Set Data to model
+                subject.SubjectName = textBoxSubName.Text.Trim();
+                subject.SubjectCode = textBoxSubCode.Text.Trim();
+                switch (comboBoxOfferdYear.SelectedIndex)
+                {
+                    case 0:
+                        subject.OfferedYear = 1;
+                        break;
+                    case 1:
+                        subject.OfferedYear = 2;
+                        break;
+                    case 2:
+                        subject.OfferedYear = 3;
+                        break;
+                    case 3:
+                        subject.OfferedYear = 4;
+                        break;
+                }
+
+                if (radioButtonSem1.Checked == true)
+                    subject.OfferedSem = 1;
+                else
+                    subject.OfferedSem = 2;
+
+                subject.LecHours = int.Parse(numericLecHours.Value.ToString());
+                subject.TuteHours = int.Parse(numericTuteHours.Value.ToString());
+                subject.LabHours = int.Parse(numericLabHours.Value.ToString());
+                subject.EvaluationHours = int.Parse(numericEvaluationHours.Value.ToString());
+                #endregion
+
+                //Update Data
+                if (subjectService.updateSubject(selectedSub.Id,subject))
+                {
+                    SuccessMessage sc = new SuccessMessage("Subject Updated Successfully !");
+                    sc.Show();
+                    dataGridSubjects.Rows.Clear();
+                    populateData();
+                    clear();
+                }
+                else
+                {
+                    ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
+                    ec.Show();
+                }
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -76,9 +167,9 @@ namespace Time_Table_Management_System
             {
                 SuccessMessage sm = new SuccessMessage("Subject Deleted Successfully");
                 sm.Show();
-                clear();
                 dataGridSubjects.Rows.Clear();
                 populateData();
+                clear();
             }
             else
             {

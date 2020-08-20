@@ -81,25 +81,11 @@ namespace Time_Table_Management_System.Services
                 cmd.Parameters.AddWithValue("@id", id);
                 cmd.Prepare();
 
-                //Console.WriteLine(cmd);
-
                 if (cmd.ExecuteNonQuery() == 1)
                     result = true;
                 else
                     result = false;
 
-                //SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter(cmd);
-                //DataTable dataTable = new DataTable();
-                //dataAdapter.Fill(dataTable);
-
-                //if (dataTable.Rows.Count > 0)
-                //{
-                // MessageBox.Show("You are Logged in", "Login Successfull");
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Login Failed", "Error");
-                //}
             }
             catch (Exception e)
             {
@@ -194,6 +180,46 @@ namespace Time_Table_Management_System.Services
             return sub;
         }
 
+        public bool updateSubject(int id, Subject subject)
+        {
+            Boolean result = false;
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            try
+            {
+                string query = "UPDATE subjects SET subjectName = @subname, subjectCode = @subcode, offeredYear = @offeredyear, offeredSem = @offeredSem, LecHours = @lechours, TuteHours = @tutehours, LabHours = @labhours, EvaluationHours = @evaluationhours WHERE id = @id";
 
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@subname", subject.SubjectName);
+                cmd.Parameters.AddWithValue("@subcode", subject.SubjectCode);
+                cmd.Parameters.AddWithValue("@offeredyear", subject.OfferedYear);
+                cmd.Parameters.AddWithValue("@offeredSem", subject.OfferedSem);
+                cmd.Parameters.AddWithValue("@lechours", subject.LabHours);
+                cmd.Parameters.AddWithValue("@tutehours", subject.TuteHours);
+                cmd.Parameters.AddWithValue("@labhours", subject.LabHours);
+                cmd.Parameters.AddWithValue("@evaluationhours", subject.EvaluationHours);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cmd.Prepare();
+
+
+                if (cmd.ExecuteNonQuery() == 1)
+                    result = true;
+                else
+                    result = false;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnClose = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.dataGridSubjects = new System.Windows.Forms.DataGridView();
@@ -61,11 +62,13 @@
             this.comboBoxOfferdYear = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.errorManageSubjects = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSubjects)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericEvaluationHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericLabHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTuteHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericLecHours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorManageSubjects)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -460,6 +463,10 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "Offerd Year";
             // 
+            // errorManageSubjects
+            // 
+            this.errorManageSubjects.ContainerControl = this;
+            // 
             // ManageSubjects
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -497,6 +504,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericLabHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTuteHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericLecHours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorManageSubjects)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -536,5 +544,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn labHours;
         private System.Windows.Forms.DataGridViewTextBoxColumn evaluationHours;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ErrorProvider errorManageSubjects;
     }
 }
