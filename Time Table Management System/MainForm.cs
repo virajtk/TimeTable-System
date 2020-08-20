@@ -232,6 +232,7 @@ namespace Time_Table_Management_System
         #region Locations
         private void btnLocations_Click(object sender, EventArgs e)
         {
+            
             defaultBtn();
             btnLocations.BackColor = Color.FromArgb(0, 25, 51);
             showSubMenu(panelLocationsSubMenu);
@@ -239,6 +240,7 @@ namespace Time_Table_Management_System
 
         private void btnAddLocation_Click(object sender, EventArgs e)
         {
+            
             //..
             // your code
             //..

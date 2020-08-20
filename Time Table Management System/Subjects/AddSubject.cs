@@ -120,5 +120,10 @@ namespace Time_Table_Management_System
         {
            
         }
+
+        private void AddSubject_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
