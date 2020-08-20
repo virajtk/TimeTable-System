@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnClose = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.dataGridLecturers = new System.Windows.Forms.DataGridView();
@@ -60,7 +61,9 @@
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.btnGenerateRank = new System.Windows.Forms.Button();
+            this.errorManageLecturers = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLecturers)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorManageLecturers)).BeginInit();
             this.SuspendLayout();
             // 
             // btnClose
@@ -449,6 +452,11 @@
             this.btnGenerateRank.Size = new System.Drawing.Size(41, 35);
             this.btnGenerateRank.TabIndex = 50;
             this.btnGenerateRank.UseVisualStyleBackColor = false;
+            this.btnGenerateRank.Click += new System.EventHandler(this.btnGenerateRank_Click);
+            // 
+            // errorManageLecturers
+            // 
+            this.errorManageLecturers.ContainerControl = this;
             // 
             // ManageLecturers
             // 
@@ -483,6 +491,7 @@
             this.Name = "ManageLecturers";
             this.Text = "ManageLecturers";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLecturers)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorManageLecturers)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -522,5 +531,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn building;
         private System.Windows.Forms.DataGridViewTextBoxColumn level;
         private System.Windows.Forms.DataGridViewTextBoxColumn rank;
+        private System.Windows.Forms.ErrorProvider errorManageLecturers;
     }
 }
