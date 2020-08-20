@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Time_Table_Management_System.Models;
 using System.Data.SQLite;
 using System.Data;
+using System.Windows.Forms;
 
 namespace Time_Table_Management_System.Services
 {
@@ -52,9 +53,85 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public ArrayList getAllLecturers()
+        public List<Lecturer> getAllLecturers()
         {
-            throw new NotImplementedException();
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            List<Lecturer> arrayLecs = null;
+            
+
+            try
+            {
+                string query = "SELECT * FROM lecturers";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+                arrayLecs = new List<Lecturer>();
+
+                while (rdr.Read())
+                {
+                    Lecturer lec = new Lecturer();
+                    lec.Id = rdr.GetInt32(0);
+                    lec.Name = rdr.GetString(1);
+                    lec.EmployeeID = rdr.GetString(2);
+                    lec.Faculty = rdr.GetString(3);
+                    lec.Department = rdr.GetString(4);
+                    lec.Center = rdr.GetString(5);
+                    lec.Building = rdr.GetString(6);
+                    lec.Level = rdr.GetInt32(7);
+                    lec.Rank = rdr.GetString(8);
+
+                    arrayLecs.Add(lec);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return arrayLecs;
+        }
+
+        public Lecturer GetLecturer(int id)
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            Lecturer lec = new Lecturer();
+
+            try
+            {
+                string query = "SELECT * FROM lecturers WHERE id = @id";
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    lec.Id = rdr.GetInt32(0);
+                    lec.Name = rdr.GetString(1);
+                    lec.EmployeeID = rdr.GetString(2);
+                    lec.Faculty = rdr.GetString(3);
+                    lec.Department = rdr.GetString(4);
+                    lec.Center = rdr.GetString(5);
+                    lec.Building = rdr.GetString(6);
+                    lec.Level = rdr.GetInt32(7);
+                    lec.Rank = rdr.GetString(8);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return lec;
         }
     }
 }
