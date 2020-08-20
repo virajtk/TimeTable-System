@@ -10,9 +10,8 @@ namespace Time_Table_Management_System.Services
 {
     interface ILecturerService
     {
-        Boolean addLecturer(Lecturer lecturer);
+        Boolean addLecturer(Lecturer lecturer); 
         List<Lecturer> getAllLecturers();
-
         Lecturer GetLecturer(int id);
     }
 }
