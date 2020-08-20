@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Messages;
+using Time_Table_Management_System.Services;
 
 namespace Time_Table_Management_System
 {
@@ -27,6 +27,11 @@ namespace Time_Table_Management_System
 
         private void btnClear_Click(object sender, EventArgs e)
         {
+            clear();
+        }
+
+        private void clear()
+        {
             comboBoxOfferdYear.SelectedIndex = -1;
             radioButtonSem1.Checked = false;
             radioButtonSem2.Checked = false;
@@ -36,13 +41,12 @@ namespace Time_Table_Management_System
             numericTuteHours.Value = 1;
             numericLabHours.Value = 2;
             numericEvaluationHours.Value = 1;
-
-            //ErrorMessage em = new ErrorMessage("Please Enter Subject Code");
-            //em.Show();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            #region Validation
+            //validation
             if (comboBoxOfferdYear.SelectedIndex == -1)
             {
                 comboBoxOfferdYear.Focus();
@@ -81,11 +85,14 @@ namespace Time_Table_Management_System
                 numericEvaluationHours.Focus();
                 errorAddSubject.SetError(numericEvaluationHours, "Please Enter Valid Number of Hours");
             }
+            #endregion
             else
             {
                 Subject subject = new Subject();
+                ISubjectService subjectService = new SubjectService();
 
-                // Set Data
+                #region Set Data to Object
+                // Set Data to model
                 subject.SubjectName = textBoxSubName.Text.Trim();
                 subject.SubjectCode = textBoxSubCode.Text.Trim();
                 switch (comboBoxOfferdYear.SelectedIndex)
@@ -103,15 +110,32 @@ namespace Time_Table_Management_System
                         subject.OfferedYear = 4;
                         break;
                 }
+
                 if (radioButtonSem1.Checked == true)
                     subject.OfferedSem = 1;
                 else
                     subject.OfferedSem = 2;
 
-                //subject.OfferedYear = int.Parse(comboBoxOfferdYear.SelectedItem.ToString());
-                //MessageBox.Show(subject.SubjectName);
-                SuccessMessage sc = new SuccessMessage("Subject Added Successfully !");
-                sc.Show();
+                subject.LecHours = int.Parse(numericLecHours.Value.ToString());
+                subject.TuteHours = int.Parse(numericTuteHours.Value.ToString());
+                subject.LabHours = int.Parse(numericLabHours.Value.ToString());
+                subject.EvaluationHours = int.Parse(numericEvaluationHours.Value.ToString());
+                #endregion
+
+                //Insert Data
+                if (subjectService.addSubject(subject))
+                {
+                    //MessageBox.Show(subject.SubjectName);
+                    SuccessMessage sc = new SuccessMessage("Subject Added Successfully !");
+                    sc.Show();
+                    clear();
+                }
+                else
+                {
+                    ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
+                    ec.Show();
+                }
+  
             }
 
         }
