@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Messages;
+using Time_Table_Management_System.Services;
 
 namespace Time_Table_Management_System.Tags
 {
@@ -27,9 +27,9 @@ namespace Time_Table_Management_System.Tags
 
         private void button3_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "";
-            textBox2.Text = "";
-            comboBox1.SelectedIndex = -1;
+            subName.Text = "";
+            subCode.Text = "";
+            comboBoxRelatedTag.SelectedIndex = -1;
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -39,29 +39,30 @@ namespace Time_Table_Management_System.Tags
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text == String.Empty)
+            if (subName.Text == String.Empty)
             {
-                textBox1.Focus();
-                errorAddTag.SetError(textBox1, "Please Enter Subject Name");
+                subName.Focus();
+                errorTag.SetError(subName, "Please Enter Subject Name");
             }
-            else if (textBox2.Text == String.Empty)
+            else if (subCode.Text == String.Empty)
             {
-                textBox2.Focus();
-                errorAddTag.SetError(textBox2, "Please Enter Subject Code");
+                subCode.Focus();
+                errorTag.SetError(subCode, "Please Enter Subject Code");
             }
-            else if (comboBox1.SelectedIndex == -1)
+            else if (comboBoxRelatedTag.SelectedIndex == -1)
             {
-                comboBox1.Focus();
-                errorAddTag.SetError(comboBox1, "Please Select Related Tag");
+                comboBoxRelatedTag.Focus();
+                errorTag.SetError(comboBoxRelatedTag, "Please Select Related Tag");
             }
             else
             {
                 Tag tag = new Tag();
+                ITagService tagService = new TagService();
 
                 // Set Data
-                tag.SubjectName = textBox1.Text.Trim();
-                tag.SubjectCode = textBox2.Text.Trim();
-                switch (comboBox1.SelectedIndex)
+                tag.SubjectName = subName.Text.Trim();
+                tag.SubjectCode = subCode.Text.Trim();
+                switch (comboBoxRelatedTag.SelectedIndex)
                 {
                     case 0:
                         tag.RelatedTag = "Lecture";
@@ -73,10 +74,18 @@ namespace Time_Table_Management_System.Tags
                         tag.RelatedTag = "Practicle";
                         break;
                 }
-
-
-                SuccessMessage sc = new SuccessMessage("Tag Added Successfully !");
-                sc.Show();
+                //Insert Data
+                if (tagService.addTag(tag))
+                {
+                    //MessageBox.Show(tag.Tag);
+                    SuccessMessage sc = new SuccessMessage("Tags Added Successfully !");
+                    sc.Show();
+                }
+                else
+                {
+                    ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
+                    ec.Show();
+                }
             }
         }
 
