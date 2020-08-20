@@ -338,6 +338,7 @@
             this.comboBoxOfferdYear.Name = "comboBoxOfferdYear";
             this.comboBoxOfferdYear.Size = new System.Drawing.Size(248, 28);
             this.comboBoxOfferdYear.TabIndex = 54;
+            this.comboBoxOfferdYear.SelectedIndexChanged += new System.EventHandler(this.comboBoxOfferdYear_SelectedIndexChanged);
             // 
             // label1
             // 
