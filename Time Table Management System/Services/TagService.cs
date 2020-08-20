@@ -10,27 +10,23 @@ using System.Data;
 
 namespace Time_Table_Management_System.Services
 {
-    class StudentService : IStudentService
+    class TagService : ITagService
     {
-        public bool addStudent(Student student)
+        public bool addTag(Tag tag)
         {
             Boolean result = false;
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
                 //string query = "SELECT * FROM people WHERE username= @user AND password= @pass";
-                string query = "INSERT INTO students (academicYear, programme, groupNumber, subGroupNumber, groupId, subGroupId) VALUES (@academicyear, @programme, @groupno, @subgroupno, @groupid, @subgroupid)";
+                string query = "INSERT INTO tags (subjectName, subjectCode, relatedTag) VALUES (@subjectname, @subjectcode, @relatedtag)";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@academicyear", student.AcademicYear);
-                cmd.Parameters.AddWithValue("@programme", student.Programme);
-                cmd.Parameters.AddWithValue("@groupno", student.GroupNumber);
-                cmd.Parameters.AddWithValue("@subgroupno", student.SubGroupNumber);
-                cmd.Parameters.AddWithValue("@groupid", student.GroupId);
-                cmd.Parameters.AddWithValue("@subgroupid", student.SubGroupId);
-                
+                cmd.Parameters.AddWithValue("@subjectname", tag.SubjectName);
+                cmd.Parameters.AddWithValue("@subjectcode", tag.SubjectCode);
+                cmd.Parameters.AddWithValue("@relatedtag", tag.RelatedTag);
 
                 cmd.Prepare();
 
@@ -41,7 +37,7 @@ namespace Time_Table_Management_System.Services
                 else
                     result = false;
 
-     
+
             }
             catch (Exception e)
             {
@@ -55,10 +51,9 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public ArrayList getAllStudents()
+        public ArrayList getAllTags()
         {
             throw new NotImplementedException();
         }
-
     }
 }

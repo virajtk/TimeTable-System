@@ -26,5 +26,10 @@ namespace Time_Table_Management_System
         {
 
         }
+
+        private void comboBoxOfferdYear_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

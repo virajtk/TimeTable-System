@@ -8,9 +8,9 @@ using Time_Table_Management_System.Models;
 
 namespace Time_Table_Management_System.Services
 {
-    interface IStudentService
+    interface ITagService
     {
-        Boolean addStudent(Student student);
-        ArrayList getAllStudents();
+        Boolean addTag(Tag tag);
+        ArrayList getAllTags();
     }
 }
