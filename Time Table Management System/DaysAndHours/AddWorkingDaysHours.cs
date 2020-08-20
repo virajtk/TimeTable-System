@@ -26,5 +26,10 @@ namespace Time_Table_Management_System.DaysAndHours
         {
 
         }
+
+        private void btn_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

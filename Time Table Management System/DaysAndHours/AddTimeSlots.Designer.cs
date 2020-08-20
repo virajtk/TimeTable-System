@@ -28,39 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridTimeSlots = new System.Windows.Forms.DataGridView();
             this.title = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numericSTMinutes = new System.Windows.Forms.NumericUpDown();
+            this.numericSThours = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown4 = new System.Windows.Forms.NumericUpDown();
+            this.numericETMinutes = new System.Windows.Forms.NumericUpDown();
+            this.numericETHours = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnSave = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).BeginInit();
+            this.btnAddTimeSlot = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTimeSlots)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericSTMinutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericSThours)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericETMinutes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericETHours)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dataGridTimeSlots
             // 
-            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(87, 229);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dataGridView1.Size = new System.Drawing.Size(734, 189);
-            this.dataGridView1.TabIndex = 19;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridTimeSlots.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.dataGridTimeSlots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTimeSlots.Location = new System.Drawing.Point(87, 229);
+            this.dataGridTimeSlots.Name = "dataGridTimeSlots";
+            this.dataGridTimeSlots.RowHeadersWidth = 51;
+            this.dataGridTimeSlots.RowTemplate.Height = 24;
+            this.dataGridTimeSlots.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridTimeSlots.Size = new System.Drawing.Size(734, 189);
+            this.dataGridTimeSlots.TabIndex = 19;
+            this.dataGridTimeSlots.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // title
             // 
@@ -75,18 +75,19 @@
             this.title.TabIndex = 18;
             this.title.Text = "Manage Time Slots";
             // 
-            // button4
+            // btnClose
             // 
-            this.button4.BackColor = System.Drawing.Color.Maroon;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button4.ForeColor = System.Drawing.SystemColors.Info;
-            this.button4.Location = new System.Drawing.Point(3, 2);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 25);
-            this.button4.TabIndex = 17;
-            this.button4.Text = "X";
-            this.button4.UseVisualStyleBackColor = false;
+            this.btnClose.BackColor = System.Drawing.Color.Maroon;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnClose.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClose.Location = new System.Drawing.Point(3, 2);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(50, 25);
+            this.btnClose.TabIndex = 17;
+            this.btnClose.Text = "X";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.button4_Click);
             // 
             // label1
             // 
@@ -101,29 +102,29 @@
             this.label1.TabIndex = 28;
             this.label1.Text = "Start Time";
             // 
-            // numericUpDown2
+            // numericSTMinutes
             // 
-            this.numericUpDown2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(435, 115);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(111, 27);
-            this.numericUpDown2.TabIndex = 44;
-            this.numericUpDown2.Value = new decimal(new int[] {
+            this.numericSTMinutes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericSTMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericSTMinutes.Location = new System.Drawing.Point(435, 115);
+            this.numericSTMinutes.Name = "numericSTMinutes";
+            this.numericSTMinutes.Size = new System.Drawing.Size(111, 27);
+            this.numericSTMinutes.TabIndex = 44;
+            this.numericSTMinutes.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // numericUpDown1
+            // numericSThours
             // 
-            this.numericUpDown1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(217, 115);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(111, 27);
-            this.numericUpDown1.TabIndex = 43;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.numericSThours.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericSThours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericSThours.Location = new System.Drawing.Point(217, 115);
+            this.numericSThours.Name = "numericSThours";
+            this.numericSThours.Size = new System.Drawing.Size(111, 27);
+            this.numericSThours.TabIndex = 43;
+            this.numericSThours.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -155,29 +156,29 @@
             this.label4.TabIndex = 41;
             this.label4.Text = "Hours";
             // 
-            // numericUpDown3
+            // numericETMinutes
             // 
-            this.numericUpDown3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(435, 158);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(111, 27);
-            this.numericUpDown3.TabIndex = 49;
-            this.numericUpDown3.Value = new decimal(new int[] {
+            this.numericETMinutes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericETMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericETMinutes.Location = new System.Drawing.Point(435, 158);
+            this.numericETMinutes.Name = "numericETMinutes";
+            this.numericETMinutes.Size = new System.Drawing.Size(111, 27);
+            this.numericETMinutes.TabIndex = 49;
+            this.numericETMinutes.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // numericUpDown4
+            // numericETHours
             // 
-            this.numericUpDown4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericUpDown4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown4.Location = new System.Drawing.Point(217, 158);
-            this.numericUpDown4.Name = "numericUpDown4";
-            this.numericUpDown4.Size = new System.Drawing.Size(111, 27);
-            this.numericUpDown4.TabIndex = 48;
-            this.numericUpDown4.Value = new decimal(new int[] {
+            this.numericETHours.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericETHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericETHours.Location = new System.Drawing.Point(217, 158);
+            this.numericETHours.Name = "numericETHours";
+            this.numericETHours.Size = new System.Drawing.Size(111, 27);
+            this.numericETHours.TabIndex = 48;
+            this.numericETHours.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -222,16 +223,16 @@
             this.label6.TabIndex = 45;
             this.label6.Text = "End Time";
             // 
-            // btnSave
+            // btnAddTimeSlot
             // 
-            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(701, 115);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 65);
-            this.btnSave.TabIndex = 50;
-            this.btnSave.Text = "Add Time Slot";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnAddTimeSlot.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAddTimeSlot.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTimeSlot.Location = new System.Drawing.Point(701, 115);
+            this.btnAddTimeSlot.Name = "btnAddTimeSlot";
+            this.btnAddTimeSlot.Size = new System.Drawing.Size(120, 65);
+            this.btnAddTimeSlot.TabIndex = 50;
+            this.btnAddTimeSlot.Text = "Add Time Slot";
+            this.btnAddTimeSlot.UseVisualStyleBackColor = true;
             // 
             // AddTimeSlots
             // 
@@ -239,27 +240,27 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(881, 442);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.numericUpDown4);
+            this.Controls.Add(this.btnAddTimeSlot);
+            this.Controls.Add(this.numericETMinutes);
+            this.Controls.Add(this.numericETHours);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numericSTMinutes);
+            this.Controls.Add(this.numericSThours);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dataGridTimeSlots);
             this.Controls.Add(this.title);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnClose);
             this.Name = "AddTimeSlots";
             this.Text = "AddTimeSlots";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridTimeSlots)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericSTMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericSThours)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericETMinutes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericETHours)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,19 +268,19 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridTimeSlots;
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numericSTMinutes;
+        private System.Windows.Forms.NumericUpDown numericSThours;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.NumericUpDown numericUpDown4;
+        private System.Windows.Forms.NumericUpDown numericETMinutes;
+        private System.Windows.Forms.NumericUpDown numericETHours;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnAddTimeSlot;
     }
 }
