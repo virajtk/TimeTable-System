@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Messages;
+using Time_Table_Management_System.Services;
 
 namespace Time_Table_Management_System.Students
 {
@@ -38,9 +39,9 @@ namespace Time_Table_Management_System.Students
         {
             textBoxYearSem.Text = "";
             comboBoxProgramme.SelectedIndex = -1;
-            textBoxGroupNo.Text = "";
+            numericGroupNo.Value = 0;
             textBoxGroupID.Text = "";
-            textBoxSubGroupNo.Text = "";
+            numericsubGroup.Value = 0;
             textBoxSubGroupID.Text = "";
 
         }
@@ -77,20 +78,20 @@ namespace Time_Table_Management_System.Students
                 comboBoxProgramme.Focus();
                 errorStudent.SetError(comboBoxProgramme, "Please Select Programme");
             }
-            else if (textBoxGroupNo.Text == String.Empty)
+            else if (numericGroupNo.Value < 0)
             {
-                textBoxGroupNo.Focus();
-                errorStudent.SetError(textBoxGroupNo, "Please Enter Group Number");
+                numericGroupNo.Focus();
+                errorStudent.SetError(numericGroupNo, "Please Enter Valid Group Number");
             }
             else if (textBoxGroupID.Text == String.Empty)
             {
                 textBoxGroupID.Focus();
                 errorStudent.SetError(textBoxGroupID, "Please Enter Group Id");
             }
-            else if (textBoxSubGroupNo.Text == String.Empty)
+            else if (numericsubGroup.Value < 0)
             {
-                textBoxSubGroupNo.Focus();
-                errorStudent.SetError(textBoxSubGroupNo, "Please Enter Sub Group Number");
+                numericsubGroup.Focus();
+                errorStudent.SetError(numericsubGroup, "Please Enter Valid Sub Group Number");
             }
             else if (textBoxSubGroupID.Text == String.Empty)
             {
@@ -100,12 +101,13 @@ namespace Time_Table_Management_System.Students
             else
             {
                 Student student = new Student();
+                IStudentService studentService = new StudentService();
 
                 // Set Data
                 student.AcademicYear = textBoxYearSem.Text.Trim();
-                student.GroupNumber = textBoxGroupNo.Text.Trim();
+                student.GroupNumber = int.Parse(numericGroupNo.Value.ToString());
                 student.GroupId = textBoxGroupID.Text.Trim();
-                student.SubGroupNumber = textBoxSubGroupNo.Text.Trim();
+                student.SubGroupNumber = int.Parse(numericsubGroup.Value.ToString());
                 student.SubGroupId = textBoxSubGroupID.Text.Trim();
 
                 switch (comboBoxProgramme.SelectedIndex)
@@ -126,8 +128,18 @@ namespace Time_Table_Management_System.Students
                         student.Programme = "CN";
                         break;
                 }
-                SuccessMessage sc = new SuccessMessage("Student Group Added Successfully !");
-                sc.Show();
+                //Insert Data
+                if (studentService.addStudent(student))
+                {
+                    //MessageBox.Show(student.StudentGroup);
+                    SuccessMessage sc = new SuccessMessage("Student Group Added Successfully !");
+                    sc.Show();
+                }
+                else
+                {
+                    ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
+                    ec.Show();
+                }
             }
         }
 
@@ -143,8 +155,8 @@ namespace Time_Table_Management_System.Students
 
         private void btnGenerateIDs_Click(object sender, EventArgs e)
         {
-            String GroupID = textBoxYearSem.Text + "." + comboBoxProgramme.SelectedItem + "." + textBoxGroupNo.Text;
-            String SubGroupID = textBoxYearSem.Text + "." + comboBoxProgramme.SelectedItem + "." + textBoxGroupNo.Text + "." + textBoxSubGroupNo.Text;
+            String GroupID = textBoxYearSem.Text + "." + comboBoxProgramme.SelectedItem + "." + numericGroupNo.Value;
+            String SubGroupID = textBoxYearSem.Text + "." + comboBoxProgramme.SelectedItem + "." + numericGroupNo.Value + "." + numericsubGroup.Value;
 
             textBoxGroupID.Text = GroupID;
             textBoxSubGroupID.Text = SubGroupID;
