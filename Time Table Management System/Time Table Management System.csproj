@@ -66,11 +66,11 @@
     <Compile Include="Lecturers\ManageLecturers.Designer.cs">
       <DependentUpon>ManageLecturers.cs</DependentUpon>
     </Compile>
-    <Compile Include="Locations\AddLocation.cs">
+    <Compile Include="Locations\AddLocations.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Locations\AddLocation.Designer.cs">
-      <DependentUpon>AddLocation.cs</DependentUpon>
+    <Compile Include="Locations\AddLocations.Designer.cs">
+      <DependentUpon>AddLocations.cs</DependentUpon>
     </Compile>
     <Compile Include="Locations\EditLocations.cs">
       <SubType>Form</SubType>
@@ -97,14 +97,17 @@
       <DependentUpon>SuccessMessage.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Lecturer.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Tag.cs" />
     <Compile Include="Services\ILecturerService.cs" />
+    <Compile Include="Services\ILocationService.cs" />
     <Compile Include="Services\IStudentService.cs" />
     <Compile Include="Services\ISubjectService.cs" />
     <Compile Include="Services\LecturerService.cs" />
     <Compile Include="Services\ITagService.cs" />
+    <Compile Include="Services\LocationService.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\SubjectService.cs" />
     <Compile Include="Services\TagService.cs" />
@@ -164,8 +167,8 @@
     <EmbeddedResource Include="Lecturers\ManageLecturers.resx">
       <DependentUpon>ManageLecturers.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Locations\AddLocation.resx">
-      <DependentUpon>AddLocation.cs</DependentUpon>
+    <EmbeddedResource Include="Locations\AddLocations.resx">
+      <DependentUpon>AddLocations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Locations\EditLocations.resx">
       <DependentUpon>EditLocations.cs</DependentUpon>

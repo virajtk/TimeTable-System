@@ -149,5 +149,10 @@ namespace Time_Table_Management_System
         {
 
         }
+
+        private void radioButtonSem1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
