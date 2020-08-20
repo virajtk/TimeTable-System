@@ -1,4 +1,4 @@
-﻿using System;
+﻿using  System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Time_Table_Management_System.Lecturers;
 using Time_Table_Management_System.Students;
 using Time_Table_Management_System.Tags;
+using Time_Table_Management_System.Locations;
 
 namespace Time_Table_Management_System
 {
@@ -243,6 +244,7 @@ namespace Time_Table_Management_System
 
         private void btnAddLocation_Click(object sender, EventArgs e)
         {
+            openChildForm(new AddLocations());
             //..
             // your code
             //..
@@ -252,6 +254,7 @@ namespace Time_Table_Management_System
 
         private void btnManageLocations_Click(object sender, EventArgs e)
         {
+            openChildForm(new ManageLocations());
             //..
             // your code
             //..
