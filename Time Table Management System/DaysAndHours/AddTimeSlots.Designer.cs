@@ -44,6 +44,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnAddTimeSlot = new System.Windows.Forms.Button();
             this.errorProviderTimeSlot = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTimeSlots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSTMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSThours)).BeginInit();
@@ -54,16 +57,25 @@
             // 
             // dataGridTimeSlots
             // 
+            this.dataGridTimeSlots.AllowUserToAddRows = false;
+            this.dataGridTimeSlots.AllowUserToDeleteRows = false;
+            this.dataGridTimeSlots.AllowUserToResizeColumns = false;
+            this.dataGridTimeSlots.AllowUserToResizeRows = false;
             this.dataGridTimeSlots.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridTimeSlots.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridTimeSlots.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.StartTime,
+            this.EndTime});
             this.dataGridTimeSlots.Location = new System.Drawing.Point(87, 229);
             this.dataGridTimeSlots.Name = "dataGridTimeSlots";
             this.dataGridTimeSlots.RowHeadersWidth = 51;
             this.dataGridTimeSlots.RowTemplate.Height = 24;
             this.dataGridTimeSlots.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridTimeSlots.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridTimeSlots.Size = new System.Drawing.Size(734, 189);
             this.dataGridTimeSlots.TabIndex = 19;
-            this.dataGridTimeSlots.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridTimeSlots.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
             // 
             // title
             // 
@@ -113,11 +125,6 @@
             this.numericSTMinutes.Name = "numericSTMinutes";
             this.numericSTMinutes.Size = new System.Drawing.Size(111, 27);
             this.numericSTMinutes.TabIndex = 44;
-            this.numericSTMinutes.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // numericSThours
             // 
@@ -127,11 +134,6 @@
             this.numericSThours.Name = "numericSThours";
             this.numericSThours.Size = new System.Drawing.Size(111, 27);
             this.numericSThours.TabIndex = 43;
-            this.numericSThours.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // label5
             // 
@@ -167,11 +169,6 @@
             this.numericETMinutes.Name = "numericETMinutes";
             this.numericETMinutes.Size = new System.Drawing.Size(111, 27);
             this.numericETMinutes.TabIndex = 49;
-            this.numericETMinutes.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // numericETHours
             // 
@@ -181,11 +178,6 @@
             this.numericETHours.Name = "numericETHours";
             this.numericETHours.Size = new System.Drawing.Size(111, 27);
             this.numericETHours.TabIndex = 48;
-            this.numericETHours.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // label2
             // 
@@ -242,6 +234,30 @@
             // 
             this.errorProviderTimeSlot.ContainerControl = this;
             // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // StartTime
+            // 
+            this.StartTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StartTime.HeaderText = "Start Time";
+            this.StartTime.MinimumWidth = 6;
+            this.StartTime.Name = "StartTime";
+            this.StartTime.ReadOnly = true;
+            // 
+            // EndTime
+            // 
+            this.EndTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EndTime.HeaderText = "End Time";
+            this.EndTime.MinimumWidth = 6;
+            this.EndTime.Name = "EndTime";
+            this.EndTime.ReadOnly = true;
+            // 
             // AddTimeSlots
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -292,5 +308,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAddTimeSlot;
         private System.Windows.Forms.ErrorProvider errorProviderTimeSlot;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
     }
 }

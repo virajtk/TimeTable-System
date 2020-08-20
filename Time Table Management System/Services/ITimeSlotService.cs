@@ -10,5 +10,9 @@ namespace Time_Table_Management_System.Services
     interface ITimeSlotService
     {
         Boolean addTimeSlots(TimeSlot timeSlot);
+
+        List<TimeSlot> getAllTimeSlots();
+
+        TimeSlot getTimeSlot(int id);
     }
 }

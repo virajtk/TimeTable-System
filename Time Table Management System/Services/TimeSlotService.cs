@@ -46,5 +46,82 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
+
+
+        public List<TimeSlot> getAllTimeSlots()
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            List<TimeSlot> arrayTimeSlots = null;
+
+
+            try
+            {
+                string query = "SELECT * FROM timeslots";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+                arrayTimeSlots = new List<TimeSlot>();
+
+                while (rdr.Read())
+                {
+                    TimeSlot timeSlot = new TimeSlot();
+                    timeSlot.Id = rdr.GetInt32(0);
+                    timeSlot.StHours = rdr.GetInt32(1);
+                    timeSlot.StMinutes = rdr.GetInt32(2);
+                    timeSlot.EtHours = rdr.GetInt32(3);
+                    timeSlot.EtMinutes = rdr.GetInt32(4);
+
+
+                    arrayTimeSlots.Add(timeSlot);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return arrayTimeSlots;
+        }
+
+        public TimeSlot getTimeSlot(int id)
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            TimeSlot timeSlot = new TimeSlot();
+
+            try
+            {
+                string query = "SELECT * FROM timeslots WHERE id = @id";
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    timeSlot.Id = rdr.GetInt32(0);
+                    timeSlot.StHours = rdr.GetInt32(1);
+                    timeSlot.StMinutes = rdr.GetInt32(2);
+                    timeSlot.EtHours = rdr.GetInt32(3);
+                    timeSlot.EtMinutes = rdr.GetInt32(4);
+
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return timeSlot;
+        }
+
     }
 }

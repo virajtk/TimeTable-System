@@ -8,7 +8,7 @@ namespace Time_Table_Management_System.Models
 {
     class WorkingDaysHours
     {
-
+        private int id;
         private int noOfWorkingDays;
         private int monday;
         private int tuesday;
@@ -30,5 +30,6 @@ namespace Time_Table_Management_System.Models
         public int Sunday { get => sunday; set => sunday = value; }
         public int NoOfHours { get => noOfHours; set => noOfHours = value; }
         public int NoOfMinutes { get => noOfMinutes; set => noOfMinutes = value; }
+        public int Id { get => id; set => id = value; }
     }
 }

@@ -87,11 +87,6 @@
             this.numericNoOfDays.Name = "numericNoOfDays";
             this.numericNoOfDays.Size = new System.Drawing.Size(79, 27);
             this.numericNoOfDays.TabIndex = 30;
-            this.numericNoOfDays.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             this.numericNoOfDays.ValueChanged += new System.EventHandler(this.numericTuteHours_ValueChanged);
             // 
             // btnClose
@@ -195,11 +190,6 @@
             this.numericTPerDayHours.Name = "numericTPerDayHours";
             this.numericTPerDayHours.Size = new System.Drawing.Size(111, 27);
             this.numericTPerDayHours.TabIndex = 39;
-            this.numericTPerDayHours.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // numericTPerDayMinutes
             // 
@@ -209,11 +199,6 @@
             this.numericTPerDayMinutes.Name = "numericTPerDayMinutes";
             this.numericTPerDayMinutes.Size = new System.Drawing.Size(111, 27);
             this.numericTPerDayMinutes.TabIndex = 40;
-            this.numericTPerDayMinutes.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // errorAddWorkingDays
             // 

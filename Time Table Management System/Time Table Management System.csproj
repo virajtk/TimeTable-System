@@ -66,6 +66,12 @@
     <Compile Include="DaysAndHours\AddWorkingDaysHours.Designer.cs">
       <DependentUpon>AddWorkingDaysHours.cs</DependentUpon>
     </Compile>
+    <Compile Include="DaysAndHours\ManageWorkingDaysHours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaysAndHours\ManageWorkingDaysHours.Designer.cs">
+      <DependentUpon>ManageWorkingDaysHours.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturers\AddLecturer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DaysAndHours\AddWorkingDaysHours.resx">
       <DependentUpon>AddWorkingDaysHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaysAndHours\ManageWorkingDaysHours.resx">
+      <DependentUpon>ManageWorkingDaysHours.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturers\AddLecturer.resx">
       <DependentUpon>AddLecturer.cs</DependentUpon>

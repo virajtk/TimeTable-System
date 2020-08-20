@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,18 +17,30 @@ namespace Time_Table_Management_System.DaysAndHours
     public partial class AddTimeSlots : Form
     {
         private TimeSlot timeSlot = new TimeSlot();
+        private bool executedFirstTime;
+        private TimeSlot selectedTimeSlot;
+        private ITimeSlotService timeSlotService;
 
         public AddTimeSlots()
         {
             InitializeComponent();
+            executedFirstTime = true;
+            timeSlotService = new TimeSlotService();
+            populateData();
         }
 
-        
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void populateData()
         {
+            List<TimeSlot> timeSlotsArray = new List<TimeSlot>();
+            timeSlotsArray = timeSlotService.getAllTimeSlots();
+
+            foreach (TimeSlot timeSlot in timeSlotsArray)
+            {
+                dataGridTimeSlots.Rows.Add(timeSlot.Id, timeSlot.StHours + " : " + timeSlot.StMinutes, timeSlot.EtHours + " : " + timeSlot.EtMinutes);
+            }
 
         }
+
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -80,6 +93,7 @@ namespace Time_Table_Management_System.DaysAndHours
                 timeSlot.StMinutes = int.Parse(numericSTMinutes.Value.ToString());
                 timeSlot.EtHours = int.Parse(numericETHours.Value.ToString());
                 timeSlot.EtMinutes = int.Parse(numericETMinutes.Value.ToString());
+
                 #endregion
 
                 //Insert Data
@@ -88,6 +102,8 @@ namespace Time_Table_Management_System.DaysAndHours
                     SuccessMessage sc = new SuccessMessage("Working Days And Hours Added Successfully !");
                     sc.Show();
                     clear();
+                    dataGridTimeSlots.Rows.Clear();
+                    populateData();
 
 
                 }
@@ -98,5 +114,44 @@ namespace Time_Table_Management_System.DaysAndHours
                 }
             }
         }
+
+
+
+        private void dataGrid_Selection(object sender, EventArgs e)
+        {
+            if (executedFirstTime)
+            {
+                executedFirstTime = false;
+                return;
+            }
+            try
+            {
+                int selectedIndex = dataGridTimeSlots.SelectedRows[0].Index;
+                if (selectedIndex != -1)
+                {
+                    if (dataGridTimeSlots.SelectedRows[0].Cells[0].Value != null)
+                    {
+                        int id = int.Parse(dataGridTimeSlots.SelectedRows[0].Cells[0].Value.ToString());
+                        selectedTimeSlot = timeSlotService.getTimeSlot(id);
+
+                        #region Set data to Fields
+                        numericSThours.Value = selectedTimeSlot.StHours;
+                        numericSTMinutes.Value = selectedTimeSlot.StMinutes;
+                        numericETHours.Value = selectedTimeSlot.EtHours;
+                        numericETMinutes.Value = selectedTimeSlot.EtMinutes;
+
+                        #endregion
+
+                    }
+                }
+
+
+            }
+            catch (ArgumentOutOfRangeException es)
+            {
+                Console.WriteLine(es.Message);
+            }
+        }
+
     }
 }

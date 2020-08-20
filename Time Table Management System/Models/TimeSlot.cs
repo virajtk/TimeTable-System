@@ -8,6 +8,7 @@ namespace Time_Table_Management_System.Models
 {
     class TimeSlot
     {
+        private int id;
         private int stHours;
         private int stMinutes;
         private int etHours;
@@ -17,5 +18,6 @@ namespace Time_Table_Management_System.Models
         public int StMinutes { get => stMinutes; set => stMinutes = value; }
         public int EtHours { get => etHours; set => etHours = value; }
         public int EtMinutes { get => etMinutes; set => etMinutes = value; }
+        public int Id { get => id; set => id = value; }
     }
 }
