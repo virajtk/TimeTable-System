@@ -21,15 +21,5 @@ namespace Time_Table_Management_System
         {
             this.Close();
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxOfferdYear_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
