@@ -194,5 +194,10 @@ namespace Time_Table_Management_System.Lecturers
         {
 
         }
+
+        private void dataGridLecturers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

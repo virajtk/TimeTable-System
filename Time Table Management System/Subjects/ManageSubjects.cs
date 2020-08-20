@@ -21,5 +21,10 @@ namespace Time_Table_Management_System
         {
             this.Close();
         }
+
+        private void dataGridSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

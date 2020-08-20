@@ -64,9 +64,10 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.ForeColor = System.Drawing.SystemColors.Info;
-            this.button4.Location = new System.Drawing.Point(3, 2);
+            this.button4.Location = new System.Drawing.Point(2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(50, 25);
+            this.button4.Size = new System.Drawing.Size(38, 20);
             this.button4.TabIndex = 13;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = false;
@@ -76,11 +77,12 @@
             // 
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.SystemColors.Info;
-            this.title.Location = new System.Drawing.Point(116, 30);
+            this.title.Location = new System.Drawing.Point(87, 24);
+            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(254, 34);
+            this.title.Size = new System.Drawing.Size(180, 26);
             this.title.TabIndex = 14;
             this.title.Text = "Manage Subjects";
             // 
@@ -91,21 +93,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridSubjects.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dataGridSubjects.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridSubjects.Location = new System.Drawing.Point(31, 82);
+            this.dataGridSubjects.Location = new System.Drawing.Point(23, 67);
+            this.dataGridSubjects.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridSubjects.Name = "dataGridSubjects";
             this.dataGridSubjects.ReadOnly = true;
             this.dataGridSubjects.RowHeadersWidth = 51;
             this.dataGridSubjects.RowTemplate.Height = 24;
-            this.dataGridSubjects.Size = new System.Drawing.Size(679, 154);
+            this.dataGridSubjects.Size = new System.Drawing.Size(509, 125);
             this.dataGridSubjects.TabIndex = 5;
+            this.dataGridSubjects.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSubjects_CellContentClick);
             // 
             // btnClear
             // 
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(716, 176);
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(537, 143);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(120, 40);
+            this.btnClear.Size = new System.Drawing.Size(90, 32);
             this.btnClear.TabIndex = 52;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -113,10 +118,11 @@
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(716, 129);
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(537, 105);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 40);
+            this.btnDelete.Size = new System.Drawing.Size(90, 32);
             this.btnDelete.TabIndex = 51;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -124,10 +130,11 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(716, 82);
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(537, 67);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 40);
+            this.btnUpdate.Size = new System.Drawing.Size(90, 32);
             this.btnUpdate.TabIndex = 50;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -136,9 +143,10 @@
             // 
             this.numericEvaluationHours.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.numericEvaluationHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericEvaluationHours.Location = new System.Drawing.Point(753, 383);
+            this.numericEvaluationHours.Location = new System.Drawing.Point(565, 311);
+            this.numericEvaluationHours.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericEvaluationHours.Name = "numericEvaluationHours";
-            this.numericEvaluationHours.Size = new System.Drawing.Size(79, 27);
+            this.numericEvaluationHours.Size = new System.Drawing.Size(59, 23);
             this.numericEvaluationHours.TabIndex = 69;
             this.numericEvaluationHours.Value = new decimal(new int[] {
             1,
@@ -153,9 +161,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Info;
-            this.label8.Location = new System.Drawing.Point(526, 386);
+            this.label8.Location = new System.Drawing.Point(394, 314);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(220, 20);
+            this.label8.Size = new System.Drawing.Size(186, 17);
             this.label8.TabIndex = 68;
             this.label8.Text = "Number of Evaluation Hours";
             // 
@@ -163,9 +172,10 @@
             // 
             this.numericLabHours.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.numericLabHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericLabHours.Location = new System.Drawing.Point(753, 340);
+            this.numericLabHours.Location = new System.Drawing.Point(565, 276);
+            this.numericLabHours.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericLabHours.Name = "numericLabHours";
-            this.numericLabHours.Size = new System.Drawing.Size(79, 27);
+            this.numericLabHours.Size = new System.Drawing.Size(59, 23);
             this.numericLabHours.TabIndex = 67;
             this.numericLabHours.Value = new decimal(new int[] {
             2,
@@ -180,9 +190,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(526, 343);
+            this.label7.Location = new System.Drawing.Point(394, 279);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(171, 20);
+            this.label7.Size = new System.Drawing.Size(144, 17);
             this.label7.TabIndex = 66;
             this.label7.Text = "Number of Lab Hours";
             // 
@@ -190,9 +201,10 @@
             // 
             this.numericTuteHours.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.numericTuteHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericTuteHours.Location = new System.Drawing.Point(753, 298);
+            this.numericTuteHours.Location = new System.Drawing.Point(565, 242);
+            this.numericTuteHours.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericTuteHours.Name = "numericTuteHours";
-            this.numericTuteHours.Size = new System.Drawing.Size(79, 27);
+            this.numericTuteHours.Size = new System.Drawing.Size(59, 23);
             this.numericTuteHours.TabIndex = 65;
             this.numericTuteHours.Value = new decimal(new int[] {
             1,
@@ -207,9 +219,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(526, 301);
+            this.label6.Location = new System.Drawing.Point(394, 245);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(199, 20);
+            this.label6.Size = new System.Drawing.Size(168, 17);
             this.label6.TabIndex = 64;
             this.label6.Text = "Number of Tutorial Hours";
             // 
@@ -217,9 +230,10 @@
             // 
             this.numericLecHours.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.numericLecHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericLecHours.Location = new System.Drawing.Point(755, 257);
+            this.numericLecHours.Location = new System.Drawing.Point(566, 209);
+            this.numericLecHours.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.numericLecHours.Name = "numericLecHours";
-            this.numericLecHours.Size = new System.Drawing.Size(79, 27);
+            this.numericLecHours.Size = new System.Drawing.Size(59, 23);
             this.numericLecHours.TabIndex = 63;
             this.numericLecHours.Value = new decimal(new int[] {
             2,
@@ -231,18 +245,20 @@
             // 
             this.textBoxSubCode.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxSubCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSubCode.Location = new System.Drawing.Point(199, 383);
+            this.textBoxSubCode.Location = new System.Drawing.Point(149, 311);
+            this.textBoxSubCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSubCode.Name = "textBoxSubCode";
-            this.textBoxSubCode.Size = new System.Drawing.Size(248, 27);
+            this.textBoxSubCode.Size = new System.Drawing.Size(187, 23);
             this.textBoxSubCode.TabIndex = 62;
             // 
             // textBoxSubName
             // 
             this.textBoxSubName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxSubName.Location = new System.Drawing.Point(199, 340);
+            this.textBoxSubName.Location = new System.Drawing.Point(149, 276);
+            this.textBoxSubName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxSubName.Name = "textBoxSubName";
-            this.textBoxSubName.Size = new System.Drawing.Size(248, 27);
+            this.textBoxSubName.Size = new System.Drawing.Size(187, 23);
             this.textBoxSubName.TabIndex = 61;
             // 
             // radioButtonSem2
@@ -250,9 +266,10 @@
             this.radioButtonSem2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.radioButtonSem2.AutoSize = true;
             this.radioButtonSem2.ForeColor = System.Drawing.SystemColors.Info;
-            this.radioButtonSem2.Location = new System.Drawing.Point(335, 301);
+            this.radioButtonSem2.Location = new System.Drawing.Point(251, 245);
+            this.radioButtonSem2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonSem2.Name = "radioButtonSem2";
-            this.radioButtonSem2.Size = new System.Drawing.Size(112, 21);
+            this.radioButtonSem2.Size = new System.Drawing.Size(86, 17);
             this.radioButtonSem2.TabIndex = 60;
             this.radioButtonSem2.TabStop = true;
             this.radioButtonSem2.Text = "2st Semester";
@@ -263,9 +280,10 @@
             this.radioButtonSem1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.radioButtonSem1.AutoSize = true;
             this.radioButtonSem1.ForeColor = System.Drawing.SystemColors.Info;
-            this.radioButtonSem1.Location = new System.Drawing.Point(199, 301);
+            this.radioButtonSem1.Location = new System.Drawing.Point(149, 245);
+            this.radioButtonSem1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radioButtonSem1.Name = "radioButtonSem1";
-            this.radioButtonSem1.Size = new System.Drawing.Size(112, 21);
+            this.radioButtonSem1.Size = new System.Drawing.Size(86, 17);
             this.radioButtonSem1.TabIndex = 59;
             this.radioButtonSem1.TabStop = true;
             this.radioButtonSem1.Text = "1st Semester";
@@ -278,9 +296,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(528, 260);
+            this.label5.Location = new System.Drawing.Point(396, 211);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(200, 20);
+            this.label5.Size = new System.Drawing.Size(168, 17);
             this.label5.TabIndex = 58;
             this.label5.Text = "Number of Lecture Hours";
             // 
@@ -291,9 +310,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(48, 386);
+            this.label4.Location = new System.Drawing.Point(36, 314);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(109, 20);
+            this.label4.Size = new System.Drawing.Size(92, 17);
             this.label4.TabIndex = 57;
             this.label4.Text = "Subject Code";
             // 
@@ -304,9 +324,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(48, 343);
+            this.label3.Location = new System.Drawing.Point(36, 279);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(114, 20);
+            this.label3.Size = new System.Drawing.Size(96, 17);
             this.label3.TabIndex = 56;
             this.label3.Text = "Subject Name";
             // 
@@ -317,9 +338,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(48, 301);
+            this.label2.Location = new System.Drawing.Point(36, 245);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 20);
+            this.label2.Size = new System.Drawing.Size(112, 17);
             this.label2.TabIndex = 55;
             this.label2.Text = "Offerd Semester";
             // 
@@ -334,9 +356,10 @@
             "2nd Year",
             "3rd Year",
             "4th Year"});
-            this.comboBoxOfferdYear.Location = new System.Drawing.Point(201, 256);
+            this.comboBoxOfferdYear.Location = new System.Drawing.Point(151, 208);
+            this.comboBoxOfferdYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxOfferdYear.Name = "comboBoxOfferdYear";
-            this.comboBoxOfferdYear.Size = new System.Drawing.Size(248, 28);
+            this.comboBoxOfferdYear.Size = new System.Drawing.Size(187, 25);
             this.comboBoxOfferdYear.TabIndex = 54;
             // 
             // label1
@@ -346,18 +369,19 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(50, 260);
+            this.label1.Location = new System.Drawing.Point(38, 211);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 20);
+            this.label1.Size = new System.Drawing.Size(82, 17);
             this.label1.TabIndex = 53;
             this.label1.Text = "Offerd Year";
             // 
             // ManageSubjects
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(881, 442);
+            this.ClientSize = new System.Drawing.Size(661, 359);
             this.Controls.Add(this.numericEvaluationHours);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.numericLabHours);
@@ -382,6 +406,7 @@
             this.Controls.Add(this.button4);
             this.Controls.Add(this.dataGridSubjects);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManageSubjects";
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridSubjects)).EndInit();

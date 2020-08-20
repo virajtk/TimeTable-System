@@ -11,6 +11,7 @@ namespace Time_Table_Management_System.Services
     interface ILocationService
     {
         Boolean addLocation(Location location);
-        ArrayList getAllTags();
+        List<Location> getAllLocations();
+        Location GetLocation(int id);
     }
 }
