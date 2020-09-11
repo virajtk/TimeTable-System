@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Time_Table_Management_System.Messages;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Services;
 
@@ -64,10 +65,21 @@ namespace Time_Table_Management_System.DaysAndHours
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if(textBoxWorkingDays.Text != String.Empty)
-            {
+            
 
+                if (workingDaysHoursService.updateWorkingDaysHours(int.Parse(textBoxNoOfDays.Text)))
+                {
+                    SuccessMessage sm = new SuccessMessage("Number of Working Days Updated");
+                    sm.Show();
+                    clear();
+                    populateData();
             }
+                else
+                {
+                    ErrorMessage em = new ErrorMessage("Oops, Somthing went wrong");
+                    em.Show();
+                }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -84,10 +96,18 @@ namespace Time_Table_Management_System.DaysAndHours
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            SuccessMessage sm = new SuccessMessage("Working Days deleted Sucessfully");
+            sm.Show();
+            btnDaysCount.Text = String.Empty;
+            clear();
         }
 
         private void btnClear_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        public void clear()
         {
             textBoxNoOfDays.Text = String.Empty;
             textBoxWorkingDays.Text = String.Empty;

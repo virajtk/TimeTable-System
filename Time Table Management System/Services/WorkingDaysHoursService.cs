@@ -102,5 +102,42 @@ namespace Time_Table_Management_System.Services
         }
 
 
+
+
+        public Boolean updateWorkingDaysHours(int workingDaysHours)
+        {
+            Boolean result = false;
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            try
+            {
+                string query = "UPDATE workingdayshours SET noOfWorkingDays = @noworkingdays WHERE id = 2";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@noworkingdays", workingDaysHours);
+
+                cmd.Prepare();
+
+
+                if (cmd.ExecuteNonQuery() == 1)
+                    result = true;
+                else
+                    result = false;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
+        }
+
+
     }
 }
