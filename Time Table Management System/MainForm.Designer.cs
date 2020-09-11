@@ -52,7 +52,7 @@
             this.btnAddLecturer = new System.Windows.Forms.Button();
             this.btnLecturers = new System.Windows.Forms.Button();
             this.panelWorkingHoursSubMenu = new System.Windows.Forms.Panel();
-            this.btnAddTimeSlots = new System.Windows.Forms.Button();
+            this.btnManageDaysHours = new System.Windows.Forms.Button();
             this.btnAddWorkingDaysHours = new System.Windows.Forms.Button();
             this.btnWorkingHours = new System.Windows.Forms.Button();
             this.btnDashBoard = new System.Windows.Forms.Button();
@@ -76,6 +76,7 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.timerDateNTime = new System.Windows.Forms.Timer(this.components);
+            this.btnManageTimeSlots = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelLocationsSubMenu.SuspendLayout();
             this.panelTagsSubMenu.SuspendLayout();
@@ -123,7 +124,7 @@
             this.panelLocationsSubMenu.Controls.Add(this.btnManageLocations);
             this.panelLocationsSubMenu.Controls.Add(this.btnAddLocation);
             this.panelLocationsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLocationsSubMenu.Location = new System.Drawing.Point(0, 923);
+            this.panelLocationsSubMenu.Location = new System.Drawing.Point(0, 968);
             this.panelLocationsSubMenu.Name = "panelLocationsSubMenu";
             this.panelLocationsSubMenu.Size = new System.Drawing.Size(269, 94);
             this.panelLocationsSubMenu.TabIndex = 13;
@@ -166,7 +167,7 @@
             this.btnLocations.FlatAppearance.BorderSize = 0;
             this.btnLocations.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocations.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLocations.Location = new System.Drawing.Point(0, 878);
+            this.btnLocations.Location = new System.Drawing.Point(0, 923);
             this.btnLocations.Name = "btnLocations";
             this.btnLocations.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLocations.Size = new System.Drawing.Size(269, 45);
@@ -182,7 +183,7 @@
             this.panelTagsSubMenu.Controls.Add(this.btnManageTags);
             this.panelTagsSubMenu.Controls.Add(this.btnAddTag);
             this.panelTagsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTagsSubMenu.Location = new System.Drawing.Point(0, 784);
+            this.panelTagsSubMenu.Location = new System.Drawing.Point(0, 829);
             this.panelTagsSubMenu.Name = "panelTagsSubMenu";
             this.panelTagsSubMenu.Size = new System.Drawing.Size(269, 94);
             this.panelTagsSubMenu.TabIndex = 11;
@@ -225,7 +226,7 @@
             this.btnTags.FlatAppearance.BorderSize = 0;
             this.btnTags.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTags.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnTags.Location = new System.Drawing.Point(0, 739);
+            this.btnTags.Location = new System.Drawing.Point(0, 784);
             this.btnTags.Name = "btnTags";
             this.btnTags.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnTags.Size = new System.Drawing.Size(269, 45);
@@ -241,7 +242,7 @@
             this.panelStudentsSubMenu.Controls.Add(this.btnManageStudents);
             this.panelStudentsSubMenu.Controls.Add(this.btnAddStudents);
             this.panelStudentsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelStudentsSubMenu.Location = new System.Drawing.Point(0, 645);
+            this.panelStudentsSubMenu.Location = new System.Drawing.Point(0, 690);
             this.panelStudentsSubMenu.Name = "panelStudentsSubMenu";
             this.panelStudentsSubMenu.Size = new System.Drawing.Size(269, 94);
             this.panelStudentsSubMenu.TabIndex = 9;
@@ -284,7 +285,7 @@
             this.btnStudents.FlatAppearance.BorderSize = 0;
             this.btnStudents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStudents.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnStudents.Location = new System.Drawing.Point(0, 600);
+            this.btnStudents.Location = new System.Drawing.Point(0, 645);
             this.btnStudents.Name = "btnStudents";
             this.btnStudents.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnStudents.Size = new System.Drawing.Size(269, 45);
@@ -300,7 +301,7 @@
             this.panelSubjectsSubMenu.Controls.Add(this.btnManageSubjects);
             this.panelSubjectsSubMenu.Controls.Add(this.btnAddSubject);
             this.panelSubjectsSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubjectsSubMenu.Location = new System.Drawing.Point(0, 506);
+            this.panelSubjectsSubMenu.Location = new System.Drawing.Point(0, 551);
             this.panelSubjectsSubMenu.Name = "panelSubjectsSubMenu";
             this.panelSubjectsSubMenu.Size = new System.Drawing.Size(269, 94);
             this.panelSubjectsSubMenu.TabIndex = 7;
@@ -343,7 +344,7 @@
             this.btnSubjects.FlatAppearance.BorderSize = 0;
             this.btnSubjects.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubjects.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnSubjects.Location = new System.Drawing.Point(0, 461);
+            this.btnSubjects.Location = new System.Drawing.Point(0, 506);
             this.btnSubjects.Name = "btnSubjects";
             this.btnSubjects.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnSubjects.Size = new System.Drawing.Size(269, 45);
@@ -359,7 +360,7 @@
             this.panelLecturersSubMenu.Controls.Add(this.btnManageLecturers);
             this.panelLecturersSubMenu.Controls.Add(this.btnAddLecturer);
             this.panelLecturersSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelLecturersSubMenu.Location = new System.Drawing.Point(0, 367);
+            this.panelLecturersSubMenu.Location = new System.Drawing.Point(0, 412);
             this.panelLecturersSubMenu.Name = "panelLecturersSubMenu";
             this.panelLecturersSubMenu.Size = new System.Drawing.Size(269, 94);
             this.panelLecturersSubMenu.TabIndex = 5;
@@ -402,7 +403,7 @@
             this.btnLecturers.FlatAppearance.BorderSize = 0;
             this.btnLecturers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLecturers.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnLecturers.Location = new System.Drawing.Point(0, 322);
+            this.btnLecturers.Location = new System.Drawing.Point(0, 367);
             this.btnLecturers.Name = "btnLecturers";
             this.btnLecturers.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
             this.btnLecturers.Size = new System.Drawing.Size(269, 45);
@@ -415,11 +416,13 @@
             // panelWorkingHoursSubMenu
             // 
             this.panelWorkingHoursSubMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(32)))), ((int)(((byte)(39)))));
-            this.panelWorkingHoursSubMenu.Controls.Add(this.btnAddTimeSlots);
+            this.panelWorkingHoursSubMenu.Controls.Add(this.btnManageTimeSlots);
+            this.panelWorkingHoursSubMenu.Controls.Add(this.btnManageDaysHours);
             this.panelWorkingHoursSubMenu.Controls.Add(this.btnAddWorkingDaysHours);
             this.panelWorkingHoursSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelWorkingHoursSubMenu.Location = new System.Drawing.Point(0, 228);
             this.panelWorkingHoursSubMenu.Name = "panelWorkingHoursSubMenu";
+          
             this.panelWorkingHoursSubMenu.Size = new System.Drawing.Size(269, 94);
             this.panelWorkingHoursSubMenu.TabIndex = 3;
             // 
@@ -438,6 +441,27 @@
             this.btnAddTimeSlots.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddTimeSlots.UseVisualStyleBackColor = true;
             this.btnAddTimeSlots.Click += new System.EventHandler(this.button3_Click);
+          
+          
+            this.panelWorkingHoursSubMenu.Size = new System.Drawing.Size(265, 139);
+            this.panelWorkingHoursSubMenu.TabIndex = 3;
+            // 
+            // btnManageDaysHours
+            // 
+            this.btnManageDaysHours.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageDaysHours.FlatAppearance.BorderSize = 0;
+            this.btnManageDaysHours.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageDaysHours.ForeColor = System.Drawing.Color.LightGray;
+            this.btnManageDaysHours.Location = new System.Drawing.Point(0, 40);
+            this.btnManageDaysHours.Name = "btnManageDaysHours";
+            this.btnManageDaysHours.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnManageDaysHours.Size = new System.Drawing.Size(265, 40);
+            this.btnManageDaysHours.TabIndex = 1;
+            this.btnManageDaysHours.Text = "Manage Days/Hours";
+            this.btnManageDaysHours.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageDaysHours.UseVisualStyleBackColor = true;
+            this.btnManageDaysHours.Click += new System.EventHandler(this.button3_Click);
+
             // 
             // btnAddWorkingDaysHours
             // 
@@ -710,6 +734,22 @@
             this.timerDateNTime.Enabled = true;
             this.timerDateNTime.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnManageTimeSlots
+            // 
+            this.btnManageTimeSlots.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnManageTimeSlots.FlatAppearance.BorderSize = 0;
+            this.btnManageTimeSlots.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnManageTimeSlots.ForeColor = System.Drawing.Color.LightGray;
+            this.btnManageTimeSlots.Location = new System.Drawing.Point(0, 80);
+            this.btnManageTimeSlots.Name = "btnManageTimeSlots";
+            this.btnManageTimeSlots.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnManageTimeSlots.Size = new System.Drawing.Size(265, 40);
+            this.btnManageTimeSlots.TabIndex = 2;
+            this.btnManageTimeSlots.Text = "Manage Time Slots";
+            this.btnManageTimeSlots.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnManageTimeSlots.UseVisualStyleBackColor = true;
+            this.btnManageTimeSlots.Click += new System.EventHandler(this.btnManageTimeSlots_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -776,7 +816,7 @@
         private System.Windows.Forms.Button btnAddLecturer;
         private System.Windows.Forms.Button btnLecturers;
         private System.Windows.Forms.Panel panelWorkingHoursSubMenu;
-        private System.Windows.Forms.Button btnAddTimeSlots;
+        private System.Windows.Forms.Button btnManageDaysHours;
         private System.Windows.Forms.Button btnAddWorkingDaysHours;
         private System.Windows.Forms.Button btnWorkingHours;
         private System.Windows.Forms.Button btnDashBoard;
@@ -798,6 +838,7 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label devTeam;
         private System.Windows.Forms.Timer timerDateNTime;
+        private System.Windows.Forms.Button btnManageTimeSlots;
     }
 }
 

@@ -91,6 +91,12 @@ namespace Time_Table_Management_System
 
         private void button3_Click(object sender, EventArgs e)
         {
+            openChildForm(new ManageWorkingDaysHours());
+
+            hideSubMenu();
+        }
+        private void btnManageTimeSlots_Click(object sender, EventArgs e)
+        {
             openChildForm(new AddTimeSlots());
 
             hideSubMenu();
