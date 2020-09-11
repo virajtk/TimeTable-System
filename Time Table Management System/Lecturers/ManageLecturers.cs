@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Time_Table_Management_System.Messages;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Services;
 
@@ -68,7 +69,63 @@ namespace Time_Table_Management_System.Lecturers
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (textBoxLecturerName.Text == String.Empty)
+            {
+                textBoxLecturerName.Focus();
+                errorManageLecturers.SetError(textBoxLecturerName, "Please Enter Lecturer Name");
+            }
+            else if (comboBoxFaculty.SelectedIndex == -1)
+            {
+                comboBoxFaculty.Focus();
+                errorManageLecturers.SetError(comboBoxFaculty, "Please Select Faculty");
+            }
+            else if (textBoxDepartment.Text == String.Empty)
+            {
+                textBoxDepartment.Focus();
+                errorManageLecturers.SetError(textBoxDepartment, "Please Enter Department");
+            }
+            else if (comboBoxCenter.SelectedIndex == -1)
+            {
+                comboBoxCenter.Focus();
+                errorManageLecturers.SetError(comboBoxCenter, "Please Select Center");
+            }
+            else if (textBoxRank.Text == String.Empty)
+            {
+                btnGenerateRank.Focus();
+                ErrorMessage em = new ErrorMessage("Please Generate Rank before Save");
+                em.Show();
+            }
+            else
+            {
+                Lecturer lecturer = new Lecturer();
 
+                #region Set Data to Object
+                // Set Data to model
+                lecturer.Name = textBoxLecturerName.Text.Trim();
+                lecturer.EmployeeID = textBoxEmployeeID.Text.Trim();
+                lecturer.Faculty = comboBoxFaculty.SelectedItem.ToString();
+                lecturer.Department = textBoxDepartment.Text.Trim();
+                lecturer.Center = comboBoxCenter.SelectedItem.ToString();
+                lecturer.Building = comboBoxBuilding.SelectedItem.ToString();
+                lecturer.Level = int.Parse(comboBoxLevel.SelectedItem.ToString());
+                lecturer.Rank = textBoxRank.Text.Trim();
+                #endregion
+
+                //Insert Data
+                if (lecturerService.updateLecturer(selectedLec.Id,lecturer))
+                {
+                    SuccessMessage sc = new SuccessMessage("Lecturer Updated Successfully !");
+                    sc.Show();
+                    dataGridLecturers.Rows.Clear();
+                    populateData();
+                    clear();
+                }
+                else
+                {
+                    ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
+                    ec.Show();
+                }
+            }
         }
 
         private void dataGrid_Selection(object sender, EventArgs e)
@@ -192,7 +249,40 @@ namespace Time_Table_Management_System.Lecturers
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (lecturerService.deleteLecturer(selectedLec.Id))
+            {
+                SuccessMessage sm = new SuccessMessage("Lecturer killed Successfully");
+                sm.Show();
+                dataGridLecturers.Rows.Clear();
+                populateData();
+                clear();
+            }
+            else
+            {
+                ErrorMessage em = new ErrorMessage("Oops, Somthing went wrong..");
+                em.Show();
+            }
+        }
 
+        private void btnGenerateRank_Click(object sender, EventArgs e)
+        {
+            if (textBoxEmployeeID.Text == String.Empty)
+            {
+                textBoxEmployeeID.Focus();
+                errorManageLecturers.SetError(textBoxEmployeeID, "Please Enter Employee ID");
+            }
+            else if (comboBoxLevel.SelectedIndex == -1)
+            {
+                comboBoxLevel.Focus();
+                errorManageLecturers.SetError(comboBoxLevel, "Please Select Level");
+            }
+            else
+            {
+                textBoxRank.Text = comboBoxLevel.SelectedItem + "." + textBoxEmployeeID.Text.Trim();
+                textBoxEmployeeID.ReadOnly = true;
+                comboBoxLevel.Enabled = false;
+                btnGenerateRank.Enabled = false;
+            }
         }
 
         private void dataGridLecturers_CellContentClick(object sender, DataGridViewCellEventArgs e)
