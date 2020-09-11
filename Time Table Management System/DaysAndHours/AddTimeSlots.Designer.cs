@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridTimeSlots = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.title = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,9 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnAddTimeSlot = new System.Windows.Forms.Button();
             this.errorProviderTimeSlot = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTimeSlots)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSTMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSThours)).BeginInit();
@@ -67,15 +68,39 @@
             this.Id,
             this.StartTime,
             this.EndTime});
-            this.dataGridTimeSlots.Location = new System.Drawing.Point(87, 229);
+            this.dataGridTimeSlots.Location = new System.Drawing.Point(87, 256);
             this.dataGridTimeSlots.Name = "dataGridTimeSlots";
             this.dataGridTimeSlots.RowHeadersWidth = 51;
             this.dataGridTimeSlots.RowTemplate.Height = 24;
             this.dataGridTimeSlots.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridTimeSlots.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridTimeSlots.Size = new System.Drawing.Size(734, 189);
+            this.dataGridTimeSlots.Size = new System.Drawing.Size(734, 162);
             this.dataGridTimeSlots.TabIndex = 19;
             this.dataGridTimeSlots.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
+            // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            // 
+            // StartTime
+            // 
+            this.StartTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.StartTime.HeaderText = "Start Time";
+            this.StartTime.MinimumWidth = 6;
+            this.StartTime.Name = "StartTime";
+            this.StartTime.ReadOnly = true;
+            // 
+            // EndTime
+            // 
+            this.EndTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.EndTime.HeaderText = "End Time";
+            this.EndTime.MinimumWidth = 6;
+            this.EndTime.Name = "EndTime";
+            this.EndTime.ReadOnly = true;
             // 
             // title
             // 
@@ -111,7 +136,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(83, 117);
+            this.label1.Location = new System.Drawing.Point(83, 85);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 28;
@@ -121,7 +146,7 @@
             // 
             this.numericSTMinutes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericSTMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericSTMinutes.Location = new System.Drawing.Point(435, 115);
+            this.numericSTMinutes.Location = new System.Drawing.Point(435, 83);
             this.numericSTMinutes.Name = "numericSTMinutes";
             this.numericSTMinutes.Size = new System.Drawing.Size(111, 27);
             this.numericSTMinutes.TabIndex = 44;
@@ -130,7 +155,7 @@
             // 
             this.numericSThours.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericSThours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericSThours.Location = new System.Drawing.Point(217, 115);
+            this.numericSThours.Location = new System.Drawing.Point(217, 83);
             this.numericSThours.Name = "numericSThours";
             this.numericSThours.Size = new System.Drawing.Size(111, 27);
             this.numericSThours.TabIndex = 43;
@@ -142,7 +167,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(563, 120);
+            this.label5.Location = new System.Drawing.Point(563, 88);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 42;
@@ -155,7 +180,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(346, 120);
+            this.label4.Location = new System.Drawing.Point(346, 88);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 41;
@@ -165,7 +190,7 @@
             // 
             this.numericETMinutes.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericETMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericETMinutes.Location = new System.Drawing.Point(435, 158);
+            this.numericETMinutes.Location = new System.Drawing.Point(435, 195);
             this.numericETMinutes.Name = "numericETMinutes";
             this.numericETMinutes.Size = new System.Drawing.Size(111, 27);
             this.numericETMinutes.TabIndex = 49;
@@ -174,7 +199,7 @@
             // 
             this.numericETHours.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericETHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericETHours.Location = new System.Drawing.Point(217, 158);
+            this.numericETHours.Location = new System.Drawing.Point(217, 195);
             this.numericETHours.Name = "numericETHours";
             this.numericETHours.Size = new System.Drawing.Size(111, 27);
             this.numericETHours.TabIndex = 48;
@@ -186,7 +211,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(563, 163);
+            this.label2.Location = new System.Drawing.Point(563, 200);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 47;
@@ -199,7 +224,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(346, 163);
+            this.label3.Location = new System.Drawing.Point(346, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 20);
             this.label3.TabIndex = 46;
@@ -212,7 +237,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(83, 160);
+            this.label6.Location = new System.Drawing.Point(83, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 20);
             this.label6.TabIndex = 45;
@@ -234,29 +259,19 @@
             // 
             this.errorProviderTimeSlot.ContainerControl = this;
             // 
-            // Id
+            // label7
             // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            // 
-            // StartTime
-            // 
-            this.StartTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.StartTime.HeaderText = "Start Time";
-            this.StartTime.MinimumWidth = 6;
-            this.StartTime.Name = "StartTime";
-            this.StartTime.ReadOnly = true;
-            // 
-            // EndTime
-            // 
-            this.EndTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.EndTime.HeaderText = "End Time";
-            this.EndTime.MinimumWidth = 6;
-            this.EndTime.Name = "EndTime";
-            this.EndTime.ReadOnly = true;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.Info;
+            this.label7.Location = new System.Drawing.Point(83, 138);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 20);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "Start Time";
+            
             // 
             // AddTimeSlots
             // 
@@ -264,6 +279,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(881, 442);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnAddTimeSlot);
             this.Controls.Add(this.numericETMinutes);
             this.Controls.Add(this.numericETHours);
@@ -311,5 +327,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
+        private System.Windows.Forms.Label label7;
     }
 }

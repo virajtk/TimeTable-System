@@ -12,5 +12,7 @@ namespace Time_Table_Management_System.Services
         Boolean addWorkingDaysHours(WorkingDaysHours workingDaysHours);
 
         List<WorkingDaysHours> getWorkingDaysHours();
+
+        Boolean updateWorkingDaysHours(int workingDaysHours);
     }
 }

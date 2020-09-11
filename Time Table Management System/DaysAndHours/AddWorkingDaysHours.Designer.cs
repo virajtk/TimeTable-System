@@ -81,11 +81,17 @@
             // 
             // numericNoOfDays
             // 
+            this.numericNoOfDays.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.numericNoOfDays.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericNoOfDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericNoOfDays.Location = new System.Drawing.Point(295, 115);
+            this.numericNoOfDays.Location = new System.Drawing.Point(297, 117);
+            this.numericNoOfDays.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.numericNoOfDays.Name = "numericNoOfDays";
-            this.numericNoOfDays.Size = new System.Drawing.Size(79, 27);
+            this.numericNoOfDays.Size = new System.Drawing.Size(111, 27);
             this.numericNoOfDays.TabIndex = 30;
             this.numericNoOfDays.ValueChanged += new System.EventHandler(this.numericTuteHours_ValueChanged);
             // 
@@ -186,7 +192,7 @@
             // 
             this.numericTPerDayHours.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericTPerDayHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericTPerDayHours.Location = new System.Drawing.Point(295, 262);
+            this.numericTPerDayHours.Location = new System.Drawing.Point(297, 263);
             this.numericTPerDayHours.Name = "numericTPerDayHours";
             this.numericTPerDayHours.Size = new System.Drawing.Size(111, 27);
             this.numericTPerDayHours.TabIndex = 39;
@@ -206,80 +212,94 @@
             // 
             // checkBoxMonday
             // 
+            this.checkBoxMonday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxMonday.AutoSize = true;
             this.checkBoxMonday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxMonday.Location = new System.Drawing.Point(295, 174);
+            this.checkBoxMonday.Location = new System.Drawing.Point(297, 174);
             this.checkBoxMonday.Name = "checkBoxMonday";
             this.checkBoxMonday.Size = new System.Drawing.Size(80, 21);
             this.checkBoxMonday.TabIndex = 41;
             this.checkBoxMonday.Text = "Monday";
             this.checkBoxMonday.UseVisualStyleBackColor = true;
+            this.checkBoxMonday.CheckedChanged += new System.EventHandler(this.checkBoxMonday_CheckedChanged);
             // 
             // checkBoxTuesday
             // 
+            this.checkBoxTuesday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxTuesday.AutoSize = true;
             this.checkBoxTuesday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxTuesday.Location = new System.Drawing.Point(399, 174);
+            this.checkBoxTuesday.Location = new System.Drawing.Point(401, 174);
             this.checkBoxTuesday.Name = "checkBoxTuesday";
             this.checkBoxTuesday.Size = new System.Drawing.Size(85, 21);
             this.checkBoxTuesday.TabIndex = 42;
             this.checkBoxTuesday.Text = "Tuesday";
             this.checkBoxTuesday.UseVisualStyleBackColor = true;
+            this.checkBoxTuesday.CheckedChanged += new System.EventHandler(this.checkBoxTuesday_CheckedChanged);
             // 
             // checkBoxSunday
             // 
+            this.checkBoxSunday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxSunday.AutoSize = true;
             this.checkBoxSunday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxSunday.Location = new System.Drawing.Point(400, 211);
+            this.checkBoxSunday.Location = new System.Drawing.Point(402, 211);
             this.checkBoxSunday.Name = "checkBoxSunday";
             this.checkBoxSunday.Size = new System.Drawing.Size(78, 21);
             this.checkBoxSunday.TabIndex = 43;
             this.checkBoxSunday.Text = "Sunday";
             this.checkBoxSunday.UseVisualStyleBackColor = true;
+            this.checkBoxSunday.CheckedChanged += new System.EventHandler(this.checkBoxSunday_CheckedChanged);
             // 
             // checkBoxFriday
             // 
+            this.checkBoxFriday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxFriday.AutoSize = true;
             this.checkBoxFriday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxFriday.Location = new System.Drawing.Point(718, 174);
+            this.checkBoxFriday.Location = new System.Drawing.Point(720, 174);
             this.checkBoxFriday.Name = "checkBoxFriday";
             this.checkBoxFriday.Size = new System.Drawing.Size(69, 21);
             this.checkBoxFriday.TabIndex = 44;
             this.checkBoxFriday.Text = "Friday";
             this.checkBoxFriday.UseVisualStyleBackColor = true;
+            this.checkBoxFriday.CheckedChanged += new System.EventHandler(this.checkBoxFriday_CheckedChanged);
             // 
             // checkBoxThursday
             // 
+            this.checkBoxThursday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxThursday.AutoSize = true;
             this.checkBoxThursday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxThursday.Location = new System.Drawing.Point(615, 174);
+            this.checkBoxThursday.Location = new System.Drawing.Point(617, 174);
             this.checkBoxThursday.Name = "checkBoxThursday";
             this.checkBoxThursday.Size = new System.Drawing.Size(90, 21);
             this.checkBoxThursday.TabIndex = 45;
             this.checkBoxThursday.Text = "Thursday";
             this.checkBoxThursday.UseVisualStyleBackColor = true;
+            this.checkBoxThursday.CheckedChanged += new System.EventHandler(this.checkBoxThursday_CheckedChanged);
             // 
             // checkBoxWednesday
             // 
+            this.checkBoxWednesday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxWednesday.AutoSize = true;
             this.checkBoxWednesday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxWednesday.Location = new System.Drawing.Point(504, 174);
+            this.checkBoxWednesday.Location = new System.Drawing.Point(506, 174);
             this.checkBoxWednesday.Name = "checkBoxWednesday";
             this.checkBoxWednesday.Size = new System.Drawing.Size(105, 21);
             this.checkBoxWednesday.TabIndex = 46;
             this.checkBoxWednesday.Text = "Wednesday";
             this.checkBoxWednesday.UseVisualStyleBackColor = true;
+            this.checkBoxWednesday.CheckedChanged += new System.EventHandler(this.checkBoxWednesday_CheckedChanged);
             // 
             // checkBoxSaturday
             // 
+            this.checkBoxSaturday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxSaturday.AutoSize = true;
             this.checkBoxSaturday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxSaturday.Location = new System.Drawing.Point(295, 211);
+            this.checkBoxSaturday.Location = new System.Drawing.Point(297, 211);
             this.checkBoxSaturday.Name = "checkBoxSaturday";
             this.checkBoxSaturday.Size = new System.Drawing.Size(87, 21);
             this.checkBoxSaturday.TabIndex = 47;
             this.checkBoxSaturday.Text = "Saturday";
             this.checkBoxSaturday.UseVisualStyleBackColor = true;
+            this.checkBoxSaturday.CheckedChanged += new System.EventHandler(this.checkBoxSaturday_CheckedChanged);
             // 
             // AddWorkingDaysHours
             // 

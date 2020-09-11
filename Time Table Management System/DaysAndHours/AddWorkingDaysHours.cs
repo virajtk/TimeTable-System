@@ -38,7 +38,7 @@ namespace Time_Table_Management_System.DaysAndHours
 
         private void clear()
         {
-            numericNoOfDays.Value = 1;
+            numericNoOfDays.Value = 0;
             checkBoxMonday.Checked = false;
             checkBoxTuesday.Checked = false;
             checkBoxWednesday.Checked = false;
@@ -46,14 +46,14 @@ namespace Time_Table_Management_System.DaysAndHours
             checkBoxFriday.Checked = false;
             checkBoxSaturday.Checked = false;
             checkBoxSunday.Checked = false;
-            numericTPerDayHours.Value = 1;
-            numericTPerDayMinutes.Value = 1;
+            numericTPerDayHours.Value = 0;
+            numericTPerDayMinutes.Value = 0;
            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (numericNoOfDays.Value < 0 ^ numericNoOfDays.Value >= 7)
+            if (numericNoOfDays.Value < 1 ^ numericNoOfDays.Value >= 7)
             {
                 numericNoOfDays.Focus();
                 errorAddWorkingDays.SetError(numericNoOfDays, "Please Enter Valid No Of Working Days");
@@ -133,7 +133,6 @@ namespace Time_Table_Management_System.DaysAndHours
                     sc.Show();
                     clear();
 
-
                 }
                 else
                 {
@@ -146,6 +145,118 @@ namespace Time_Table_Management_System.DaysAndHours
         private void btnClear_Click(object sender, EventArgs e)
         {
             clear();
+        }
+
+        private void checkBoxMonday_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (checkBoxMonday.Checked == true)
+                    numericNoOfDays.Value++;
+                else
+                    numericNoOfDays.Value--;
+            }
+            catch(Exception eMonday)
+            {
+                
+            }
+            
+        }
+
+        private void checkBoxTuesday_CheckedChanged(object sender, EventArgs e)
+        {
+            try
+            {
+
+                if (checkBoxTuesday.Checked == true)
+                    numericNoOfDays.Value++;
+                else
+                    numericNoOfDays.Value--;
+
+            }
+            catch (Exception eTuesday) { 
+            
+            }
+            
+            
+
+        }
+
+        private void checkBoxWednesday_CheckedChanged(object sender, EventArgs e)
+        {
+            try {
+
+                if (checkBoxWednesday.Checked == true)
+                    numericNoOfDays.Value++;
+                else
+                    numericNoOfDays.Value--;
+
+            } catch (Exception eWednesday) { 
+            
+            }
+            
+
+        }
+
+        private void checkBoxThursday_CheckedChanged(object sender, EventArgs e)
+        {
+            try {
+
+                if (checkBoxThursday.Checked == true)
+                    numericNoOfDays.Value++;
+                else
+                    numericNoOfDays.Value--;
+
+            } catch (Exception eThursday) { 
+            
+            }
+            
+        }
+
+        private void checkBoxFriday_CheckedChanged(object sender, EventArgs e)
+        {
+            try {
+
+                if (checkBoxFriday.Checked == true)
+                    numericNoOfDays.Value++;
+                else
+                    numericNoOfDays.Value--;
+
+
+            } catch (Exception eFriday) {
+            
+            }
+            
+        }
+
+        private void checkBoxSaturday_CheckedChanged(object sender, EventArgs e)
+        {
+            try {
+
+                if (checkBoxSaturday.Checked == true)
+                    numericNoOfDays.Value++;
+                else
+                    numericNoOfDays.Value--;
+
+            } catch (Exception eSaturday) { 
+            
+            }
+            
+        }
+
+        private void checkBoxSunday_CheckedChanged(object sender, EventArgs e)
+        {
+            try {
+
+                if (checkBoxSunday.Checked == true)
+                    numericNoOfDays.Value++;
+                else
+                    numericNoOfDays.Value--;
+
+            } catch (Exception eSunday) { 
+            
+            }
+            
         }
     }
 }

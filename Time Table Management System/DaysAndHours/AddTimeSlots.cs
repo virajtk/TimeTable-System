@@ -58,7 +58,7 @@ namespace Time_Table_Management_System.DaysAndHours
 
         private void btnAddTimeSlot_Click(object sender, EventArgs e)
         {
-            if (numericSThours.Value <= 0 ^ numericSThours.Value >= 12)
+            if (numericSThours.Value <= 0 ^ numericSThours.Value >= 24)
             {
                 numericSThours.Focus();
                 errorProviderTimeSlot.SetError(numericSThours, "Please Enter Valid Hours");
@@ -70,7 +70,7 @@ namespace Time_Table_Management_System.DaysAndHours
                 errorProviderTimeSlot.SetError(numericSTMinutes, "Please Enter Valid Minutes");
                 clear();
             }
-            else if (numericETHours.Value <= 0 ^ numericETHours.Value >= 12)
+            else if (numericETHours.Value <= 0 ^ numericETHours.Value >= 24)
             {
                 numericETHours.Focus();
                 errorProviderTimeSlot.SetError(numericETHours, "Please Enter Valid Hours");
@@ -153,5 +153,9 @@ namespace Time_Table_Management_System.DaysAndHours
             }
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
