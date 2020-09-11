@@ -72,9 +72,10 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnClose.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnClose.Location = new System.Drawing.Point(3, 2);
+            this.btnClose.Location = new System.Drawing.Point(2, 2);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(50, 25);
+            this.btnClose.Size = new System.Drawing.Size(38, 20);
             this.btnClose.TabIndex = 16;
             this.btnClose.Text = "X";
             this.btnClose.UseVisualStyleBackColor = false;
@@ -84,11 +85,12 @@
             // 
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.SystemColors.Info;
-            this.title.Location = new System.Drawing.Point(116, 30);
+            this.title.Location = new System.Drawing.Point(87, 24);
+            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(261, 34);
+            this.title.Size = new System.Drawing.Size(186, 26);
             this.title.TabIndex = 15;
             this.title.Text = "Manage Lecturers";
             // 
@@ -115,13 +117,15 @@
             this.level,
             this.rank});
             this.dataGridLecturers.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridLecturers.Location = new System.Drawing.Point(56, 92);
+            this.dataGridLecturers.Location = new System.Drawing.Point(42, 75);
+            this.dataGridLecturers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridLecturers.Name = "dataGridLecturers";
             this.dataGridLecturers.RowHeadersWidth = 51;
             this.dataGridLecturers.RowTemplate.Height = 24;
             this.dataGridLecturers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridLecturers.Size = new System.Drawing.Size(618, 131);
+            this.dataGridLecturers.Size = new System.Drawing.Size(464, 106);
             this.dataGridLecturers.TabIndex = 17;
+            this.dataGridLecturers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridLecturers_CellContentClick);
             this.dataGridLecturers.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
             // 
             // id
@@ -195,10 +199,11 @@
             // 
             this.textBoxRank.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRank.Location = new System.Drawing.Point(573, 382);
+            this.textBoxRank.Location = new System.Drawing.Point(430, 310);
+            this.textBoxRank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRank.Name = "textBoxRank";
             this.textBoxRank.ReadOnly = true;
-            this.textBoxRank.Size = new System.Drawing.Size(222, 27);
+            this.textBoxRank.Size = new System.Drawing.Size(168, 23);
             this.textBoxRank.TabIndex = 45;
             // 
             // label8
@@ -208,9 +213,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Info;
-            this.label8.Location = new System.Drawing.Point(447, 384);
+            this.label8.Location = new System.Drawing.Point(335, 312);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 20);
+            this.label8.Size = new System.Drawing.Size(45, 17);
             this.label8.TabIndex = 44;
             this.label8.Text = "Rank";
             // 
@@ -228,9 +234,10 @@
             "5",
             "6",
             "7"});
-            this.comboBoxLevel.Location = new System.Drawing.Point(573, 339);
+            this.comboBoxLevel.Location = new System.Drawing.Point(430, 275);
+            this.comboBoxLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxLevel.Name = "comboBoxLevel";
-            this.comboBoxLevel.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxLevel.Size = new System.Drawing.Size(168, 25);
             this.comboBoxLevel.TabIndex = 43;
             // 
             // comboBoxBuilding
@@ -246,9 +253,10 @@
             "C-block",
             "D-block",
             "E-block"});
-            this.comboBoxBuilding.Location = new System.Drawing.Point(573, 295);
+            this.comboBoxBuilding.Location = new System.Drawing.Point(430, 240);
+            this.comboBoxBuilding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxBuilding.Name = "comboBoxBuilding";
-            this.comboBoxBuilding.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxBuilding.Size = new System.Drawing.Size(168, 25);
             this.comboBoxBuilding.TabIndex = 42;
             // 
             // label6
@@ -258,9 +266,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(447, 298);
+            this.label6.Location = new System.Drawing.Point(335, 242);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 41;
             this.label6.Text = "Building";
             // 
@@ -277,9 +286,10 @@
             "Kandy",
             "Kurunagala",
             "Jaffna"});
-            this.comboBoxCenter.Location = new System.Drawing.Point(573, 251);
+            this.comboBoxCenter.Location = new System.Drawing.Point(430, 204);
+            this.comboBoxCenter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxCenter.Name = "comboBoxCenter";
-            this.comboBoxCenter.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxCenter.Size = new System.Drawing.Size(168, 25);
             this.comboBoxCenter.TabIndex = 40;
             // 
             // label5
@@ -289,9 +299,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(447, 254);
+            this.label5.Location = new System.Drawing.Point(335, 206);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.Size = new System.Drawing.Size(50, 17);
             this.label5.TabIndex = 39;
             this.label5.Text = "Center";
             // 
@@ -299,9 +310,10 @@
             // 
             this.textBoxDepartment.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDepartment.Location = new System.Drawing.Point(191, 380);
+            this.textBoxDepartment.Location = new System.Drawing.Point(143, 309);
+            this.textBoxDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDepartment.Name = "textBoxDepartment";
-            this.textBoxDepartment.Size = new System.Drawing.Size(222, 27);
+            this.textBoxDepartment.Size = new System.Drawing.Size(168, 23);
             this.textBoxDepartment.TabIndex = 38;
             // 
             // label4
@@ -311,9 +323,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(52, 383);
+            this.label4.Location = new System.Drawing.Point(39, 311);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 20);
+            this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 37;
             this.label4.Text = "Department";
             // 
@@ -328,9 +341,10 @@
             "Engineering",
             "Business",
             "Humanities & Sciences"});
-            this.comboBoxFaculty.Location = new System.Drawing.Point(191, 337);
+            this.comboBoxFaculty.Location = new System.Drawing.Point(143, 274);
+            this.comboBoxFaculty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxFaculty.Name = "comboBoxFaculty";
-            this.comboBoxFaculty.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxFaculty.Size = new System.Drawing.Size(168, 25);
             this.comboBoxFaculty.TabIndex = 36;
             // 
             // label2
@@ -340,9 +354,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(52, 341);
+            this.label2.Location = new System.Drawing.Point(39, 277);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.Size = new System.Drawing.Size(53, 17);
             this.label2.TabIndex = 35;
             this.label2.Text = "Faculty";
             // 
@@ -350,9 +365,10 @@
             // 
             this.textBoxEmployeeID.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmployeeID.Location = new System.Drawing.Point(191, 294);
+            this.textBoxEmployeeID.Location = new System.Drawing.Point(143, 239);
+            this.textBoxEmployeeID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxEmployeeID.Name = "textBoxEmployeeID";
-            this.textBoxEmployeeID.Size = new System.Drawing.Size(222, 27);
+            this.textBoxEmployeeID.Size = new System.Drawing.Size(168, 23);
             this.textBoxEmployeeID.TabIndex = 34;
             // 
             // label1
@@ -362,9 +378,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(52, 297);
+            this.label1.Location = new System.Drawing.Point(39, 241);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 33;
             this.label1.Text = "Employee ID";
             // 
@@ -372,9 +389,10 @@
             // 
             this.textBoxLecturerName.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textBoxLecturerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLecturerName.Location = new System.Drawing.Point(191, 250);
+            this.textBoxLecturerName.Location = new System.Drawing.Point(143, 203);
+            this.textBoxLecturerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLecturerName.Name = "textBoxLecturerName";
-            this.textBoxLecturerName.Size = new System.Drawing.Size(222, 27);
+            this.textBoxLecturerName.Size = new System.Drawing.Size(168, 23);
             this.textBoxLecturerName.TabIndex = 32;
             // 
             // label3
@@ -384,9 +402,10 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(52, 253);
+            this.label3.Location = new System.Drawing.Point(39, 206);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 20);
+            this.label3.Size = new System.Drawing.Size(102, 17);
             this.label3.TabIndex = 31;
             this.label3.Text = "Lecturer Name";
             // 
@@ -397,9 +416,10 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(447, 342);
+            this.label7.Location = new System.Drawing.Point(335, 278);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 20);
+            this.label7.Size = new System.Drawing.Size(42, 17);
             this.label7.TabIndex = 46;
             this.label7.Text = "Level";
             // 
@@ -407,10 +427,11 @@
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnUpdate.Enabled = false;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(703, 92);
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(527, 75);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 40);
+            this.btnUpdate.Size = new System.Drawing.Size(90, 32);
             this.btnUpdate.TabIndex = 47;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -420,10 +441,11 @@
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnDelete.Enabled = false;
-            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(703, 139);
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(527, 113);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 40);
+            this.btnDelete.Size = new System.Drawing.Size(90, 32);
             this.btnDelete.TabIndex = 48;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -432,10 +454,11 @@
             // btnClear
             // 
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(703, 186);
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Location = new System.Drawing.Point(527, 151);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(120, 40);
+            this.btnClear.Size = new System.Drawing.Size(90, 32);
             this.btnClear.TabIndex = 49;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
@@ -447,9 +470,10 @@
             this.btnGenerateRank.BackColor = System.Drawing.Color.Transparent;
             this.btnGenerateRank.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerateRank.Image = global::Time_Table_Management_System.Properties.Resources.generate;
-            this.btnGenerateRank.Location = new System.Drawing.Point(801, 377);
+            this.btnGenerateRank.Location = new System.Drawing.Point(601, 306);
+            this.btnGenerateRank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerateRank.Name = "btnGenerateRank";
-            this.btnGenerateRank.Size = new System.Drawing.Size(41, 35);
+            this.btnGenerateRank.Size = new System.Drawing.Size(31, 28);
             this.btnGenerateRank.TabIndex = 50;
             this.btnGenerateRank.UseVisualStyleBackColor = false;
             this.btnGenerateRank.Click += new System.EventHandler(this.btnGenerateRank_Click);
@@ -460,11 +484,11 @@
             // 
             // ManageLecturers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(881, 442);
+            this.ClientSize = new System.Drawing.Size(661, 359);
             this.Controls.Add(this.btnGenerateRank);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnDelete);
@@ -488,6 +512,7 @@
             this.Controls.Add(this.dataGridLecturers);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.title);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManageLecturers";
             this.Text = "ManageLecturers";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLecturers)).EndInit();

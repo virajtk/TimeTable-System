@@ -284,5 +284,10 @@ namespace Time_Table_Management_System.Lecturers
                 btnGenerateRank.Enabled = false;
             }
         }
+
+        private void dataGridLecturers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
