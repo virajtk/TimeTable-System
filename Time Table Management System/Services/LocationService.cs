@@ -51,6 +51,37 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
+        public bool deleteLocation(int id)
+        {
+            Boolean result = false;
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            try
+            {
+                string query = "DELETE FROM locations WHERE id = @id";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Prepare();
+
+                if (cmd.ExecuteNonQuery() == 1)
+                    result = true;
+                else
+                    result = false;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
+        }
+
 
         public List<Location> getAllLocations()
         {
@@ -124,6 +155,42 @@ namespace Time_Table_Management_System.Services
             }
 
             return loc;
+        }
+        public bool updateLocation(int id, Location location)
+        {
+            Boolean result = false;
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            try
+            {
+                string query = "UPDATE locations SET buildingName = @buildingname, roomName = @roomname, roomType = @roomtype, capacity = @capacity WHERE id = @id";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@buildingname", location.BuildingName);
+                cmd.Parameters.AddWithValue("@roomname", location.RoomName);
+                cmd.Parameters.AddWithValue("@roomtype", location.RoomType);
+                cmd.Parameters.AddWithValue("@capacity", location.Capacity);
+
+                cmd.Prepare();
+
+
+                if (cmd.ExecuteNonQuery() == 1)
+                    result = true;
+                else
+                    result = false;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
         }
     }
 }

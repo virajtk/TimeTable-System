@@ -28,9 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.dataGridLocations = new System.Windows.Forms.DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -43,12 +49,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxCapacity = new System.Windows.Forms.TextBox();
             this.radioButtonLaboratory = new System.Windows.Forms.RadioButton();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.errorLocation = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLocations)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorLocation)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -103,6 +106,31 @@
             this.dataGridLocations.TabIndex = 16;
             this.dataGridLocations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridSubjects_CellContentClick);
             // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "ID";
+            this.Column5.Name = "Column5";
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Building";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Room";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Room Type";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Capacity";
+            this.Column4.Name = "Column4";
+            // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
@@ -114,6 +142,7 @@
             this.btnUpdate.TabIndex = 51;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
@@ -126,6 +155,7 @@
             this.btnDelete.TabIndex = 52;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
@@ -163,6 +193,7 @@
             this.textBoxBuildName.Name = "textBoxBuildName";
             this.textBoxBuildName.Size = new System.Drawing.Size(187, 23);
             this.textBoxBuildName.TabIndex = 55;
+            this.textBoxBuildName.Text = "New Building";
             // 
             // label4
             // 
@@ -187,6 +218,7 @@
             this.textBoxRoomName.Name = "textBoxRoomName";
             this.textBoxRoomName.Size = new System.Drawing.Size(187, 23);
             this.textBoxRoomName.TabIndex = 57;
+            this.textBoxRoomName.Text = "N501";
             this.textBoxRoomName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label5
@@ -242,6 +274,8 @@
             this.textBoxCapacity.Name = "textBoxCapacity";
             this.textBoxCapacity.Size = new System.Drawing.Size(187, 23);
             this.textBoxCapacity.TabIndex = 61;
+            this.textBoxCapacity.Text = "123";
+            this.textBoxCapacity.TextChanged += new System.EventHandler(this.textBoxCapacity_TextChanged);
             // 
             // radioButtonLaboratory
             // 
@@ -257,30 +291,9 @@
             this.radioButtonLaboratory.Text = "Laboratory";
             this.radioButtonLaboratory.UseVisualStyleBackColor = true;
             // 
-            // Column5
+            // errorLocation
             // 
-            this.Column5.HeaderText = "ID";
-            this.Column5.Name = "Column5";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Building";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Room";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Room Type";
-            this.Column3.Name = "Column3";
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Capacity";
-            this.Column4.Name = "Column4";
+            this.errorLocation.ContainerControl = this;
             // 
             // ManageLocations
             // 
@@ -306,6 +319,7 @@
             this.Name = "ManageLocations";
             this.Text = "ManageLocations";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLocations)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorLocation)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +347,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.ErrorProvider errorLocation;
     }
 }

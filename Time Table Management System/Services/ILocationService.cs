@@ -13,5 +13,8 @@ namespace Time_Table_Management_System.Services
         Boolean addLocation(Location location);
         List<Location> getAllLocations();
         Location GetLocation(int id);
+        Boolean deleteLocation(int id);
+
+        Boolean updateLocation(int id, Location location);
     }
 }

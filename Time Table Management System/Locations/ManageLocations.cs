@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Time_Table_Management_System.Messages;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Services;
 
@@ -17,8 +18,11 @@ namespace Time_Table_Management_System.Locations
     public partial class ManageLocations : Form
     {
         private bool executedFirstTime;
-        private Location selectedLoc;
         private ILocationService locationService;
+        private Location selectedLoc;
+        private ILocationService subjectService;
+        private List<Location> locationsArray;
+
         public ManageLocations()
         {
             InitializeComponent();
@@ -128,5 +132,99 @@ namespace Time_Table_Management_System.Locations
             }
         }
 
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+           if (textBoxBuildName.Text == String.Empty)
+            {
+                textBoxBuildName.Focus();
+                errorLocation.SetError(textBoxBuildName, "Please Enter Building Name");
+            }
+            else if (textBoxRoomName.Text == String.Empty)
+            {
+                textBoxRoomName.Focus();
+                errorLocation.SetError(textBoxRoomName, "Please Enter Room Name");
+            }
+            else if (textBoxRoomName.Text == String.Empty)
+            {
+                textBoxRoomName.Focus();
+                errorLocation.SetError(textBoxRoomName, "Please Enter Room Name");
+            }
+            else if (radioButtonLectureHall.Checked == false & radioButtonLaboratory.Checked == false)
+            {
+                errorLocation.SetError(radioButtonLaboratory, "Please Select Room Type");
+            }
+            else if (textBoxCapacity.Text == String.Empty)
+            {
+                textBoxCapacity.Focus();
+                errorLocation.SetError(textBoxCapacity, "Please Enter Room Capacity");
+            }
+            else
+            {
+                Location location = new Location();
+
+                #region Set Data to Object
+                // Set Data to model
+                location.BuildingName = textBoxBuildName.Text.Trim();
+                location.RoomName = textBoxRoomName.Text.Trim();
+           
+
+                if (radioButtonLectureHall.Checked == true)
+                    location.RoomType= "Lecture Hall";
+                else
+                    location.RoomType = "Laboratory";
+
+ 
+                #endregion
+
+                //Update Data
+                if (locationService.updateLocation(selectedLoc.Id, location))
+                {
+                    SuccessMessage sc = new SuccessMessage("Subject Updated Successfully !");
+                    sc.Show();
+                    dataGridLocations.Rows.Clear();
+                    populateData();
+                    textBoxBuildName.Text = "";
+                    radioButtonLectureHall.Checked = false;
+                    radioButtonLaboratory.Checked = false;
+                    textBoxCapacity.Text = "";
+
+                    btnDelete.Enabled = false;
+                    btnUpdate.Enabled = false;
+                }
+                else
+                {
+                    ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
+                    ec.Show();
+                }
+            }
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (locationService.deleteLocation(selectedLoc.Id))
+            {
+                SuccessMessage sm = new SuccessMessage("Subject Deleted Successfully");
+                sm.Show();
+                dataGridLocations.Rows.Clear();
+                populateData();
+                textBoxBuildName.Text = "";
+                radioButtonLectureHall.Checked = false;
+                radioButtonLaboratory.Checked = false;
+                textBoxCapacity.Text = "";
+
+                btnDelete.Enabled = false;
+                btnUpdate.Enabled = false; 
+            }
+            else
+            {
+                ErrorMessage em = new ErrorMessage("Oops, Somthing went wrong..");
+                em.Show();
+            }
+        }
+
+        private void textBoxCapacity_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
