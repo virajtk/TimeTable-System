@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Time_Table_Management_System.Messages;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Services;
 
@@ -157,12 +158,125 @@ namespace Time_Table_Management_System.Students
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (textBoxAcYear.Text == String.Empty)
+            {
+                textBoxAcYear.Focus();
+                errorManageStudent.SetError(textBoxAcYear, "Please Enter Academic Year an Sem");
+            }
+            else if (comboBoxProgramme.SelectedIndex == -1)
+            {
+                comboBoxProgramme.Focus();
+                errorManageStudent.SetError(comboBoxProgramme, "Please Select Programme");
+            }
+            else if (numericGroupno.Value < 0)
+            {
+                numericGroupno.Focus();
+                errorManageStudent.SetError(numericGroupno, "Please Enter Valid Group Number");
+            }
+            else if (numericSubGroup.Value < 0)
+            {
+                numericSubGroup.Focus();
+                errorManageStudent.SetError(numericGroupno, "Please Enter Valid Sub Group Number");
+            }
+            else if (textBoxgroupId.Text == String.Empty)
+            {
+                btnGenerateIds.Focus();
+                ErrorMessage em = new ErrorMessage("Please Generate IDs before Save");
+                em.Show();
+            }
+            else if (textBoxSubGroup.Text == String.Empty)
+            {
+                btnGenerateIds.Focus();
+                ErrorMessage em = new ErrorMessage("Please Generate IDs before Save");
+                em.Show();
+            }
+            else
+            {
+                Student student = new Student();
 
+                #region Set Data to Object
+                // Set Data to model
+                student.AcademicYear = textBoxAcYear.Text.Trim();
+                student.Programme = comboBoxProgramme.SelectedItem.ToString();
+                student.GroupNumber = int.Parse(numericGroupno.Value.ToString());
+                student.SubGroupNumber = int.Parse(numericSubGroup.Value.ToString());
+                student.GroupId = textBoxSubGroup.Text.Trim();
+                student.SubGroupId = textBoxSubGroup.Text.Trim();
+               
+                
+                #endregion
+
+                //Insert Data
+                if (studentService.updateStudent(selectedStu.Id, student))
+                {
+                    SuccessMessage sc = new SuccessMessage("Student Group Updated Successfully !");
+                    sc.Show();
+                    dataGridView1.Rows.Clear();
+                    populateData();
+                    clear();
+                }
+                else
+                {
+                    ErrorMessage ec = new ErrorMessage("Student Group Updated Successfully");
+                    ec.Show();
+                }
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (studentService.deleteStudent(selectedStu.Id))
+            {
+                SuccessMessage sm = new SuccessMessage("Student Group killed Successfully");
+                sm.Show();
+                dataGridView1.Rows.Clear();
+                populateData();
+                clear();
+            }
+            else
+            {
+                ErrorMessage em = new ErrorMessage("Oops, Somthing went wrong..");
+                em.Show();
+            }
+        }
 
+        private void btnGenerateIds_Click(object sender, EventArgs e)
+        {
+            if (textBoxAcYear.Text == String.Empty)
+            {
+                textBoxAcYear.Focus();
+                errorManageStudent.SetError(textBoxAcYear, "Please Enter Academic Year");
+            }
+            else if (comboBoxProgramme.SelectedIndex == -1)
+            {
+                comboBoxProgramme.Focus();
+                errorManageStudent.SetError(comboBoxProgramme, "Please Select Programme");
+            }
+            else if (numericGroupno.Value < 0)
+            {
+                numericGroupno.Focus();
+                errorManageStudent.SetError(numericGroupno, "Please Enter Group Number");
+            }
+            else if (numericSubGroup.Value < 0)
+            {
+                numericSubGroup.Focus();
+                errorManageStudent.SetError(numericSubGroup, "Please Enter Sub Group Number");
+            }
+
+            else
+            {
+                String GroupID = textBoxAcYear.Text + "." + comboBoxProgramme.SelectedItem + "." + numericGroupno.Value;
+                String SubGroupID = textBoxAcYear.Text + "." + comboBoxProgramme.SelectedItem + "." + numericGroupno.Value + "." + numericSubGroup.Value;
+
+                textBoxgroupId.Text = GroupID;
+                textBoxSubGroup.Text = SubGroupID;
+
+
+                comboBoxProgramme.Enabled = false;
+                numericGroupno.Enabled = false;
+                numericSubGroup.Enabled = false;
+                btnGenerateIds.Enabled = false;
+            }
         }
     }
 }

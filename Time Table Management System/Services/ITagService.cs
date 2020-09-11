@@ -11,9 +11,9 @@ namespace Time_Table_Management_System.Services
     interface ITagService
     {
         Boolean addTag(Tag tag);
-      
         List<Tag> getAllTags();
-
         Tag GetTag(int id);
+        Boolean deleteTagr(int id);
+        Boolean updateTag(int id, Tag tag);
     }
 }

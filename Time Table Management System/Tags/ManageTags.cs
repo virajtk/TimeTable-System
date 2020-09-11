@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Time_Table_Management_System.Messages;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Services;
 
@@ -114,12 +115,64 @@ namespace Time_Table_Management_System.Tags
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (subName.Text == String.Empty)
+            {
+                subName.Focus();
+                errorManageTags.SetError(subName, "Please Enter Subject Name");
+            }
+            else if (subCode.Text == String.Empty)
+            {
+                subCode.Focus();
+                errorManageTags.SetError(subCode, "Please Enter Subject Code");
+            }
+            else if (comboBoxRelatedTag.SelectedIndex == -1)
+            {
+                comboBoxRelatedTag.Focus();
+                errorManageTags.SetError(comboBoxRelatedTag, "Please Select Related Tag");
+            }
+            else
+            {
+                Tag tag = new Tag();
 
+                #region Set Data to Object
+                // Set Data to model
+                tag.SubjectName = subName.Text.Trim();
+                tag.SubjectCode = subCode.Text.Trim();
+                tag.RelatedTag = comboBoxRelatedTag.SelectedItem.ToString();
+                #endregion
+
+                //Insert Data
+                if (tagService.updateTag(selectedTag.Id,tag))
+                {
+                    SuccessMessage sc = new SuccessMessage("Tag Updated Successfully !");
+                    sc.Show();
+                    dataGridView1.Rows.Clear();
+                    populateData();
+                    clear();
+                }
+                else
+                {
+                    ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
+                    ec.Show();
+                }
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-
+            if (tagService.deleteTagr(selectedTag.Id))
+            {
+                SuccessMessage sm = new SuccessMessage("Tag killed Successfully");
+                sm.Show();
+                dataGridView1.Rows.Clear();
+                populateData();
+                clear();
+            }
+            else
+            {
+                ErrorMessage em = new ErrorMessage("Oops, Somthing went wrong..");
+                em.Show();
+            }
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -136,6 +189,11 @@ namespace Time_Table_Management_System.Tags
 
             btnDelete.Enabled = false;
             btnUpdate.Enabled = false;
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

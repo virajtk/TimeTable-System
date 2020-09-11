@@ -52,6 +52,37 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
+        public bool deleteTagr(int id)
+        {
+            Boolean result = false;
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            try
+            {
+                string query = "DELETE FROM tags WHERE id = @id";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Prepare();
+
+                if (cmd.ExecuteNonQuery() == 1)
+                    result = true;
+                else
+                    result = false;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
+        }
+
         public List<Tag> getAllTags()
         {
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
@@ -125,6 +156,40 @@ namespace Time_Table_Management_System.Services
             return tag;
         }
 
-      
+        public bool updateTag(int id, Tag tag)
+        {
+            Boolean result = false;
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            try
+            {
+                string query = "UPDATE tags SET subjectName = @subjectname, subjectCode = @subjectcode, relatedTag = @relatedtag WHERE id = @id";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+
+                cmd.Parameters.AddWithValue("@subjectname", tag.SubjectName);
+                cmd.Parameters.AddWithValue("@subjectcode", tag.SubjectCode);
+                cmd.Parameters.AddWithValue("@relatedtag", tag.RelatedTag);
+                cmd.Parameters.AddWithValue("@id", id);
+
+                cmd.Prepare();
+
+                if (cmd.ExecuteNonQuery() == 1)
+                    result = true;
+                else
+                    result = false;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
+        }
     }
 }

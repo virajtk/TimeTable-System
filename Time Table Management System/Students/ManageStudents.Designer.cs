@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button4 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -53,9 +57,12 @@
             this.textBoxSubGroup = new System.Windows.Forms.TextBox();
             this.numericGroupno = new System.Windows.Forms.NumericUpDown();
             this.numericSubGroup = new System.Windows.Forms.NumericUpDown();
+            this.errorManageStudent = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnGenerateIds = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericGroupno)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSubGroup)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorManageStudent)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -88,6 +95,14 @@
             // dataGridView1
             // 
             this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -97,8 +112,24 @@
             this.groupid,
             this.subgroupNo,
             this.subId});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.Location = new System.Drawing.Point(31, 82);
             this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -202,7 +233,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(45, 263);
+            this.label1.Location = new System.Drawing.Point(24, 273);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(204, 20);
             this.label1.TabIndex = 20;
@@ -215,7 +246,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(45, 317);
+            this.label2.Location = new System.Drawing.Point(24, 327);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(96, 20);
             this.label2.TabIndex = 21;
@@ -228,7 +259,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(45, 371);
+            this.label3.Location = new System.Drawing.Point(24, 381);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(119, 20);
             this.label3.TabIndex = 22;
@@ -241,7 +272,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(491, 263);
+            this.label5.Location = new System.Drawing.Point(429, 275);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(153, 20);
             this.label5.TabIndex = 23;
@@ -254,7 +285,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(491, 319);
+            this.label4.Location = new System.Drawing.Point(429, 331);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 24;
@@ -267,7 +298,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(491, 375);
+            this.label6.Location = new System.Drawing.Point(429, 387);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 20);
             this.label6.TabIndex = 25;
@@ -276,7 +307,7 @@
             // textBoxAcYear
             // 
             this.textBoxAcYear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxAcYear.Location = new System.Drawing.Point(272, 263);
+            this.textBoxAcYear.Location = new System.Drawing.Point(251, 273);
             this.textBoxAcYear.Name = "textBoxAcYear";
             this.textBoxAcYear.Size = new System.Drawing.Size(135, 22);
             this.textBoxAcYear.TabIndex = 26;
@@ -292,7 +323,7 @@
             "CSE",
             "DS",
             "CN"});
-            this.comboBoxProgramme.Location = new System.Drawing.Point(272, 318);
+            this.comboBoxProgramme.Location = new System.Drawing.Point(251, 328);
             this.comboBoxProgramme.Name = "comboBoxProgramme";
             this.comboBoxProgramme.Size = new System.Drawing.Size(135, 24);
             this.comboBoxProgramme.TabIndex = 27;
@@ -302,7 +333,7 @@
             // textBoxgroupId
             // 
             this.textBoxgroupId.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxgroupId.Location = new System.Drawing.Point(701, 315);
+            this.textBoxgroupId.Location = new System.Drawing.Point(639, 327);
             this.textBoxgroupId.Name = "textBoxgroupId";
             this.textBoxgroupId.Size = new System.Drawing.Size(135, 22);
             this.textBoxgroupId.TabIndex = 28;
@@ -311,7 +342,7 @@
             // textBoxSubGroup
             // 
             this.textBoxSubGroup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSubGroup.Location = new System.Drawing.Point(701, 369);
+            this.textBoxSubGroup.Location = new System.Drawing.Point(639, 381);
             this.textBoxSubGroup.Name = "textBoxSubGroup";
             this.textBoxSubGroup.Size = new System.Drawing.Size(135, 22);
             this.textBoxSubGroup.TabIndex = 29;
@@ -320,7 +351,7 @@
             // numericGroupno
             // 
             this.numericGroupno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericGroupno.Location = new System.Drawing.Point(272, 375);
+            this.numericGroupno.Location = new System.Drawing.Point(251, 385);
             this.numericGroupno.Name = "numericGroupno";
             this.numericGroupno.Size = new System.Drawing.Size(135, 22);
             this.numericGroupno.TabIndex = 30;
@@ -329,11 +360,28 @@
             // numericSubGroup
             // 
             this.numericSubGroup.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericSubGroup.Location = new System.Drawing.Point(701, 261);
+            this.numericSubGroup.Location = new System.Drawing.Point(639, 273);
             this.numericSubGroup.Name = "numericSubGroup";
             this.numericSubGroup.Size = new System.Drawing.Size(135, 22);
             this.numericSubGroup.TabIndex = 31;
             this.numericSubGroup.ValueChanged += new System.EventHandler(this.numericSubGroup_ValueChanged);
+            // 
+            // errorManageStudent
+            // 
+            this.errorManageStudent.ContainerControl = this;
+            // 
+            // btnGenerateIds
+            // 
+            this.btnGenerateIds.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGenerateIds.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerateIds.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGenerateIds.Image = global::Time_Table_Management_System.Properties.Resources.generate;
+            this.btnGenerateIds.Location = new System.Drawing.Point(811, 372);
+            this.btnGenerateIds.Name = "btnGenerateIds";
+            this.btnGenerateIds.Size = new System.Drawing.Size(41, 35);
+            this.btnGenerateIds.TabIndex = 51;
+            this.btnGenerateIds.UseVisualStyleBackColor = false;
+            this.btnGenerateIds.Click += new System.EventHandler(this.btnGenerateIds_Click);
             // 
             // ManageStudents
             // 
@@ -341,6 +389,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(881, 442);
+            this.Controls.Add(this.btnGenerateIds);
             this.Controls.Add(this.numericSubGroup);
             this.Controls.Add(this.numericGroupno);
             this.Controls.Add(this.textBoxSubGroup);
@@ -364,6 +413,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericGroupno)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSubGroup)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorManageStudent)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +446,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn groupid;
         private System.Windows.Forms.DataGridViewTextBoxColumn subgroupNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn subId;
+        private System.Windows.Forms.ErrorProvider errorManageStudent;
+        private System.Windows.Forms.Button btnGenerateIds;
     }
 }

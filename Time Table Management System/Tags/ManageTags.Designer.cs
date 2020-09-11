@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,7 +45,9 @@
             this.subName = new System.Windows.Forms.TextBox();
             this.subCode = new System.Windows.Forms.TextBox();
             this.comboBoxRelatedTag = new System.Windows.Forms.ComboBox();
+            this.errorManageTags = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorManageTags)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -82,6 +85,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(555, 154);
             this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
             // 
             // id
@@ -238,6 +242,10 @@
             this.comboBoxRelatedTag.Tag = "";
             this.comboBoxRelatedTag.SelectedIndexChanged += new System.EventHandler(this.comboBoxRelatedTag_SelectedIndexChanged);
             // 
+            // errorManageTags
+            // 
+            this.errorManageTags.ContainerControl = this;
+            // 
             // ManageTags
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -259,6 +267,7 @@
             this.Name = "ManageTags";
             this.Text = "ManageTags";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorManageTags)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -282,5 +291,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subjName;
         private System.Windows.Forms.DataGridViewTextBoxColumn subjCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn relTag;
+        private System.Windows.Forms.ErrorProvider errorManageTags;
     }
 }
