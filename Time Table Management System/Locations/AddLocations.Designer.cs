@@ -33,7 +33,7 @@
             this.title = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.textBoxBuildName = new System.Windows.Forms.TextBox();
-            this.button = new System.Windows.Forms.Button();
+            this.btnSaveBuild = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxBuildingName = new System.Windows.Forms.ComboBox();
@@ -48,6 +48,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.errorLocation = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnClearBuild = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorLocation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -105,17 +106,18 @@
             this.textBoxBuildName.Size = new System.Drawing.Size(187, 23);
             this.textBoxBuildName.TabIndex = 23;
             // 
-            // button
+            // btnSaveBuild
             // 
-            this.button.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button.Location = new System.Drawing.Point(447, 84);
-            this.button.Margin = new System.Windows.Forms.Padding(2);
-            this.button.Name = "button";
-            this.button.Size = new System.Drawing.Size(90, 32);
-            this.button.TabIndex = 30;
-            this.button.Text = "Save";
-            this.button.UseVisualStyleBackColor = true;
+            this.btnSaveBuild.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSaveBuild.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSaveBuild.Location = new System.Drawing.Point(560, 69);
+            this.btnSaveBuild.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSaveBuild.Name = "btnSaveBuild";
+            this.btnSaveBuild.Size = new System.Drawing.Size(90, 32);
+            this.btnSaveBuild.TabIndex = 30;
+            this.btnSaveBuild.Text = "Save";
+            this.btnSaveBuild.UseVisualStyleBackColor = true;
+            this.btnSaveBuild.Click += new System.EventHandler(this.button_Click);
             // 
             // label1
             // 
@@ -287,12 +289,26 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // btnClearBuild
+            // 
+            this.btnClearBuild.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClearBuild.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClearBuild.Location = new System.Drawing.Point(447, 69);
+            this.btnClearBuild.Margin = new System.Windows.Forms.Padding(2);
+            this.btnClearBuild.Name = "btnClearBuild";
+            this.btnClearBuild.Size = new System.Drawing.Size(90, 32);
+            this.btnClearBuild.TabIndex = 43;
+            this.btnClearBuild.Text = "Clear";
+            this.btnClearBuild.UseVisualStyleBackColor = true;
+            this.btnClearBuild.Click += new System.EventHandler(this.btnClearBuild_Click);
+            // 
             // AddLocations
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(661, 359);
+            this.Controls.Add(this.btnClearBuild);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.textBoxCapacity);
@@ -305,7 +321,7 @@
             this.Controls.Add(this.comboBoxBuildingName);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button);
+            this.Controls.Add(this.btnSaveBuild);
             this.Controls.Add(this.textBoxBuildName);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.title);
@@ -325,7 +341,7 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxBuildName;
-        private System.Windows.Forms.Button button;
+        private System.Windows.Forms.Button btnSaveBuild;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxBuildingName;
@@ -340,5 +356,6 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.ErrorProvider errorLocation;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Button btnClearBuild;
     }
 }

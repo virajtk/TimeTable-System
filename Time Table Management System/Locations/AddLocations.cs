@@ -109,5 +109,42 @@ namespace Time_Table_Management_System.Locations
         {
             this.Close();
         }
+
+        private void button_Click(object sender, EventArgs e)
+        {
+           if (textBoxBuildName.Text == String.Empty)
+            {
+                textBoxBuildName.Focus();
+                errorLocation.SetError(textBoxBuildName, "Please Enter Building Name");
+            }
+           else
+            {
+                Location location = new Location();
+                ILocationService locationService = new LocationService();
+
+
+                if (locationService.addLocation(location))
+                {
+                    //MessageBox.Show(tag.Tag);
+                    SuccessMessage sc = new SuccessMessage("Building Added Successfully !");
+                    sc.Show();
+                }
+                else
+                {
+                    ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
+                    ec.Show();
+                }
+
+            }
+
+
+
+
+        }
+
+        private void btnClearBuild_Click(object sender, EventArgs e)
+        {
+            textBoxBuildName.Text = "";
+        }
     }
 }
