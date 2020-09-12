@@ -16,25 +16,22 @@ namespace Time_Table_Management_System.DaysAndHours
     public partial class ManageWorkingDaysHours : Form
     {
         private WorkingDaysHours workingDaysHours = new WorkingDaysHours();
-        private bool executedFirstTime;
-        private TimeSlot selectedTimeSlot;
+        //private bool executedFirstTime;
+        //private TimeSlot selectedTimeSlot;
         private IWorkingDaysHoursService workingDaysHoursService;
 
         public ManageWorkingDaysHours()
         {
             InitializeComponent();
-            executedFirstTime = true;
+            //executedFirstTime = true;
             workingDaysHoursService = new WorkingDaysHoursService();
             populateData();
         }
 
         private void populateData()
         {
-            List<WorkingDaysHours> workingDaysHoursArray = new List<WorkingDaysHours>();
-            workingDaysHoursArray = workingDaysHoursService.getWorkingDaysHours();
+            workingDaysHours = workingDaysHoursService.getWorkingDaysHours();
 
-            foreach (WorkingDaysHours workingDaysHours in workingDaysHoursArray)
-            {
                 btnDaysCount.Text = workingDaysHours.NoOfWorkingDays.ToString();
                 List<String> workingArr = new List<String>();
                 if(workingDaysHours.Monday == 1)
@@ -59,7 +56,7 @@ namespace Time_Table_Management_System.DaysAndHours
                 }
 
                 btnTime.Text = workingDaysHours.NoOfHours + ":" + workingDaysHours.NoOfMinutes;
-            }
+            
 
         }
 
@@ -67,13 +64,13 @@ namespace Time_Table_Management_System.DaysAndHours
         {
             
 
-                if (workingDaysHoursService.updateWorkingDaysHours(int.Parse(textBoxNoOfDays.Text)))
+                if (workingDaysHoursService.updateWorkingDaysHours(workingDaysHours))
                 {
                     SuccessMessage sm = new SuccessMessage("Number of Working Days Updated");
                     sm.Show();
                     clear();
                     populateData();
-            }
+                }
                 else
                 {
                     ErrorMessage em = new ErrorMessage("Oops, Somthing went wrong");

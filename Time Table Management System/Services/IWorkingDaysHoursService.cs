@@ -10,9 +10,9 @@ namespace Time_Table_Management_System.Services
     interface IWorkingDaysHoursService
     {
         Boolean addWorkingDaysHours(WorkingDaysHours workingDaysHours);
-
-        List<WorkingDaysHours> getWorkingDaysHours();
-
-        Boolean updateWorkingDaysHours(int workingDaysHours);
+        WorkingDaysHours getWorkingDaysHours();
+        Boolean updateWorkingDaysHours(WorkingDaysHours workingDaysHours);
+        Boolean getExistWorkingDaysHours();
+        Boolean deleteWorkingDaysHours();
     }
 }
