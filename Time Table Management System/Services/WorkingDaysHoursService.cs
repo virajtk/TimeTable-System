@@ -53,40 +53,50 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
+        public bool deleteWorkingDaysHours()
+        {
+            Boolean result = false;
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            try
+            {
+                string query = "DELETE FROM workingdayshours";
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Prepare();
 
-        public List<WorkingDaysHours> getWorkingDaysHours()
+                if (cmd.ExecuteNonQuery() != 0)
+                    result = true;
+                else
+                    result = false;
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
+        }
+
+        public bool getExistWorkingDaysHours()
         {
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            List<WorkingDaysHours> arrayWorkingDaysHours = null;
+            Boolean exist = false;
 
 
             try
             {
                 string query = "SELECT * FROM workingdayshours";
-
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataReader rdr = cmd.ExecuteReader();
-                arrayWorkingDaysHours = new List<WorkingDaysHours>();
 
-                while (rdr.Read())
+                if (rdr.Read())
                 {
-                    WorkingDaysHours workingDaysHours = new WorkingDaysHours();
-                    workingDaysHours.Id = rdr.GetInt32(0);
-                    workingDaysHours.NoOfWorkingDays = rdr.GetInt32(1);
-                    workingDaysHours.Monday = rdr.GetInt32(2);
-                    workingDaysHours.Tuesday = rdr.GetInt32(3);
-                    workingDaysHours.Wednesday = rdr.GetInt32(4);
-                    workingDaysHours.Thursday = rdr.GetInt32(5);
-                    workingDaysHours.Friday = rdr.GetInt32(6);
-                    workingDaysHours.Saturday = rdr.GetInt32(7);
-                    workingDaysHours.Sunday = rdr.GetInt32(8);
-                    workingDaysHours.NoOfHours = rdr.GetInt32(9);
-                    workingDaysHours.NoOfMinutes = rdr.GetInt32(10);
-
-
-
-                    arrayWorkingDaysHours.Add(workingDaysHours);
+                    exist = true;
                 }
             }
             catch (Exception e)
@@ -98,13 +108,51 @@ namespace Time_Table_Management_System.Services
                 conn.Close();
             }
 
-            return arrayWorkingDaysHours;
+            return exist;
+        }
+
+        public WorkingDaysHours getWorkingDaysHours()
+        {
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            WorkingDaysHours workingDaysHours = new WorkingDaysHours();
+            try
+            {
+                string query = "SELECT * FROM workingdayshours";
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+
+                while (rdr.Read())
+                {
+                    workingDaysHours.Id = rdr.GetInt32(0);
+                    workingDaysHours.NoOfWorkingDays = rdr.GetInt32(1);
+                    workingDaysHours.Monday = rdr.GetInt32(2);
+                    workingDaysHours.Tuesday = rdr.GetInt32(3);
+                    workingDaysHours.Wednesday = rdr.GetInt32(4);
+                    workingDaysHours.Thursday = rdr.GetInt32(5);
+                    workingDaysHours.Friday = rdr.GetInt32(6);
+                    workingDaysHours.Saturday = rdr.GetInt32(7);
+                    workingDaysHours.Sunday = rdr.GetInt32(8);
+                    workingDaysHours.NoOfHours = rdr.GetInt32(9);
+                    workingDaysHours.NoOfMinutes = rdr.GetInt32(10);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return workingDaysHours;
         }
 
 
 
 
-        public Boolean updateWorkingDaysHours(int workingDaysHours)
+        public Boolean updateWorkingDaysHours(WorkingDaysHours workingDaysHours)
         {
             Boolean result = false;
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");

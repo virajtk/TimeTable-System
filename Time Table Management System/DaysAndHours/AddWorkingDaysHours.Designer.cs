@@ -49,17 +49,21 @@
             this.checkBoxThursday = new System.Windows.Forms.CheckBox();
             this.checkBoxWednesday = new System.Windows.Forms.CheckBox();
             this.checkBoxSaturday = new System.Windows.Forms.CheckBox();
+            this.btnUpdate = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.numericNoOfDays)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTPerDayHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTPerDayMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorAddWorkingDays)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(579, 339);
+            this.btnClear.Location = new System.Drawing.Point(729, 355);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 40);
             this.btnClear.TabIndex = 32;
@@ -71,7 +75,7 @@
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(718, 339);
+            this.btnSave.Location = new System.Drawing.Point(589, 355);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 40);
             this.btnSave.TabIndex = 31;
@@ -83,6 +87,7 @@
             // 
             this.numericNoOfDays.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.numericNoOfDays.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericNoOfDays.Enabled = false;
             this.numericNoOfDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericNoOfDays.Location = new System.Drawing.Point(297, 117);
             this.numericNoOfDays.Maximum = new decimal(new int[] {
@@ -91,9 +96,10 @@
             0,
             0});
             this.numericNoOfDays.Name = "numericNoOfDays";
+            this.numericNoOfDays.ReadOnly = true;
             this.numericNoOfDays.Size = new System.Drawing.Size(111, 27);
             this.numericNoOfDays.TabIndex = 30;
-            this.numericNoOfDays.ValueChanged += new System.EventHandler(this.numericTuteHours_ValueChanged);
+            this.numericNoOfDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // btnClose
             // 
@@ -173,7 +179,6 @@
             this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 36;
             this.label4.Text = "Hours";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 
@@ -196,6 +201,7 @@
             this.numericTPerDayHours.Name = "numericTPerDayHours";
             this.numericTPerDayHours.Size = new System.Drawing.Size(111, 27);
             this.numericTPerDayHours.TabIndex = 39;
+            this.numericTPerDayHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericTPerDayMinutes
             // 
@@ -205,6 +211,7 @@
             this.numericTPerDayMinutes.Name = "numericTPerDayMinutes";
             this.numericTPerDayMinutes.Size = new System.Drawing.Size(111, 27);
             this.numericTPerDayMinutes.TabIndex = 40;
+            this.numericTPerDayMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // errorAddWorkingDays
             // 
@@ -215,7 +222,7 @@
             this.checkBoxMonday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxMonday.AutoSize = true;
             this.checkBoxMonday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxMonday.Location = new System.Drawing.Point(297, 174);
+            this.checkBoxMonday.Location = new System.Drawing.Point(15, 11);
             this.checkBoxMonday.Name = "checkBoxMonday";
             this.checkBoxMonday.Size = new System.Drawing.Size(80, 21);
             this.checkBoxMonday.TabIndex = 41;
@@ -228,7 +235,7 @@
             this.checkBoxTuesday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxTuesday.AutoSize = true;
             this.checkBoxTuesday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxTuesday.Location = new System.Drawing.Point(401, 174);
+            this.checkBoxTuesday.Location = new System.Drawing.Point(110, 14);
             this.checkBoxTuesday.Name = "checkBoxTuesday";
             this.checkBoxTuesday.Size = new System.Drawing.Size(85, 21);
             this.checkBoxTuesday.TabIndex = 42;
@@ -241,7 +248,7 @@
             this.checkBoxSunday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxSunday.AutoSize = true;
             this.checkBoxSunday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxSunday.Location = new System.Drawing.Point(402, 211);
+            this.checkBoxSunday.Location = new System.Drawing.Point(119, 51);
             this.checkBoxSunday.Name = "checkBoxSunday";
             this.checkBoxSunday.Size = new System.Drawing.Size(78, 21);
             this.checkBoxSunday.TabIndex = 43;
@@ -254,7 +261,7 @@
             this.checkBoxFriday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxFriday.AutoSize = true;
             this.checkBoxFriday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxFriday.Location = new System.Drawing.Point(720, 174);
+            this.checkBoxFriday.Location = new System.Drawing.Point(435, 14);
             this.checkBoxFriday.Name = "checkBoxFriday";
             this.checkBoxFriday.Size = new System.Drawing.Size(69, 21);
             this.checkBoxFriday.TabIndex = 44;
@@ -267,7 +274,7 @@
             this.checkBoxThursday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxThursday.AutoSize = true;
             this.checkBoxThursday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxThursday.Location = new System.Drawing.Point(617, 174);
+            this.checkBoxThursday.Location = new System.Drawing.Point(330, 14);
             this.checkBoxThursday.Name = "checkBoxThursday";
             this.checkBoxThursday.Size = new System.Drawing.Size(90, 21);
             this.checkBoxThursday.TabIndex = 45;
@@ -280,7 +287,7 @@
             this.checkBoxWednesday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxWednesday.AutoSize = true;
             this.checkBoxWednesday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxWednesday.Location = new System.Drawing.Point(506, 174);
+            this.checkBoxWednesday.Location = new System.Drawing.Point(210, 14);
             this.checkBoxWednesday.Name = "checkBoxWednesday";
             this.checkBoxWednesday.Size = new System.Drawing.Size(105, 21);
             this.checkBoxWednesday.TabIndex = 46;
@@ -293,7 +300,7 @@
             this.checkBoxSaturday.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.checkBoxSaturday.AutoSize = true;
             this.checkBoxSaturday.ForeColor = System.Drawing.SystemColors.Info;
-            this.checkBoxSaturday.Location = new System.Drawing.Point(297, 211);
+            this.checkBoxSaturday.Location = new System.Drawing.Point(14, 51);
             this.checkBoxSaturday.Name = "checkBoxSaturday";
             this.checkBoxSaturday.Size = new System.Drawing.Size(87, 21);
             this.checkBoxSaturday.TabIndex = 47;
@@ -301,19 +308,56 @@
             this.checkBoxSaturday.UseVisualStyleBackColor = true;
             this.checkBoxSaturday.CheckedChanged += new System.EventHandler(this.checkBoxSaturday_CheckedChanged);
             // 
+            // btnUpdate
+            // 
+            this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Location = new System.Drawing.Point(590, 355);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(120, 40);
+            this.btnUpdate.TabIndex = 48;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Visible = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(729, 355);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(120, 40);
+            this.btnDelete.TabIndex = 49;
+            this.btnDelete.Text = "Delete All";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Visible = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.checkBoxMonday);
+            this.panel1.Controls.Add(this.checkBoxTuesday);
+            this.panel1.Controls.Add(this.checkBoxSunday);
+            this.panel1.Controls.Add(this.checkBoxSaturday);
+            this.panel1.Controls.Add(this.checkBoxFriday);
+            this.panel1.Controls.Add(this.checkBoxWednesday);
+            this.panel1.Controls.Add(this.checkBoxThursday);
+            this.panel1.Location = new System.Drawing.Point(290, 166);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(522, 81);
+            this.panel1.TabIndex = 50;
+            // 
             // AddWorkingDaysHours
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(881, 442);
-            this.Controls.Add(this.checkBoxSaturday);
-            this.Controls.Add(this.checkBoxWednesday);
-            this.Controls.Add(this.checkBoxThursday);
-            this.Controls.Add(this.checkBoxFriday);
-            this.Controls.Add(this.checkBoxSunday);
-            this.Controls.Add(this.checkBoxTuesday);
-            this.Controls.Add(this.checkBoxMonday);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.numericTPerDayMinutes);
             this.Controls.Add(this.numericTPerDayHours);
             this.Controls.Add(this.label5);
@@ -332,6 +376,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericTPerDayHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTPerDayMinutes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorAddWorkingDays)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -359,5 +405,8 @@
         private System.Windows.Forms.CheckBox checkBoxSunday;
         private System.Windows.Forms.CheckBox checkBoxTuesday;
         private System.Windows.Forms.CheckBox checkBoxMonday;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Panel panel1;
     }
 }
