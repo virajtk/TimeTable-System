@@ -32,8 +32,7 @@ namespace Time_Table_Management_System.Locations
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            textBoxBuildName.Text = "";
-            comboBoxBuildingName.SelectedIndex = -1;
+            comboBoxBuildingName.Text = "";
             textBoxRoomName.Text = "";
             radioButtonLectureHall.Checked = false;
             radioButtonLaboratory.Checked = false;
@@ -42,7 +41,7 @@ namespace Time_Table_Management_System.Locations
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (comboBoxBuildingName.SelectedIndex == -1)
+            if (comboBoxBuildingName.Text == String.Empty)
             {
                 comboBoxBuildingName.Focus();
                 errorLocation.SetError(comboBoxBuildingName, "Please Select Building");
@@ -69,18 +68,7 @@ namespace Time_Table_Management_System.Locations
 
                 // Set Data
 
-                switch (comboBoxBuildingName.SelectedIndex)
-                {
-                    case 0:
-                        location.BuildingName = "New Building";
-                        break;
-                    case 1:
-                        location.BuildingName = "BM";
-                        break;
-                    case 2:
-                        location.BuildingName = "IT Faculty";
-                        break;
-                }
+                location.BuildingName = comboBoxBuildingName.Text.Trim();
                 location.RoomName = textBoxRoomName.Text.Trim();
 
                 if (radioButtonLectureHall.Checked == true)
@@ -110,41 +98,14 @@ namespace Time_Table_Management_System.Locations
             this.Close();
         }
 
-        private void button_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
-           if (textBoxBuildName.Text == String.Empty)
-            {
-                textBoxBuildName.Focus();
-                errorLocation.SetError(textBoxBuildName, "Please Enter Building Name");
-            }
-           else
-            {
-                Location location = new Location();
-                ILocationService locationService = new LocationService();
-
-
-                if (locationService.addLocation(location))
-                {
-                    //MessageBox.Show(tag.Tag);
-                    SuccessMessage sc = new SuccessMessage("Building Added Successfully !");
-                    sc.Show();
-                }
-                else
-                {
-                    ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
-                    ec.Show();
-                }
-
-            }
-
-
-
 
         }
 
-        private void btnClearBuild_Click(object sender, EventArgs e)
+        private void comboBoxBuilduing_TextChanged(object sender, EventArgs e)
         {
-            textBoxBuildName.Text = "";
+
         }
     }
 }

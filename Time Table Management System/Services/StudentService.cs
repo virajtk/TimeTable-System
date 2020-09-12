@@ -42,7 +42,6 @@ namespace Time_Table_Management_System.Services
                 else
                     result = false;
 
-     
             }
             catch (Exception e)
             {

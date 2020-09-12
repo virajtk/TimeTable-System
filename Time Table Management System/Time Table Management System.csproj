@@ -108,11 +108,14 @@
     <Compile Include="Messages\SuccessMessage.Designer.cs">
       <DependentUpon>SuccessMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Dash.cs" />
     <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Tag.cs" />
+    <Compile Include="Services\DashBoardService.cs" />
+    <Compile Include="Services\IDashBoardService.cs" />
     <Compile Include="Services\ILecturerService.cs" />
     <Compile Include="Services\ILocationService.cs" />
     <Compile Include="Services\IStudentService.cs" />

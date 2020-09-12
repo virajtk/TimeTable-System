@@ -164,6 +164,7 @@ namespace Time_Table_Management_System.Services
             {
                 string query = "UPDATE locations SET buildingName = @buildingname, roomName = @roomname, roomType = @roomtype, capacity = @capacity WHERE id = @id";
 
+
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
 
@@ -171,11 +172,12 @@ namespace Time_Table_Management_System.Services
                 cmd.Parameters.AddWithValue("@roomname", location.RoomName);
                 cmd.Parameters.AddWithValue("@roomtype", location.RoomType);
                 cmd.Parameters.AddWithValue("@capacity", location.Capacity);
+                cmd.Parameters.AddWithValue("@id", id);
 
                 cmd.Prepare();
 
 
-                if (cmd.ExecuteNonQuery() == 1)
+                if (cmd.ExecuteNonQuery() != 0)
                     result = true;
                 else
                     result = false;

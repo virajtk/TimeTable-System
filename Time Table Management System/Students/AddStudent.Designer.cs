@@ -92,7 +92,6 @@
             this.label1.Size = new System.Drawing.Size(204, 20);
             this.label1.TabIndex = 14;
             this.label1.Text = "Academic Year & Semester";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBoxYearSem
             // 

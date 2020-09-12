@@ -80,11 +80,18 @@ namespace Time_Table_Management_System.Tags
                     //MessageBox.Show(tag.Tag);
                     SuccessMessage sc = new SuccessMessage("Tags Added Successfully !");
                     sc.Show();
+                    subName.Text = "";
+                    subCode.Text = "";
+                    comboBoxRelatedTag.SelectedIndex = -1;
+
                 }
                 else
                 {
                     ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
                     ec.Show();
+                    subName.Text = "";
+                    subCode.Text = "";
+                    comboBoxRelatedTag.SelectedIndex = -1;
                 }
             }
         }

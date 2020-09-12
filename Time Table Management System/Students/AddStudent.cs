@@ -20,17 +20,7 @@ namespace Time_Table_Management_System.Students
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }
@@ -43,7 +33,6 @@ namespace Time_Table_Management_System.Students
             textBoxGroupID.Text = "";
             numericsubGroup.Value = 0;
             textBoxSubGroupID.Text = "";
-
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -134,11 +123,23 @@ namespace Time_Table_Management_System.Students
                     //MessageBox.Show(student.StudentGroup);
                     SuccessMessage sc = new SuccessMessage("Student Group Added Successfully !");
                     sc.Show();
+                    textBoxYearSem.Text = "";
+                    comboBoxProgramme.SelectedIndex = -1;
+                    numericGroupNo.Value = 0;
+                    textBoxGroupID.Text = "";
+                    numericsubGroup.Value = 0;
+                    textBoxSubGroupID.Text = "";
                 }
                 else
                 {
                     ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
                     ec.Show();
+                    textBoxYearSem.Text = "";
+                    comboBoxProgramme.SelectedIndex = -1;
+                    numericGroupNo.Value = 0;
+                    textBoxGroupID.Text = "";
+                    numericsubGroup.Value = 0;
+                    textBoxSubGroupID.Text = "";
                 }
             }
         }

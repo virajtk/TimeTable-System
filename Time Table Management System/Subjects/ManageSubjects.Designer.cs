@@ -381,6 +381,7 @@
             this.radioButtonSem1.TabStop = true;
             this.radioButtonSem1.Text = "1st Semester";
             this.radioButtonSem1.UseVisualStyleBackColor = true;
+            this.radioButtonSem1.CheckedChanged += new System.EventHandler(this.radioButtonSem1_CheckedChanged);
             // 
             // label5
             // 

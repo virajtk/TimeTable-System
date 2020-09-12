@@ -241,5 +241,10 @@ namespace Time_Table_Management_System
                 Console.WriteLine(es.Message);
             }
         }
+
+        private void radioButtonSem1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace Time_Table_Management_System.Models
         private String roomType;
         private String capacity;
         private int id;
+
         public string BuildingName { get => buildingName; set => buildingName = value; }
         public string RoomName{ get => roomName; set => roomName = value; }
         public string RoomType { get => roomType; set => roomType = value; }

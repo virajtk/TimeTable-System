@@ -20,8 +20,7 @@ namespace Time_Table_Management_System.Locations
         private bool executedFirstTime;
         private ILocationService locationService;
         private Location selectedLoc;
-        private ILocationService subjectService;
-        private List<Location> locationsArray;
+
 
         public ManageLocations()
         {
@@ -41,6 +40,9 @@ namespace Time_Table_Management_System.Locations
             }
 
         }
+
+
+
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
@@ -62,22 +64,12 @@ namespace Time_Table_Management_System.Locations
 
         }
 
-        private void dataGridSubjects_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            
-            
-            textBoxBuildName.Text = "";
-            radioButtonLectureHall.Checked = false;
-            radioButtonLaboratory.Checked = false;
-            textBoxCapacity.Text = "";
 
-            btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
+
+            clear();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -110,10 +102,15 @@ namespace Time_Table_Management_System.Locations
                         textBoxBuildName.Text = selectedLoc.BuildingName;
                         textBoxRoomName.Text = selectedLoc.RoomName;
 
-                        if (radioButtonLectureHall.Checked == true)
-                            selectedLoc.RoomType = "Lecture Hall";
+
+                        if (selectedLoc.RoomType == "Lecture Hall")
+                        {
+                            radioButtonLectureHall.Checked = true;
+                        }
                         else
-                            selectedLoc.RoomType = "Laboratory";
+                        {
+                            radioButtonLaboratory.Checked = true;
+                        }
 
                         textBoxCapacity.Text = selectedLoc.Capacity;
                        
@@ -158,6 +155,8 @@ namespace Time_Table_Management_System.Locations
                 textBoxCapacity.Focus();
                 errorLocation.SetError(textBoxCapacity, "Please Enter Room Capacity");
             }
+
+
             else
             {
                 Location location = new Location();
@@ -166,30 +165,27 @@ namespace Time_Table_Management_System.Locations
                 // Set Data to model
                 location.BuildingName = textBoxBuildName.Text.Trim();
                 location.RoomName = textBoxRoomName.Text.Trim();
-           
+            
 
                 if (radioButtonLectureHall.Checked == true)
                     location.RoomType= "Lecture Hall";
-                else
+                else if (radioButtonLaboratory.Checked == true)
                     location.RoomType = "Laboratory";
 
- 
+                location.Capacity = textBoxCapacity.Text.Trim();
+
+                Console.WriteLine(selectedLoc.Id);
+
                 #endregion
 
                 //Update Data
                 if (locationService.updateLocation(selectedLoc.Id, location))
                 {
-                    SuccessMessage sc = new SuccessMessage("Subject Updated Successfully !");
+                    SuccessMessage sc = new SuccessMessage("Location Updated Successfully !");
                     sc.Show();
                     dataGridLocations.Rows.Clear();
                     populateData();
-                    textBoxBuildName.Text = "";
-                    radioButtonLectureHall.Checked = false;
-                    radioButtonLaboratory.Checked = false;
-                    textBoxCapacity.Text = "";
-
-                    btnDelete.Enabled = false;
-                    btnUpdate.Enabled = false;
+                    clear(); 
                 }
                 else
                 {
@@ -207,13 +203,7 @@ namespace Time_Table_Management_System.Locations
                 sm.Show();
                 dataGridLocations.Rows.Clear();
                 populateData();
-                textBoxBuildName.Text = "";
-                radioButtonLectureHall.Checked = false;
-                radioButtonLaboratory.Checked = false;
-                textBoxCapacity.Text = "";
-
-                btnDelete.Enabled = false;
-                btnUpdate.Enabled = false; 
+                clear();
             }
             else
             {
@@ -225,6 +215,33 @@ namespace Time_Table_Management_System.Locations
         private void textBoxCapacity_TextChanged(object sender, EventArgs e)
         {
             
+        }
+
+        private void dataGridLocations_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void radioButtonLectureHall_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonLaboratory_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void clear()
+        {
+            textBoxBuildName.Text = String.Empty;
+            radioButtonLectureHall.Checked = false;
+            radioButtonLaboratory.Checked = false;
+            textBoxCapacity.Text = String.Empty;
+            radioButtonLectureHall.Checked = false;
+            radioButtonLaboratory.Checked = false;
+
+            btnDelete.Enabled = false;
+            btnUpdate.Enabled = false;
         }
     }
 }

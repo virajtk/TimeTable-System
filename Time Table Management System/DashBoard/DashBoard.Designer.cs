@@ -29,11 +29,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtLatestSub = new System.Windows.Forms.TextBox();
+            this.txtLatestStu = new System.Windows.Forms.TextBox();
+            this.txtLatestLec = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,13 +45,14 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBoxBuildName = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.labelRegLecs = new System.Windows.Forms.Label();
+            this.labelRegStu = new System.Windows.Forms.Label();
+            this.labelRegSubs = new System.Windows.Forms.Label();
+            this.label1RegRooms = new System.Windows.Forms.Label();
+            this.chartLocations = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLocations)).BeginInit();
             this.SuspendLayout();
             // 
             // button4
@@ -56,95 +61,105 @@
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.ForeColor = System.Drawing.SystemColors.Info;
-            this.button4.Location = new System.Drawing.Point(2, 2);
-            this.button4.Margin = new System.Windows.Forms.Padding(2);
+            this.button4.Location = new System.Drawing.Point(3, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(38, 20);
+            this.button4.Size = new System.Drawing.Size(51, 25);
             this.button4.TabIndex = 15;
             this.button4.Text = "X";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox6);
-            this.groupBox1.Controls.Add(this.textBox5);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.Controls.Add(this.txtLatestSub);
+            this.groupBox1.Controls.Add(this.txtLatestStu);
+            this.groupBox1.Controls.Add(this.txtLatestLec);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox1.Location = new System.Drawing.Point(369, 149);
+            this.groupBox1.Location = new System.Drawing.Point(492, 183);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(280, 207);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(373, 246);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "What\'s New?";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
-            // textBox6
+            // txtLatestSub
             // 
-            this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(106, 132);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(146, 23);
-            this.textBox6.TabIndex = 61;
-            this.textBox6.Text = "SPM";
-            this.textBox6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox6.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
+            this.txtLatestSub.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLatestSub.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLatestSub.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLatestSub.Location = new System.Drawing.Point(141, 164);
+            this.txtLatestSub.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLatestSub.Name = "txtLatestSub";
+            this.txtLatestSub.ReadOnly = true;
+            this.txtLatestSub.Size = new System.Drawing.Size(193, 34);
+            this.txtLatestSub.TabIndex = 61;
+            this.txtLatestSub.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox5
+            // txtLatestStu
             // 
-            this.textBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(106, 90);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(146, 23);
-            this.textBox5.TabIndex = 60;
-            this.textBox5.Text = "Senura Diwantha";
-            this.textBox5.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLatestStu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLatestStu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLatestStu.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLatestStu.Location = new System.Drawing.Point(141, 113);
+            this.txtLatestStu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLatestStu.Name = "txtLatestStu";
+            this.txtLatestStu.ReadOnly = true;
+            this.txtLatestStu.Size = new System.Drawing.Size(193, 34);
+            this.txtLatestStu.TabIndex = 60;
+            this.txtLatestStu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // textBox4
+            // txtLatestLec
             // 
-            this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(106, 48);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(146, 23);
-            this.textBox4.TabIndex = 59;
-            this.textBox4.Text = "Viraj Konthasinghe";
-            this.textBox4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtLatestLec.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtLatestLec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtLatestLec.Font = new System.Drawing.Font("Nirmala UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLatestLec.Location = new System.Drawing.Point(141, 59);
+            this.txtLatestLec.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLatestLec.Name = "txtLatestLec";
+            this.txtLatestLec.ReadOnly = true;
+            this.txtLatestLec.Size = new System.Drawing.Size(193, 34);
+            this.txtLatestLec.TabIndex = 59;
+            this.txtLatestLec.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 138);
+            this.label3.Location = new System.Drawing.Point(27, 169);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.Size = new System.Drawing.Size(98, 17);
             this.label3.TabIndex = 20;
-            this.label3.Text = "Latest Subject:";
+            this.label3.Text = "Latest Subject";
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 96);
+            this.label2.Location = new System.Drawing.Point(27, 117);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 13);
+            this.label2.Size = new System.Drawing.Size(91, 17);
             this.label2.TabIndex = 18;
-            this.label2.Text = "Latest Sudent:";
+            this.label2.Text = "Latest Group";
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 54);
+            this.label1.Location = new System.Drawing.Point(27, 65);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(80, 13);
+            this.label1.Size = new System.Drawing.Size(99, 17);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Latest lecturer :";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.label1.Text = "Latest lecturer";
             // 
             // label4
             // 
@@ -153,12 +168,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(186, 53);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(248, 141);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(149, 17);
+            this.label4.Size = new System.Drawing.Size(161, 20);
             this.label4.TabIndex = 18;
-            this.label4.Text = "#Registered Students:";
+            this.label4.Text = "Registered Students";
             // 
             // label5
             // 
@@ -167,12 +181,11 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(356, 53);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(465, 141);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(147, 17);
+            this.label5.Size = new System.Drawing.Size(160, 20);
             this.label5.TabIndex = 19;
-            this.label5.Text = "#Registered Subjects:";
+            this.label5.Text = "Registered Subjects";
             // 
             // label6
             // 
@@ -181,106 +194,144 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(512, 53);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(673, 141);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(137, 17);
+            this.label6.Size = new System.Drawing.Size(148, 20);
             this.label6.TabIndex = 20;
-            this.label6.Text = "#Registered Rooms:";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
+            this.label6.Text = "Registered Rooms";
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(28, 62);
+            this.label7.Location = new System.Drawing.Point(37, 141);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(153, 17);
+            this.label7.Size = new System.Drawing.Size(167, 20);
             this.label7.TabIndex = 36;
-            this.label7.Text = "#Registered Lecturers:";
+            this.label7.Text = "Registered Lecturers";
             // 
-            // textBoxBuildName
+            // label8
             // 
-            this.textBoxBuildName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxBuildName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxBuildName.Location = new System.Drawing.Point(65, 91);
-            this.textBoxBuildName.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxBuildName.Name = "textBoxBuildName";
-            this.textBoxBuildName.Size = new System.Drawing.Size(47, 23);
-            this.textBoxBuildName.TabIndex = 56;
-            this.textBoxBuildName.Text = "4";
-            this.textBoxBuildName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(49, 191);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 17);
+            this.label8.TabIndex = 61;
+            this.label8.Text = "label8";
             // 
-            // textBox1
+            // labelRegLecs
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(223, 91);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(48, 23);
-            this.textBox1.TabIndex = 57;
-            this.textBox1.Text = "2";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelRegLecs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelRegLecs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelRegLecs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelRegLecs.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegLecs.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelRegLecs.Location = new System.Drawing.Point(55, 52);
+            this.labelRegLecs.Name = "labelRegLecs";
+            this.labelRegLecs.Size = new System.Drawing.Size(131, 74);
+            this.labelRegLecs.TabIndex = 62;
+            this.labelRegLecs.Text = "2";
+            this.labelRegLecs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox2
+            // labelRegStu
             // 
-            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(382, 91);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(48, 23);
-            this.textBox2.TabIndex = 58;
-            this.textBox2.Text = "2";
-            this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelRegStu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelRegStu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelRegStu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelRegStu.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegStu.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelRegStu.Location = new System.Drawing.Point(265, 52);
+            this.labelRegStu.Name = "labelRegStu";
+            this.labelRegStu.Size = new System.Drawing.Size(131, 74);
+            this.labelRegStu.TabIndex = 63;
+            this.labelRegStu.Text = "2";
+            this.labelRegStu.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox3
+            // labelRegSubs
             // 
-            this.textBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(541, 91);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(48, 23);
-            this.textBox3.TabIndex = 59;
-            this.textBox3.Text = "1";
-            this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.labelRegSubs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelRegSubs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.labelRegSubs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelRegSubs.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRegSubs.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.labelRegSubs.Location = new System.Drawing.Point(481, 52);
+            this.labelRegSubs.Name = "labelRegSubs";
+            this.labelRegSubs.Size = new System.Drawing.Size(131, 74);
+            this.labelRegSubs.TabIndex = 64;
+            this.labelRegSubs.Text = "2";
+            this.labelRegSubs.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
+            // label1RegRooms
             // 
-            this.pictureBox1.Image = global::Time_Table_Management_System.Properties.Resources.graph3;
-            this.pictureBox1.Location = new System.Drawing.Point(33, 129);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(302, 237);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 60;
-            this.pictureBox1.TabStop = false;
+            this.label1RegRooms.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1RegRooms.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1RegRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1RegRooms.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1RegRooms.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1RegRooms.Location = new System.Drawing.Point(682, 52);
+            this.label1RegRooms.Name = "label1RegRooms";
+            this.label1RegRooms.Size = new System.Drawing.Size(131, 74);
+            this.label1RegRooms.TabIndex = 65;
+            this.label1RegRooms.Text = "2";
+            this.label1RegRooms.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // chartLocations
+            // 
+            this.chartLocations.Anchor = System.Windows.Forms.AnchorStyles.None;
+            chartArea1.Name = "ChartArea1";
+            this.chartLocations.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartLocations.Legends.Add(legend1);
+            this.chartLocations.Location = new System.Drawing.Point(41, 206);
+            this.chartLocations.Name = "chartLocations";
+            this.chartLocations.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
+            series1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
+            series1.BorderColor = System.Drawing.Color.DarkOrange;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series1.Color = System.Drawing.Color.DarkOrange;
+            series1.Legend = "Legend1";
+            series1.Name = "Lecture Rooms";
+            series1.YValuesPerPoint = 10;
+            series2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.Percent05;
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series2.Color = System.Drawing.Color.MidnightBlue;
+            series2.Legend = "Legend1";
+            series2.Name = "Laboratories";
+            this.chartLocations.Series.Add(series1);
+            this.chartLocations.Series.Add(series2);
+            this.chartLocations.Size = new System.Drawing.Size(424, 216);
+            this.chartLocations.TabIndex = 66;
+            this.chartLocations.Text = "Locations Stats";
             // 
             // DashBoard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(661, 359);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBoxBuildName);
+            this.ClientSize = new System.Drawing.Size(881, 442);
+            this.Controls.Add(this.chartLocations);
+            this.Controls.Add(this.label1RegRooms);
+            this.Controls.Add(this.labelRegSubs);
+            this.Controls.Add(this.labelRegStu);
+            this.Controls.Add(this.labelRegLecs);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button4);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "DashBoard";
             this.Text = "DashBoard";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartLocations)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -296,13 +347,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBoxBuildName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtLatestSub;
+        private System.Windows.Forms.TextBox txtLatestStu;
+        private System.Windows.Forms.TextBox txtLatestLec;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label labelRegLecs;
+        private System.Windows.Forms.Label labelRegStu;
+        private System.Windows.Forms.Label labelRegSubs;
+        private System.Windows.Forms.Label label1RegRooms;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartLocations;
     }
 }
