@@ -16,7 +16,7 @@ namespace Time_Table_Management_System.Services
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
-                string query = "INSERT INTO timeslots (stHours, stMinutes, etHours, etMinutes) VALUES (@stHours, @stMinutes, @etHours, @etMinutes)";
+                string query = "INSERT INTO timeslots (stHours, stMinutes, etHours, etMinutes, duration) VALUES (@stHours, @stMinutes, @etHours, @etMinutes, @duration)";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
@@ -25,6 +25,7 @@ namespace Time_Table_Management_System.Services
                 cmd.Parameters.AddWithValue("@stMinutes", timeSlot.StMinutes);
                 cmd.Parameters.AddWithValue("@etHours", timeSlot.EtHours);
                 cmd.Parameters.AddWithValue("@etMinutes", timeSlot.EtMinutes);
+                cmd.Parameters.AddWithValue("@duration", timeSlot.Duration);
 
                 cmd.Prepare();
 
@@ -71,6 +72,7 @@ namespace Time_Table_Management_System.Services
                     timeSlot.StMinutes = rdr.GetInt32(2);
                     timeSlot.EtHours = rdr.GetInt32(3);
                     timeSlot.EtMinutes = rdr.GetInt32(4);
+                    timeSlot.Duration = rdr.GetString(5);
 
 
                     arrayTimeSlots.Add(timeSlot);
@@ -108,6 +110,7 @@ namespace Time_Table_Management_System.Services
                     timeSlot.StMinutes = rdr.GetInt32(2);
                     timeSlot.EtHours = rdr.GetInt32(3);
                     timeSlot.EtMinutes = rdr.GetInt32(4);
+                    timeSlot.Duration = rdr.GetString(5);
 
                 }
             }
@@ -121,6 +124,39 @@ namespace Time_Table_Management_System.Services
             }
 
             return timeSlot;
+        }
+
+
+
+        public bool deleteTimeSlot(int id)
+        {
+            Boolean result = false;
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            try
+            {
+                string query = "DELETE FROM timeslots WHERE id = @id";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Prepare();
+
+                if (cmd.ExecuteNonQuery() == 1)
+                    result = true;
+                else
+                    result = false;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
         }
 
     }

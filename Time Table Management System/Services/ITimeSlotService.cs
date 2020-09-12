@@ -14,5 +14,7 @@ namespace Time_Table_Management_System.Services
         List<TimeSlot> getAllTimeSlots();
 
         TimeSlot getTimeSlot(int id);
+
+        Boolean deleteTimeSlot(int id);
     }
 }

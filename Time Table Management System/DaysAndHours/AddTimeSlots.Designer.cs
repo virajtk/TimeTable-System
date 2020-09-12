@@ -33,26 +33,27 @@
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StartTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.EndTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.title = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericSTMinutes = new System.Windows.Forms.NumericUpDown();
             this.numericSThours = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.numericETMinutes = new System.Windows.Forms.NumericUpDown();
-            this.numericETHours = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnAddTimeSlot = new System.Windows.Forms.Button();
             this.errorProviderTimeSlot = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label7 = new System.Windows.Forms.Label();
+            this.label = new System.Windows.Forms.Label();
+            this.comboBoxDuration = new System.Windows.Forms.ComboBox();
+            this.btnDeleteTimeSlot = new System.Windows.Forms.Button();
+            this.comboBoxSTMinutes = new System.Windows.Forms.ComboBox();
+            this.btnGenerateRank = new System.Windows.Forms.Button();
+            this.ETMinutes = new System.Windows.Forms.TextBox();
+            this.ETHours = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTimeSlots)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericSTMinutes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSThours)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericETMinutes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericETHours)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTimeSlot)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,14 +68,15 @@
             this.dataGridTimeSlots.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id,
             this.StartTime,
-            this.EndTime});
-            this.dataGridTimeSlots.Location = new System.Drawing.Point(87, 256);
+            this.EndTime,
+            this.Duration});
+            this.dataGridTimeSlots.Location = new System.Drawing.Point(87, 281);
             this.dataGridTimeSlots.Name = "dataGridTimeSlots";
             this.dataGridTimeSlots.RowHeadersWidth = 51;
             this.dataGridTimeSlots.RowTemplate.Height = 24;
             this.dataGridTimeSlots.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dataGridTimeSlots.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridTimeSlots.Size = new System.Drawing.Size(734, 162);
+            this.dataGridTimeSlots.Size = new System.Drawing.Size(734, 137);
             this.dataGridTimeSlots.TabIndex = 19;
             this.dataGridTimeSlots.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
             // 
@@ -101,6 +103,13 @@
             this.EndTime.MinimumWidth = 6;
             this.EndTime.Name = "EndTime";
             this.EndTime.ReadOnly = true;
+            // 
+            // Duration
+            // 
+            this.Duration.HeaderText = "Duration";
+            this.Duration.MinimumWidth = 6;
+            this.Duration.Name = "Duration";
+            this.Duration.Width = 125;
             // 
             // title
             // 
@@ -136,29 +145,26 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(83, 85);
+            this.label1.Location = new System.Drawing.Point(83, 118);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 20);
             this.label1.TabIndex = 28;
             this.label1.Text = "Start Time";
             // 
-            // numericSTMinutes
-            // 
-            this.numericSTMinutes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericSTMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericSTMinutes.Location = new System.Drawing.Point(435, 83);
-            this.numericSTMinutes.Name = "numericSTMinutes";
-            this.numericSTMinutes.Size = new System.Drawing.Size(111, 27);
-            this.numericSTMinutes.TabIndex = 44;
-            // 
             // numericSThours
             // 
             this.numericSThours.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericSThours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericSThours.Location = new System.Drawing.Point(217, 83);
+            this.numericSThours.Location = new System.Drawing.Point(254, 116);
+            this.numericSThours.Maximum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             this.numericSThours.Name = "numericSThours";
             this.numericSThours.Size = new System.Drawing.Size(111, 27);
             this.numericSThours.TabIndex = 43;
+            this.numericSThours.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label5
             // 
@@ -167,7 +173,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(563, 88);
+            this.label5.Location = new System.Drawing.Point(600, 121);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 42;
@@ -180,29 +186,11 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(346, 88);
+            this.label4.Location = new System.Drawing.Point(383, 121);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 41;
             this.label4.Text = "Hours";
-            // 
-            // numericETMinutes
-            // 
-            this.numericETMinutes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericETMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericETMinutes.Location = new System.Drawing.Point(435, 195);
-            this.numericETMinutes.Name = "numericETMinutes";
-            this.numericETMinutes.Size = new System.Drawing.Size(111, 27);
-            this.numericETMinutes.TabIndex = 49;
-            // 
-            // numericETHours
-            // 
-            this.numericETHours.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericETHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericETHours.Location = new System.Drawing.Point(217, 195);
-            this.numericETHours.Name = "numericETHours";
-            this.numericETHours.Size = new System.Drawing.Size(111, 27);
-            this.numericETHours.TabIndex = 48;
             // 
             // label2
             // 
@@ -211,7 +199,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(563, 200);
+            this.label2.Location = new System.Drawing.Point(600, 218);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 47;
@@ -224,7 +212,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(346, 200);
+            this.label3.Location = new System.Drawing.Point(383, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(55, 20);
             this.label3.TabIndex = 46;
@@ -237,7 +225,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(83, 197);
+            this.label6.Location = new System.Drawing.Point(83, 218);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(80, 20);
             this.label6.TabIndex = 45;
@@ -247,11 +235,11 @@
             // 
             this.btnAddTimeSlot.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnAddTimeSlot.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddTimeSlot.Location = new System.Drawing.Point(701, 115);
+            this.btnAddTimeSlot.Location = new System.Drawing.Point(701, 116);
             this.btnAddTimeSlot.Name = "btnAddTimeSlot";
-            this.btnAddTimeSlot.Size = new System.Drawing.Size(120, 65);
+            this.btnAddTimeSlot.Size = new System.Drawing.Size(120, 47);
             this.btnAddTimeSlot.TabIndex = 50;
-            this.btnAddTimeSlot.Text = "Add Time Slot";
+            this.btnAddTimeSlot.Text = "Add ";
             this.btnAddTimeSlot.UseVisualStyleBackColor = true;
             this.btnAddTimeSlot.Click += new System.EventHandler(this.btnAddTimeSlot_Click);
             // 
@@ -259,19 +247,102 @@
             // 
             this.errorProviderTimeSlot.ContainerControl = this;
             // 
-            // label7
+            // label
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(83, 138);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(87, 20);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "Start Time";
-            
+            this.label.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label.AutoSize = true;
+            this.label.BackColor = System.Drawing.Color.Transparent;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.ForeColor = System.Drawing.SystemColors.Info;
+            this.label.Location = new System.Drawing.Point(83, 164);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(149, 20);
+            this.label.TabIndex = 51;
+            this.label.Text = "Time Slot Duration";
+            // 
+            // comboBoxDuration
+            // 
+            this.comboBoxDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxDuration.AutoCompleteCustomSource.AddRange(new string[] {
+            "30 Minutes",
+            "1 Hour",
+            "2 Hours"});
+            this.comboBoxDuration.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxDuration.FormattingEnabled = true;
+            this.comboBoxDuration.Items.AddRange(new object[] {
+            "30 Minutes",
+            "1 Hour",
+            "2 Hours"});
+            this.comboBoxDuration.Location = new System.Drawing.Point(254, 161);
+            this.comboBoxDuration.Name = "comboBoxDuration";
+            this.comboBoxDuration.Size = new System.Drawing.Size(111, 28);
+            this.comboBoxDuration.TabIndex = 52;
+            // 
+            // btnDeleteTimeSlot
+            // 
+            this.btnDeleteTimeSlot.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnDeleteTimeSlot.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTimeSlot.Location = new System.Drawing.Point(701, 193);
+            this.btnDeleteTimeSlot.Name = "btnDeleteTimeSlot";
+            this.btnDeleteTimeSlot.Size = new System.Drawing.Size(120, 47);
+            this.btnDeleteTimeSlot.TabIndex = 53;
+            this.btnDeleteTimeSlot.Text = "Delete";
+            this.btnDeleteTimeSlot.UseVisualStyleBackColor = true;
+            this.btnDeleteTimeSlot.Click += new System.EventHandler(this.btnDeleteTimeSlot_Click);
+            // 
+            // comboBoxSTMinutes
+            // 
+            this.comboBoxSTMinutes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxSTMinutes.AutoCompleteCustomSource.AddRange(new string[] {
+            "30 Minutes",
+            "1 Hour",
+            "2 Hours"});
+            this.comboBoxSTMinutes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSTMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSTMinutes.FormattingEnabled = true;
+            this.comboBoxSTMinutes.Items.AddRange(new object[] {
+            "00",
+            "30"});
+            this.comboBoxSTMinutes.Location = new System.Drawing.Point(472, 116);
+            this.comboBoxSTMinutes.Name = "comboBoxSTMinutes";
+            this.comboBoxSTMinutes.Size = new System.Drawing.Size(111, 28);
+            this.comboBoxSTMinutes.TabIndex = 54;
+            // 
+            // btnGenerateRank
+            // 
+            this.btnGenerateRank.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnGenerateRank.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerateRank.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGenerateRank.Image = global::Time_Table_Management_System.Properties.Resources.generate;
+            this.btnGenerateRank.Location = new System.Drawing.Point(387, 161);
+            this.btnGenerateRank.Name = "btnGenerateRank";
+            this.btnGenerateRank.Size = new System.Drawing.Size(41, 28);
+            this.btnGenerateRank.TabIndex = 55;
+            this.btnGenerateRank.UseVisualStyleBackColor = false;
+            this.btnGenerateRank.Click += new System.EventHandler(this.btnGenerateRank_Click);
+            // 
+            // ETMinutes
+            // 
+            this.ETMinutes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ETMinutes.Enabled = false;
+            this.ETMinutes.Location = new System.Drawing.Point(472, 218);
+            this.ETMinutes.Name = "ETMinutes";
+            this.ETMinutes.ReadOnly = true;
+            this.ETMinutes.Size = new System.Drawing.Size(111, 22);
+            this.ETMinutes.TabIndex = 57;
+            this.ETMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // ETHours
+            // 
+            this.ETHours.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ETHours.Enabled = false;
+            this.ETHours.Location = new System.Drawing.Point(254, 218);
+            this.ETHours.Name = "ETHours";
+            this.ETHours.ReadOnly = true;
+            this.ETHours.Size = new System.Drawing.Size(111, 22);
+            this.ETHours.TabIndex = 58;
+            this.ETHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // AddTimeSlots
             // 
@@ -279,14 +350,17 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(881, 442);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.ETHours);
+            this.Controls.Add(this.ETMinutes);
+            this.Controls.Add(this.btnGenerateRank);
+            this.Controls.Add(this.comboBoxSTMinutes);
+            this.Controls.Add(this.btnDeleteTimeSlot);
+            this.Controls.Add(this.comboBoxDuration);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.btnAddTimeSlot);
-            this.Controls.Add(this.numericETMinutes);
-            this.Controls.Add(this.numericETHours);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.numericSTMinutes);
             this.Controls.Add(this.numericSThours);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -297,10 +371,7 @@
             this.Name = "AddTimeSlots";
             this.Text = "AddTimeSlots";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridTimeSlots)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericSTMinutes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericSThours)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericETMinutes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericETHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProviderTimeSlot)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -313,20 +384,24 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericSTMinutes;
         private System.Windows.Forms.NumericUpDown numericSThours;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.NumericUpDown numericETMinutes;
-        private System.Windows.Forms.NumericUpDown numericETHours;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAddTimeSlot;
         private System.Windows.Forms.ErrorProvider errorProviderTimeSlot;
+        private System.Windows.Forms.Label label;
+        private System.Windows.Forms.ComboBox comboBoxDuration;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn StartTime;
         private System.Windows.Forms.DataGridViewTextBoxColumn EndTime;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
+        private System.Windows.Forms.Button btnDeleteTimeSlot;
+        private System.Windows.Forms.ComboBox comboBoxSTMinutes;
+        private System.Windows.Forms.Button btnGenerateRank;
+        private System.Windows.Forms.TextBox ETMinutes;
+        private System.Windows.Forms.TextBox ETHours;
     }
 }
