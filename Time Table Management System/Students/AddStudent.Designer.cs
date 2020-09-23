@@ -57,11 +57,11 @@
             this.title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.SystemColors.Info;
+            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.SteelBlue;
             this.title.Location = new System.Drawing.Point(108, 36);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(292, 34);
+            this.title.Size = new System.Drawing.Size(287, 34);
             this.title.TabIndex = 2;
             this.title.Text = "Add Student Groups";
             this.title.Click += new System.EventHandler(this.title_Click);
@@ -210,40 +210,46 @@
             // btnClear
             // 
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnClear.BackColor = System.Drawing.Color.DarkRed;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
             this.btnClear.Location = new System.Drawing.Point(302, 356);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 40);
             this.btnClear.TabIndex = 26;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.Info;
             this.btnSave.Location = new System.Drawing.Point(460, 356);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 40);
             this.btnSave.TabIndex = 27;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.button1_Click);
             // 
             // btngenerateIDs
             // 
             this.btngenerateIDs.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btngenerateIDs.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btngenerateIDs.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btngenerateIDs.BackColor = System.Drawing.Color.DarkOrange;
+            this.btngenerateIDs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btngenerateIDs.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btngenerateIDs.ForeColor = System.Drawing.SystemColors.Info;
             this.btngenerateIDs.Location = new System.Drawing.Point(676, 249);
             this.btngenerateIDs.Name = "btngenerateIDs";
             this.btngenerateIDs.Size = new System.Drawing.Size(162, 40);
             this.btngenerateIDs.TabIndex = 28;
             this.btngenerateIDs.Text = "Generate IDs";
-            this.btngenerateIDs.UseVisualStyleBackColor = true;
+            this.btngenerateIDs.UseVisualStyleBackColor = false;
             this.btngenerateIDs.Click += new System.EventHandler(this.btnGenerateIDs_Click);
             // 
             // errorStudent
