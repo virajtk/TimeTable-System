@@ -32,33 +32,33 @@
             this.title = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tab1 = new System.Windows.Forms.TabPage();
-            this.tab2 = new System.Windows.Forms.TabPage();
             this.groupBoxStep1 = new System.Windows.Forms.GroupBox();
-            this.groupBoxStep2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnClear = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnSubmit = new System.Windows.Forms.Button();
-            this.btnClear2 = new System.Windows.Forms.Button();
-            this.btnBack = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tab2 = new System.Windows.Forms.TabPage();
+            this.groupBoxStep2 = new System.Windows.Forms.GroupBox();
+            this.txtNoOfStudents = new System.Windows.Forms.TextBox();
+            this.txtDuration = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.txtDuration = new System.Windows.Forms.TextBox();
-            this.txtNoOfStudents = new System.Windows.Forms.TextBox();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.btnClear2 = new System.Windows.Forms.Button();
+            this.btnSubmit = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.tab1.SuspendLayout();
-            this.tab2.SuspendLayout();
             this.groupBoxStep1.SuspendLayout();
+            this.tab2.SuspendLayout();
             this.groupBoxStep2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -114,17 +114,6 @@
             this.tab1.Text = "Select Lectures & Tag";
             this.tab1.UseVisualStyleBackColor = true;
             // 
-            // tab2
-            // 
-            this.tab2.Controls.Add(this.groupBoxStep2);
-            this.tab2.Location = new System.Drawing.Point(4, 32);
-            this.tab2.Name = "tab2";
-            this.tab2.Padding = new System.Windows.Forms.Padding(3);
-            this.tab2.Size = new System.Drawing.Size(816, 307);
-            this.tab2.TabIndex = 1;
-            this.tab2.Text = "Select Group & Subject";
-            this.tab2.UseVisualStyleBackColor = true;
-            // 
             // groupBoxStep1
             // 
             this.groupBoxStep1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -145,6 +134,114 @@
             this.groupBoxStep1.TabIndex = 0;
             this.groupBoxStep1.TabStop = false;
             this.groupBoxStep1.Text = "Step 1";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(214, 127);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(206, 90);
+            this.textBox1.TabIndex = 33;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.label3.Location = new System.Drawing.Point(23, 125);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(184, 36);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Selected Lecturer(s)";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(214, 64);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(207, 33);
+            this.comboBox2.TabIndex = 31;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(562, 65);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(207, 33);
+            this.comboBox1.TabIndex = 30;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(443, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(113, 36);
+            this.label2.TabIndex = 29;
+            this.label2.Text = "Select Tag";
+            // 
+            // btnNext
+            // 
+            this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnNext.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnNext.Location = new System.Drawing.Point(511, 231);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(120, 40);
+            this.btnNext.TabIndex = 28;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear.BackColor = System.Drawing.Color.DarkRed;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClear.Location = new System.Drawing.Point(649, 231);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(120, 40);
+            this.btnClear.TabIndex = 27;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label1.Location = new System.Drawing.Point(23, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(179, 36);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Select Lecturer(s)";
+            // 
+            // tab2
+            // 
+            this.tab2.Controls.Add(this.groupBoxStep2);
+            this.tab2.Location = new System.Drawing.Point(4, 32);
+            this.tab2.Name = "tab2";
+            this.tab2.Padding = new System.Windows.Forms.Padding(3);
+            this.tab2.Size = new System.Drawing.Size(816, 307);
+            this.tab2.TabIndex = 1;
+            this.tab2.Text = "Select Group & Subject";
+            this.tab2.UseVisualStyleBackColor = true;
             // 
             // groupBoxStep2
             // 
@@ -171,141 +268,60 @@
             this.groupBoxStep2.TabStop = false;
             this.groupBoxStep2.Text = "Step 2";
             // 
-            // label1
+            // txtNoOfStudents
             // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(23, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 36);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Select Lecturer(s)";
+            this.txtNoOfStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtNoOfStudents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNoOfStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNoOfStudents.Location = new System.Drawing.Point(600, 74);
+            this.txtNoOfStudents.Name = "txtNoOfStudents";
+            this.txtNoOfStudents.Size = new System.Drawing.Size(125, 30);
+            this.txtNoOfStudents.TabIndex = 42;
             // 
-            // btnClear
+            // txtDuration
             // 
-            this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClear.BackColor = System.Drawing.Color.DarkRed;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnClear.Location = new System.Drawing.Point(649, 231);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(120, 40);
-            this.btnClear.TabIndex = 27;
-            this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = false;
+            this.txtDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuration.Location = new System.Drawing.Point(600, 136);
+            this.txtDuration.Name = "txtDuration";
+            this.txtDuration.Size = new System.Drawing.Size(125, 30);
+            this.txtDuration.TabIndex = 41;
             // 
-            // btnNext
+            // label8
             // 
-            this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnNext.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNext.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnNext.Location = new System.Drawing.Point(511, 231);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(120, 40);
-            this.btnNext.TabIndex = 28;
-            this.btnNext.Text = "Next";
-            this.btnNext.UseVisualStyleBackColor = false;
-            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label8.Location = new System.Drawing.Point(730, 134);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(44, 36);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Hrs";
             // 
-            // btnSubmit
+            // label7
             // 
-            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubmit.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnSubmit.Location = new System.Drawing.Point(511, 231);
-            this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(120, 40);
-            this.btnSubmit.TabIndex = 29;
-            this.btnSubmit.Text = "Submit";
-            this.btnSubmit.UseVisualStyleBackColor = false;
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label7.Location = new System.Drawing.Point(436, 134);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 36);
+            this.label7.TabIndex = 38;
+            this.label7.Text = "Duration";
             // 
-            // btnClear2
+            // comboBox
             // 
-            this.btnClear2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClear2.BackColor = System.Drawing.Color.DarkRed;
-            this.btnClear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear2.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnClear2.Location = new System.Drawing.Point(649, 231);
-            this.btnClear2.Name = "btnClear2";
-            this.btnClear2.Size = new System.Drawing.Size(120, 40);
-            this.btnClear2.TabIndex = 30;
-            this.btnClear2.Text = "Clear";
-            this.btnClear2.UseVisualStyleBackColor = false;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnBack.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnBack.Location = new System.Drawing.Point(373, 231);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(120, 40);
-            this.btnBack.TabIndex = 31;
-            this.btnBack.Text = "Back";
-            this.btnBack.UseVisualStyleBackColor = false;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(443, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 36);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Select Tag";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(562, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 33);
-            this.comboBox1.TabIndex = 30;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(214, 64);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(207, 33);
-            this.comboBox2.TabIndex = 31;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(23, 125);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 36);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "Selected Lecturer(s)";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(214, 127);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 90);
-            this.textBox1.TabIndex = 33;
+            this.comboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox.FormattingEnabled = true;
+            this.comboBox.Location = new System.Drawing.Point(200, 134);
+            this.comboBox.Name = "comboBox";
+            this.comboBox.Size = new System.Drawing.Size(207, 33);
+            this.comboBox.TabIndex = 37;
             // 
             // label4
             // 
@@ -321,6 +337,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox3.FormattingEnabled = true;
@@ -353,57 +370,47 @@
             this.label6.TabIndex = 33;
             this.label6.Text = "Select Group";
             // 
-            // comboBox
+            // btnBack
             // 
-            this.comboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(200, 134);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(207, 33);
-            this.comboBox.TabIndex = 37;
+            this.btnBack.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnBack.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnBack.Location = new System.Drawing.Point(373, 231);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(120, 40);
+            this.btnBack.TabIndex = 31;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = false;
             // 
-            // label7
+            // btnClear2
             // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label7.Location = new System.Drawing.Point(436, 134);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 36);
-            this.label7.TabIndex = 38;
-            this.label7.Text = "Duration";
+            this.btnClear2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClear2.BackColor = System.Drawing.Color.DarkRed;
+            this.btnClear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear2.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClear2.Location = new System.Drawing.Point(649, 231);
+            this.btnClear2.Name = "btnClear2";
+            this.btnClear2.Size = new System.Drawing.Size(120, 40);
+            this.btnClear2.TabIndex = 30;
+            this.btnClear2.Text = "Clear";
+            this.btnClear2.UseVisualStyleBackColor = false;
             // 
-            // label8
+            // btnSubmit
             // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label8.Location = new System.Drawing.Point(730, 134);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 36);
-            this.label8.TabIndex = 40;
-            this.label8.Text = "Hrs";
-            // 
-            // txtDuration
-            // 
-            this.txtDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuration.Location = new System.Drawing.Point(600, 136);
-            this.txtDuration.Name = "txtDuration";
-            this.txtDuration.Size = new System.Drawing.Size(125, 30);
-            this.txtDuration.TabIndex = 41;
-            // 
-            // txtNoOfStudents
-            // 
-            this.txtNoOfStudents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNoOfStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoOfStudents.Location = new System.Drawing.Point(600, 74);
-            this.txtNoOfStudents.Name = "txtNoOfStudents";
-            this.txtNoOfStudents.Size = new System.Drawing.Size(125, 30);
-            this.txtNoOfStudents.TabIndex = 42;
+            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnSubmit.Location = new System.Drawing.Point(511, 231);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(120, 40);
+            this.btnSubmit.TabIndex = 29;
+            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.UseVisualStyleBackColor = false;
             // 
             // ManageSessions
             // 
@@ -419,9 +426,9 @@
             this.Text = "ManageSessions";
             this.tabControl.ResumeLayout(false);
             this.tab1.ResumeLayout(false);
-            this.tab2.ResumeLayout(false);
             this.groupBoxStep1.ResumeLayout(false);
             this.groupBoxStep1.PerformLayout();
+            this.tab2.ResumeLayout(false);
             this.groupBoxStep2.ResumeLayout(false);
             this.groupBoxStep2.PerformLayout();
             this.ResumeLayout(false);
