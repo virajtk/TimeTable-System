@@ -33,10 +33,10 @@
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tab1 = new System.Windows.Forms.TabPage();
             this.groupBoxStep1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtSelectedLec = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBoxLec = new System.Windows.Forms.ComboBox();
+            this.comboBoxTag = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -47,9 +47,9 @@
             this.txtDuration = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox = new System.Windows.Forms.ComboBox();
+            this.comboBoxSubject = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBoxGroup = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
@@ -119,10 +119,10 @@
             this.groupBoxStep1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxStep1.Controls.Add(this.textBox1);
+            this.groupBoxStep1.Controls.Add(this.txtSelectedLec);
             this.groupBoxStep1.Controls.Add(this.label3);
-            this.groupBoxStep1.Controls.Add(this.comboBox2);
-            this.groupBoxStep1.Controls.Add(this.comboBox1);
+            this.groupBoxStep1.Controls.Add(this.comboBoxLec);
+            this.groupBoxStep1.Controls.Add(this.comboBoxTag);
             this.groupBoxStep1.Controls.Add(this.label2);
             this.groupBoxStep1.Controls.Add(this.btnNext);
             this.groupBoxStep1.Controls.Add(this.btnClear);
@@ -135,16 +135,16 @@
             this.groupBoxStep1.TabStop = false;
             this.groupBoxStep1.Text = "Step 1";
             // 
-            // textBox1
+            // txtSelectedLec
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(214, 127);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(206, 90);
-            this.textBox1.TabIndex = 33;
+            this.txtSelectedLec.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSelectedLec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSelectedLec.Enabled = false;
+            this.txtSelectedLec.Location = new System.Drawing.Point(214, 127);
+            this.txtSelectedLec.Multiline = true;
+            this.txtSelectedLec.Name = "txtSelectedLec";
+            this.txtSelectedLec.Size = new System.Drawing.Size(206, 90);
+            this.txtSelectedLec.TabIndex = 33;
             // 
             // label3
             // 
@@ -158,26 +158,26 @@
             this.label3.TabIndex = 32;
             this.label3.Text = "Selected Lecturer(s)";
             // 
-            // comboBox2
+            // comboBoxLec
             // 
-            this.comboBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(214, 64);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(207, 33);
-            this.comboBox2.TabIndex = 31;
+            this.comboBoxLec.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxLec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLec.FormattingEnabled = true;
+            this.comboBoxLec.Location = new System.Drawing.Point(214, 64);
+            this.comboBoxLec.Name = "comboBoxLec";
+            this.comboBoxLec.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxLec.TabIndex = 31;
             // 
-            // comboBox1
+            // comboBoxTag
             // 
-            this.comboBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(562, 65);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(207, 33);
-            this.comboBox1.TabIndex = 30;
+            this.comboBoxTag.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxTag.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxTag.FormattingEnabled = true;
+            this.comboBoxTag.Location = new System.Drawing.Point(562, 65);
+            this.comboBoxTag.Name = "comboBoxTag";
+            this.comboBoxTag.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxTag.TabIndex = 30;
             // 
             // label2
             // 
@@ -219,6 +219,7 @@
             this.btnClear.TabIndex = 27;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label1
             // 
@@ -252,9 +253,9 @@
             this.groupBoxStep2.Controls.Add(this.txtDuration);
             this.groupBoxStep2.Controls.Add(this.label8);
             this.groupBoxStep2.Controls.Add(this.label7);
-            this.groupBoxStep2.Controls.Add(this.comboBox);
+            this.groupBoxStep2.Controls.Add(this.comboBoxSubject);
             this.groupBoxStep2.Controls.Add(this.label4);
-            this.groupBoxStep2.Controls.Add(this.comboBox3);
+            this.groupBoxStep2.Controls.Add(this.comboBoxGroup);
             this.groupBoxStep2.Controls.Add(this.label5);
             this.groupBoxStep2.Controls.Add(this.label6);
             this.groupBoxStep2.Controls.Add(this.btnBack);
@@ -312,16 +313,16 @@
             this.label7.TabIndex = 38;
             this.label7.Text = "Duration";
             // 
-            // comboBox
+            // comboBoxSubject
             // 
-            this.comboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(200, 134);
-            this.comboBox.Name = "comboBox";
-            this.comboBox.Size = new System.Drawing.Size(207, 33);
-            this.comboBox.TabIndex = 37;
+            this.comboBoxSubject.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxSubject.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSubject.FormattingEnabled = true;
+            this.comboBoxSubject.Location = new System.Drawing.Point(200, 134);
+            this.comboBoxSubject.Name = "comboBoxSubject";
+            this.comboBoxSubject.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxSubject.TabIndex = 37;
             // 
             // label4
             // 
@@ -335,16 +336,16 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Select Subject";
             // 
-            // comboBox3
+            // comboBoxGroup
             // 
-            this.comboBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.comboBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(200, 73);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(207, 33);
-            this.comboBox3.TabIndex = 35;
+            this.comboBoxGroup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxGroup.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGroup.FormattingEnabled = true;
+            this.comboBoxGroup.Location = new System.Drawing.Point(200, 73);
+            this.comboBoxGroup.Name = "comboBoxGroup";
+            this.comboBoxGroup.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxGroup.TabIndex = 35;
             // 
             // label5
             // 
@@ -383,6 +384,7 @@
             this.btnBack.TabIndex = 31;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // btnClear2
             // 
@@ -397,6 +399,7 @@
             this.btnClear2.TabIndex = 30;
             this.btnClear2.Text = "Clear";
             this.btnClear2.UseVisualStyleBackColor = false;
+            this.btnClear2.Click += new System.EventHandler(this.btnClear2_Click);
             // 
             // btnSubmit
             // 
@@ -448,21 +451,21 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBoxTag;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Button btnClear2;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtSelectedLec;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBoxLec;
         private System.Windows.Forms.TextBox txtNoOfStudents;
         private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox;
+        private System.Windows.Forms.ComboBox comboBoxSubject;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBoxGroup;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
     }

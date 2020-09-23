@@ -13,6 +13,7 @@ using Time_Table_Management_System.Tags;
 using Time_Table_Management_System.Locations;
 using Time_Table_Management_System.DaysAndHours;
 using Time_Table_Management_System.Session;
+using Time_Table_Management_System.Messages;
 
 namespace Time_Table_Management_System
 {
@@ -309,6 +310,12 @@ namespace Time_Table_Management_System
             //..
 
             hideSubMenu();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Info info = new Info();
+            info.Show();
         }
     }
 }

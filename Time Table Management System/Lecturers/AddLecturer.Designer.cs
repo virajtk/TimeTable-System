@@ -73,11 +73,11 @@
             this.title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.SystemColors.Info;
+            this.title.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.title.ForeColor = System.Drawing.Color.SteelBlue;
             this.title.Location = new System.Drawing.Point(116, 30);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(192, 34);
+            this.title.Size = new System.Drawing.Size(184, 32);
             this.title.TabIndex = 13;
             this.title.Text = "Add Lecturer";
             // 
@@ -290,37 +290,46 @@
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClear.BackColor = System.Drawing.Color.DarkRed;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
             this.btnClear.Location = new System.Drawing.Point(559, 357);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 40);
             this.btnClear.TabIndex = 32;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.Info;
             this.btnSave.Location = new System.Drawing.Point(701, 357);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 40);
             this.btnSave.TabIndex = 31;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnGenerateRank
             // 
             this.btnGenerateRank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGenerateRank.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnGenerateRank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerateRank.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateRank.ForeColor = System.Drawing.SystemColors.Info;
             this.btnGenerateRank.Location = new System.Drawing.Point(332, 357);
             this.btnGenerateRank.Name = "btnGenerateRank";
             this.btnGenerateRank.Size = new System.Drawing.Size(205, 40);
             this.btnGenerateRank.TabIndex = 33;
             this.btnGenerateRank.Text = "Generate Rank";
-            this.btnGenerateRank.UseVisualStyleBackColor = true;
+            this.btnGenerateRank.UseVisualStyleBackColor = false;
             this.btnGenerateRank.Click += new System.EventHandler(this.btnGenerateRank_Click);
             // 
             // errorAddLecturer
