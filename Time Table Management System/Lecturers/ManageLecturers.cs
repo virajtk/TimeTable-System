@@ -289,5 +289,58 @@ namespace Time_Table_Management_System.Lecturers
         {
 
         }
+
+        private void comboBoxFaculty_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            List<String> items = new List<String>();
+            textBoxDepartment.Items.Clear();
+
+            switch (comboBoxFaculty.SelectedItem)
+            {
+                case "Computing":
+                    items.Add("Information Technology");
+                    items.Add("Software Engineering");
+                    items.Add("Cyber Security");
+                    items.Add("Data Science");
+                    items.Add("Information System engineering");
+                    items.Add("Computer Systems and Network");
+                    items.Add("Interactive Media");
+                    break;
+                case "Engineering":
+                    items.Add("Civil Engineering");
+                    items.Add("Electrical & Electronic Engineering");
+                    items.Add("Mechanical Engineering");
+                    items.Add("Mechatronic");
+                    items.Add("Materials Engineering");
+                    items.Add("Architecture");
+                    items.Add("Quantity Surveying");
+                    break;
+                case "Business":
+                    items.Add("Accounting & Finance");
+                    items.Add("Business Analytics");
+                    items.Add("Human Capital Management");
+                    items.Add("Marketing Management");
+                    items.Add("Logistics & Supply Chain Management");
+                    break;
+                case "Humanities & Sciences":
+                    items.Add("Biotechnology");
+                    items.Add("Education");
+                    items.Add("Law");
+                    items.Add("Mathematics");
+                    items.Add("Nursing");
+                    items.Add("Psychology");
+                    break;
+                case "Architecture":
+                    items.Add("Architecture");
+                    break;
+                case "Hospitality & Culinary":
+                    items.Add("Hospitality Management");
+                    items.Add("Commercial Cookery");
+                    items.Add("Event Management");
+                    items.Add("Patisserie Programme");
+                    break;
+            }
+            textBoxDepartment.Items.AddRange(items.ToArray());
+        }
     }
 }
