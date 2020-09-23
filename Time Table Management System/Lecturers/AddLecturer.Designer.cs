@@ -37,7 +37,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBoxFaculty = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBoxDepartment = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.comboBoxCenter = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -51,6 +50,7 @@
             this.btnSave = new System.Windows.Forms.Button();
             this.btnGenerateRank = new System.Windows.Forms.Button();
             this.errorAddLecturer = new System.Windows.Forms.ErrorProvider(this.components);
+            this.textBoxDepartment = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.errorAddLecturer)).BeginInit();
             this.SuspendLayout();
             // 
@@ -135,11 +135,14 @@
             "Computing",
             "Engineering",
             "Business",
-            "Humanities & Sciences"});
+            "Humanities & Sciences",
+            "Architecture",
+            "Hospitality & Culinary"});
             this.comboBoxFaculty.Location = new System.Drawing.Point(187, 232);
             this.comboBoxFaculty.Name = "comboBoxFaculty";
             this.comboBoxFaculty.Size = new System.Drawing.Size(222, 28);
             this.comboBoxFaculty.TabIndex = 20;
+            this.comboBoxFaculty.SelectedIndexChanged += new System.EventHandler(this.comboBoxFaculty_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -153,15 +156,6 @@
             this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 19;
             this.label2.Text = "Faculty";
-            // 
-            // textBoxDepartment
-            // 
-            this.textBoxDepartment.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDepartment.Location = new System.Drawing.Point(187, 294);
-            this.textBoxDepartment.Name = "textBoxDepartment";
-            this.textBoxDepartment.Size = new System.Drawing.Size(222, 27);
-            this.textBoxDepartment.TabIndex = 22;
             // 
             // label4
             // 
@@ -333,12 +327,24 @@
             // 
             this.errorAddLecturer.ContainerControl = this;
             // 
+            // textBoxDepartment
+            // 
+            this.textBoxDepartment.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.textBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDepartment.FormattingEnabled = true;
+            this.textBoxDepartment.Location = new System.Drawing.Point(187, 289);
+            this.textBoxDepartment.Name = "textBoxDepartment";
+            this.textBoxDepartment.Size = new System.Drawing.Size(222, 28);
+            this.textBoxDepartment.TabIndex = 34;
+            // 
             // AddLecturer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(881, 442);
+            this.Controls.Add(this.textBoxDepartment);
             this.Controls.Add(this.btnGenerateRank);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnSave);
@@ -350,7 +356,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.comboBoxCenter);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBoxDepartment);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.comboBoxFaculty);
             this.Controls.Add(this.label2);
@@ -379,7 +384,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox comboBoxFaculty;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBoxDepartment;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBoxCenter;
         private System.Windows.Forms.Label label5;
@@ -393,5 +397,6 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnGenerateRank;
         private System.Windows.Forms.ErrorProvider errorAddLecturer;
+        private System.Windows.Forms.ComboBox textBoxDepartment;
     }
 }
