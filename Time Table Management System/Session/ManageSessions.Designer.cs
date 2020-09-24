@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tab1 = new System.Windows.Forms.TabPage();
@@ -61,20 +60,6 @@
             this.tab2.SuspendLayout();
             this.groupBoxStep2.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Maroon;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.ForeColor = System.Drawing.SystemColors.Info;
-            this.button2.Location = new System.Drawing.Point(3, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 25);
-            this.button2.TabIndex = 14;
-            this.button2.Text = "X";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // title
             // 
@@ -423,10 +408,10 @@
             this.ClientSize = new System.Drawing.Size(881, 442);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.title);
-            this.Controls.Add(this.button2);
             this.ForeColor = System.Drawing.SystemColors.Info;
             this.Name = "ManageSessions";
-            this.Text = "ManageSessions";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Add Session";
             this.tabControl.ResumeLayout(false);
             this.tab1.ResumeLayout(false);
             this.groupBoxStep1.ResumeLayout(false);
@@ -440,8 +425,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tab1;
