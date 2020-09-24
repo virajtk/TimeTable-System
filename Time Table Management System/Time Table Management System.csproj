@@ -109,6 +109,12 @@
     <Compile Include="Messages\ErrorMessage.Designer.cs">
       <DependentUpon>ErrorMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Messages\Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Messages\Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
     <Compile Include="Messages\SuccessMessage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +145,12 @@
     <Compile Include="Services\TagService.cs" />
     <Compile Include="Services\TimeSlotService.cs" />
     <Compile Include="Services\WorkingDaysHoursService.cs" />
+    <Compile Include="Session\ManageSessions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session\ManageSessions.Designer.cs">
+      <DependentUpon>ManageSessions.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students\AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,8 +228,14 @@
     <EmbeddedResource Include="Messages\ErrorMessage.resx">
       <DependentUpon>ErrorMessage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Messages\Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Messages\SuccessMessage.resx">
       <DependentUpon>SuccessMessage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session\ManageSessions.resx">
+      <DependentUpon>ManageSessions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>

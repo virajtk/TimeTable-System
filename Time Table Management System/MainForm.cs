@@ -12,6 +12,8 @@ using Time_Table_Management_System.Students;
 using Time_Table_Management_System.Tags;
 using Time_Table_Management_System.Locations;
 using Time_Table_Management_System.DaysAndHours;
+using Time_Table_Management_System.Session;
+using Time_Table_Management_System.Messages;
 
 namespace Time_Table_Management_System
 {
@@ -70,6 +72,7 @@ namespace Time_Table_Management_System
             btnStudents.BackColor = Color.FromArgb(11, 7, 17);
             btnTags.BackColor = Color.FromArgb(11, 7, 17);
             btnLocations.BackColor = Color.FromArgb(11, 7, 17);
+            btnAddSession.BackColor = Color.FromArgb(255, 255, 128);
         }
         #endregion
 
@@ -302,6 +305,24 @@ namespace Time_Table_Management_System
         }
         #endregion
 
-        
+
+        private void btnAddSession_Click(object sender, EventArgs e)
+        {
+            defaultBtn();
+            btnAddSession.BackColor = Color.FromArgb(224, 224, 224);
+
+            openChildForm(new ManageSessions());
+            //..
+            // your code
+            //..
+
+            hideSubMenu();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Info info = new Info();
+            info.Show();
+        }
     }
 }
