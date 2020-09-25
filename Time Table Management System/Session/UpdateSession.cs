@@ -13,19 +13,19 @@ using Time_Table_Management_System.Services;
 
 namespace Time_Table_Management_System.Session
 {
-    public partial class ManageSessions : Form
+    public partial class UpdateSession : Form
     {
-
         private SessionDTO session = new SessionDTO();
         private ISessionService sessionService = new SessionService();
         private int selectedLecCount = 0;
+        private int selectedSessionID;
 
-        public ManageSessions()
+        public UpdateSession(int id)
         {
             InitializeComponent();
             loadData();
+            setData(id);
         }
-
         private void loadData()
         {
             // add Lecturers
@@ -33,8 +33,9 @@ namespace Time_Table_Management_System.Session
             List<Lecturer> lecList = new List<Lecturer>();
             List<String> lecNameList = new List<String>();
             lecList = lecturerService.getAllLecturers();
-            
-            foreach(Lecturer lec in lecList){
+
+            foreach (Lecturer lec in lecList)
+            {
                 lecNameList.Add(lec.Name);
             }
             comboBoxLec.Items.AddRange(lecNameList.ToArray());
@@ -59,17 +60,38 @@ namespace Time_Table_Management_System.Session
 
             foreach (Subject sub in subList)
             {
-                subNameList.Add(sub.SubjectName+" | " + sub.SubjectCode );
+                subNameList.Add(sub.SubjectName + " | " + sub.SubjectCode);
             }
             comboBoxSubject.Items.AddRange(subNameList.ToArray());
+        }
 
+        private void setData(int id)
+        {
+            SessionDTO selectedSession = new SessionDTO();
+            ISessionService sessionService = new SessionService();
+            selectedSession = sessionService.GetSession(id);
+
+            selectedSessionID = selectedSession.Id;
+            txtSelectedLec.Text = selectedSession.Lec1_name;
+            session.Lec1_name = selectedSession.Lec1_name;
+            selectedLecCount++;
+            if (selectedSession.Lec2_name != null)
+            {
+                txtSelectedLec.Text = selectedSession.Lec1_name + " , " + selectedSession.Lec2_name;
+                session.Lec2_name = selectedSession.Lec2_name;
+                selectedLecCount++;
+            }  
+            comboBoxTag.SelectedItem = selectedSession.Tag;
+            comboBoxGroup.SelectedItem = selectedSession.Group_code;
+            comboBoxSubject.Text = selectedSession.Subject_name + " | " + selectedSession.Subject_code;
+            txtNoOfStudents.Text = selectedSession.Student_count.ToString();
+            txtDuration.Text = selectedSession.Duration.ToString();
         }
 
         private void btnNext_Click(object sender, EventArgs e)
         {
             tabControl.SelectedIndex = 1;
         }
-
         private void btnBack_Click(object sender, EventArgs e)
         {
             tabControl.SelectedIndex = 0;
@@ -102,7 +124,7 @@ namespace Time_Table_Management_System.Session
             List<String> stuNameList = new List<String>();
             stuList = studentService.getAllStudents();
             comboBoxGroup.Items.Clear();
-            
+
             switch (comboBoxTag.SelectedItem)
             {
                 case "Lecture":
@@ -138,17 +160,17 @@ namespace Time_Table_Management_System.Session
         private void comboBoxLec_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedLecCount++;
-            if(selectedLecCount == 1)
+            if (selectedLecCount == 1)
             {
                 session.Lec1_name = comboBoxLec.Text;
                 txtSelectedLec.Text = session.Lec1_name;
 
             }
-            else if(selectedLecCount == 2)
+            else if (selectedLecCount == 2)
             {
                 session.Lec2_name = comboBoxLec.Text;
                 txtSelectedLec.Text = session.Lec1_name + " , " + session.Lec2_name;
-            }  
+            }
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
@@ -166,14 +188,11 @@ namespace Time_Table_Management_System.Session
             session.Student_count = int.Parse(txtNoOfStudents.Text);
             session.Duration = int.Parse(txtDuration.Text);
 
-            Console.WriteLine(session.Subject_name);
-            Console.WriteLine(session.Subject_code);
-
-            //Insert Data
-            if (sessionService.addSession(session))
+            //Update Data
+            if (sessionService.updateSession(selectedSessionID,session))
             {
                 this.Close();
-                SuccessMessage sc = new SuccessMessage("Session Added Successfully !");
+                SuccessMessage sc = new SuccessMessage("Session Updated Successfully !");
                 sc.Show();
             }
             else
@@ -181,7 +200,6 @@ namespace Time_Table_Management_System.Session
                 ErrorMessage ec = new ErrorMessage("Oops, Somthing went wrong!");
                 ec.Show();
             }
-
         }
     }
 }

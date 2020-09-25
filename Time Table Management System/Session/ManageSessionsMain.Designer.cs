@@ -28,15 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
-            this.dataGridViewSessions = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lecturer = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subjectCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnView = new System.Windows.Forms.Button();
@@ -44,6 +39,15 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
             this.btnAddSession = new System.Windows.Forms.Button();
+            this.dataGridViewSessions = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lec1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lec2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_code = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.group_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,83 +77,11 @@
             this.title.TabIndex = 16;
             this.title.Text = "Manage Sessions";
             // 
-            // dataGridViewSessions
-            // 
-            this.dataGridViewSessions.AllowUserToAddRows = false;
-            this.dataGridViewSessions.AllowUserToDeleteRows = false;
-            this.dataGridViewSessions.AllowUserToResizeColumns = false;
-            this.dataGridViewSessions.AllowUserToResizeRows = false;
-            this.dataGridViewSessions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewSessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.lecturer,
-            this.subject,
-            this.subjectCode,
-            this.groupID,
-            this.tag});
-            this.dataGridViewSessions.Location = new System.Drawing.Point(39, 145);
-            this.dataGridViewSessions.Name = "dataGridViewSessions";
-            this.dataGridViewSessions.RowHeadersWidth = 51;
-            this.dataGridViewSessions.RowTemplate.Height = 24;
-            this.dataGridViewSessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSessions.Size = new System.Drawing.Size(652, 261);
-            this.dataGridViewSessions.TabIndex = 17;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 125;
-            // 
-            // lecturer
-            // 
-            this.lecturer.HeaderText = "Lectuter";
-            this.lecturer.MinimumWidth = 6;
-            this.lecturer.Name = "lecturer";
-            this.lecturer.ReadOnly = true;
-            this.lecturer.Width = 125;
-            // 
-            // subject
-            // 
-            this.subject.HeaderText = "Subject";
-            this.subject.MinimumWidth = 6;
-            this.subject.Name = "subject";
-            this.subject.ReadOnly = true;
-            this.subject.Width = 125;
-            // 
-            // subjectCode
-            // 
-            this.subjectCode.HeaderText = "Subject Code";
-            this.subjectCode.MinimumWidth = 6;
-            this.subjectCode.Name = "subjectCode";
-            this.subjectCode.ReadOnly = true;
-            this.subjectCode.Width = 125;
-            // 
-            // groupID
-            // 
-            this.groupID.HeaderText = "Group ID";
-            this.groupID.MinimumWidth = 6;
-            this.groupID.Name = "groupID";
-            this.groupID.ReadOnly = true;
-            this.groupID.Width = 125;
-            // 
-            // tag
-            // 
-            this.tag.HeaderText = "Tag";
-            this.tag.MinimumWidth = 6;
-            this.tag.Name = "tag";
-            this.tag.ReadOnly = true;
-            this.tag.Width = 125;
-            // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnUpdate.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnUpdate.Enabled = false;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.Info;
@@ -159,11 +91,13 @@
             this.btnUpdate.TabIndex = 29;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnDelete.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
@@ -173,11 +107,13 @@
             this.btnDelete.TabIndex = 30;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnView
             // 
             this.btnView.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnView.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnView.Enabled = false;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnView.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.SystemColors.Info;
@@ -187,6 +123,7 @@
             this.btnView.TabIndex = 31;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
+            this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
             // txtSearchKey
             // 
@@ -212,8 +149,13 @@
             // 
             // comboBoxSearch
             // 
+            this.comboBoxSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSearch.FormattingEnabled = true;
+            this.comboBoxSearch.Items.AddRange(new object[] {
+            "Lecturer",
+            "Subject Name",
+            "Group ID"});
             this.comboBoxSearch.Location = new System.Drawing.Point(356, 95);
             this.comboBoxSearch.Name = "comboBoxSearch";
             this.comboBoxSearch.Size = new System.Drawing.Size(181, 33);
@@ -234,12 +176,124 @@
             this.btnAddSession.UseVisualStyleBackColor = false;
             this.btnAddSession.Click += new System.EventHandler(this.btnAddSession_Click);
             // 
+            // dataGridViewSessions
+            // 
+            this.dataGridViewSessions.AllowUserToAddRows = false;
+            this.dataGridViewSessions.AllowUserToDeleteRows = false;
+            this.dataGridViewSessions.AllowUserToResizeColumns = false;
+            this.dataGridViewSessions.AllowUserToResizeRows = false;
+            this.dataGridViewSessions.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewSessions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewSessions.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dataGridViewSessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.lec1,
+            this.lec2,
+            this.subject_code,
+            this.subject_name,
+            this.group_id,
+            this.tag});
+            this.dataGridViewSessions.Location = new System.Drawing.Point(21, 143);
+            this.dataGridViewSessions.MultiSelect = false;
+            this.dataGridViewSessions.Name = "dataGridViewSessions";
+            this.dataGridViewSessions.ReadOnly = true;
+            this.dataGridViewSessions.RowHeadersVisible = false;
+            this.dataGridViewSessions.RowHeadersWidth = 51;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewSessions.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            this.dataGridViewSessions.RowTemplate.Height = 24;
+            this.dataGridViewSessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewSessions.Size = new System.Drawing.Size(671, 273);
+            this.dataGridViewSessions.TabIndex = 36;
+            this.dataGridViewSessions.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 40;
+            // 
+            // lec1
+            // 
+            this.lec1.HeaderText = "Lecturer 1";
+            this.lec1.MinimumWidth = 6;
+            this.lec1.Name = "lec1";
+            this.lec1.ReadOnly = true;
+            this.lec1.Width = 150;
+            // 
+            // lec2
+            // 
+            this.lec2.HeaderText = "Lecturer 2";
+            this.lec2.MinimumWidth = 6;
+            this.lec2.Name = "lec2";
+            this.lec2.ReadOnly = true;
+            this.lec2.Width = 150;
+            // 
+            // subject_code
+            // 
+            this.subject_code.HeaderText = "Subject Code";
+            this.subject_code.MinimumWidth = 6;
+            this.subject_code.Name = "subject_code";
+            this.subject_code.ReadOnly = true;
+            this.subject_code.Width = 80;
+            // 
+            // subject_name
+            // 
+            this.subject_name.HeaderText = "Subject Name";
+            this.subject_name.MinimumWidth = 6;
+            this.subject_name.Name = "subject_name";
+            this.subject_name.ReadOnly = true;
+            this.subject_name.Width = 80;
+            // 
+            // group_id
+            // 
+            this.group_id.HeaderText = "Group ID";
+            this.group_id.MinimumWidth = 6;
+            this.group_id.Name = "group_id";
+            this.group_id.ReadOnly = true;
+            // 
+            // tag
+            // 
+            this.tag.HeaderText = "Tag";
+            this.tag.MinimumWidth = 6;
+            this.tag.Name = "tag";
+            this.tag.ReadOnly = true;
+            this.tag.Width = 70;
+            // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnRefresh.Location = new System.Drawing.Point(724, 95);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(120, 33);
+            this.btnRefresh.TabIndex = 37;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // ManageSessionsMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
             this.ClientSize = new System.Drawing.Size(881, 442);
+            this.Controls.Add(this.btnRefresh);
+            this.Controls.Add(this.dataGridViewSessions);
             this.Controls.Add(this.btnAddSession);
             this.Controls.Add(this.comboBoxSearch);
             this.Controls.Add(this.btnSearch);
@@ -247,12 +301,11 @@
             this.Controls.Add(this.btnView);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.dataGridViewSessions);
             this.Controls.Add(this.title);
             this.Controls.Add(this.button2);
             this.ForeColor = System.Drawing.SystemColors.Info;
             this.Name = "ManageSessionsMain";
-            this.Text = "ManageSessionsMain";
+            this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessions)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -263,19 +316,21 @@
 
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label title;
-        private System.Windows.Forms.DataGridView dataGridViewSessions;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnView;
         private System.Windows.Forms.TextBox txtSearchKey;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.ComboBox comboBoxSearch;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lecturer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subjectCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn groupID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tag;
         private System.Windows.Forms.Button btnAddSession;
+        private System.Windows.Forms.DataGridView dataGridViewSessions;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lec1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lec2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_code;
+        private System.Windows.Forms.DataGridViewTextBoxColumn subject_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn group_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tag;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }
