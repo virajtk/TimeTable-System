@@ -160,6 +160,18 @@
     <Compile Include="Session\ManageSessionsMain.Designer.cs">
       <DependentUpon>ManageSessionsMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Session\UpdateSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session\UpdateSession.Designer.cs">
+      <DependentUpon>UpdateSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session\ViewSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session\ViewSession.Designer.cs">
+      <DependentUpon>ViewSession.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students\AddStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +260,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Session\ManageSessionsMain.resx">
       <DependentUpon>ManageSessionsMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session\UpdateSession.resx">
+      <DependentUpon>UpdateSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session\ViewSession.resx">
+      <DependentUpon>ViewSession.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>

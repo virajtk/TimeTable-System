@@ -12,7 +12,7 @@ namespace Time_Table_Management_System.Services
         Boolean addSession(SessionDTO session);
         List<SessionDTO> getAllSessions();
         SessionDTO GetSession(int id);
-        Boolean deleteSession(SessionDTO session);
+        Boolean deleteSession(int id);
         Boolean updateSession(int id, SessionDTO session);
     }
 }
