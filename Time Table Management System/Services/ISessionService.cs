@@ -14,5 +14,6 @@ namespace Time_Table_Management_System.Services
         SessionDTO GetSession(int id);
         Boolean deleteSession(int id);
         Boolean updateSession(int id, SessionDTO session);
+        List<SessionDTO> searchSession(String key, String type);
     }
 }
