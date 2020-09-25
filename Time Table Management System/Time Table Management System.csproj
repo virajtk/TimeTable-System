@@ -124,6 +124,7 @@
     <Compile Include="Models\Dash.cs" />
     <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\SessionDTO.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Tag.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Models\WorkingDaysHours.cs" />
     <Compile Include="Services\ILecturerService.cs" />
     <Compile Include="Services\ILocationService.cs" />
+    <Compile Include="Services\ISessionService.cs" />
     <Compile Include="Services\IStudentService.cs" />
     <Compile Include="Services\ISubjectService.cs" />
     <Compile Include="Services\ITimeSlotService.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Services\LecturerService.cs" />
     <Compile Include="Services\ITagService.cs" />
     <Compile Include="Services\LocationService.cs" />
+    <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\SubjectService.cs" />
     <Compile Include="Services\TagService.cs" />

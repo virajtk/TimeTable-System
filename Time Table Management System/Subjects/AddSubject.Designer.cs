@@ -167,7 +167,6 @@
             this.radioButtonSem1.TabStop = true;
             this.radioButtonSem1.Text = "1st Semester";
             this.radioButtonSem1.UseVisualStyleBackColor = true;
-            this.radioButtonSem1.CheckedChanged += new System.EventHandler(this.radioButtonSem1_CheckedChanged);
             // 
             // button1
             // 
@@ -383,7 +382,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddSubject";
             this.Text = "Add Subject";
-            this.Load += new System.EventHandler(this.AddSubject_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericLecHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericTuteHours)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericLabHours)).EndInit();
