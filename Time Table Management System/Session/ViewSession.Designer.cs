@@ -46,15 +46,18 @@
             this.txtSubjectName = new System.Windows.Forms.TextBox();
             this.txtStudentCount = new System.Windows.Forms.TextBox();
             this.txtDuration = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtSummery = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnOK
             // 
+            this.btnOK.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnOK.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOK.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnOK.Location = new System.Drawing.Point(415, 361);
+            this.btnOK.Location = new System.Drawing.Point(352, 502);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(175, 44);
             this.btnOK.TabIndex = 0;
@@ -64,40 +67,44 @@
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(410, 32);
+            this.label1.Location = new System.Drawing.Point(0, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(195, 29);
+            this.label1.Size = new System.Drawing.Size(890, 66);
             this.label1.TabIndex = 1;
             this.label1.Text = "Session Details";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(77, 106);
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
+            this.label2.Location = new System.Drawing.Point(55, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(99, 24);
+            this.label2.Size = new System.Drawing.Size(103, 24);
             this.label2.TabIndex = 2;
             this.label2.Text = "Session ID";
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(77, 165);
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
+            this.label3.Location = new System.Drawing.Point(55, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(100, 24);
+            this.label3.Size = new System.Drawing.Size(105, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "Lecturer(s)";
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(77, 224);
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
+            this.label4.Location = new System.Drawing.Point(55, 212);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 24);
             this.label4.TabIndex = 4;
@@ -105,58 +112,64 @@
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(77, 283);
+            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
+            this.label5.Location = new System.Drawing.Point(55, 263);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 24);
+            this.label5.Size = new System.Drawing.Size(91, 24);
             this.label5.TabIndex = 5;
             this.label5.Text = "Group ID";
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(502, 106);
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
+            this.label6.Location = new System.Drawing.Point(438, 109);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 24);
+            this.label6.Size = new System.Drawing.Size(130, 24);
             this.label6.TabIndex = 6;
             this.label6.Text = "Subject Code";
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(502, 165);
+            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
+            this.label7.Location = new System.Drawing.Point(438, 160);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 24);
+            this.label7.Size = new System.Drawing.Size(136, 24);
             this.label7.TabIndex = 7;
             this.label7.Text = "Subject Name";
             // 
             // label8
             // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(502, 224);
+            this.label8.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
+            this.label8.Location = new System.Drawing.Point(438, 211);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 24);
+            this.label8.Size = new System.Drawing.Size(150, 24);
             this.label8.TabIndex = 8;
             this.label8.Text = "No. of Students";
             // 
             // label9
             // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(502, 283);
+            this.label9.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
+            this.label9.Location = new System.Drawing.Point(438, 262);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 24);
+            this.label9.Size = new System.Drawing.Size(89, 24);
             this.label9.TabIndex = 9;
             this.label9.Text = "Duration";
             // 
             // txtSessionID
             // 
+            this.txtSessionID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSessionID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSessionID.Location = new System.Drawing.Point(211, 101);
+            this.txtSessionID.Location = new System.Drawing.Point(161, 104);
             this.txtSessionID.Name = "txtSessionID";
             this.txtSessionID.ReadOnly = true;
             this.txtSessionID.Size = new System.Drawing.Size(254, 30);
@@ -164,8 +177,9 @@
             // 
             // txtLecs
             // 
+            this.txtLecs.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtLecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLecs.Location = new System.Drawing.Point(211, 160);
+            this.txtLecs.Location = new System.Drawing.Point(161, 155);
             this.txtLecs.Name = "txtLecs";
             this.txtLecs.ReadOnly = true;
             this.txtLecs.Size = new System.Drawing.Size(254, 30);
@@ -173,8 +187,9 @@
             // 
             // txtTag
             // 
+            this.txtTag.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTag.Location = new System.Drawing.Point(211, 219);
+            this.txtTag.Location = new System.Drawing.Point(161, 206);
             this.txtTag.Name = "txtTag";
             this.txtTag.ReadOnly = true;
             this.txtTag.Size = new System.Drawing.Size(254, 30);
@@ -182,8 +197,9 @@
             // 
             // txtGroupID
             // 
+            this.txtGroupID.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtGroupID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGroupID.Location = new System.Drawing.Point(211, 277);
+            this.txtGroupID.Location = new System.Drawing.Point(161, 256);
             this.txtGroupID.Name = "txtGroupID";
             this.txtGroupID.ReadOnly = true;
             this.txtGroupID.Size = new System.Drawing.Size(254, 30);
@@ -191,8 +207,9 @@
             // 
             // txtSubjectCode
             // 
+            this.txtSubjectCode.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubjectCode.Location = new System.Drawing.Point(678, 101);
+            this.txtSubjectCode.Location = new System.Drawing.Point(593, 103);
             this.txtSubjectCode.Name = "txtSubjectCode";
             this.txtSubjectCode.ReadOnly = true;
             this.txtSubjectCode.Size = new System.Drawing.Size(254, 30);
@@ -200,8 +217,9 @@
             // 
             // txtSubjectName
             // 
+            this.txtSubjectName.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSubjectName.Location = new System.Drawing.Point(678, 160);
+            this.txtSubjectName.Location = new System.Drawing.Point(593, 154);
             this.txtSubjectName.Name = "txtSubjectName";
             this.txtSubjectName.ReadOnly = true;
             this.txtSubjectName.Size = new System.Drawing.Size(254, 30);
@@ -209,8 +227,9 @@
             // 
             // txtStudentCount
             // 
+            this.txtStudentCount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtStudentCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStudentCount.Location = new System.Drawing.Point(678, 219);
+            this.txtStudentCount.Location = new System.Drawing.Point(593, 205);
             this.txtStudentCount.Name = "txtStudentCount";
             this.txtStudentCount.ReadOnly = true;
             this.txtStudentCount.Size = new System.Drawing.Size(254, 30);
@@ -218,19 +237,46 @@
             // 
             // txtDuration
             // 
+            this.txtDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuration.Location = new System.Drawing.Point(678, 278);
+            this.txtDuration.Location = new System.Drawing.Point(593, 256);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.ReadOnly = true;
             this.txtDuration.Size = new System.Drawing.Size(254, 30);
             this.txtDuration.TabIndex = 17;
             // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
+            this.label10.Location = new System.Drawing.Point(247, 311);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(396, 29);
+            this.label10.TabIndex = 18;
+            this.label10.Text = "Summery According to the Format";
+            // 
+            // txtSummery
+            // 
+            this.txtSummery.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtSummery.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.txtSummery.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSummery.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSummery.Location = new System.Drawing.Point(272, 355);
+            this.txtSummery.Multiline = true;
+            this.txtSummery.Name = "txtSummery";
+            this.txtSummery.ReadOnly = true;
+            this.txtSummery.Size = new System.Drawing.Size(345, 119);
+            this.txtSummery.TabIndex = 19;
+            // 
             // ViewSession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Coral;
-            this.ClientSize = new System.Drawing.Size(1000, 447);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(888, 579);
+            this.Controls.Add(this.txtSummery);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.txtDuration);
             this.Controls.Add(this.txtStudentCount);
             this.Controls.Add(this.txtSubjectName);
@@ -280,5 +326,7 @@
         private System.Windows.Forms.TextBox txtSubjectName;
         private System.Windows.Forms.TextBox txtStudentCount;
         private System.Windows.Forms.TextBox txtDuration;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtSummery;
     }
 }

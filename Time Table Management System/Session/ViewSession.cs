@@ -38,6 +38,24 @@ namespace Time_Table_Management_System.Session
             txtStudentCount.Text = selectedSession.Student_count.ToString();
             txtDuration.Text = selectedSession.Duration.ToString();
 
+            if(selectedSession.Lec2_name == null)
+            {
+                txtSummery.Text = selectedSession.Lec1_name + Environment.NewLine +
+                                  selectedSession.Subject_name + "(" + selectedSession.Subject_code + ")" + Environment.NewLine +
+                                  selectedSession.Tag + Environment.NewLine +
+                                  selectedSession.Group_code + Environment.NewLine +
+                                  selectedSession.Student_count.ToString() + "( "+ selectedSession.Duration.ToString() + ")";
+            }
+            else
+            {
+                txtSummery.Text = selectedSession.Lec1_name + ", " + selectedSession.Lec2_name + Environment.NewLine +
+                                  selectedSession.Subject_name + "(" + selectedSession.Subject_code + ")" + Environment.NewLine +
+                                  selectedSession.Tag + Environment.NewLine +
+                                  selectedSession.Group_code + Environment.NewLine +
+                                  selectedSession.Student_count.ToString() + "( " + selectedSession.Duration.ToString() + ")";
+            }
+            
+
         }
 
         private void btnOK_Click(object sender, EventArgs e)
