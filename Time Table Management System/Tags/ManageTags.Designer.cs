@@ -233,8 +233,8 @@
             this.comboBoxRelatedTag.FormattingEnabled = true;
             this.comboBoxRelatedTag.Items.AddRange(new object[] {
             "Lecture",
-            "Lab",
-            "Practicle"});
+            "Tutorial",
+            "Lab"});
             this.comboBoxRelatedTag.Location = new System.Drawing.Point(414, 374);
             this.comboBoxRelatedTag.Name = "comboBoxRelatedTag";
             this.comboBoxRelatedTag.Size = new System.Drawing.Size(225, 24);

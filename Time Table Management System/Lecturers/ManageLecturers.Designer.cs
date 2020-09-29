@@ -119,12 +119,12 @@
             this.dataGridLecturers.Location = new System.Drawing.Point(56, 92);
             this.dataGridLecturers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridLecturers.Name = "dataGridLecturers";
+            this.dataGridLecturers.RowHeadersVisible = false;
             this.dataGridLecturers.RowHeadersWidth = 51;
             this.dataGridLecturers.RowTemplate.Height = 24;
             this.dataGridLecturers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridLecturers.Size = new System.Drawing.Size(619, 130);
             this.dataGridLecturers.TabIndex = 17;
-            this.dataGridLecturers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridLecturers_CellContentClick);
             this.dataGridLecturers.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
             // 
             // id
