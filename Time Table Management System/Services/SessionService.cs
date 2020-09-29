@@ -187,15 +187,14 @@ namespace Time_Table_Management_System.Services
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             List<SessionDTO> arraySessions = null;
 
-
             try
             {
                 if (type == "Lecturer")
                 {
-                    string query = "SELECT DISTINCT * FROM sessions WHERE lecturer1_name LIKE '%@key%' OR lecturer2_name LIKE '%@key%'";
+                    string query = "SELECT * FROM sessions WHERE lecturer1_name LIKE '%" + key + "%' OR lecturer2_name LIKE '%" + key + "%' ";
                     conn.Open();
                     SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@key", key);
+                    cmd.Prepare();
                     SQLiteDataReader rdr = cmd.ExecuteReader();
                     arraySessions = new List<SessionDTO>();
 
@@ -204,7 +203,6 @@ namespace Time_Table_Management_System.Services
                         SessionDTO session = new SessionDTO();
                         session.Id = rdr.GetInt32(0);
                         session.Lec1_name = rdr.GetString(1);
-                        Console.WriteLine(session.Lec1_name);
                         try
                         {
                             session.Lec2_name = rdr.GetString(2);
@@ -213,6 +211,7 @@ namespace Time_Table_Management_System.Services
                         {
                             if (er.Message == "")
                             {
+
                             }
                         }
                         session.Subject_code = rdr.GetString(3);
@@ -224,14 +223,16 @@ namespace Time_Table_Management_System.Services
 
                         arraySessions.Add(session);
                     }
+
+
+
                 }
                 else
                 {
-                    string query = "SELECT * FROM sessions WHERE @type LIKE '%@key%'";
+                    string query = "SELECT * FROM sessions WHERE "+type+" LIKE '%" + key + "%'";
                     conn.Open();
                     SQLiteCommand cmd = new SQLiteCommand(query, conn);
                     cmd.Parameters.AddWithValue("@type", type);
-                    cmd.Parameters.AddWithValue("@key", key);
                     SQLiteDataReader rdr = cmd.ExecuteReader();
                     arraySessions = new List<SessionDTO>();
 

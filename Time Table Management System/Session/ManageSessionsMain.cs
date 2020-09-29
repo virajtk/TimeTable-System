@@ -47,8 +47,8 @@ namespace Time_Table_Management_System.Session
             }
             try
             {
-                int selectedIndex = dataGridViewSessions.SelectedRows[0].Index;
-                if (selectedIndex != -1)
+                //int selectedIndex = ;
+                if (dataGridViewSessions.SelectedRows[0].Index != -1)
                 {
                     if (dataGridViewSessions.SelectedRows[0].Cells[0].Value != null)
                     {
@@ -93,34 +93,60 @@ namespace Time_Table_Management_System.Session
             if (comboBoxSearch.Text == "Lecturer")
             {
                 typeGG = "Lecturer";
-                List<SessionDTO> sessionsArray = sessionService.searchSession(txtSearchKey.Text, typeGG);
-                dataGridViewSessions.Rows.Clear();
-
-                foreach (SessionDTO session in sessionsArray)
+                List<SessionDTO> sessionsArray = sessionService.searchSession(txtSearchKey.Text.Trim(), typeGG);
+                if (sessionsArray.Count == 0)
                 {
-                    dataGridViewSessions.Rows.Add(session.Id, session.Lec1_name, session.Lec2_name, session.Subject_code, session.Subject_name, session.Group_code, session.Tag);
+                    ErrorMessage em = new ErrorMessage("No data found!");
+                    em.Show();
                 }
+                else
+                {
+                    dataGridViewSessions.Rows.Clear();
+
+                    foreach (SessionDTO session in sessionsArray)
+                    {
+                        dataGridViewSessions.Rows.Add(session.Id, session.Lec1_name, session.Lec2_name, session.Subject_code, session.Subject_name, session.Group_code, session.Tag);
+                    }
+                }
+
+
             }
             else if (comboBoxSearch.Text == "Subject Name")
             {
                 typeGG = "subject_name";
                 List<SessionDTO> sessionsArray = sessionService.searchSession(txtSearchKey.Text, typeGG);
-                dataGridViewSessions.Rows.Clear();
-
-                foreach (SessionDTO session in sessionsArray)
+                if (sessionsArray.Count == 0)
                 {
-                    dataGridViewSessions.Rows.Add(session.Id, session.Lec1_name, session.Lec2_name, session.Subject_code, session.Subject_name, session.Group_code, session.Tag);
+                    ErrorMessage em = new ErrorMessage("No data found!");
+                    em.Show();
+                }
+                else
+                {
+                    dataGridViewSessions.Rows.Clear();
+
+                    foreach (SessionDTO session in sessionsArray)
+                    {
+                        dataGridViewSessions.Rows.Add(session.Id, session.Lec1_name, session.Lec2_name, session.Subject_code, session.Subject_name, session.Group_code, session.Tag);
+                    }
                 }
             }
             else if (comboBoxSearch.Text == "Group ID")
             {
                 typeGG = "group_code";
                 List<SessionDTO> sessionsArray = sessionService.searchSession(txtSearchKey.Text, typeGG);
-                dataGridViewSessions.Rows.Clear();
-
-                foreach (SessionDTO session in sessionsArray)
+                if (sessionsArray.Count == 0)
                 {
-                    dataGridViewSessions.Rows.Add(session.Id, session.Lec1_name, session.Lec2_name, session.Subject_code, session.Subject_name, session.Group_code, session.Tag);
+                    ErrorMessage em = new ErrorMessage("No data found!");
+                    em.Show();
+                }
+                else
+                {
+                    dataGridViewSessions.Rows.Clear();
+
+                    foreach (SessionDTO session in sessionsArray)
+                    {
+                        dataGridViewSessions.Rows.Add(session.Id, session.Lec1_name, session.Lec2_name, session.Subject_code, session.Subject_name, session.Group_code, session.Tag);
+                    }
                 }
             }
             else

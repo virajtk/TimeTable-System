@@ -158,6 +158,7 @@
             this.txtSessionID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSessionID.Location = new System.Drawing.Point(211, 101);
             this.txtSessionID.Name = "txtSessionID";
+            this.txtSessionID.ReadOnly = true;
             this.txtSessionID.Size = new System.Drawing.Size(254, 30);
             this.txtSessionID.TabIndex = 10;
             // 
@@ -166,6 +167,7 @@
             this.txtLecs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLecs.Location = new System.Drawing.Point(211, 160);
             this.txtLecs.Name = "txtLecs";
+            this.txtLecs.ReadOnly = true;
             this.txtLecs.Size = new System.Drawing.Size(254, 30);
             this.txtLecs.TabIndex = 11;
             // 
@@ -174,6 +176,7 @@
             this.txtTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTag.Location = new System.Drawing.Point(211, 219);
             this.txtTag.Name = "txtTag";
+            this.txtTag.ReadOnly = true;
             this.txtTag.Size = new System.Drawing.Size(254, 30);
             this.txtTag.TabIndex = 12;
             // 
@@ -182,6 +185,7 @@
             this.txtGroupID.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtGroupID.Location = new System.Drawing.Point(211, 277);
             this.txtGroupID.Name = "txtGroupID";
+            this.txtGroupID.ReadOnly = true;
             this.txtGroupID.Size = new System.Drawing.Size(254, 30);
             this.txtGroupID.TabIndex = 13;
             // 
@@ -190,6 +194,7 @@
             this.txtSubjectCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubjectCode.Location = new System.Drawing.Point(678, 101);
             this.txtSubjectCode.Name = "txtSubjectCode";
+            this.txtSubjectCode.ReadOnly = true;
             this.txtSubjectCode.Size = new System.Drawing.Size(254, 30);
             this.txtSubjectCode.TabIndex = 14;
             // 
@@ -198,6 +203,7 @@
             this.txtSubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSubjectName.Location = new System.Drawing.Point(678, 160);
             this.txtSubjectName.Name = "txtSubjectName";
+            this.txtSubjectName.ReadOnly = true;
             this.txtSubjectName.Size = new System.Drawing.Size(254, 30);
             this.txtSubjectName.TabIndex = 15;
             // 
@@ -206,6 +212,7 @@
             this.txtStudentCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtStudentCount.Location = new System.Drawing.Point(678, 219);
             this.txtStudentCount.Name = "txtStudentCount";
+            this.txtStudentCount.ReadOnly = true;
             this.txtStudentCount.Size = new System.Drawing.Size(254, 30);
             this.txtStudentCount.TabIndex = 16;
             // 
@@ -214,6 +221,7 @@
             this.txtDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDuration.Location = new System.Drawing.Point(678, 278);
             this.txtDuration.Name = "txtDuration";
+            this.txtDuration.ReadOnly = true;
             this.txtDuration.Size = new System.Drawing.Size(254, 30);
             this.txtDuration.TabIndex = 17;
             // 
@@ -221,7 +229,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.InactiveCaption;
+            this.BackColor = System.Drawing.Color.Coral;
             this.ClientSize = new System.Drawing.Size(1000, 447);
             this.Controls.Add(this.txtDuration);
             this.Controls.Add(this.txtStudentCount);
