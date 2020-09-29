@@ -40,6 +40,7 @@
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
             this.btnAddSession = new System.Windows.Forms.Button();
             this.dataGridViewSessions = new System.Windows.Forms.DataGridView();
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lec1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lec2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,7 +48,6 @@
             this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.group_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -219,6 +219,21 @@
             this.dataGridViewSessions.TabIndex = 36;
             this.dataGridViewSessions.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnRefresh.Location = new System.Drawing.Point(724, 95);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(120, 33);
+            this.btnRefresh.TabIndex = 37;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // id
             // 
             this.id.HeaderText = "ID";
@@ -265,7 +280,7 @@
             this.group_id.MinimumWidth = 6;
             this.group_id.Name = "group_id";
             this.group_id.ReadOnly = true;
-            this.group_id.Width = 125;
+            this.group_id.Width = 115;
             // 
             // tag
             // 
@@ -274,21 +289,6 @@
             this.tag.Name = "tag";
             this.tag.ReadOnly = true;
             this.tag.Width = 70;
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnRefresh.Location = new System.Drawing.Point(724, 95);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(120, 33);
-            this.btnRefresh.TabIndex = 37;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // ManageSessionsMain
             // 
@@ -328,6 +328,7 @@
         private System.Windows.Forms.ComboBox comboBoxSearch;
         private System.Windows.Forms.Button btnAddSession;
         private System.Windows.Forms.DataGridView dataGridViewSessions;
+        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn lec1;
         private System.Windows.Forms.DataGridViewTextBoxColumn lec2;
@@ -335,6 +336,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subject_name;
         private System.Windows.Forms.DataGridViewTextBoxColumn group_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn tag;
-        private System.Windows.Forms.Button btnRefresh;
     }
 }
