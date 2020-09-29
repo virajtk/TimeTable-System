@@ -1,6 +1,6 @@
 ﻿namespace Time_Table_Management_System.Session
 {
-    partial class ManageSessions
+    partial class UpdateSession
     {
         /// <summary>
         /// Required designer variable.
@@ -69,9 +69,9 @@
             this.title.ForeColor = System.Drawing.Color.SteelBlue;
             this.title.Location = new System.Drawing.Point(108, 21);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(173, 32);
-            this.title.TabIndex = 15;
-            this.title.Text = "Add Session";
+            this.title.Size = new System.Drawing.Size(214, 32);
+            this.title.TabIndex = 16;
+            this.title.Text = "Update Session";
             // 
             // tabControl
             // 
@@ -86,7 +86,7 @@
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(824, 343);
-            this.tabControl.TabIndex = 16;
+            this.tabControl.TabIndex = 17;
             // 
             // tab1
             // 
@@ -405,11 +405,11 @@
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(120, 40);
             this.btnSubmit.TabIndex = 29;
-            this.btnSubmit.Text = "Submit";
+            this.btnSubmit.Text = "Update";
             this.btnSubmit.UseVisualStyleBackColor = false;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // ManageSessions
+            // UpdateSession
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -418,9 +418,9 @@
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.title);
             this.ForeColor = System.Drawing.SystemColors.Info;
-            this.Name = "ManageSessions";
+            this.Name = "UpdateSession";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add Session";
+            this.Text = "UpdateSession";
             this.tabControl.ResumeLayout(false);
             this.tab1.ResumeLayout(false);
             this.groupBoxStep1.ResumeLayout(false);
@@ -434,23 +434,21 @@
         }
 
         #endregion
+
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.TabControl tabControl;
         private System.Windows.Forms.TabPage tab1;
-        private System.Windows.Forms.TabPage tab2;
         private System.Windows.Forms.GroupBox groupBoxStep1;
-        private System.Windows.Forms.GroupBox groupBoxStep2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.ComboBox comboBoxTag;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnClear2;
-        private System.Windows.Forms.Button btnSubmit;
         private System.Windows.Forms.TextBox txtSelectedLec;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBoxLec;
+        private System.Windows.Forms.ComboBox comboBoxTag;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage tab2;
+        private System.Windows.Forms.GroupBox groupBoxStep2;
         private System.Windows.Forms.TextBox txtNoOfStudents;
         private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.Label label8;
@@ -460,5 +458,8 @@
         private System.Windows.Forms.ComboBox comboBoxGroup;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Button btnClear2;
+        private System.Windows.Forms.Button btnSubmit;
     }
 }

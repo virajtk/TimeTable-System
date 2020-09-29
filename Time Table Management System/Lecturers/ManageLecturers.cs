@@ -285,11 +285,6 @@ namespace Time_Table_Management_System.Lecturers
             }
         }
 
-        private void dataGridLecturers_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void comboBoxFaculty_SelectedIndexChanged(object sender, EventArgs e)
         {
             List<String> items = new List<String>();

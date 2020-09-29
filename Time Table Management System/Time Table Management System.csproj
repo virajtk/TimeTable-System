@@ -124,6 +124,7 @@
     <Compile Include="Models\Dash.cs" />
     <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\SessionDTO.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Tag.cs" />
@@ -133,6 +134,7 @@
     <Compile Include="Models\WorkingDaysHours.cs" />
     <Compile Include="Services\ILecturerService.cs" />
     <Compile Include="Services\ILocationService.cs" />
+    <Compile Include="Services\ISessionService.cs" />
     <Compile Include="Services\IStudentService.cs" />
     <Compile Include="Services\ISubjectService.cs" />
     <Compile Include="Services\ITimeSlotService.cs" />
@@ -140,6 +142,7 @@
     <Compile Include="Services\LecturerService.cs" />
     <Compile Include="Services\ITagService.cs" />
     <Compile Include="Services\LocationService.cs" />
+    <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\SubjectService.cs" />
     <Compile Include="Services\TagService.cs" />
@@ -150,6 +153,24 @@
     </Compile>
     <Compile Include="Session\ManageSessions.Designer.cs">
       <DependentUpon>ManageSessions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session\ManageSessionsMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session\ManageSessionsMain.Designer.cs">
+      <DependentUpon>ManageSessionsMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session\UpdateSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session\UpdateSession.Designer.cs">
+      <DependentUpon>UpdateSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Session\ViewSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Session\ViewSession.Designer.cs">
+      <DependentUpon>ViewSession.cs</DependentUpon>
     </Compile>
     <Compile Include="Students\AddStudent.cs">
       <SubType>Form</SubType>
@@ -236,6 +257,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Session\ManageSessions.resx">
       <DependentUpon>ManageSessions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session\ManageSessionsMain.resx">
+      <DependentUpon>ManageSessionsMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session\UpdateSession.resx">
+      <DependentUpon>UpdateSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Session\ViewSession.resx">
+      <DependentUpon>ViewSession.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students\AddStudent.resx">
       <DependentUpon>AddStudent.cs</DependentUpon>
