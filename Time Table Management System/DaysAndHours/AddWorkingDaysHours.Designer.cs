@@ -88,8 +88,8 @@
             this.numericNoOfDays.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
             this.numericNoOfDays.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.numericNoOfDays.Enabled = false;
-            this.numericNoOfDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericNoOfDays.Location = new System.Drawing.Point(297, 117);
+            this.numericNoOfDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.numericNoOfDays.Location = new System.Drawing.Point(310, 116);
             this.numericNoOfDays.Maximum = new decimal(new int[] {
             7,
             0,
@@ -97,7 +97,7 @@
             0});
             this.numericNoOfDays.Name = "numericNoOfDays";
             this.numericNoOfDays.ReadOnly = true;
-            this.numericNoOfDays.Size = new System.Drawing.Size(111, 27);
+            this.numericNoOfDays.Size = new System.Drawing.Size(111, 28);
             this.numericNoOfDays.TabIndex = 30;
             this.numericNoOfDays.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -122,7 +122,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(54, 117);
+            this.label1.Location = new System.Drawing.Point(103, 119);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(159, 20);
             this.label1.TabIndex = 27;
@@ -133,8 +133,8 @@
             this.title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.SystemColors.Info;
+            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.SteelBlue;
             this.title.Location = new System.Drawing.Point(116, 30);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(347, 34);
@@ -148,7 +148,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(54, 176);
+            this.label2.Location = new System.Drawing.Point(103, 178);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(114, 20);
             this.label2.TabIndex = 33;
@@ -161,7 +161,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(54, 265);
+            this.label3.Location = new System.Drawing.Point(103, 267);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(178, 20);
             this.label3.TabIndex = 35;
@@ -174,7 +174,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(424, 268);
+            this.label4.Location = new System.Drawing.Point(437, 267);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 20);
             this.label4.TabIndex = 36;
@@ -187,7 +187,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(641, 268);
+            this.label5.Location = new System.Drawing.Point(654, 267);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 20);
             this.label5.TabIndex = 38;
@@ -196,20 +196,20 @@
             // numericTPerDayHours
             // 
             this.numericTPerDayHours.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericTPerDayHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericTPerDayHours.Location = new System.Drawing.Point(297, 263);
+            this.numericTPerDayHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.numericTPerDayHours.Location = new System.Drawing.Point(310, 262);
             this.numericTPerDayHours.Name = "numericTPerDayHours";
-            this.numericTPerDayHours.Size = new System.Drawing.Size(111, 27);
+            this.numericTPerDayHours.Size = new System.Drawing.Size(111, 28);
             this.numericTPerDayHours.TabIndex = 39;
             this.numericTPerDayHours.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // numericTPerDayMinutes
             // 
             this.numericTPerDayMinutes.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericTPerDayMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericTPerDayMinutes.Location = new System.Drawing.Point(513, 263);
+            this.numericTPerDayMinutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.numericTPerDayMinutes.Location = new System.Drawing.Point(526, 262);
             this.numericTPerDayMinutes.Name = "numericTPerDayMinutes";
-            this.numericTPerDayMinutes.Size = new System.Drawing.Size(111, 27);
+            this.numericTPerDayMinutes.Size = new System.Drawing.Size(111, 28);
             this.numericTPerDayMinutes.TabIndex = 40;
             this.numericTPerDayMinutes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -311,26 +311,32 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(590, 355);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnUpdate.Location = new System.Drawing.Point(579, 355);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 40);
+            this.btnUpdate.Size = new System.Drawing.Size(131, 47);
             this.btnUpdate.TabIndex = 48;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
             this.btnDelete.Location = new System.Drawing.Point(729, 355);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 40);
+            this.btnDelete.Size = new System.Drawing.Size(120, 47);
             this.btnDelete.TabIndex = 49;
             this.btnDelete.Text = "Delete All";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Visible = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -344,7 +350,7 @@
             this.panel1.Controls.Add(this.checkBoxFriday);
             this.panel1.Controls.Add(this.checkBoxWednesday);
             this.panel1.Controls.Add(this.checkBoxThursday);
-            this.panel1.Location = new System.Drawing.Point(290, 166);
+            this.panel1.Location = new System.Drawing.Point(310, 164);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(522, 81);
             this.panel1.TabIndex = 50;

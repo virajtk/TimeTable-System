@@ -89,7 +89,7 @@
             // 
             this.comboBoxOfferdYear.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxOfferdYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxOfferdYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxOfferdYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxOfferdYear.FormattingEnabled = true;
             this.comboBoxOfferdYear.Items.AddRange(new object[] {
             "1st Year",
@@ -99,7 +99,7 @@
             this.comboBoxOfferdYear.Location = new System.Drawing.Point(205, 110);
             this.comboBoxOfferdYear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxOfferdYear.Name = "comboBoxOfferdYear";
-            this.comboBoxOfferdYear.Size = new System.Drawing.Size(248, 28);
+            this.comboBoxOfferdYear.Size = new System.Drawing.Size(248, 30);
             this.comboBoxOfferdYear.TabIndex = 2;
             // 
             // label2
@@ -200,31 +200,31 @@
             // textBoxSubName
             // 
             this.textBoxSubName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSubName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxSubName.Location = new System.Drawing.Point(205, 220);
             this.textBoxSubName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSubName.Name = "textBoxSubName";
-            this.textBoxSubName.Size = new System.Drawing.Size(248, 27);
+            this.textBoxSubName.Size = new System.Drawing.Size(248, 28);
             this.textBoxSubName.TabIndex = 14;
             // 
             // textBoxSubCode
             // 
             this.textBoxSubCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSubCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSubCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxSubCode.Location = new System.Drawing.Point(205, 274);
             this.textBoxSubCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxSubCode.Name = "textBoxSubCode";
-            this.textBoxSubCode.Size = new System.Drawing.Size(248, 27);
+            this.textBoxSubCode.Size = new System.Drawing.Size(248, 28);
             this.textBoxSubCode.TabIndex = 15;
             // 
             // numericLecHours
             // 
             this.numericLecHours.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericLecHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericLecHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.numericLecHours.Location = new System.Drawing.Point(759, 110);
             this.numericLecHours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericLecHours.Name = "numericLecHours";
-            this.numericLecHours.Size = new System.Drawing.Size(79, 27);
+            this.numericLecHours.Size = new System.Drawing.Size(79, 28);
             this.numericLecHours.TabIndex = 17;
             this.numericLecHours.Value = new decimal(new int[] {
             2,
@@ -235,11 +235,11 @@
             // numericTuteHours
             // 
             this.numericTuteHours.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericTuteHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericTuteHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.numericTuteHours.Location = new System.Drawing.Point(759, 164);
             this.numericTuteHours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericTuteHours.Name = "numericTuteHours";
-            this.numericTuteHours.Size = new System.Drawing.Size(79, 27);
+            this.numericTuteHours.Size = new System.Drawing.Size(79, 28);
             this.numericTuteHours.TabIndex = 19;
             this.numericTuteHours.Value = new decimal(new int[] {
             1,
@@ -263,11 +263,11 @@
             // numericLabHours
             // 
             this.numericLabHours.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericLabHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericLabHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.numericLabHours.Location = new System.Drawing.Point(759, 220);
             this.numericLabHours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericLabHours.Name = "numericLabHours";
-            this.numericLabHours.Size = new System.Drawing.Size(79, 27);
+            this.numericLabHours.Size = new System.Drawing.Size(79, 28);
             this.numericLabHours.TabIndex = 21;
             this.numericLabHours.Value = new decimal(new int[] {
             2,
@@ -291,11 +291,11 @@
             // numericEvaluationHours
             // 
             this.numericEvaluationHours.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.numericEvaluationHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numericEvaluationHours.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.numericEvaluationHours.Location = new System.Drawing.Point(759, 274);
             this.numericEvaluationHours.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.numericEvaluationHours.Name = "numericEvaluationHours";
-            this.numericEvaluationHours.Size = new System.Drawing.Size(79, 27);
+            this.numericEvaluationHours.Size = new System.Drawing.Size(79, 28);
             this.numericEvaluationHours.TabIndex = 23;
             this.numericEvaluationHours.Value = new decimal(new int[] {
             1,
@@ -321,7 +321,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.Info;
             this.btnSave.Location = new System.Drawing.Point(717, 338);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -337,7 +337,7 @@
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.BackColor = System.Drawing.Color.DarkRed;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
             this.btnClear.Location = new System.Drawing.Point(579, 338);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

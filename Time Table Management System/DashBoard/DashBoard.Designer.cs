@@ -29,10 +29,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.button4 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtLatestSub = new System.Windows.Forms.TextBox();
@@ -45,7 +45,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.labelRegLecs = new System.Windows.Forms.Label();
             this.labelRegStu = new System.Windows.Forms.Label();
             this.labelRegSubs = new System.Windows.Forms.Label();
@@ -73,6 +72,7 @@
             // groupBox1
             // 
             this.groupBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.groupBox1.BackColor = System.Drawing.Color.DarkOrange;
             this.groupBox1.Controls.Add(this.txtLatestSub);
             this.groupBox1.Controls.Add(this.txtLatestStu);
             this.groupBox1.Controls.Add(this.txtLatestLec);
@@ -213,18 +213,10 @@
             this.label7.TabIndex = 36;
             this.label7.Text = "Registered Lecturers";
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(49, 191);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 17);
-            this.label8.TabIndex = 61;
-            this.label8.Text = "label8";
-            // 
             // labelRegLecs
             // 
             this.labelRegLecs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelRegLecs.BackColor = System.Drawing.SystemColors.HotTrack;
             this.labelRegLecs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelRegLecs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelRegLecs.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -239,6 +231,7 @@
             // labelRegStu
             // 
             this.labelRegStu.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelRegStu.BackColor = System.Drawing.SystemColors.HotTrack;
             this.labelRegStu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelRegStu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelRegStu.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -253,6 +246,7 @@
             // labelRegSubs
             // 
             this.labelRegSubs.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelRegSubs.BackColor = System.Drawing.SystemColors.HotTrack;
             this.labelRegSubs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelRegSubs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.labelRegSubs.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -267,6 +261,7 @@
             // label1RegRooms
             // 
             this.label1RegRooms.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1RegRooms.BackColor = System.Drawing.SystemColors.HotTrack;
             this.label1RegRooms.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1RegRooms.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1RegRooms.Font = new System.Drawing.Font("Monotype Corsiva", 36F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -281,29 +276,29 @@
             // chartLocations
             // 
             this.chartLocations.Anchor = System.Windows.Forms.AnchorStyles.None;
-            chartArea1.Name = "ChartArea1";
-            this.chartLocations.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartLocations.Legends.Add(legend1);
-            this.chartLocations.Location = new System.Drawing.Point(41, 206);
+            chartArea2.Name = "ChartArea1";
+            this.chartLocations.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chartLocations.Legends.Add(legend2);
+            this.chartLocations.Location = new System.Drawing.Point(41, 199);
             this.chartLocations.Name = "chartLocations";
             this.chartLocations.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
-            series1.BorderColor = System.Drawing.Color.DarkOrange;
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series1.Color = System.Drawing.Color.DarkOrange;
-            series1.Legend = "Legend1";
-            series1.Name = "Lecture Rooms";
-            series1.YValuesPerPoint = 10;
-            series2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.Percent05;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
-            series2.Color = System.Drawing.Color.MidnightBlue;
-            series2.Legend = "Legend1";
-            series2.Name = "Laboratories";
-            this.chartLocations.Series.Add(series1);
-            this.chartLocations.Series.Add(series2);
+            series3.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
+            series3.BorderColor = System.Drawing.Color.DarkOrange;
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series3.Color = System.Drawing.Color.DarkOrange;
+            series3.Legend = "Legend1";
+            series3.Name = "Lecture Rooms";
+            series3.YValuesPerPoint = 10;
+            series4.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.Percent05;
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series4.Color = System.Drawing.Color.MidnightBlue;
+            series4.Legend = "Legend1";
+            series4.Name = "Laboratories";
+            this.chartLocations.Series.Add(series3);
+            this.chartLocations.Series.Add(series4);
             this.chartLocations.Size = new System.Drawing.Size(424, 216);
             this.chartLocations.TabIndex = 66;
             this.chartLocations.Text = "Locations Stats";
@@ -312,14 +307,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Desktop;
+            this.BackColor = System.Drawing.Color.Brown;
             this.ClientSize = new System.Drawing.Size(881, 442);
             this.Controls.Add(this.chartLocations);
             this.Controls.Add(this.label1RegRooms);
             this.Controls.Add(this.labelRegSubs);
             this.Controls.Add(this.labelRegStu);
             this.Controls.Add(this.labelRegLecs);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -350,7 +344,6 @@
         private System.Windows.Forms.TextBox txtLatestSub;
         private System.Windows.Forms.TextBox txtLatestStu;
         private System.Windows.Forms.TextBox txtLatestLec;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label labelRegLecs;
         private System.Windows.Forms.Label labelRegStu;
         private System.Windows.Forms.Label labelRegSubs;

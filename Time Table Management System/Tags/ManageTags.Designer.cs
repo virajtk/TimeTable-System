@@ -78,12 +78,13 @@
             this.subjName,
             this.subjCode,
             this.relTag});
-            this.dataGridView1.Location = new System.Drawing.Point(129, 82);
+            this.dataGridView1.Location = new System.Drawing.Point(54, 82);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(555, 154);
+            this.dataGridView1.Size = new System.Drawing.Size(632, 158);
             this.dataGridView1.TabIndex = 16;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             this.dataGridView1.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
@@ -121,51 +122,57 @@
             this.title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.SystemColors.Info;
+            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.SteelBlue;
             this.title.Location = new System.Drawing.Point(95, 26);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(200, 34);
+            this.title.Size = new System.Drawing.Size(197, 34);
             this.title.TabIndex = 17;
             this.title.Text = "Manage Tags";
             // 
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUpdate.Location = new System.Drawing.Point(716, 82);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnUpdate.Location = new System.Drawing.Point(720, 82);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(120, 40);
             this.btnUpdate.TabIndex = 20;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnClear.Location = new System.Drawing.Point(716, 176);
+            this.btnClear.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClear.Location = new System.Drawing.Point(720, 192);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 40);
             this.btnClear.TabIndex = 19;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDelete.Location = new System.Drawing.Point(716, 129);
+            this.btnDelete.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnDelete.Location = new System.Drawing.Point(720, 137);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 40);
             this.btnDelete.TabIndex = 18;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label1
@@ -175,7 +182,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(211, 280);
+            this.label1.Location = new System.Drawing.Point(274, 274);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 20);
             this.label1.TabIndex = 21;
@@ -188,7 +195,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(211, 327);
+            this.label2.Location = new System.Drawing.Point(274, 324);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 22;
@@ -201,7 +208,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(211, 374);
+            this.label3.Location = new System.Drawing.Point(274, 375);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 20);
             this.label3.TabIndex = 23;
@@ -210,34 +217,36 @@
             // subName
             // 
             this.subName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.subName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subName.Location = new System.Drawing.Point(414, 274);
+            this.subName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.subName.Location = new System.Drawing.Point(404, 270);
             this.subName.Name = "subName";
-            this.subName.Size = new System.Drawing.Size(225, 27);
+            this.subName.Size = new System.Drawing.Size(225, 28);
             this.subName.TabIndex = 24;
             this.subName.TextChanged += new System.EventHandler(this.subName_TextChanged);
             // 
             // subCode
             // 
             this.subCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.subCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subCode.Location = new System.Drawing.Point(414, 324);
+            this.subCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.subCode.Location = new System.Drawing.Point(404, 320);
             this.subCode.Name = "subCode";
-            this.subCode.Size = new System.Drawing.Size(225, 27);
+            this.subCode.Size = new System.Drawing.Size(225, 28);
             this.subCode.TabIndex = 25;
             this.subCode.TextChanged += new System.EventHandler(this.subCode_TextChanged);
             // 
             // comboBoxRelatedTag
             // 
             this.comboBoxRelatedTag.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxRelatedTag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxRelatedTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxRelatedTag.FormattingEnabled = true;
             this.comboBoxRelatedTag.Items.AddRange(new object[] {
             "Lecture",
             "Tutorial",
             "Lab"});
-            this.comboBoxRelatedTag.Location = new System.Drawing.Point(414, 374);
+            this.comboBoxRelatedTag.Location = new System.Drawing.Point(404, 370);
             this.comboBoxRelatedTag.Name = "comboBoxRelatedTag";
-            this.comboBoxRelatedTag.Size = new System.Drawing.Size(225, 24);
+            this.comboBoxRelatedTag.Size = new System.Drawing.Size(225, 30);
             this.comboBoxRelatedTag.TabIndex = 26;
             this.comboBoxRelatedTag.Tag = "";
             this.comboBoxRelatedTag.SelectedIndexChanged += new System.EventHandler(this.comboBoxRelatedTag_SelectedIndexChanged);
