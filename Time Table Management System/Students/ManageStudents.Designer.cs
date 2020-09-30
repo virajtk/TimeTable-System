@@ -86,7 +86,7 @@
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.SystemColors.Info;
-            this.title.Location = new System.Drawing.Point(156, 26);
+            this.title.Location = new System.Drawing.Point(123, 26);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(350, 34);
             this.title.TabIndex = 15;
@@ -130,6 +130,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -190,40 +191,46 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnUpdate.Location = new System.Drawing.Point(716, 82);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnUpdate.Location = new System.Drawing.Point(732, 92);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(120, 40);
             this.btnUpdate.TabIndex = 19;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnClear
             // 
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnClear.Location = new System.Drawing.Point(716, 176);
+            this.btnClear.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClear.Location = new System.Drawing.Point(732, 186);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 40);
             this.btnClear.TabIndex = 18;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnDelete.Location = new System.Drawing.Point(716, 129);
+            this.btnDelete.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnDelete.Location = new System.Drawing.Point(732, 139);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 40);
             this.btnDelete.TabIndex = 17;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // label1
@@ -307,15 +314,17 @@
             // textBoxAcYear
             // 
             this.textBoxAcYear.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxAcYear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxAcYear.Location = new System.Drawing.Point(251, 273);
             this.textBoxAcYear.Name = "textBoxAcYear";
-            this.textBoxAcYear.Size = new System.Drawing.Size(135, 22);
+            this.textBoxAcYear.Size = new System.Drawing.Size(135, 28);
             this.textBoxAcYear.TabIndex = 26;
             this.textBoxAcYear.TextChanged += new System.EventHandler(this.textBoxAcYear_TextChanged);
             // 
             // comboBoxProgramme
             // 
             this.comboBoxProgramme.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxProgramme.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxProgramme.FormattingEnabled = true;
             this.comboBoxProgramme.Items.AddRange(new object[] {
             "IT",
@@ -325,7 +334,7 @@
             "CN"});
             this.comboBoxProgramme.Location = new System.Drawing.Point(251, 328);
             this.comboBoxProgramme.Name = "comboBoxProgramme";
-            this.comboBoxProgramme.Size = new System.Drawing.Size(135, 24);
+            this.comboBoxProgramme.Size = new System.Drawing.Size(135, 30);
             this.comboBoxProgramme.TabIndex = 27;
             this.comboBoxProgramme.Tag = "";
             this.comboBoxProgramme.SelectedIndexChanged += new System.EventHandler(this.comboBoxProgramme_SelectedIndexChanged);
@@ -333,36 +342,40 @@
             // textBoxgroupId
             // 
             this.textBoxgroupId.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxgroupId.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxgroupId.Location = new System.Drawing.Point(639, 327);
             this.textBoxgroupId.Name = "textBoxgroupId";
-            this.textBoxgroupId.Size = new System.Drawing.Size(135, 22);
+            this.textBoxgroupId.Size = new System.Drawing.Size(135, 28);
             this.textBoxgroupId.TabIndex = 28;
             this.textBoxgroupId.TextChanged += new System.EventHandler(this.textBoxgroupId_TextChanged);
             // 
             // textBoxSubGroup
             // 
             this.textBoxSubGroup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBoxSubGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxSubGroup.Location = new System.Drawing.Point(639, 381);
             this.textBoxSubGroup.Name = "textBoxSubGroup";
-            this.textBoxSubGroup.Size = new System.Drawing.Size(135, 22);
+            this.textBoxSubGroup.Size = new System.Drawing.Size(135, 28);
             this.textBoxSubGroup.TabIndex = 29;
             this.textBoxSubGroup.TextChanged += new System.EventHandler(this.textBoxSubGroup_TextChanged);
             // 
             // numericGroupno
             // 
             this.numericGroupno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericGroupno.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericGroupno.Location = new System.Drawing.Point(251, 385);
             this.numericGroupno.Name = "numericGroupno";
-            this.numericGroupno.Size = new System.Drawing.Size(135, 22);
+            this.numericGroupno.Size = new System.Drawing.Size(135, 28);
             this.numericGroupno.TabIndex = 30;
             this.numericGroupno.ValueChanged += new System.EventHandler(this.numericGroupno_ValueChanged);
             // 
             // numericSubGroup
             // 
             this.numericSubGroup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericSubGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericSubGroup.Location = new System.Drawing.Point(639, 273);
             this.numericSubGroup.Name = "numericSubGroup";
-            this.numericSubGroup.Size = new System.Drawing.Size(135, 22);
+            this.numericSubGroup.Size = new System.Drawing.Size(135, 28);
             this.numericSubGroup.TabIndex = 31;
             this.numericSubGroup.ValueChanged += new System.EventHandler(this.numericSubGroup_ValueChanged);
             // 
@@ -373,12 +386,13 @@
             // btnGenerateIds
             // 
             this.btnGenerateIds.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGenerateIds.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerateIds.BackColor = System.Drawing.Color.Snow;
             this.btnGenerateIds.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGenerateIds.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnGenerateIds.Image = global::Time_Table_Management_System.Properties.Resources.generate;
-            this.btnGenerateIds.Location = new System.Drawing.Point(811, 372);
+            this.btnGenerateIds.Location = new System.Drawing.Point(790, 375);
             this.btnGenerateIds.Name = "btnGenerateIds";
-            this.btnGenerateIds.Size = new System.Drawing.Size(41, 35);
+            this.btnGenerateIds.Size = new System.Drawing.Size(62, 35);
             this.btnGenerateIds.TabIndex = 51;
             this.btnGenerateIds.UseVisualStyleBackColor = false;
             this.btnGenerateIds.Click += new System.EventHandler(this.btnGenerateIds_Click);
