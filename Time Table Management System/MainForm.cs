@@ -15,6 +15,7 @@ using Time_Table_Management_System.DaysAndHours;
 using Time_Table_Management_System.Session;
 using Time_Table_Management_System.Messages;
 using Time_Table_Management_System.Generate;
+using Time_Table_Management_System.Allocations;
 
 namespace Time_Table_Management_System
 {
@@ -333,6 +334,19 @@ namespace Time_Table_Management_System
             btnGenerate.BackColor = Color.FromArgb(224, 224, 224);
 
             openChildForm(new GenerateTimeTable());
+
+            hideSubMenu();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            defaultBtn();
+            btnAddSession.BackColor = Color.FromArgb(224, 224, 224);
+
+            openChildForm(new AllocateSession());
+            //..
+            // your code
+            //..
 
             hideSubMenu();
         }

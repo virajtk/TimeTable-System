@@ -55,6 +55,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Allocations\AllocateSession.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allocations\AllocateSession.Designer.cs">
+      <DependentUpon>AllocateSession.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Allocations\ManageConsecutives.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allocations\ManageConsecutives.Designer.cs">
+      <DependentUpon>ManageConsecutives.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Allocations\ManageNonoverlaps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allocations\ManageNonoverlaps.Designer.cs">
+      <DependentUpon>ManageNonoverlaps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Allocations\ManageParallels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allocations\ManageParallels.Designer.cs">
+      <DependentUpon>ManageParallels.cs</DependentUpon>
+    </Compile>
     <Compile Include="DaysAndHours\AddTimeSlots.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +151,7 @@
     <Compile Include="Messages\SuccessMessage.Designer.cs">
       <DependentUpon>SuccessMessage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Consecutive.cs" />
     <Compile Include="Models\Dash.cs" />
     <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\Location.cs" />
@@ -134,7 +159,9 @@
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Tag.cs" />
+    <Compile Include="Services\ConsecutiveService.cs" />
     <Compile Include="Services\DashBoardService.cs" />
+    <Compile Include="Services\IConsecutiveService.cs" />
     <Compile Include="Services\IDashBoardService.cs" />
     <Compile Include="Models\TimeSlot.cs" />
     <Compile Include="Models\WorkingDaysHours.cs" />
@@ -228,6 +255,18 @@
     <Compile Include="Tags\ManageTags.Designer.cs">
       <DependentUpon>ManageTags.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Allocations\AllocateSession.resx">
+      <DependentUpon>AllocateSession.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Allocations\ManageConsecutives.resx">
+      <DependentUpon>ManageConsecutives.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Allocations\ManageNonoverlaps.resx">
+      <DependentUpon>ManageNonoverlaps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Allocations\ManageParallels.resx">
+      <DependentUpon>ManageParallels.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DaysAndHours\AddTimeSlots.resx">
       <DependentUpon>AddTimeSlots.cs</DependentUpon>
     </EmbeddedResource>
