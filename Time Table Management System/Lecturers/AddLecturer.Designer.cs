@@ -84,10 +84,10 @@
             // textBoxLecturerName
             // 
             this.textBoxLecturerName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxLecturerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLecturerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxLecturerName.Location = new System.Drawing.Point(187, 105);
             this.textBoxLecturerName.Name = "textBoxLecturerName";
-            this.textBoxLecturerName.Size = new System.Drawing.Size(222, 27);
+            this.textBoxLecturerName.Size = new System.Drawing.Size(222, 28);
             this.textBoxLecturerName.TabIndex = 16;
             // 
             // label3
@@ -106,10 +106,10 @@
             // textBoxEmployeeID
             // 
             this.textBoxEmployeeID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxEmployeeID.Location = new System.Drawing.Point(187, 167);
             this.textBoxEmployeeID.Name = "textBoxEmployeeID";
-            this.textBoxEmployeeID.Size = new System.Drawing.Size(222, 27);
+            this.textBoxEmployeeID.Size = new System.Drawing.Size(222, 28);
             this.textBoxEmployeeID.TabIndex = 18;
             // 
             // label1
@@ -129,7 +129,7 @@
             // 
             this.comboBoxFaculty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxFaculty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxFaculty.FormattingEnabled = true;
             this.comboBoxFaculty.Items.AddRange(new object[] {
             "Computing",
@@ -140,7 +140,7 @@
             "Hospitality & Culinary"});
             this.comboBoxFaculty.Location = new System.Drawing.Point(187, 232);
             this.comboBoxFaculty.Name = "comboBoxFaculty";
-            this.comboBoxFaculty.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxFaculty.Size = new System.Drawing.Size(222, 30);
             this.comboBoxFaculty.TabIndex = 20;
             this.comboBoxFaculty.SelectedIndexChanged += new System.EventHandler(this.comboBoxFaculty_SelectedIndexChanged);
             // 
@@ -174,7 +174,7 @@
             // 
             this.comboBoxCenter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxCenter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxCenter.FormattingEnabled = true;
             this.comboBoxCenter.Items.AddRange(new object[] {
             "Malabe",
@@ -185,7 +185,7 @@
             "Jaffna"});
             this.comboBoxCenter.Location = new System.Drawing.Point(597, 104);
             this.comboBoxCenter.Name = "comboBoxCenter";
-            this.comboBoxCenter.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxCenter.Size = new System.Drawing.Size(222, 30);
             this.comboBoxCenter.TabIndex = 24;
             // 
             // label5
@@ -205,7 +205,7 @@
             // 
             this.comboBoxBuilding.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxBuilding.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxBuilding.FormattingEnabled = true;
             this.comboBoxBuilding.Items.AddRange(new object[] {
             "New building",
@@ -216,7 +216,7 @@
             "E-block"});
             this.comboBoxBuilding.Location = new System.Drawing.Point(597, 166);
             this.comboBoxBuilding.Name = "comboBoxBuilding";
-            this.comboBoxBuilding.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxBuilding.Size = new System.Drawing.Size(222, 30);
             this.comboBoxBuilding.TabIndex = 26;
             // 
             // label6
@@ -236,7 +236,7 @@
             // 
             this.comboBoxLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxLevel.FormattingEnabled = true;
             this.comboBoxLevel.Items.AddRange(new object[] {
             "1",
@@ -248,7 +248,7 @@
             "7"});
             this.comboBoxLevel.Location = new System.Drawing.Point(597, 232);
             this.comboBoxLevel.Name = "comboBoxLevel";
-            this.comboBoxLevel.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxLevel.Size = new System.Drawing.Size(222, 30);
             this.comboBoxLevel.TabIndex = 28;
             // 
             // label7
@@ -267,11 +267,11 @@
             // textBoxRank
             // 
             this.textBoxRank.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxRank.Location = new System.Drawing.Point(597, 294);
             this.textBoxRank.Name = "textBoxRank";
             this.textBoxRank.ReadOnly = true;
-            this.textBoxRank.Size = new System.Drawing.Size(222, 27);
+            this.textBoxRank.Size = new System.Drawing.Size(222, 28);
             this.textBoxRank.TabIndex = 30;
             // 
             // label8
@@ -292,7 +292,7 @@
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.BackColor = System.Drawing.Color.DarkRed;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
             this.btnClear.Location = new System.Drawing.Point(559, 357);
             this.btnClear.Name = "btnClear";
@@ -307,7 +307,7 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.Info;
             this.btnSave.Location = new System.Drawing.Point(701, 357);
             this.btnSave.Name = "btnSave";
@@ -322,7 +322,7 @@
             this.btnGenerateRank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerateRank.BackColor = System.Drawing.Color.DarkOrange;
             this.btnGenerateRank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateRank.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateRank.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateRank.ForeColor = System.Drawing.SystemColors.Info;
             this.btnGenerateRank.Location = new System.Drawing.Point(332, 357);
             this.btnGenerateRank.Name = "btnGenerateRank";
@@ -340,11 +340,11 @@
             // 
             this.textBoxDepartment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.textBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxDepartment.FormattingEnabled = true;
             this.textBoxDepartment.Location = new System.Drawing.Point(187, 289);
             this.textBoxDepartment.Name = "textBoxDepartment";
-            this.textBoxDepartment.Size = new System.Drawing.Size(222, 28);
+            this.textBoxDepartment.Size = new System.Drawing.Size(222, 30);
             this.textBoxDepartment.TabIndex = 34;
             // 
             // AddLecturer

@@ -96,10 +96,10 @@
             // textBoxYearSem
             // 
             this.textBoxYearSem.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxYearSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxYearSem.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxYearSem.Location = new System.Drawing.Point(289, 109);
             this.textBoxYearSem.Name = "textBoxYearSem";
-            this.textBoxYearSem.Size = new System.Drawing.Size(219, 27);
+            this.textBoxYearSem.Size = new System.Drawing.Size(219, 28);
             this.textBoxYearSem.TabIndex = 15;
             this.textBoxYearSem.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -119,6 +119,7 @@
             // comboBoxProgramme
             // 
             this.comboBoxProgramme.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxProgramme.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxProgramme.FormattingEnabled = true;
             this.comboBoxProgramme.Items.AddRange(new object[] {
             "IT",
@@ -128,7 +129,7 @@
             "CN"});
             this.comboBoxProgramme.Location = new System.Drawing.Point(289, 165);
             this.comboBoxProgramme.Name = "comboBoxProgramme";
-            this.comboBoxProgramme.Size = new System.Drawing.Size(219, 24);
+            this.comboBoxProgramme.Size = new System.Drawing.Size(219, 30);
             this.comboBoxProgramme.TabIndex = 17;
             this.comboBoxProgramme.Tag = "";
             this.comboBoxProgramme.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -162,11 +163,11 @@
             // textBoxGroupID
             // 
             this.textBoxGroupID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxGroupID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGroupID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxGroupID.Location = new System.Drawing.Point(676, 112);
             this.textBoxGroupID.Name = "textBoxGroupID";
             this.textBoxGroupID.ReadOnly = true;
-            this.textBoxGroupID.Size = new System.Drawing.Size(162, 27);
+            this.textBoxGroupID.Size = new System.Drawing.Size(162, 28);
             this.textBoxGroupID.TabIndex = 21;
             this.textBoxGroupID.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
@@ -199,11 +200,11 @@
             // textBoxSubGroupID
             // 
             this.textBoxSubGroupID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxSubGroupID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxSubGroupID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxSubGroupID.Location = new System.Drawing.Point(676, 175);
             this.textBoxSubGroupID.Name = "textBoxSubGroupID";
             this.textBoxSubGroupID.ReadOnly = true;
-            this.textBoxSubGroupID.Size = new System.Drawing.Size(162, 27);
+            this.textBoxSubGroupID.Size = new System.Drawing.Size(162, 28);
             this.textBoxSubGroupID.TabIndex = 25;
             this.textBoxSubGroupID.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
@@ -259,17 +260,19 @@
             // numericGroupNo
             // 
             this.numericGroupNo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericGroupNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.numericGroupNo.Location = new System.Drawing.Point(289, 218);
             this.numericGroupNo.Name = "numericGroupNo";
-            this.numericGroupNo.Size = new System.Drawing.Size(219, 22);
+            this.numericGroupNo.Size = new System.Drawing.Size(219, 28);
             this.numericGroupNo.TabIndex = 29;
             // 
             // numericsubGroup
             // 
             this.numericsubGroup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.numericsubGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.numericsubGroup.Location = new System.Drawing.Point(289, 269);
             this.numericsubGroup.Name = "numericsubGroup";
-            this.numericsubGroup.Size = new System.Drawing.Size(219, 22);
+            this.numericsubGroup.Size = new System.Drawing.Size(219, 28);
             this.numericsubGroup.TabIndex = 30;
             // 
             // AddStudent
