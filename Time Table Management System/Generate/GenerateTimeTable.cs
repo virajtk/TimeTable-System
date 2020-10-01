@@ -16,13 +16,7 @@ namespace Time_Table_Management_System.Generate
         {
             InitializeComponent();
         }
-
-        private void btnAddSession_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
+        private void btnGenerateLec_Click(object sender, EventArgs e)
         {
 
         }
