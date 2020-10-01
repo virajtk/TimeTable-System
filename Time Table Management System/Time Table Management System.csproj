@@ -73,6 +73,12 @@
     <Compile Include="DaysAndHours\ManageWorkingDaysHours.Designer.cs">
       <DependentUpon>ManageWorkingDaysHours.cs</DependentUpon>
     </Compile>
+    <Compile Include="Generate\GenerateTimeTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Generate\GenerateTimeTable.Designer.cs">
+      <DependentUpon>GenerateTimeTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lecturers\AddLecturer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DaysAndHours\ManageWorkingDaysHours.resx">
       <DependentUpon>ManageWorkingDaysHours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Generate\GenerateTimeTable.resx">
+      <DependentUpon>GenerateTimeTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturers\AddLecturer.resx">
       <DependentUpon>AddLecturer.cs</DependentUpon>
