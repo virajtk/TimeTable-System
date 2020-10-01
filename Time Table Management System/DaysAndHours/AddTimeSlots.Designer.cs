@@ -116,11 +116,11 @@
             this.title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.SystemColors.Info;
+            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.SteelBlue;
             this.title.Location = new System.Drawing.Point(116, 30);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(269, 34);
+            this.title.Size = new System.Drawing.Size(268, 34);
             this.title.TabIndex = 18;
             this.title.Text = "Manage Time Slots";
             // 
@@ -234,13 +234,16 @@
             // btnAddTimeSlot
             // 
             this.btnAddTimeSlot.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddTimeSlot.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTimeSlot.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAddTimeSlot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddTimeSlot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddTimeSlot.ForeColor = System.Drawing.SystemColors.Info;
             this.btnAddTimeSlot.Location = new System.Drawing.Point(701, 116);
             this.btnAddTimeSlot.Name = "btnAddTimeSlot";
-            this.btnAddTimeSlot.Size = new System.Drawing.Size(120, 47);
+            this.btnAddTimeSlot.Size = new System.Drawing.Size(120, 43);
             this.btnAddTimeSlot.TabIndex = 50;
             this.btnAddTimeSlot.Text = "Add ";
-            this.btnAddTimeSlot.UseVisualStyleBackColor = true;
+            this.btnAddTimeSlot.UseVisualStyleBackColor = false;
             this.btnAddTimeSlot.Click += new System.EventHandler(this.btnAddTimeSlot_Click);
             // 
             // errorProviderTimeSlot
@@ -282,13 +285,16 @@
             // btnDeleteTimeSlot
             // 
             this.btnDeleteTimeSlot.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnDeleteTimeSlot.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTimeSlot.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDeleteTimeSlot.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteTimeSlot.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteTimeSlot.ForeColor = System.Drawing.SystemColors.Info;
             this.btnDeleteTimeSlot.Location = new System.Drawing.Point(701, 193);
             this.btnDeleteTimeSlot.Name = "btnDeleteTimeSlot";
-            this.btnDeleteTimeSlot.Size = new System.Drawing.Size(120, 47);
+            this.btnDeleteTimeSlot.Size = new System.Drawing.Size(120, 45);
             this.btnDeleteTimeSlot.TabIndex = 53;
             this.btnDeleteTimeSlot.Text = "Delete";
-            this.btnDeleteTimeSlot.UseVisualStyleBackColor = true;
+            this.btnDeleteTimeSlot.UseVisualStyleBackColor = false;
             this.btnDeleteTimeSlot.Click += new System.EventHandler(this.btnDeleteTimeSlot_Click);
             // 
             // comboBoxSTMinutes
@@ -312,12 +318,12 @@
             // btnGenerateRank
             // 
             this.btnGenerateRank.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnGenerateRank.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerateRank.BackColor = System.Drawing.Color.Snow;
             this.btnGenerateRank.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerateRank.Image = global::Time_Table_Management_System.Properties.Resources.generate;
-            this.btnGenerateRank.Location = new System.Drawing.Point(387, 161);
+            this.btnGenerateRank.Location = new System.Drawing.Point(387, 154);
             this.btnGenerateRank.Name = "btnGenerateRank";
-            this.btnGenerateRank.Size = new System.Drawing.Size(41, 28);
+            this.btnGenerateRank.Size = new System.Drawing.Size(51, 35);
             this.btnGenerateRank.TabIndex = 55;
             this.btnGenerateRank.UseVisualStyleBackColor = false;
             this.btnGenerateRank.Click += new System.EventHandler(this.btnGenerateRank_Click);

@@ -66,7 +66,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(104, 112);
+            this.label1.Location = new System.Drawing.Point(258, 122);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(114, 20);
             this.label1.TabIndex = 15;
@@ -77,11 +77,11 @@
             this.title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.SystemColors.Info;
-            this.title.Location = new System.Drawing.Point(156, 26);
+            this.title.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.SteelBlue;
+            this.title.Location = new System.Drawing.Point(126, 37);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(131, 34);
+            this.title.Size = new System.Drawing.Size(128, 34);
             this.title.TabIndex = 16;
             this.title.Text = "Add Tag";
             // 
@@ -92,7 +92,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(104, 172);
+            this.label2.Location = new System.Drawing.Point(258, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
             this.label2.TabIndex = 17;
@@ -101,20 +101,20 @@
             // subName
             // 
             this.subName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.subName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subName.Location = new System.Drawing.Point(283, 105);
+            this.subName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.subName.Location = new System.Drawing.Point(437, 115);
             this.subName.Name = "subName";
-            this.subName.Size = new System.Drawing.Size(225, 27);
+            this.subName.Size = new System.Drawing.Size(225, 28);
             this.subName.TabIndex = 18;
             this.subName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // subCode
             // 
             this.subCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.subCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.subCode.Location = new System.Drawing.Point(283, 170);
+            this.subCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.subCode.Location = new System.Drawing.Point(437, 180);
             this.subCode.Name = "subCode";
-            this.subCode.Size = new System.Drawing.Size(225, 27);
+            this.subCode.Size = new System.Drawing.Size(225, 28);
             this.subCode.TabIndex = 19;
             this.subCode.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -125,7 +125,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(104, 232);
+            this.label3.Location = new System.Drawing.Point(258, 242);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(99, 20);
             this.label3.TabIndex = 20;
@@ -134,14 +134,16 @@
             // comboBoxRelatedTag
             // 
             this.comboBoxRelatedTag.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxRelatedTag.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxRelatedTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxRelatedTag.FormattingEnabled = true;
             this.comboBoxRelatedTag.Items.AddRange(new object[] {
             "Lecture",
             "Tutorial",
             "Lab"});
-            this.comboBoxRelatedTag.Location = new System.Drawing.Point(283, 235);
+            this.comboBoxRelatedTag.Location = new System.Drawing.Point(437, 245);
             this.comboBoxRelatedTag.Name = "comboBoxRelatedTag";
-            this.comboBoxRelatedTag.Size = new System.Drawing.Size(225, 24);
+            this.comboBoxRelatedTag.Size = new System.Drawing.Size(225, 30);
             this.comboBoxRelatedTag.TabIndex = 21;
             this.comboBoxRelatedTag.Tag = "";
             this.comboBoxRelatedTag.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
@@ -149,27 +151,31 @@
             // btnSave
             // 
             this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnSave.Location = new System.Drawing.Point(352, 331);
+            this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnSave.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnSave.Location = new System.Drawing.Point(474, 326);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 40);
             this.btnSave.TabIndex = 29;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnClear
             // 
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnClear.Location = new System.Drawing.Point(197, 331);
+            this.btnClear.BackColor = System.Drawing.Color.DarkRed;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClear.Location = new System.Drawing.Point(319, 326);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 40);
             this.btnClear.TabIndex = 28;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.button3_Click);
             // 
             // errorTag
