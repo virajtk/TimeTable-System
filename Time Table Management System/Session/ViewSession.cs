@@ -62,5 +62,10 @@ namespace Time_Table_Management_System.Session
         {
             this.Close();
         }
+
+        private void txtSummery_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

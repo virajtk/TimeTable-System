@@ -19,6 +19,9 @@ namespace Time_Table_Management_System.Models
         private String group_code;
         private int student_count;
         private int duration;
+        private String room;
+
+
 
         public int Id { get => id; set => id = value; }
         public int Lec1_id { get => lec1_id; set => lec1_id = value; }
@@ -31,5 +34,7 @@ namespace Time_Table_Management_System.Models
         public string Group_code { get => group_code; set => group_code = value; }
         public int Student_count { get => student_count; set => student_count = value; }
         public int Duration { get => duration; set => duration = value; }
+        public string Room { get => room; set => room = value; }
+
     }
 }
