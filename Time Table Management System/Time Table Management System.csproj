@@ -84,6 +84,12 @@
     <Compile Include="Allocations\ManageNonoverlaps.Designer.cs">
       <DependentUpon>ManageNonoverlaps.cs</DependentUpon>
     </Compile>
+    <Compile Include="Allocations\ManageNotavailables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Allocations\ManageNotavailables.Designer.cs">
+      <DependentUpon>ManageNotavailables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Allocations\ManageParallels.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     <Compile Include="Models\Dash.cs" />
     <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\Location.cs" />
+    <Compile Include="Models\Nonoverlap.cs" />
+    <Compile Include="Models\Notavailable.cs" />
+    <Compile Include="Models\ParalleDTO.cs" />
     <Compile Include="Models\SessionDTO.cs" />
     <Compile Include="Models\SessionRoom.cs" />
     <Compile Include="Models\Student.cs" />
@@ -198,6 +207,9 @@
     <Compile Include="Models\WorkingDaysHours.cs" />
     <Compile Include="Services\ILecturerService.cs" />
     <Compile Include="Services\ILocationService.cs" />
+    <Compile Include="Services\INonoverlapService.cs" />
+    <Compile Include="Services\INotavailableService.cs" />
+    <Compile Include="Services\IParallelService.cs" />
     <Compile Include="Services\ISessionRoomService.cs" />
     <Compile Include="Services\ISessionService.cs" />
     <Compile Include="Services\IStudentService.cs" />
@@ -208,6 +220,9 @@
     <Compile Include="Services\LecturerService.cs" />
     <Compile Include="Services\ITagService.cs" />
     <Compile Include="Services\LocationService.cs" />
+    <Compile Include="Services\NonoverlapService.cs" />
+    <Compile Include="Services\NotavailableService.cs" />
+    <Compile Include="Services\ParallelService.cs" />
     <Compile Include="Services\SessionRoomService.cs" />
     <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\StudentService.cs" />
@@ -298,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Allocations\ManageNonoverlaps.resx">
       <DependentUpon>ManageNonoverlaps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Allocations\ManageNotavailables.resx">
+      <DependentUpon>ManageNotavailables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Allocations\ManageParallels.resx">
       <DependentUpon>ManageParallels.cs</DependentUpon>

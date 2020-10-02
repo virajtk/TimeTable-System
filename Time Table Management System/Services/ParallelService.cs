@@ -8,22 +8,22 @@ using System.Data.SQLite;
 
 namespace Time_Table_Management_System.Services
 {
-    class ConsecutiveService : IConsecutiveService
+    class ParallelService : IParallelService
     {
-            
-        public bool addConsecutive(int conSessionID1 , int conSessionID2)
+        public bool addParallel(int parSessionID1, int parSessionID2, int parSessionID3)
         {
             Boolean result = false;
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
 
-                string query = "INSERT INTO consecutives (con1_id, con2_id) VALUES (@con1_id, @con2_id)";
+                string query = "INSERT INTO parallels (par1_id, par2_id, par3_id) VALUES (@par1_id, @par2_id, @par3_id)";
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@con1_id", conSessionID1);
-                cmd.Parameters.AddWithValue("@con2_id", conSessionID2);
+                cmd.Parameters.AddWithValue("@par1_id", parSessionID1);
+                cmd.Parameters.AddWithValue("@par2_id", parSessionID2);
+                cmd.Parameters.AddWithValue("@par3_id", parSessionID3);
 
 
                 cmd.Prepare();
@@ -45,13 +45,13 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public bool deleteConsecutive(int id)
+        public bool deleteParallel(int id)
         {
             Boolean result = false;
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
-                string query = "DELETE FROM consecutives WHERE id = @id";
+                string query = "DELETE FROM parallels WHERE id = @id";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
@@ -76,28 +76,29 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public List<Consecutive> getAllConsecutives()
+        public List<ParalleDTO> getAllParallels()
         {
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            List<Consecutive> arrayConsecutives = null;
+            List<ParalleDTO> arrayParallels = null;
 
             try
             {
-                string query = "SELECT * FROM consecutives";
+                string query = "SELECT * FROM parallels";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataReader rdr = cmd.ExecuteReader();
-                arrayConsecutives = new List<Consecutive>();
+                arrayParallels = new List<ParalleDTO>();
 
                 while (rdr.Read())
                 {
-                    Consecutive consecutive = new Consecutive();
-                    consecutive.Id = rdr.GetInt32(0);
-                    consecutive.Con1_id = rdr.GetInt32(1);
+                    ParalleDTO paralleDTO = new ParalleDTO();
+                    paralleDTO.Id = rdr.GetInt32(0);
+                    paralleDTO.Par1_id = rdr.GetInt32(1);
                     try
                     {
-                        consecutive.Con2_id = rdr.GetInt32(2);
+                        paralleDTO.Par2_id = rdr.GetInt32(2);
+                        paralleDTO.Par3_id = rdr.GetInt32(3);
                     }
                     catch (Exception er)
                     {
@@ -108,7 +109,7 @@ namespace Time_Table_Management_System.Services
                     }
 
 
-                    arrayConsecutives.Add(consecutive);
+                    arrayParallels.Add(paralleDTO);
                 }
             }
             catch (Exception e)
@@ -120,19 +121,19 @@ namespace Time_Table_Management_System.Services
                 conn.Close();
             }
 
-            return arrayConsecutives;
-
+            return arrayParallels;
 
         }
 
-        public Consecutive GetConsecutive(int id)
+        public ParalleDTO GetParallel(int id)
         {
+
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            Consecutive consecutive = new Consecutive();
+            ParalleDTO paralleDTO = new ParalleDTO();
 
             try
             {
-                string query = "SELECT * FROM consecutives WHERE id = @id";
+                string query = "SELECT * FROM parallels WHERE id = @id";
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", id);
@@ -140,11 +141,12 @@ namespace Time_Table_Management_System.Services
 
                 while (rdr.Read())
                 {
-                    consecutive.Id = rdr.GetInt32(0);
-                    consecutive.Con1_id = rdr.GetInt32(1);
+                    paralleDTO.Id = rdr.GetInt32(0);
+                    paralleDTO.Par1_id = rdr.GetInt32(1);
                     try
                     {
-                        consecutive.Con2_id = rdr.GetInt32(2);
+                        paralleDTO.Par2_id = rdr.GetInt32(2);
+                        paralleDTO.Par3_id = rdr.GetInt32(3);
                     }
                     catch (Exception er)
                     {
@@ -153,7 +155,7 @@ namespace Time_Table_Management_System.Services
 
                         }
                     }
-                  
+
                 }
             }
             catch (Exception e)
@@ -165,35 +167,37 @@ namespace Time_Table_Management_System.Services
                 conn.Close();
             }
 
-            return consecutive;
+            return paralleDTO;
         }
 
-        public List<Consecutive> searchConsecutive(string key, string type)
+        public List<ParalleDTO> searchParallel(string key, string type)
         {
+
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            List<Consecutive> arrayConsecutives = null;
+            List<ParalleDTO> arrayParallels = null;
 
             try
             {
-                    string query = "SELECT * FROM consecutives WHERE " + type + " LIKE '%" + key + "%'";
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@type", type);
-                    SQLiteDataReader rdr = cmd.ExecuteReader();
-                    arrayConsecutives = new List<Consecutive>();
+                string query = "SELECT * FROM parallels WHERE " + type + " LIKE '%" + key + "%'";
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@type", type);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+                arrayParallels = new List<ParalleDTO>();
 
-                    while (rdr.Read())
-                    {
-                        Consecutive consecutive = new Consecutive();
-                        consecutive.Id = rdr.GetInt32(0);
-                        consecutive.Con1_id = rdr.GetInt32(1);
-                        consecutive.Con2_id = rdr.GetInt32(2);
-          
+                while (rdr.Read())
+                {
+                    ParalleDTO paralleDTO = new ParalleDTO();
+                    paralleDTO.Id = rdr.GetInt32(0);
+                    paralleDTO.Par1_id = rdr.GetInt32(1);
+                    paralleDTO.Par2_id = rdr.GetInt32(2);
+                    paralleDTO.Par3_id = rdr.GetInt32(3);
 
-                        arrayConsecutives.Add(consecutive);
-                    }
 
-                
+                    arrayParallels.Add(paralleDTO);
+                }
+
+
             }
             catch (Exception e)
             {
@@ -204,10 +208,10 @@ namespace Time_Table_Management_System.Services
                 conn.Close();
             }
 
-            return arrayConsecutives;
+            return arrayParallels;
         }
 
-        public bool updateConsecutive(int id, Consecutive consecutive)
+        public bool updateParallel(int id, ParalleDTO parallel)
         {
             throw new NotImplementedException();
         }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Time_Table_Management_System.Models;
 using Time_Table_Management_System.Services;
+using Time_Table_Management_System.Messages;
 using System.Data.SQLite;
 
 
@@ -39,7 +40,6 @@ namespace Time_Table_Management_System.Allocations
             }
 
         }
-
         private void dataGrid_Selection(object sender, EventArgs e)
         {
             if (executedFirstTime)
@@ -65,7 +65,7 @@ namespace Time_Table_Management_System.Allocations
 
                         #endregion
 
-                        btnUpdate.Enabled = true;
+                        
                         btnDelete.Enabled = true;
                     }
                 }
@@ -93,7 +93,7 @@ namespace Time_Table_Management_System.Allocations
             populateData();
             selectedConsecutive = new Consecutive();
             btnDelete.Enabled = false;
-            btnUpdate.Enabled = false;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,6 +101,74 @@ namespace Time_Table_Management_System.Allocations
             this.Close();
         }
 
-    
+
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (consecutiveService.deleteConsecutive(selectedConsecutive.Id))
+            {
+                SuccessMessage sm = new SuccessMessage("Session killed Successfully");
+                sm.Show();
+                dataGridViewSessions.Rows.Clear();
+                populateData();
+                
+            }
+            else
+            {
+                ErrorMessage em = new ErrorMessage("Oops, Somthing went wrong..");
+                em.Show();
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            String typeGG = null;
+            if (comboBoxSearch.Text == "Session 1 ID")
+            {
+                typeGG = "con1_id";
+                List<Consecutive> consecutivesArray = consecutiveService.searchConsecutive(txtSearchKey.Text.Trim(), typeGG);
+                if (consecutivesArray.Count == 0)
+                {
+                    ErrorMessage em = new ErrorMessage("No data found!");
+                    em.Show();
+                }
+                else
+                {
+                    dataGridViewSessions.Rows.Clear();
+
+                    foreach (Consecutive consecutive in consecutivesArray)
+                    {
+                        dataGridViewSessions.Rows.Add(consecutive.Id, consecutive.Con1_id, consecutive.Con2_id);
+                    }
+                }
+
+
+            }
+            else if (comboBoxSearch.Text == "Session 2 ID")
+            {
+                typeGG = "con2_id";
+                List<Consecutive> consecutivesArray = consecutiveService.searchConsecutive(txtSearchKey.Text, typeGG);
+                if (consecutivesArray.Count == 0)
+                {
+                    ErrorMessage em = new ErrorMessage("No data found!");
+                    em.Show();
+                }
+                else
+                {
+                    dataGridViewSessions.Rows.Clear();
+
+                    foreach (Consecutive consecutive in consecutivesArray)
+                    {
+                        dataGridViewSessions.Rows.Add(consecutive.Id, consecutive.Con1_id, consecutive.Con2_id);
+                    }
+                }
+            }
+            
+            else
+            {
+                ErrorMessage errorMessage = new ErrorMessage("Select a type to proceed...");
+                errorMessage.Show();
+            }
+        }
     }
 }
