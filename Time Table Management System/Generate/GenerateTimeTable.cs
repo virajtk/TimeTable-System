@@ -84,6 +84,18 @@ namespace Time_Table_Management_System.Generate
                 stuNameList.Add(stu.GroupId);
             }
             comboBoxGroups.Items.AddRange(stuNameList.ToArray());
+
+            // add rooms
+            ILocationService locationService = new LocationService();
+            List<Location> locationList = new List<Location>();
+            List<String> roomNameList = new List<String>();
+            locationList = locationService.getAllLocations();
+
+            foreach (Location l in locationList)
+            {
+                roomNameList.Add(l.RoomName);
+            }
+            comboBoxLocationList.Items.AddRange(roomNameList.ToArray());
         }
 
         private void btnGenerateLec_Click(object sender, EventArgs e)
@@ -159,7 +171,7 @@ namespace Time_Table_Management_System.Generate
                                     rowString[col] = (getStringSession(lec2DArray[raw, col].Lec1_name, lec2DArray[raw, col].Lec2_name,
                                         lec2DArray[raw, col].Subject_name, lec2DArray[raw, col].Subject_code, lec2DArray[raw, col].Tag,
                                         lec2DArray[raw, col].Group_code, lec2DArray[raw, col].Student_count.ToString(),
-                                        lec2DArray[raw, col].Duration.ToString()));
+                                        lec2DArray[raw, col].Duration.ToString(), lec2DArray[raw, col].Room));
 
                                     dataGridLec.RowTemplate.Height = 75;
                                 }
@@ -182,20 +194,20 @@ namespace Time_Table_Management_System.Generate
             return random.Next(min,max);
         }
 
-        public String getStringSession(String lec1, String lec2, String subjectName, String subjectCode, String tag, String group, String stuCount, String duration)
+        public String getStringSession(String lec1, String lec2, String subjectName, String subjectCode, String tag, String group, String stuCount, String duration, String room)
         {
             String file = null;
             if (lec2 == String.Empty || lec2 == null)
             {
                 file = lec1 + Environment.NewLine +
                        subjectName + "(" + subjectCode + "), " + tag + Environment.NewLine +
-                       group + ", " + stuCount + "(" + duration + ")" + Environment.NewLine;
+                       group + ", " + stuCount + "(" + duration + "), " + room;
             }
             else
             {
                 file = lec1 + ", " + lec2 + Environment.NewLine +
                        subjectName + "(" + subjectCode + "), " + tag + Environment.NewLine +
-                       group + ", " + stuCount + "(" + duration + ")" + Environment.NewLine;
+                       group + ", " + stuCount + "(" + duration + "), " + room ;
             }
             return file;
         }
@@ -350,7 +362,7 @@ namespace Time_Table_Management_System.Generate
                                     rowString[col] = (getStringSession(lec2DArray[raw, col].Lec1_name, lec2DArray[raw, col].Lec2_name,
                                         lec2DArray[raw, col].Subject_name, lec2DArray[raw, col].Subject_code, lec2DArray[raw, col].Tag,
                                         lec2DArray[raw, col].Group_code, lec2DArray[raw, col].Student_count.ToString(),
-                                        lec2DArray[raw, col].Duration.ToString()));
+                                        lec2DArray[raw, col].Duration.ToString(), lec2DArray[raw,col].Room));
 
                                     dataGridGroup.RowTemplate.Height = 75;
                                 }
@@ -510,7 +522,93 @@ namespace Time_Table_Management_System.Generate
 
         private void btnGenerateLocation_Click(object sender, EventArgs e)
         {
+            if (comboBoxLocationList.Text == String.Empty)
+            {
+                ErrorMessage em = new ErrorMessage("Please Select Room");
+                em.Show();
+            }
+            else
+            {
+                try
+                {
+                    SessionDTO[,] lec2DArray = new SessionDTO[8, workingDaysHours.NoOfWorkingDays];// 8, 5  indexes:0-7, 0-4
+                    List<SessionDTO> sessionsArray = sessionService.getAllSessions();
+                    dataGridLec.Rows.Clear();
 
+                    // set session slots
+                    foreach (SessionDTO session in sessionsArray)
+                    {
+                        if (session.Room == comboBoxLocationList.Text)
+                        {
+                            if (session.Duration == 2)
+                            {
+                                int colNum = getRandom(0, workingDaysHours.NoOfWorkingDays); // 0 1 2 3 4
+                                int rawNum = getRandom(0, 7); // 0 1 2 3 4 5 6
+
+                                session.Duration = 1;
+                                while (lec2DArray[rawNum, colNum] != null || lec2DArray[rawNum, colNum + 1] != null || rawNum == 3)
+                                {
+                                    colNum = getRandom(0, workingDaysHours.NoOfWorkingDays);
+                                    rawNum = getRandom(0, 7);
+                                }
+                                //set Session
+                                lec2DArray[rawNum, colNum] = session;
+                                lec2DArray[rawNum + 1, colNum] = session;
+                            }
+                            else //session.Duration == 1
+                            {
+                                int colNum = getRandom(0, workingDaysHours.NoOfWorkingDays); // 0 1 2 3 4 
+                                int rawNum = getRandom(0, 8); // 0 1 2 3 4 5 6 7
+                                while (lec2DArray[rawNum, colNum] != null)
+                                {
+                                    colNum = getRandom(0, workingDaysHours.NoOfWorkingDays);
+                                    rawNum = getRandom(0, 8);
+                                }
+                                //set Session
+                                lec2DArray[rawNum, colNum] = session;
+                            }
+                        }
+                    }
+
+                    MessageBox.Show("Time Table Generated Successfully", "Info");
+                    //display
+                    int raw = 0;
+                    foreach (String time in timeSlotsList)
+                    {
+                        if (time == "12.30-13.00")
+                        {
+                            dataGridLocation.Rows.Add(time, "xxxxx", "xxxxx", "xxxxx", "xxxxx", "xxxxx");
+                        }
+                        else
+                        {
+                            String[] rowString = new String[5];
+                            for (int col = 0; col < 5; col++)
+                            {
+                                if (lec2DArray[raw, col] == null)
+                                {
+                                    rowString[col] = ("---");
+                                }
+                                else
+                                {
+                                    rowString[col] = (getStringSession(lec2DArray[raw, col].Lec1_name, lec2DArray[raw, col].Lec2_name,
+                                        lec2DArray[raw, col].Subject_name, lec2DArray[raw, col].Subject_code, lec2DArray[raw, col].Tag,
+                                        lec2DArray[raw, col].Group_code, lec2DArray[raw, col].Student_count.ToString(),
+                                        lec2DArray[raw, col].Duration.ToString(), lec2DArray[raw, col].Room));
+
+                                    dataGridLocation.RowTemplate.Height = 75;
+                                }
+                            }
+                            dataGridLocation.Rows.Add(time, rowString[0], rowString[1], rowString[2], rowString[3], rowString[4]);
+                            raw++;
+                        }
+                    }
+
+                }
+                catch (Exception exas)
+                {
+                    MessageBox.Show("Conflict has Occured ! ," + exas.Message, "Error");
+                }
+            }
         }
     }
 }

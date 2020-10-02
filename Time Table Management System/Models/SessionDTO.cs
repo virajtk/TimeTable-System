@@ -21,8 +21,6 @@ namespace Time_Table_Management_System.Models
         private int duration;
         private String room;
 
-
-
         public int Id { get => id; set => id = value; }
         public int Lec1_id { get => lec1_id; set => lec1_id = value; }
         public string Lec1_name { get => lec1_name; set => lec1_name = value; }
