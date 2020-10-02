@@ -253,7 +253,7 @@
             this.groupBoxStep2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.groupBoxStep2.Location = new System.Drawing.Point(6, 6);
             this.groupBoxStep2.Name = "groupBoxStep2";
-            this.groupBoxStep2.Size = new System.Drawing.Size(804, 286);
+            this.groupBoxStep2.Size = new System.Drawing.Size(804, 289);
             this.groupBoxStep2.TabIndex = 1;
             this.groupBoxStep2.TabStop = false;
             this.groupBoxStep2.Text = "Step 2";
@@ -263,7 +263,7 @@
             this.txtNoOfStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNoOfStudents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNoOfStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoOfStudents.Location = new System.Drawing.Point(600, 74);
+            this.txtNoOfStudents.Location = new System.Drawing.Point(600, 76);
             this.txtNoOfStudents.Name = "txtNoOfStudents";
             this.txtNoOfStudents.Size = new System.Drawing.Size(125, 30);
             this.txtNoOfStudents.TabIndex = 42;
@@ -274,7 +274,7 @@
             this.txtDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuration.Location = new System.Drawing.Point(600, 136);
+            this.txtDuration.Location = new System.Drawing.Point(600, 138);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(125, 30);
             this.txtDuration.TabIndex = 41;
@@ -286,7 +286,7 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label8.Location = new System.Drawing.Point(730, 134);
+            this.label8.Location = new System.Drawing.Point(730, 136);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(44, 36);
             this.label8.TabIndex = 40;
@@ -298,7 +298,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label7.Location = new System.Drawing.Point(436, 134);
+            this.label7.Location = new System.Drawing.Point(436, 136);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 36);
             this.label7.TabIndex = 38;
@@ -311,10 +311,11 @@
             this.comboBoxSubject.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSubject.FormattingEnabled = true;
-            this.comboBoxSubject.Location = new System.Drawing.Point(200, 134);
+            this.comboBoxSubject.Location = new System.Drawing.Point(200, 136);
             this.comboBoxSubject.Name = "comboBoxSubject";
             this.comboBoxSubject.Size = new System.Drawing.Size(207, 33);
             this.comboBoxSubject.TabIndex = 37;
+            
             // 
             // label4
             // 
@@ -322,7 +323,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(37, 134);
+            this.label4.Location = new System.Drawing.Point(37, 136);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(148, 36);
             this.label4.TabIndex = 36;
@@ -335,7 +336,7 @@
             this.comboBoxGroup.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGroup.FormattingEnabled = true;
-            this.comboBoxGroup.Location = new System.Drawing.Point(200, 73);
+            this.comboBoxGroup.Location = new System.Drawing.Point(200, 75);
             this.comboBoxGroup.Name = "comboBoxGroup";
             this.comboBoxGroup.Size = new System.Drawing.Size(207, 33);
             this.comboBoxGroup.TabIndex = 35;
@@ -346,7 +347,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label5.Location = new System.Drawing.Point(436, 73);
+            this.label5.Location = new System.Drawing.Point(436, 75);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(151, 36);
             this.label5.TabIndex = 34;
@@ -358,7 +359,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(37, 73);
+            this.label6.Location = new System.Drawing.Point(37, 75);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(136, 36);
             this.label6.TabIndex = 33;
@@ -371,7 +372,7 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnBack.Location = new System.Drawing.Point(373, 231);
+            this.btnBack.Location = new System.Drawing.Point(373, 234);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(120, 40);
             this.btnBack.TabIndex = 31;
@@ -386,7 +387,7 @@
             this.btnClear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear2.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnClear2.Location = new System.Drawing.Point(649, 231);
+            this.btnClear2.Location = new System.Drawing.Point(649, 234);
             this.btnClear2.Name = "btnClear2";
             this.btnClear2.Size = new System.Drawing.Size(120, 40);
             this.btnClear2.TabIndex = 30;
@@ -401,7 +402,7 @@
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnSubmit.Location = new System.Drawing.Point(511, 231);
+            this.btnSubmit.Location = new System.Drawing.Point(511, 234);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(120, 40);
             this.btnSubmit.TabIndex = 29;

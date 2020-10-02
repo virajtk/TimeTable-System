@@ -1,33 +1,33 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Time_Table_Management_System.Models;
 using System.Data.SQLite;
-using System.Data;
-using System.Windows.Forms;
 
 namespace Time_Table_Management_System.Services
 {
-    class TagService : ITagService
+    class NotavailableService : INotavailableService
     {
-        public bool addTag(Tag tag)
+        public bool addNotavailable(Notavailable notavailable)
         {
             Boolean result = false;
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
-               
-                string query = "INSERT INTO tags (subjectName, subjectCode, relatedTag) VALUES (@subjectname, @subjectcode, @relatedtag)";
+
+                string query = "INSERT INTO notavailables (duration, lec_name, group_code, subgroup_code, session_id) VALUES (@duration, @lec_name, @group_code, @subgroup_code, @session_id)";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@subjectname", tag.SubjectName);
-                cmd.Parameters.AddWithValue("@subjectcode", tag.SubjectCode);
-                cmd.Parameters.AddWithValue("@relatedtag", tag.RelatedTag);
+                cmd.Parameters.AddWithValue("@duration", notavailable.Duration);
+                cmd.Parameters.AddWithValue("@lec_name", notavailable.Lec_name);
+                cmd.Parameters.AddWithValue("@group_code", notavailable.Group_code);
+                cmd.Parameters.AddWithValue("@subgroup_code", notavailable.Subgroup_code);
+                cmd.Parameters.AddWithValue("@session_id", notavailable.Session_Id);
+
 
                 cmd.Prepare();
 
@@ -52,13 +52,13 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public bool deleteTagr(int id)
+        public bool deleteNotavailable(int id)
         {
             Boolean result = false;
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
-                string query = "DELETE FROM tags WHERE id = @id";
+                string query = "DELETE FROM notavailables WHERE id = @id";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
@@ -83,31 +83,32 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public List<Tag> getAllTags()
+        public List<Notavailable> getAllNotavailables()
         {
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            List<Tag> arrayTags = null;
+            List<Notavailable> arrayNotavailables = null;
 
-
-            try
+         try
             {
-                string query = "SELECT * FROM tags";
+                string query = "SELECT * FROM notavailables";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataReader rdr = cmd.ExecuteReader();
-                arrayTags = new List<Tag>();
+                arrayNotavailables = new List<Notavailable>();
 
                 while (rdr.Read())
                 {
-                    Tag tag = new Tag();
-                    tag.Id = rdr.GetInt32(0);
-                    tag.SubjectName = rdr.GetString(1);
-                    tag.SubjectCode = rdr.GetString(2);
-                    tag.RelatedTag = rdr.GetString(3);
-                    
+                    Notavailable notavailable = new Notavailable();
+                    notavailable.Id = rdr.GetInt32(0);
+                    notavailable.Duration = rdr.GetString(1);
+                    notavailable.Lec_name = rdr.GetString(2);
+                    notavailable.Group_code = rdr.GetString(3);
+                    notavailable.Subgroup_code = rdr.GetString(4);
+                    notavailable.Session_Id = rdr.GetInt32(5);
 
-                    arrayTags.Add(tag);
+
+                    arrayNotavailables.Add(notavailable);
                 }
             }
             catch (Exception e)
@@ -119,17 +120,17 @@ namespace Time_Table_Management_System.Services
                 conn.Close();
             }
 
-            return arrayTags;
+            return arrayNotavailables;
         }
 
-        public Tag GetTag(int id)
+        public Notavailable GetNotavailable(int id)
         {
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            Tag tag = new Tag();
+            Notavailable notavailable = new Notavailable();
 
             try
             {
-                string query = "SELECT * FROM tags WHERE id = @id";
+                string query = "SELECT * FROM notavailables WHERE id = @id";
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", id);
@@ -137,10 +138,12 @@ namespace Time_Table_Management_System.Services
 
                 while (rdr.Read())
                 {
-                    tag.Id = rdr.GetInt32(0);
-                    tag.SubjectName = rdr.GetString(1);
-                    tag.SubjectCode = rdr.GetString(2);
-                    tag.RelatedTag = rdr.GetString(3);
+                    notavailable.Id = rdr.GetInt32(0);
+                    notavailable.Duration = rdr.GetString(1);
+                    notavailable.Lec_name = rdr.GetString(2);
+                    notavailable.Group_code = rdr.GetString(3);
+                    notavailable.Subgroup_code = rdr.GetString(4);
+                    notavailable.Session_Id = rdr.GetInt32(5);
 
                 }
             }
@@ -153,43 +156,12 @@ namespace Time_Table_Management_System.Services
                 conn.Close();
             }
 
-            return tag;
+            return notavailable;
         }
 
-        public bool updateTag(int id, Tag tag)
+        public List<Notavailable> searchNotavailable(string key, string type)
         {
-            Boolean result = false;
-            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            try
-            {
-                string query = "UPDATE tags SET subjectName = @subjectname, subjectCode = @subjectcode, relatedTag = @relatedtag WHERE id = @id";
-
-                conn.Open();
-                SQLiteCommand cmd = new SQLiteCommand(query, conn);
-
-                cmd.Parameters.AddWithValue("@subjectname", tag.SubjectName);
-                cmd.Parameters.AddWithValue("@subjectcode", tag.SubjectCode);
-                cmd.Parameters.AddWithValue("@relatedtag", tag.RelatedTag);
-                cmd.Parameters.AddWithValue("@id", id);
-
-                cmd.Prepare();
-
-                if (cmd.ExecuteNonQuery() == 1)
-                    result = true;
-                else
-                    result = false;
-
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-
-            return result;
+            throw new NotImplementedException();
         }
     }
 }
