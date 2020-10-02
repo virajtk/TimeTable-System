@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button2 = new System.Windows.Forms.Button();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnView = new System.Windows.Forms.Button();
             this.btnSession = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -42,6 +44,7 @@
             this.groupId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnViewP = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
@@ -53,6 +56,7 @@
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnViewN = new System.Windows.Forms.Button();
             this.btnAddN = new System.Windows.Forms.Button();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
@@ -64,8 +68,23 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBoxSid = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.comboBoxSub = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.comboBoxGroup = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.comboBoxLec = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.title = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.errorNot = new System.Windows.Forms.ErrorProvider(this.components);
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -73,6 +92,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.tabPage4.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNot)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -100,10 +123,10 @@
             this.tabControl.Controls.Add(this.tabPage3);
             this.tabControl.Controls.Add(this.tabPage4);
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tabControl.Location = new System.Drawing.Point(31, 71);
+            this.tabControl.Location = new System.Drawing.Point(22, 76);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(824, 343);
+            this.tabControl.Size = new System.Drawing.Size(833, 338);
             this.tabControl.TabIndex = 17;
             // 
             // tabPage1
@@ -114,10 +137,18 @@
             this.tabPage1.Controls.Add(this.dataGridView1);
             this.tabPage1.Location = new System.Drawing.Point(4, 32);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(816, 307);
+            this.tabPage1.Size = new System.Drawing.Size(825, 302);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Consecutive";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(285, 310);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 20);
+            this.label1.TabIndex = 26;
             // 
             // btnView
             // 
@@ -125,7 +156,7 @@
             this.btnView.BackColor = System.Drawing.Color.DarkOrange;
             this.btnView.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnView.Location = new System.Drawing.Point(419, 248);
+            this.btnView.Location = new System.Drawing.Point(400, 237);
             this.btnView.Name = "btnView";
             this.btnView.Size = new System.Drawing.Size(120, 40);
             this.btnView.TabIndex = 25;
@@ -139,7 +170,7 @@
             this.btnSession.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSession.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSession.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnSession.Location = new System.Drawing.Point(256, 248);
+            this.btnSession.Location = new System.Drawing.Point(241, 237);
             this.btnSession.Name = "btnSession";
             this.btnSession.Size = new System.Drawing.Size(120, 40);
             this.btnSession.TabIndex = 24;
@@ -153,9 +184,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeColumns = false;
             this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -166,15 +195,14 @@
             this.subject,
             this.groupId,
             this.tag});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 14);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(782, 210);
+            this.dataGridView1.Size = new System.Drawing.Size(819, 213);
             this.dataGridView1.TabIndex = 22;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // id
             // 
@@ -227,15 +255,24 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.label2);
             this.tabPage2.Controls.Add(this.btnViewP);
             this.tabPage2.Controls.Add(this.btnAdd);
             this.tabPage2.Controls.Add(this.dataGridView2);
             this.tabPage2.Location = new System.Drawing.Point(4, 32);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(816, 307);
+            this.tabPage2.Size = new System.Drawing.Size(825, 302);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Parallel";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(318, 297);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 20);
+            this.label2.TabIndex = 28;
             // 
             // btnViewP
             // 
@@ -243,7 +280,7 @@
             this.btnViewP.BackColor = System.Drawing.Color.DarkOrange;
             this.btnViewP.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewP.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnViewP.Location = new System.Drawing.Point(414, 254);
+            this.btnViewP.Location = new System.Drawing.Point(396, 254);
             this.btnViewP.Name = "btnViewP";
             this.btnViewP.Size = new System.Drawing.Size(120, 40);
             this.btnViewP.TabIndex = 27;
@@ -257,12 +294,13 @@
             this.btnAdd.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnAdd.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnAdd.Location = new System.Drawing.Point(251, 254);
+            this.btnAdd.Location = new System.Drawing.Point(238, 254);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(120, 40);
             this.btnAdd.TabIndex = 26;
             this.btnAdd.Text = "Add Session";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // dataGridView2
             // 
@@ -281,13 +319,13 @@
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn13});
-            this.dataGridView2.Location = new System.Drawing.Point(3, 16);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 3);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView2.Size = new System.Drawing.Size(802, 211);
+            this.dataGridView2.Size = new System.Drawing.Size(819, 243);
             this.dataGridView2.TabIndex = 22;
             // 
             // dataGridViewTextBoxColumn1
@@ -341,15 +379,24 @@
             // 
             // tabPage3
             // 
+            this.tabPage3.Controls.Add(this.label3);
             this.tabPage3.Controls.Add(this.btnViewN);
             this.tabPage3.Controls.Add(this.btnAddN);
             this.tabPage3.Controls.Add(this.dataGridView3);
             this.tabPage3.Location = new System.Drawing.Point(4, 32);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(816, 307);
+            this.tabPage3.Size = new System.Drawing.Size(825, 302);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Non Overlapping";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(311, 293);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 20);
+            this.label3.TabIndex = 30;
             // 
             // btnViewN
             // 
@@ -357,7 +404,7 @@
             this.btnViewN.BackColor = System.Drawing.Color.DarkOrange;
             this.btnViewN.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnViewN.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnViewN.Location = new System.Drawing.Point(399, 254);
+            this.btnViewN.Location = new System.Drawing.Point(386, 250);
             this.btnViewN.Name = "btnViewN";
             this.btnViewN.Size = new System.Drawing.Size(120, 40);
             this.btnViewN.TabIndex = 29;
@@ -371,12 +418,13 @@
             this.btnAddN.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnAddN.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddN.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnAddN.Location = new System.Drawing.Point(236, 254);
+            this.btnAddN.Location = new System.Drawing.Point(225, 250);
             this.btnAddN.Name = "btnAddN";
             this.btnAddN.Size = new System.Drawing.Size(120, 40);
             this.btnAddN.TabIndex = 28;
             this.btnAddN.Text = "Add Session";
             this.btnAddN.UseVisualStyleBackColor = false;
+            this.btnAddN.Click += new System.EventHandler(this.btnAddN_Click);
             // 
             // dataGridView3
             // 
@@ -395,13 +443,13 @@
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12,
             this.dataGridViewTextBoxColumn15});
-            this.dataGridView3.Location = new System.Drawing.Point(3, 14);
+            this.dataGridView3.Location = new System.Drawing.Point(3, 3);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowHeadersVisible = false;
             this.dataGridView3.RowHeadersWidth = 51;
             this.dataGridView3.RowTemplate.Height = 24;
             this.dataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView3.Size = new System.Drawing.Size(810, 213);
+            this.dataGridView3.Size = new System.Drawing.Size(819, 241);
             this.dataGridView3.TabIndex = 20;
             // 
             // dataGridViewTextBoxColumn7
@@ -455,12 +503,216 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.tabControl1);
             this.tabPage4.Location = new System.Drawing.Point(4, 32);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(816, 307);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(825, 302);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Not Available Times";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tabPage5);
+            this.tabControl1.Location = new System.Drawing.Point(6, 6);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(816, 296);
+            this.tabControl1.TabIndex = 0;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.Controls.Add(this.button1);
+            this.tabPage5.Controls.Add(this.button3);
+            this.tabPage5.Controls.Add(this.button4);
+            this.tabPage5.Controls.Add(this.textBox1);
+            this.tabPage5.Controls.Add(this.label11);
+            this.tabPage5.Controls.Add(this.comboBoxSid);
+            this.tabPage5.Controls.Add(this.label9);
+            this.tabPage5.Controls.Add(this.comboBoxSub);
+            this.tabPage5.Controls.Add(this.label5);
+            this.tabPage5.Controls.Add(this.comboBoxGroup);
+            this.tabPage5.Controls.Add(this.label6);
+            this.tabPage5.Controls.Add(this.comboBoxLec);
+            this.tabPage5.Controls.Add(this.label4);
+            this.tabPage5.Location = new System.Drawing.Point(4, 29);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(808, 263);
+            this.tabPage5.TabIndex = 0;
+            this.tabPage5.Text = "Lecturers, Groups & Sub Groups";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.BackColor = System.Drawing.Color.DarkOrange;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Info;
+            this.button1.Location = new System.Drawing.Point(477, 171);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(143, 40);
+            this.button1.TabIndex = 50;
+            this.button1.Text = "View";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button3.BackColor = System.Drawing.Color.DarkRed;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.SystemColors.Info;
+            this.button3.Location = new System.Drawing.Point(652, 171);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(139, 40);
+            this.button3.TabIndex = 49;
+            this.button3.Text = "Clear";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button4.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.SystemColors.Info;
+            this.button4.Location = new System.Drawing.Point(477, 97);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(314, 40);
+            this.button4.TabIndex = 48;
+            this.button4.Text = "Submit";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(548, 24);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(243, 30);
+            this.textBox1.TabIndex = 47;
+            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label11
+            // 
+            this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label11.Location = new System.Drawing.Point(471, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(57, 36);
+            this.label11.TabIndex = 45;
+            this.label11.Text = "Time";
+            // 
+            // comboBoxSid
+            // 
+            this.comboBoxSid.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxSid.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSid.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxSid.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSid.FormattingEnabled = true;
+            this.comboBoxSid.Location = new System.Drawing.Point(231, 195);
+            this.comboBoxSid.Name = "comboBoxSid";
+            this.comboBoxSid.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxSid.TabIndex = 43;
+            this.comboBoxSid.SelectedIndexChanged += new System.EventHandler(this.comboBoxSid_SelectedIndexChanged);
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label9.Location = new System.Drawing.Point(21, 192);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(175, 36);
+            this.label9.TabIndex = 42;
+            this.label9.Text = "Select Session ID";
+            // 
+            // comboBoxSub
+            // 
+            this.comboBoxSub.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxSub.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxSub.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxSub.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxSub.FormattingEnabled = true;
+            this.comboBoxSub.Location = new System.Drawing.Point(231, 136);
+            this.comboBoxSub.Name = "comboBoxSub";
+            this.comboBoxSub.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxSub.TabIndex = 39;
+            this.comboBoxSub.SelectedIndexChanged += new System.EventHandler(this.comboBoxSub_SelectedIndexChanged);
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(19, 136);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(177, 36);
+            this.label5.TabIndex = 38;
+            this.label5.Text = "Select Sub Group";
+            // 
+            // comboBoxGroup
+            // 
+            this.comboBoxGroup.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxGroup.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxGroup.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.comboBoxGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxGroup.FormattingEnabled = true;
+            this.comboBoxGroup.Location = new System.Drawing.Point(231, 79);
+            this.comboBoxGroup.Name = "comboBoxGroup";
+            this.comboBoxGroup.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxGroup.TabIndex = 37;
+            this.comboBoxGroup.SelectedIndexChanged += new System.EventHandler(this.comboBoxGroup_SelectedIndexChanged);
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label6.Location = new System.Drawing.Point(21, 81);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(136, 36);
+            this.label6.TabIndex = 36;
+            this.label6.Text = "Select Group";
+            // 
+            // comboBoxLec
+            // 
+            this.comboBoxLec.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxLec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxLec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLec.FormattingEnabled = true;
+            this.comboBoxLec.Location = new System.Drawing.Point(231, 20);
+            this.comboBoxLec.Name = "comboBoxLec";
+            this.comboBoxLec.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxLec.TabIndex = 33;
+            this.comboBoxLec.SelectedIndexChanged += new System.EventHandler(this.comboBoxLec_SelectedIndexChanged);
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(21, 22);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(156, 36);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "Select Lecturer";
             // 
             // title
             // 
@@ -468,19 +720,15 @@
             this.title.BackColor = System.Drawing.Color.Transparent;
             this.title.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
             this.title.ForeColor = System.Drawing.Color.SteelBlue;
-            this.title.Location = new System.Drawing.Point(108, 21);
+            this.title.Location = new System.Drawing.Point(111, 29);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(173, 32);
+            this.title.Size = new System.Drawing.Size(596, 32);
             this.title.TabIndex = 18;
-            this.title.Text = "Add Session";
+            this.title.Text = "Sessions and Not Available Times Allocations";
             // 
-            // label1
+            // errorNot
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(285, 310);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 20);
-            this.label1.TabIndex = 26;
+            this.errorNot.ContainerControl = this;
             // 
             // AllocateSession
             // 
@@ -493,14 +741,22 @@
             this.Controls.Add(this.button2);
             this.Name = "AllocateSession";
             this.Text = "AllocateSession";
+            this.Load += new System.EventHandler(this.AllocateSession_Load);
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorNot)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,7 +769,6 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Button btnView;
@@ -546,5 +801,24 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.ComboBox comboBoxLec;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox comboBoxSub;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox comboBoxGroup;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBoxSid;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ErrorProvider errorNot;
     }
 }

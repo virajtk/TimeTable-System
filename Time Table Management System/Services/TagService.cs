@@ -19,7 +19,7 @@ namespace Time_Table_Management_System.Services
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
-                //string query = "SELECT * FROM people WHERE username= @user AND password= @pass";
+               
                 string query = "INSERT INTO tags (subjectName, subjectCode, relatedTag) VALUES (@subjectname, @subjectcode, @relatedtag)";
 
                 conn.Open();

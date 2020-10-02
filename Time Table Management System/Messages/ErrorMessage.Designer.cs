@@ -51,11 +51,10 @@
             this.labelSErrorMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelSErrorMessage.AutoSize = true;
             this.labelSErrorMessage.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelSErrorMessage.Location = new System.Drawing.Point(309, 130);
             this.labelSErrorMessage.Name = "labelSErrorMessage";
-            this.labelSErrorMessage.Size = new System.Drawing.Size(148, 23);
+            this.labelSErrorMessage.Size = new System.Drawing.Size(410, 111);
             this.labelSErrorMessage.TabIndex = 2;
             this.labelSErrorMessage.Text = "error message";
             // 

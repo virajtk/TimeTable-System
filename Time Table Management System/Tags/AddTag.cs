@@ -68,10 +68,10 @@ namespace Time_Table_Management_System.Tags
                         tag.RelatedTag = "Lecture";
                         break;
                     case 1:
-                        tag.RelatedTag = "Lab";
+                        tag.RelatedTag = "Tutorial";
                         break;
                     case 2:
-                        tag.RelatedTag = "Practicle";
+                        tag.RelatedTag = "Lab";
                         break;
                 }
                 //Insert Data
@@ -94,16 +94,6 @@ namespace Time_Table_Management_System.Tags
                     comboBoxRelatedTag.SelectedIndex = -1;
                 }
             }
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button2_Click(object sender, EventArgs e)

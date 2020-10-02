@@ -47,7 +47,33 @@ namespace Time_Table_Management_System.Services
 
         public bool deleteConsecutive(int id)
         {
-            throw new NotImplementedException();
+            Boolean result = false;
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            try
+            {
+                string query = "DELETE FROM consecutives WHERE id = @id";
+
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Prepare();
+
+                if (cmd.ExecuteNonQuery() == 1)
+                    result = true;
+                else
+                    result = false;
+
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return result;
         }
 
         public List<Consecutive> getAllConsecutives()
@@ -144,7 +170,41 @@ namespace Time_Table_Management_System.Services
 
         public List<Consecutive> searchConsecutive(string key, string type)
         {
-            throw new NotImplementedException();
+            SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
+            List<Consecutive> arrayConsecutives = null;
+
+            try
+            {
+                    string query = "SELECT * FROM consecutives WHERE " + type + " LIKE '%" + key + "%'";
+                    conn.Open();
+                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                    cmd.Parameters.AddWithValue("@type", type);
+                    SQLiteDataReader rdr = cmd.ExecuteReader();
+                    arrayConsecutives = new List<Consecutive>();
+
+                    while (rdr.Read())
+                    {
+                        Consecutive consecutive = new Consecutive();
+                        consecutive.Id = rdr.GetInt32(0);
+                        consecutive.Con1_id = rdr.GetInt32(1);
+                        consecutive.Con2_id = rdr.GetInt32(2);
+          
+
+                        arrayConsecutives.Add(consecutive);
+                    }
+
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+            return arrayConsecutives;
         }
 
         public bool updateConsecutive(int id, Consecutive consecutive)
