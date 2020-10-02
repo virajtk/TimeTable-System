@@ -367,7 +367,6 @@
             this.textBoxDepartment.Name = "textBoxDepartment";
             this.textBoxDepartment.Size = new System.Drawing.Size(168, 26);
             this.textBoxDepartment.TabIndex = 34;
-            this.textBoxDepartment.SelectedIndexChanged += new System.EventHandler(this.textBoxDepartment_SelectedIndexChanged);
             // 
             // AddLecturer
             // 

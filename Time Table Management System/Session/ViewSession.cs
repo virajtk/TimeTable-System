@@ -54,8 +54,6 @@ namespace Time_Table_Management_System.Session
                                   selectedSession.Group_code + Environment.NewLine +
                                   selectedSession.Student_count.ToString() + "( " + selectedSession.Duration.ToString() + ")";
             }
-            
-
         }
 
         private void btnOK_Click(object sender, EventArgs e)
