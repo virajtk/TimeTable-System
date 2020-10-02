@@ -48,12 +48,19 @@ namespace Time_Table_Management_System.Lecturers
             if (textBoxEmployeeID.Text == String.Empty)
             {
                 textBoxEmployeeID.Focus();
-                errorAddLecturer.SetError(textBoxEmployeeID, "Please Enter Employee ID");
+                //errorAddLecturer.SetError(textBoxEmployeeID, "Please Enter Employee ID");
+                MessageBox.Show("Please Enter Employee ID", "Error");
+            }
+            else if(textBoxEmployeeID.Text.Length != 6)
+            {
+                textBoxEmployeeID.Focus();
+                MessageBox.Show("Please Enter Valid Employee ID, Employee ID should be 6 digits", "Error");
             }
             else if(comboBoxLevel.SelectedIndex == -1)
             {
                 comboBoxLevel.Focus();
-                errorAddLecturer.SetError(comboBoxLevel, "Please Select Level");
+                //errorAddLecturer.SetError(comboBoxLevel, "Please Select Level");
+                MessageBox.Show("Please Select Level", "Error");
             }
             else
             {
@@ -70,22 +77,31 @@ namespace Time_Table_Management_System.Lecturers
             if (textBoxLecturerName.Text == String.Empty)
             {
                 textBoxLecturerName.Focus();
-                errorAddLecturer.SetError(textBoxLecturerName, "Please Enter Lecturer Name");
+                //errorAddLecturer.SetError(textBoxLecturerName, "Please Enter Lecturer Name");
+                MessageBox.Show("Please Enter Lecturer Name", "Error");
             }
             else if (comboBoxFaculty.SelectedIndex == -1)
             {
                 comboBoxFaculty.Focus();
-                errorAddLecturer.SetError(comboBoxFaculty, "Please Select Faculty");
+                //errorAddLecturer.SetError(comboBoxFaculty, "Please Select Faculty");
+                MessageBox.Show("Please Select Faculty", "Error");
             }
-            else if (textBoxDepartment.Text == String.Empty)
+            else if (textBoxDepartment.SelectedIndex == -1)
             {
                 textBoxDepartment.Focus();
-                errorAddLecturer.SetError(textBoxDepartment, "Please Enter Department");
+                //errorAddLecturer.SetError(textBoxDepartment, "Please Enter Department");
+                MessageBox.Show("Please Select Department", "Error");
             }
             else if (comboBoxCenter.SelectedIndex == -1)
             {
                 comboBoxCenter.Focus();
-                errorAddLecturer.SetError(comboBoxCenter, "Please Select Center");
+                //errorAddLecturer.SetError(comboBoxCenter, "Please Select Center");
+                MessageBox.Show("Please Select Center", "Error");
+            }
+            else if (comboBoxBuilding.SelectedIndex == -1)
+            {
+                comboBoxBuilding.Focus();
+                MessageBox.Show("Please Select Building", "Error");
             }
             else if (textBoxRank.Text == String.Empty)
             {
@@ -182,11 +198,6 @@ namespace Time_Table_Management_System.Lecturers
                     break;
             }
             textBoxDepartment.Items.AddRange(items.ToArray());
-        }
-
-        private void textBoxDepartment_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
