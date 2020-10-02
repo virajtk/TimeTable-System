@@ -65,11 +65,12 @@
             // 
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.title.ForeColor = System.Drawing.Color.SteelBlue;
-            this.title.Location = new System.Drawing.Point(108, 21);
+            this.title.Location = new System.Drawing.Point(81, 17);
+            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(173, 32);
+            this.title.Size = new System.Drawing.Size(146, 26);
             this.title.TabIndex = 15;
             this.title.Text = "Add Session";
             // 
@@ -82,19 +83,21 @@
             this.tabControl.Controls.Add(this.tab1);
             this.tabControl.Controls.Add(this.tab2);
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.tabControl.Location = new System.Drawing.Point(31, 73);
+            this.tabControl.Location = new System.Drawing.Point(23, 59);
+            this.tabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
-            this.tabControl.Size = new System.Drawing.Size(824, 343);
+            this.tabControl.Size = new System.Drawing.Size(618, 279);
             this.tabControl.TabIndex = 16;
             // 
             // tab1
             // 
             this.tab1.Controls.Add(this.groupBoxStep1);
-            this.tab1.Location = new System.Drawing.Point(4, 32);
+            this.tab1.Location = new System.Drawing.Point(4, 28);
+            this.tab1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab1.Name = "tab1";
-            this.tab1.Padding = new System.Windows.Forms.Padding(3);
-            this.tab1.Size = new System.Drawing.Size(816, 307);
+            this.tab1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tab1.Size = new System.Drawing.Size(610, 247);
             this.tab1.TabIndex = 0;
             this.tab1.Text = "Select Lectures & Tag";
             this.tab1.UseVisualStyleBackColor = true;
@@ -113,9 +116,11 @@
             this.groupBoxStep1.Controls.Add(this.btnClear);
             this.groupBoxStep1.Controls.Add(this.label1);
             this.groupBoxStep1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBoxStep1.Location = new System.Drawing.Point(6, 6);
+            this.groupBoxStep1.Location = new System.Drawing.Point(4, 5);
+            this.groupBoxStep1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxStep1.Name = "groupBoxStep1";
-            this.groupBoxStep1.Size = new System.Drawing.Size(804, 286);
+            this.groupBoxStep1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxStep1.Size = new System.Drawing.Size(603, 232);
             this.groupBoxStep1.TabIndex = 0;
             this.groupBoxStep1.TabStop = false;
             this.groupBoxStep1.Text = "Step 1";
@@ -124,11 +129,12 @@
             // 
             this.txtSelectedLec.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtSelectedLec.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSelectedLec.Location = new System.Drawing.Point(214, 150);
+            this.txtSelectedLec.Location = new System.Drawing.Point(160, 122);
+            this.txtSelectedLec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSelectedLec.Multiline = true;
             this.txtSelectedLec.Name = "txtSelectedLec";
             this.txtSelectedLec.ReadOnly = true;
-            this.txtSelectedLec.Size = new System.Drawing.Size(555, 34);
+            this.txtSelectedLec.Size = new System.Drawing.Size(417, 28);
             this.txtSelectedLec.TabIndex = 33;
             // 
             // label3
@@ -137,9 +143,10 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(23, 149);
+            this.label3.Location = new System.Drawing.Point(17, 121);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(184, 36);
+            this.label3.Size = new System.Drawing.Size(149, 29);
             this.label3.TabIndex = 32;
             this.label3.Text = "Selected Lecturer(s)";
             // 
@@ -149,9 +156,10 @@
             this.comboBoxLec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxLec.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxLec.FormattingEnabled = true;
-            this.comboBoxLec.Location = new System.Drawing.Point(214, 78);
+            this.comboBoxLec.Location = new System.Drawing.Point(160, 63);
+            this.comboBoxLec.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxLec.Name = "comboBoxLec";
-            this.comboBoxLec.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxLec.Size = new System.Drawing.Size(156, 28);
             this.comboBoxLec.TabIndex = 31;
             this.comboBoxLec.SelectedIndexChanged += new System.EventHandler(this.comboBoxLec_SelectedIndexChanged);
             // 
@@ -162,9 +170,10 @@
             this.comboBoxTag.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxTag.FormattingEnabled = true;
-            this.comboBoxTag.Location = new System.Drawing.Point(562, 78);
+            this.comboBoxTag.Location = new System.Drawing.Point(422, 63);
+            this.comboBoxTag.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxTag.Name = "comboBoxTag";
-            this.comboBoxTag.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxTag.Size = new System.Drawing.Size(156, 28);
             this.comboBoxTag.TabIndex = 30;
             this.comboBoxTag.SelectedIndexChanged += new System.EventHandler(this.comboBoxTag_SelectedIndexChanged);
             // 
@@ -174,9 +183,10 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label2.Location = new System.Drawing.Point(443, 76);
+            this.label2.Location = new System.Drawing.Point(332, 62);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(113, 36);
+            this.label2.Size = new System.Drawing.Size(91, 29);
             this.label2.TabIndex = 29;
             this.label2.Text = "Select Tag";
             // 
@@ -185,11 +195,12 @@
             this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNext.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNext.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNext.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnNext.Location = new System.Drawing.Point(511, 231);
+            this.btnNext.Location = new System.Drawing.Point(383, 188);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(120, 40);
+            this.btnNext.Size = new System.Drawing.Size(90, 32);
             this.btnNext.TabIndex = 28;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -200,11 +211,12 @@
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.BackColor = System.Drawing.Color.DarkRed;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnClear.Location = new System.Drawing.Point(649, 231);
+            this.btnClear.Location = new System.Drawing.Point(487, 188);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(120, 40);
+            this.btnClear.Size = new System.Drawing.Size(90, 32);
             this.btnClear.TabIndex = 27;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -216,19 +228,21 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label1.Location = new System.Drawing.Point(23, 76);
+            this.label1.Location = new System.Drawing.Point(17, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 36);
+            this.label1.Size = new System.Drawing.Size(144, 29);
             this.label1.TabIndex = 0;
             this.label1.Text = "Select Lecturer(s)";
             // 
             // tab2
             // 
             this.tab2.Controls.Add(this.groupBoxStep2);
-            this.tab2.Location = new System.Drawing.Point(4, 32);
+            this.tab2.Location = new System.Drawing.Point(4, 28);
+            this.tab2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tab2.Name = "tab2";
-            this.tab2.Padding = new System.Windows.Forms.Padding(3);
-            this.tab2.Size = new System.Drawing.Size(816, 307);
+            this.tab2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tab2.Size = new System.Drawing.Size(610, 247);
             this.tab2.TabIndex = 1;
             this.tab2.Text = "Select Group & Subject";
             this.tab2.UseVisualStyleBackColor = true;
@@ -251,9 +265,11 @@
             this.groupBoxStep2.Controls.Add(this.btnClear2);
             this.groupBoxStep2.Controls.Add(this.btnSubmit);
             this.groupBoxStep2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.groupBoxStep2.Location = new System.Drawing.Point(6, 6);
+            this.groupBoxStep2.Location = new System.Drawing.Point(4, 5);
+            this.groupBoxStep2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBoxStep2.Name = "groupBoxStep2";
-            this.groupBoxStep2.Size = new System.Drawing.Size(804, 289);
+            this.groupBoxStep2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBoxStep2.Size = new System.Drawing.Size(603, 232);
             this.groupBoxStep2.TabIndex = 1;
             this.groupBoxStep2.TabStop = false;
             this.groupBoxStep2.Text = "Step 2";
@@ -263,9 +279,10 @@
             this.txtNoOfStudents.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtNoOfStudents.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNoOfStudents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNoOfStudents.Location = new System.Drawing.Point(600, 76);
+            this.txtNoOfStudents.Location = new System.Drawing.Point(450, 60);
+            this.txtNoOfStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNoOfStudents.Name = "txtNoOfStudents";
-            this.txtNoOfStudents.Size = new System.Drawing.Size(125, 30);
+            this.txtNoOfStudents.Size = new System.Drawing.Size(94, 26);
             this.txtNoOfStudents.TabIndex = 42;
             this.txtNoOfStudents.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -274,9 +291,10 @@
             this.txtDuration.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtDuration.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuration.Location = new System.Drawing.Point(600, 138);
+            this.txtDuration.Location = new System.Drawing.Point(450, 110);
+            this.txtDuration.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtDuration.Name = "txtDuration";
-            this.txtDuration.Size = new System.Drawing.Size(125, 30);
+            this.txtDuration.Size = new System.Drawing.Size(94, 26);
             this.txtDuration.TabIndex = 41;
             this.txtDuration.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -286,9 +304,10 @@
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label8.Location = new System.Drawing.Point(730, 136);
+            this.label8.Location = new System.Drawing.Point(548, 109);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(44, 36);
+            this.label8.Size = new System.Drawing.Size(37, 29);
             this.label8.TabIndex = 40;
             this.label8.Text = "Hrs";
             // 
@@ -298,9 +317,10 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label7.Location = new System.Drawing.Point(436, 136);
+            this.label7.Location = new System.Drawing.Point(327, 109);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(92, 36);
+            this.label7.Size = new System.Drawing.Size(74, 29);
             this.label7.TabIndex = 38;
             this.label7.Text = "Duration";
             // 
@@ -311,11 +331,11 @@
             this.comboBoxSubject.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxSubject.FormattingEnabled = true;
-            this.comboBoxSubject.Location = new System.Drawing.Point(200, 136);
+            this.comboBoxSubject.Location = new System.Drawing.Point(150, 109);
+            this.comboBoxSubject.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxSubject.Name = "comboBoxSubject";
-            this.comboBoxSubject.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxSubject.Size = new System.Drawing.Size(156, 28);
             this.comboBoxSubject.TabIndex = 37;
-            
             // 
             // label4
             // 
@@ -323,9 +343,10 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(37, 136);
+            this.label4.Location = new System.Drawing.Point(28, 109);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(148, 36);
+            this.label4.Size = new System.Drawing.Size(120, 29);
             this.label4.TabIndex = 36;
             this.label4.Text = "Select Subject";
             // 
@@ -336,9 +357,10 @@
             this.comboBoxGroup.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.comboBoxGroup.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxGroup.FormattingEnabled = true;
-            this.comboBoxGroup.Location = new System.Drawing.Point(200, 75);
+            this.comboBoxGroup.Location = new System.Drawing.Point(150, 59);
+            this.comboBoxGroup.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxGroup.Name = "comboBoxGroup";
-            this.comboBoxGroup.Size = new System.Drawing.Size(207, 33);
+            this.comboBoxGroup.Size = new System.Drawing.Size(156, 28);
             this.comboBoxGroup.TabIndex = 35;
             // 
             // label5
@@ -347,9 +369,10 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label5.Location = new System.Drawing.Point(436, 75);
+            this.label5.Location = new System.Drawing.Point(327, 59);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(151, 36);
+            this.label5.Size = new System.Drawing.Size(120, 29);
             this.label5.TabIndex = 34;
             this.label5.Text = "No. of Students";
             // 
@@ -359,9 +382,10 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(37, 75);
+            this.label6.Location = new System.Drawing.Point(28, 59);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(136, 36);
+            this.label6.Size = new System.Drawing.Size(110, 29);
             this.label6.TabIndex = 33;
             this.label6.Text = "Select Group";
             // 
@@ -370,11 +394,12 @@
             this.btnBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnBack.BackColor = System.Drawing.Color.DarkOrange;
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBack.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnBack.Location = new System.Drawing.Point(373, 234);
+            this.btnBack.Location = new System.Drawing.Point(280, 188);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(120, 40);
+            this.btnBack.Size = new System.Drawing.Size(90, 32);
             this.btnBack.TabIndex = 31;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -385,11 +410,12 @@
             this.btnClear2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear2.BackColor = System.Drawing.Color.DarkRed;
             this.btnClear2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear2.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnClear2.Location = new System.Drawing.Point(649, 234);
+            this.btnClear2.Location = new System.Drawing.Point(487, 188);
+            this.btnClear2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear2.Name = "btnClear2";
-            this.btnClear2.Size = new System.Drawing.Size(120, 40);
+            this.btnClear2.Size = new System.Drawing.Size(90, 32);
             this.btnClear2.TabIndex = 30;
             this.btnClear2.Text = "Clear";
             this.btnClear2.UseVisualStyleBackColor = false;
@@ -400,11 +426,12 @@
             this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubmit.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSubmit.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnSubmit.Location = new System.Drawing.Point(511, 234);
+            this.btnSubmit.Location = new System.Drawing.Point(383, 188);
+            this.btnSubmit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(120, 40);
+            this.btnSubmit.Size = new System.Drawing.Size(90, 32);
             this.btnSubmit.TabIndex = 29;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = false;
@@ -412,13 +439,14 @@
             // 
             // ManageSessions
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(881, 442);
+            this.ClientSize = new System.Drawing.Size(661, 359);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.title);
             this.ForeColor = System.Drawing.SystemColors.Info;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManageSessions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add Session";

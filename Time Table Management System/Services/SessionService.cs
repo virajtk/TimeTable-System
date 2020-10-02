@@ -118,6 +118,18 @@ namespace Time_Table_Management_System.Services
                     session.Group_code = rdr.GetString(6);
                     session.Student_count = rdr.GetInt32(7);
                     session.Duration = rdr.GetInt32(8);
+                    try
+                    {
+                        session.Room = rdr.GetString(9);
+                    }
+                    catch (Exception rxr)
+                    {
+                        if(rxr.Message == "")
+                        {
+
+                        }
+                    }
+                    
 
                     arraySessions.Add(session);
                 }

@@ -199,5 +199,9 @@ namespace Time_Table_Management_System.Session
             updateSession.Show();
         }
 
+        private void dataGridViewSessions_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
