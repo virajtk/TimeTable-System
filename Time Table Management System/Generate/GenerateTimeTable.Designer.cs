@@ -38,6 +38,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.title = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.tabControlTT = new System.Windows.Forms.TabControl();
@@ -68,9 +73,15 @@
             this.tabPageLoc = new System.Windows.Forms.TabPage();
             this.btnPrintLocation = new System.Windows.Forms.Button();
             this.btnGenerateLocation = new System.Windows.Forms.Button();
-            this.dataGridLocation = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBoxLocationList = new System.Windows.Forms.ComboBox();
+            this.dataGridLocation = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControlTT.SuspendLayout();
             this.tabPageLec.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridLec)).BeginInit();
@@ -433,9 +444,9 @@
             // tabPageLoc
             // 
             this.tabPageLoc.BackColor = System.Drawing.Color.Snow;
+            this.tabPageLoc.Controls.Add(this.dataGridLocation);
             this.tabPageLoc.Controls.Add(this.btnPrintLocation);
             this.tabPageLoc.Controls.Add(this.btnGenerateLocation);
-            this.tabPageLoc.Controls.Add(this.dataGridLocation);
             this.tabPageLoc.Controls.Add(this.label5);
             this.tabPageLoc.Controls.Add(this.comboBoxLocationList);
             this.tabPageLoc.Location = new System.Drawing.Point(4, 31);
@@ -472,26 +483,7 @@
             this.btnGenerateLocation.TabIndex = 53;
             this.btnGenerateLocation.Text = "Generate";
             this.btnGenerateLocation.UseVisualStyleBackColor = false;
-            // 
-            // dataGridLocation
-            // 
-            this.dataGridLocation.AllowUserToAddRows = false;
-            this.dataGridLocation.AllowUserToDeleteRows = false;
-            this.dataGridLocation.AllowUserToResizeColumns = false;
-            this.dataGridLocation.AllowUserToResizeRows = false;
-            this.dataGridLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridLocation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridLocation.Location = new System.Drawing.Point(20, 65);
-            this.dataGridLocation.MultiSelect = false;
-            this.dataGridLocation.Name = "dataGridLocation";
-            this.dataGridLocation.RowHeadersVisible = false;
-            this.dataGridLocation.RowHeadersWidth = 51;
-            this.dataGridLocation.RowTemplate.Height = 24;
-            this.dataGridLocation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridLocation.Size = new System.Drawing.Size(800, 263);
-            this.dataGridLocation.TabIndex = 52;
+            this.btnGenerateLocation.Click += new System.EventHandler(this.btnGenerateLocation_Click);
             // 
             // label5
             // 
@@ -516,6 +508,91 @@
             this.comboBoxLocationList.Name = "comboBoxLocationList";
             this.comboBoxLocationList.Size = new System.Drawing.Size(248, 33);
             this.comboBoxLocationList.TabIndex = 43;
+            // 
+            // dataGridLocation
+            // 
+            this.dataGridLocation.AllowUserToAddRows = false;
+            this.dataGridLocation.AllowUserToDeleteRows = false;
+            this.dataGridLocation.AllowUserToResizeColumns = false;
+            this.dataGridLocation.AllowUserToResizeRows = false;
+            this.dataGridLocation.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridLocation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridLocation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewTextBoxColumn8,
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12});
+            this.dataGridLocation.Location = new System.Drawing.Point(29, 68);
+            this.dataGridLocation.MultiSelect = false;
+            this.dataGridLocation.Name = "dataGridLocation";
+            this.dataGridLocation.RowHeadersVisible = false;
+            this.dataGridLocation.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
+            this.dataGridLocation.RowTemplate.Height = 24;
+            this.dataGridLocation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dataGridLocation.Size = new System.Drawing.Size(800, 263);
+            this.dataGridLocation.TabIndex = 55;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.HeaderText = "Time Slots";
+            this.dataGridViewTextBoxColumn7.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            this.dataGridViewTextBoxColumn7.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn8
+            // 
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle16;
+            this.dataGridViewTextBoxColumn8.HeaderText = "Monday";
+            this.dataGridViewTextBoxColumn8.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
+            this.dataGridViewTextBoxColumn8.ReadOnly = true;
+            this.dataGridViewTextBoxColumn8.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn9
+            // 
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn9.DefaultCellStyle = dataGridViewCellStyle17;
+            this.dataGridViewTextBoxColumn9.HeaderText = "Tuesday";
+            this.dataGridViewTextBoxColumn9.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
+            this.dataGridViewTextBoxColumn9.ReadOnly = true;
+            this.dataGridViewTextBoxColumn9.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn10
+            // 
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn10.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dataGridViewTextBoxColumn10.HeaderText = "Wednesday";
+            this.dataGridViewTextBoxColumn10.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
+            this.dataGridViewTextBoxColumn10.ReadOnly = true;
+            this.dataGridViewTextBoxColumn10.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn11
+            // 
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn11.DefaultCellStyle = dataGridViewCellStyle19;
+            this.dataGridViewTextBoxColumn11.HeaderText = "Thursday";
+            this.dataGridViewTextBoxColumn11.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
+            this.dataGridViewTextBoxColumn11.ReadOnly = true;
+            this.dataGridViewTextBoxColumn11.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn12
+            // 
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewTextBoxColumn12.DefaultCellStyle = dataGridViewCellStyle20;
+            this.dataGridViewTextBoxColumn12.HeaderText = "Friday";
+            this.dataGridViewTextBoxColumn12.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
+            this.dataGridViewTextBoxColumn12.ReadOnly = true;
+            this.dataGridViewTextBoxColumn12.Width = 150;
             // 
             // GenerateTimeTable
             // 
@@ -560,7 +637,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBoxLocationList;
         private System.Windows.Forms.DataGridView dataGridLec;
-        private System.Windows.Forms.DataGridView dataGridLocation;
         private System.Windows.Forms.Button btnGenerateStudent;
         private System.Windows.Forms.Button btnGenerateLocation;
         private System.Windows.Forms.DataGridViewTextBoxColumn timeSlots;
@@ -578,5 +654,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Button btnPrintStudent;
         private System.Windows.Forms.Button btnPrintLocation;
+        private System.Windows.Forms.DataGridView dataGridLocation;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
     }
 }
