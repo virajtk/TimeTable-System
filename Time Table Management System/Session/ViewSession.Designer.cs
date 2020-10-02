@@ -84,7 +84,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
             this.label2.Location = new System.Drawing.Point(55, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 24);
+            this.label2.Size = new System.Drawing.Size(81, 19);
             this.label2.TabIndex = 2;
             this.label2.Text = "Session ID";
             // 
@@ -95,7 +95,7 @@
             this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
             this.label3.Location = new System.Drawing.Point(55, 161);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 24);
+            this.label3.Size = new System.Drawing.Size(83, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "Lecturer(s)";
             // 
@@ -106,7 +106,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
             this.label4.Location = new System.Drawing.Point(55, 212);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 24);
+            this.label4.Size = new System.Drawing.Size(35, 19);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tag";
             // 
@@ -117,7 +117,7 @@
             this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
             this.label5.Location = new System.Drawing.Point(55, 263);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 24);
+            this.label5.Size = new System.Drawing.Size(72, 19);
             this.label5.TabIndex = 5;
             this.label5.Text = "Group ID";
             // 
@@ -128,7 +128,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
             this.label6.Location = new System.Drawing.Point(438, 109);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(130, 24);
+            this.label6.Size = new System.Drawing.Size(101, 19);
             this.label6.TabIndex = 6;
             this.label6.Text = "Subject Code";
             // 
@@ -139,7 +139,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
             this.label7.Location = new System.Drawing.Point(438, 160);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(136, 24);
+            this.label7.Size = new System.Drawing.Size(106, 19);
             this.label7.TabIndex = 7;
             this.label7.Text = "Subject Name";
             // 
@@ -150,7 +150,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
             this.label8.Location = new System.Drawing.Point(438, 211);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(150, 24);
+            this.label8.Size = new System.Drawing.Size(117, 19);
             this.label8.TabIndex = 8;
             this.label8.Text = "No. of Students";
             // 
@@ -161,7 +161,7 @@
             this.label9.Font = new System.Drawing.Font("Microsoft JhengHei", 11F);
             this.label9.Location = new System.Drawing.Point(438, 262);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 24);
+            this.label9.Size = new System.Drawing.Size(70, 19);
             this.label9.TabIndex = 9;
             this.label9.Text = "Duration";
             // 
@@ -172,7 +172,7 @@
             this.txtSessionID.Location = new System.Drawing.Point(161, 104);
             this.txtSessionID.Name = "txtSessionID";
             this.txtSessionID.ReadOnly = true;
-            this.txtSessionID.Size = new System.Drawing.Size(254, 30);
+            this.txtSessionID.Size = new System.Drawing.Size(254, 26);
             this.txtSessionID.TabIndex = 10;
             // 
             // txtLecs
@@ -182,7 +182,7 @@
             this.txtLecs.Location = new System.Drawing.Point(161, 155);
             this.txtLecs.Name = "txtLecs";
             this.txtLecs.ReadOnly = true;
-            this.txtLecs.Size = new System.Drawing.Size(254, 30);
+            this.txtLecs.Size = new System.Drawing.Size(254, 26);
             this.txtLecs.TabIndex = 11;
             // 
             // txtTag
@@ -192,7 +192,7 @@
             this.txtTag.Location = new System.Drawing.Point(161, 206);
             this.txtTag.Name = "txtTag";
             this.txtTag.ReadOnly = true;
-            this.txtTag.Size = new System.Drawing.Size(254, 30);
+            this.txtTag.Size = new System.Drawing.Size(254, 26);
             this.txtTag.TabIndex = 12;
             // 
             // txtGroupID
@@ -202,7 +202,7 @@
             this.txtGroupID.Location = new System.Drawing.Point(161, 256);
             this.txtGroupID.Name = "txtGroupID";
             this.txtGroupID.ReadOnly = true;
-            this.txtGroupID.Size = new System.Drawing.Size(254, 30);
+            this.txtGroupID.Size = new System.Drawing.Size(254, 26);
             this.txtGroupID.TabIndex = 13;
             // 
             // txtSubjectCode
@@ -212,7 +212,7 @@
             this.txtSubjectCode.Location = new System.Drawing.Point(593, 103);
             this.txtSubjectCode.Name = "txtSubjectCode";
             this.txtSubjectCode.ReadOnly = true;
-            this.txtSubjectCode.Size = new System.Drawing.Size(254, 30);
+            this.txtSubjectCode.Size = new System.Drawing.Size(254, 26);
             this.txtSubjectCode.TabIndex = 14;
             // 
             // txtSubjectName
@@ -222,7 +222,7 @@
             this.txtSubjectName.Location = new System.Drawing.Point(593, 154);
             this.txtSubjectName.Name = "txtSubjectName";
             this.txtSubjectName.ReadOnly = true;
-            this.txtSubjectName.Size = new System.Drawing.Size(254, 30);
+            this.txtSubjectName.Size = new System.Drawing.Size(254, 26);
             this.txtSubjectName.TabIndex = 15;
             // 
             // txtStudentCount
@@ -232,7 +232,7 @@
             this.txtStudentCount.Location = new System.Drawing.Point(593, 205);
             this.txtStudentCount.Name = "txtStudentCount";
             this.txtStudentCount.ReadOnly = true;
-            this.txtStudentCount.Size = new System.Drawing.Size(254, 30);
+            this.txtStudentCount.Size = new System.Drawing.Size(254, 26);
             this.txtStudentCount.TabIndex = 16;
             // 
             // txtDuration
@@ -242,7 +242,7 @@
             this.txtDuration.Location = new System.Drawing.Point(593, 256);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.ReadOnly = true;
-            this.txtDuration.Size = new System.Drawing.Size(254, 30);
+            this.txtDuration.Size = new System.Drawing.Size(254, 26);
             this.txtDuration.TabIndex = 17;
             // 
             // label10
@@ -252,7 +252,7 @@
             this.label10.Font = new System.Drawing.Font("Mongolian Baiti", 16F);
             this.label10.Location = new System.Drawing.Point(247, 311);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(396, 29);
+            this.label10.Size = new System.Drawing.Size(319, 24);
             this.label10.TabIndex = 18;
             this.label10.Text = "Summery According to the Format";
             // 
@@ -268,10 +268,11 @@
             this.txtSummery.ReadOnly = true;
             this.txtSummery.Size = new System.Drawing.Size(345, 119);
             this.txtSummery.TabIndex = 19;
+            this.txtSummery.TextChanged += new System.EventHandler(this.txtSummery_TextChanged);
             // 
             // ViewSession
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(888, 579);

@@ -40,7 +40,6 @@
             this.comboBoxSearch = new System.Windows.Forms.ComboBox();
             this.btnAddSession = new System.Windows.Forms.Button();
             this.dataGridViewSessions = new System.Windows.Forms.DataGridView();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lec1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lec2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +47,7 @@
             this.subject_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.group_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefresh = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessions)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,9 +57,10 @@
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.SystemColors.Info;
-            this.button2.Location = new System.Drawing.Point(3, 2);
+            this.button2.Location = new System.Drawing.Point(2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(50, 25);
+            this.button2.Size = new System.Drawing.Size(38, 20);
             this.button2.TabIndex = 15;
             this.button2.Text = "X";
             this.button2.UseVisualStyleBackColor = false;
@@ -69,11 +70,12 @@
             // 
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.title.ForeColor = System.Drawing.Color.SteelBlue;
-            this.title.Location = new System.Drawing.Point(109, 30);
+            this.title.Location = new System.Drawing.Point(82, 24);
+            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(240, 32);
+            this.title.Size = new System.Drawing.Size(200, 26);
             this.title.TabIndex = 16;
             this.title.Text = "Manage Sessions";
             // 
@@ -83,11 +85,12 @@
             this.btnUpdate.BackColor = System.Drawing.Color.DarkOrange;
             this.btnUpdate.Enabled = false;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnUpdate.Location = new System.Drawing.Point(724, 253);
+            this.btnUpdate.Location = new System.Drawing.Point(543, 206);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(120, 40);
+            this.btnUpdate.Size = new System.Drawing.Size(90, 32);
             this.btnUpdate.TabIndex = 29;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -99,11 +102,12 @@
             this.btnDelete.BackColor = System.Drawing.Color.DarkRed;
             this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnDelete.Location = new System.Drawing.Point(724, 314);
+            this.btnDelete.Location = new System.Drawing.Point(543, 255);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(120, 40);
+            this.btnDelete.Size = new System.Drawing.Size(90, 32);
             this.btnDelete.TabIndex = 30;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
@@ -115,11 +119,12 @@
             this.btnView.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnView.Enabled = false;
             this.btnView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnView.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnView.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnView.Location = new System.Drawing.Point(724, 192);
+            this.btnView.Location = new System.Drawing.Point(543, 156);
+            this.btnView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnView.Name = "btnView";
-            this.btnView.Size = new System.Drawing.Size(120, 40);
+            this.btnView.Size = new System.Drawing.Size(90, 32);
             this.btnView.TabIndex = 31;
             this.btnView.Text = "View";
             this.btnView.UseVisualStyleBackColor = false;
@@ -128,20 +133,22 @@
             // txtSearchKey
             // 
             this.txtSearchKey.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearchKey.Location = new System.Drawing.Point(58, 96);
+            this.txtSearchKey.Location = new System.Drawing.Point(44, 78);
+            this.txtSearchKey.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtSearchKey.Name = "txtSearchKey";
-            this.txtSearchKey.Size = new System.Drawing.Size(276, 30);
+            this.txtSearchKey.Size = new System.Drawing.Size(208, 26);
             this.txtSearchKey.TabIndex = 32;
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.DarkSlateGray;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSearch.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnSearch.Location = new System.Drawing.Point(558, 95);
+            this.btnSearch.Location = new System.Drawing.Point(418, 77);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(112, 33);
+            this.btnSearch.Size = new System.Drawing.Size(84, 27);
             this.btnSearch.TabIndex = 33;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
@@ -156,9 +163,10 @@
             "Lecturer",
             "Subject Name",
             "Group ID"});
-            this.comboBoxSearch.Location = new System.Drawing.Point(356, 95);
+            this.comboBoxSearch.Location = new System.Drawing.Point(267, 77);
+            this.comboBoxSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxSearch.Name = "comboBoxSearch";
-            this.comboBoxSearch.Size = new System.Drawing.Size(181, 33);
+            this.comboBoxSearch.Size = new System.Drawing.Size(137, 28);
             this.comboBoxSearch.TabIndex = 34;
             // 
             // btnAddSession
@@ -166,11 +174,12 @@
             this.btnAddSession.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddSession.BackColor = System.Drawing.Color.DarkGreen;
             this.btnAddSession.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddSession.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSession.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSession.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnAddSession.Location = new System.Drawing.Point(704, 21);
+            this.btnAddSession.Location = new System.Drawing.Point(528, 17);
+            this.btnAddSession.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddSession.Name = "btnAddSession";
-            this.btnAddSession.Size = new System.Drawing.Size(160, 54);
+            this.btnAddSession.Size = new System.Drawing.Size(120, 44);
             this.btnAddSession.TabIndex = 35;
             this.btnAddSession.Text = "Add Session";
             this.btnAddSession.UseVisualStyleBackColor = false;
@@ -204,7 +213,8 @@
             this.subject_name,
             this.group_id,
             this.tag});
-            this.dataGridViewSessions.Location = new System.Drawing.Point(21, 143);
+            this.dataGridViewSessions.Location = new System.Drawing.Point(16, 116);
+            this.dataGridViewSessions.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewSessions.MultiSelect = false;
             this.dataGridViewSessions.Name = "dataGridViewSessions";
             this.dataGridViewSessions.ReadOnly = true;
@@ -215,24 +225,10 @@
             this.dataGridViewSessions.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridViewSessions.RowTemplate.Height = 24;
             this.dataGridViewSessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSessions.Size = new System.Drawing.Size(671, 273);
+            this.dataGridViewSessions.Size = new System.Drawing.Size(503, 222);
             this.dataGridViewSessions.TabIndex = 36;
+            this.dataGridViewSessions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSessions_CellContentClick);
             this.dataGridViewSessions.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnRefresh.Location = new System.Drawing.Point(724, 95);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(120, 33);
-            this.btnRefresh.TabIndex = 37;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // id
             // 
@@ -290,12 +286,28 @@
             this.tag.ReadOnly = true;
             this.tag.Width = 70;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnRefresh.Location = new System.Drawing.Point(543, 77);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(90, 27);
+            this.btnRefresh.TabIndex = 37;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // ManageSessionsMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(881, 442);
+            this.ClientSize = new System.Drawing.Size(661, 359);
             this.Controls.Add(this.btnRefresh);
             this.Controls.Add(this.dataGridViewSessions);
             this.Controls.Add(this.btnAddSession);
@@ -308,6 +320,7 @@
             this.Controls.Add(this.title);
             this.Controls.Add(this.button2);
             this.ForeColor = System.Drawing.SystemColors.Info;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ManageSessionsMain";
             this.Text = " ";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessions)).EndInit();
