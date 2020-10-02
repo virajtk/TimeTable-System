@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Time_Table_Management_System.Messages;
@@ -72,41 +73,55 @@ namespace Time_Table_Management_System
             if (comboBoxOfferdYear.SelectedIndex == -1)
             {
                 comboBoxOfferdYear.Focus();
-                errorManageSubjects.SetError(comboBoxOfferdYear, "Please Select offered Year");
+                //errorAddSubject.SetError(comboBoxOfferdYear, "Please Select offered Year");
+                MessageBox.Show("Please Select offered Year", "Error");
             }
             else if (radioButtonSem1.Checked == false & radioButtonSem2.Checked == false)
             {
-                errorManageSubjects.SetError(radioButtonSem2, "Please Select offered Semester");
+                //errorAddSubject.SetError(radioButtonSem2, "Please Select offered Semester");
+                MessageBox.Show("Please Select offered Semester", "Error");
             }
             else if (textBoxSubName.Text == String.Empty)
             {
                 textBoxSubName.Focus();
-                errorManageSubjects.SetError(textBoxSubName, "Please Enter Subject Name");
+                //errorAddSubject.SetError(textBoxSubName, "Please Enter Subject Name");
+                MessageBox.Show("Please Enter Subject Name", "Error");
+            }
+            else if (!new Regex("^[A-Z][a-z]*$").IsMatch(textBoxSubName.Text))
+            {
+                textBoxSubName.Focus();
+                //errorAddSubject.SetError(textBoxSubName, "Please Enter Subject Name");
+                MessageBox.Show("Please Enter Valid Subject Name, Subject Name should not contain any space", "Error");
             }
             else if (textBoxSubCode.Text == String.Empty)
             {
                 textBoxSubCode.Focus();
-                errorManageSubjects.SetError(textBoxSubCode, "Please Enter Subject Code");
+                //errorAddSubject.SetError(textBoxSubCode, "Please Enter Subject Code");
+                MessageBox.Show("Please Enter Subject Code", "Error");
             }
             else if (numericLecHours.Value <= 0 ^ numericLecHours.Value >= 5)
             {
                 numericLecHours.Focus();
-                errorManageSubjects.SetError(numericLecHours, "Please Enter Valid Number of Hours");
+                //errorAddSubject.SetError(numericLecHours, "Please Enter Valid Number of Hours");
+                MessageBox.Show("Please Enter Valid Number of Hours", "Error");
             }
             else if (numericTuteHours.Value <= 0 ^ numericTuteHours.Value >= 5)
             {
                 numericTuteHours.Focus();
-                errorManageSubjects.SetError(numericTuteHours, "Please Enter Valid Number of Hours");
+                //errorAddSubject.SetError(numericTuteHours, "Please Enter Valid Number of Hours");
+                MessageBox.Show("Please Enter Valid Number of Hours", "Error");
             }
             else if (numericLabHours.Value <= 0 ^ numericLabHours.Value >= 5)
             {
                 numericLabHours.Focus();
-                errorManageSubjects.SetError(numericLabHours, "Please Enter Valid Number of Hours");
+                //errorAddSubject.SetError(numericLabHours, "Please Enter Valid Number of Hours");
+                MessageBox.Show("Please Enter Valid Number of Hours", "Error");
             }
             else if (numericEvaluationHours.Value <= 0 ^ numericEvaluationHours.Value >= 5)
             {
                 numericEvaluationHours.Focus();
-                errorManageSubjects.SetError(numericEvaluationHours, "Please Enter Valid Number of Hours");
+                //errorAddSubject.SetError(numericEvaluationHours, "Please Enter Valid Number of Hours");
+                MessageBox.Show("Please Enter Valid Number of Hours", "Error");
             }
             #endregion
             else
@@ -240,11 +255,6 @@ namespace Time_Table_Management_System
             {
                 Console.WriteLine(es.Message);
             }
-        }
-
-        private void radioButtonSem1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

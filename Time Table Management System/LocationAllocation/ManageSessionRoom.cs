@@ -20,7 +20,6 @@ namespace Time_Table_Management_System.LocationAllocation
 
         private SessionDTO session = new SessionDTO();
         private ISessionService sessionService = new SessionService();
-        private int selectedLecCount = 0;
         public ManageSessionRoom()
         {
             InitializeComponent();
@@ -39,17 +38,9 @@ namespace Time_Table_Management_System.LocationAllocation
                 
                 sessionNameList.Add(tag.Id.ToString());
             }
-
-          comboBoxSessions.Items.AddRange(sessionNameList.ToArray());
-
-            
-
+            comboBoxSessions.Items.AddRange(sessionNameList.ToArray());
         }
 
-        private void title_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void comboBoxSessions_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -85,8 +76,33 @@ namespace Time_Table_Management_System.LocationAllocation
                 comboBoxRooms.Items.AddRange(locationNameList.ToArray());
             }
 
-           
+            loadData(int.Parse(comboBoxSessions.Text));
 
+
+        }
+
+        private void loadData(int id)
+        {
+            SessionDTO selectedSession = new SessionDTO();
+            ISessionService sessionService = new SessionService();
+            selectedSession = sessionService.GetSession(id);
+
+            if (selectedSession.Lec2_name == null)
+            {
+                txtSelectedSession.Text = selectedSession.Lec1_name + Environment.NewLine +
+                                  selectedSession.Subject_name + "(" + selectedSession.Subject_code + ")" + Environment.NewLine +
+                                  selectedSession.Tag + Environment.NewLine +
+                                  selectedSession.Group_code + Environment.NewLine +
+                                  selectedSession.Student_count.ToString() + "( " + selectedSession.Duration.ToString() + ")";
+            }
+            else
+            {
+                txtSelectedSession.Text = selectedSession.Lec1_name + ", " + selectedSession.Lec2_name + Environment.NewLine +
+                                  selectedSession.Subject_name + "(" + selectedSession.Subject_code + ")" + Environment.NewLine +
+                                  selectedSession.Tag + Environment.NewLine +
+                                  selectedSession.Group_code + Environment.NewLine +
+                                  selectedSession.Student_count.ToString() + "( " + selectedSession.Duration.ToString() + ")";
+            }
         }
 
         private void btnClear2_Click(object sender, EventArgs e)
@@ -177,12 +193,8 @@ namespace Time_Table_Management_System.LocationAllocation
                 ec.Show();
             }
         }
-    }
-
-          //  comboBoxSessions.Items.AddRange(sessionNameList.ToArray());
-
-          
-        }
+    }          
+}
     
    
 

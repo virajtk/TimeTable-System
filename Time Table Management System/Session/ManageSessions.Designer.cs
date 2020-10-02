@@ -124,7 +124,6 @@
             this.groupBoxStep1.TabIndex = 0;
             this.groupBoxStep1.TabStop = false;
             this.groupBoxStep1.Text = "Step 1";
-            this.groupBoxStep1.Enter += new System.EventHandler(this.groupBoxStep1_Enter);
             // 
             // txtSelectedLec
             // 
@@ -137,7 +136,6 @@
             this.txtSelectedLec.ReadOnly = true;
             this.txtSelectedLec.Size = new System.Drawing.Size(417, 28);
             this.txtSelectedLec.TabIndex = 33;
-            this.txtSelectedLec.TextChanged += new System.EventHandler(this.txtSelectedLec_TextChanged);
             // 
             // label3
             // 
