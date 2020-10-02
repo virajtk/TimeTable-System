@@ -28,36 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.button2 = new System.Windows.Forms.Button();
             this.title = new System.Windows.Forms.Label();
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.viewConsecRoom = new System.Windows.Forms.Button();
-            this.addConsecRoom = new System.Windows.Forms.Button();
-            this.comboBoxloc = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dataGridViewSessions = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.con1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.con2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.txtStartTime = new System.Windows.Forms.TextBox();
-            this.comboBoxDay = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.btnViewN = new System.Windows.Forms.Button();
-            this.btnAddN = new System.Windows.Forms.Button();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.btnAddRoom = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.dataGridViewSessionRoom = new System.Windows.Forms.DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lec1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,14 +44,41 @@
             this.group_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.room = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnAddRoom = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.viewConsecRoom = new System.Windows.Forms.Button();
+            this.addConsecRoom = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dataGridViewSessions = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.con1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.con2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboRoom = new System.Windows.Forms.TextBox();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnViewN = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBoxDay = new System.Windows.Forms.ComboBox();
+            this.txtStartTime = new System.Windows.Forms.TextBox();
             this.txtEndTime = new System.Windows.Forms.TextBox();
             this.txtRoom = new System.Windows.Forms.TextBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessionRoom)).BeginInit();
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessions)).BeginInit();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessionRoom)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -113,9 +117,6 @@
             this.tabControl.Controls.Add(this.tabPage1);
             this.tabControl.Controls.Add(this.tabPage2);
             this.tabControl.Controls.Add(this.tabPage3);
-            this.tabControl.Controls.Add(this.tabPage4);
-            this.tabControl.Controls.Add(this.tabPage5);
-            this.tabControl.Controls.Add(this.tabPage6);
             this.tabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.tabControl.Location = new System.Drawing.Point(22, 60);
             this.tabControl.Margin = new System.Windows.Forms.Padding(2);
@@ -137,327 +138,6 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sessions";
             this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(214, 252);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(0, 17);
-            this.label1.TabIndex = 26;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.viewConsecRoom);
-            this.tabPage2.Controls.Add(this.addConsecRoom);
-            this.tabPage2.Controls.Add(this.comboBoxloc);
-            this.tabPage2.Controls.Add(this.label3);
-            this.tabPage2.Controls.Add(this.dataGridViewSessions);
-            this.tabPage2.Location = new System.Drawing.Point(4, 28);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Size = new System.Drawing.Size(633, 246);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Consecutive";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // viewConsecRoom
-            // 
-            this.viewConsecRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.viewConsecRoom.BackColor = System.Drawing.Color.DarkOrange;
-            this.viewConsecRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.viewConsecRoom.ForeColor = System.Drawing.SystemColors.Info;
-            this.viewConsecRoom.Location = new System.Drawing.Point(471, 193);
-            this.viewConsecRoom.Margin = new System.Windows.Forms.Padding(2);
-            this.viewConsecRoom.Name = "viewConsecRoom";
-            this.viewConsecRoom.Size = new System.Drawing.Size(90, 32);
-            this.viewConsecRoom.TabIndex = 43;
-            this.viewConsecRoom.Text = "View";
-            this.viewConsecRoom.UseVisualStyleBackColor = false;
-            // 
-            // addConsecRoom
-            // 
-            this.addConsecRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.addConsecRoom.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.addConsecRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.addConsecRoom.ForeColor = System.Drawing.SystemColors.Info;
-            this.addConsecRoom.Location = new System.Drawing.Point(377, 194);
-            this.addConsecRoom.Margin = new System.Windows.Forms.Padding(2);
-            this.addConsecRoom.Name = "addConsecRoom";
-            this.addConsecRoom.Size = new System.Drawing.Size(90, 32);
-            this.addConsecRoom.TabIndex = 42;
-            this.addConsecRoom.Text = "Add Room";
-            this.addConsecRoom.UseVisualStyleBackColor = false;
-            // 
-            // comboBoxloc
-            // 
-            this.comboBoxloc.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxloc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxloc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxloc.FormattingEnabled = true;
-            this.comboBoxloc.Location = new System.Drawing.Point(182, 197);
-            this.comboBoxloc.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxloc.Name = "comboBoxloc";
-            this.comboBoxloc.Size = new System.Drawing.Size(156, 28);
-            this.comboBoxloc.TabIndex = 41;
-            // 
-            // label3
-            // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label3.Location = new System.Drawing.Point(70, 197);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 29);
-            this.label3.TabIndex = 40;
-            this.label3.Text = "Select Room";
-            // 
-            // dataGridViewSessions
-            // 
-            this.dataGridViewSessions.AllowUserToAddRows = false;
-            this.dataGridViewSessions.AllowUserToDeleteRows = false;
-            this.dataGridViewSessions.AllowUserToResizeColumns = false;
-            this.dataGridViewSessions.AllowUserToResizeRows = false;
-            this.dataGridViewSessions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridViewSessions.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGridViewSessions.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridViewSessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewSessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.con1,
-            this.con2});
-            this.dataGridViewSessions.Location = new System.Drawing.Point(2, 2);
-            this.dataGridViewSessions.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridViewSessions.MultiSelect = false;
-            this.dataGridViewSessions.Name = "dataGridViewSessions";
-            this.dataGridViewSessions.ReadOnly = true;
-            this.dataGridViewSessions.RowHeadersVisible = false;
-            this.dataGridViewSessions.RowHeadersWidth = 51;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewSessions.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridViewSessions.RowTemplate.Height = 24;
-            this.dataGridViewSessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridViewSessions.Size = new System.Drawing.Size(631, 171);
-            this.dataGridViewSessions.TabIndex = 39;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "                      ID";
-            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // con1
-            // 
-            this.con1.HeaderText = "Consecutive Session 1 ID";
-            this.con1.MinimumWidth = 6;
-            this.con1.Name = "con1";
-            this.con1.ReadOnly = true;
-            this.con1.Width = 225;
-            // 
-            // con2
-            // 
-            this.con2.HeaderText = "Consecutive Session 2 ID";
-            this.con2.MinimumWidth = 6;
-            this.con2.Name = "con2";
-            this.con2.ReadOnly = true;
-            this.con2.Width = 225;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.txtRoom);
-            this.tabPage3.Controls.Add(this.txtEndTime);
-            this.tabPage3.Controls.Add(this.txtStartTime);
-            this.tabPage3.Controls.Add(this.comboBoxDay);
-            this.tabPage3.Controls.Add(this.label7);
-            this.tabPage3.Controls.Add(this.label6);
-            this.tabPage3.Controls.Add(this.label5);
-            this.tabPage3.Controls.Add(this.label4);
-            this.tabPage3.Controls.Add(this.btnViewN);
-            this.tabPage3.Controls.Add(this.btnAddN);
-            this.tabPage3.Location = new System.Drawing.Point(4, 28);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(633, 246);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Not Available Times";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // txtStartTime
-            // 
-            this.txtStartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtStartTime.Location = new System.Drawing.Point(394, 37);
-            this.txtStartTime.Margin = new System.Windows.Forms.Padding(2);
-            this.txtStartTime.Name = "txtStartTime";
-            this.txtStartTime.Size = new System.Drawing.Size(123, 26);
-            this.txtStartTime.TabIndex = 47;
-            // 
-            // comboBoxDay
-            // 
-            this.comboBoxDay.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxDay.FormattingEnabled = true;
-            this.comboBoxDay.Items.AddRange(new object[] {
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"});
-            this.comboBoxDay.Location = new System.Drawing.Point(155, 118);
-            this.comboBoxDay.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxDay.Name = "comboBoxDay";
-            this.comboBoxDay.Size = new System.Drawing.Size(123, 28);
-            this.comboBoxDay.TabIndex = 46;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label7.Location = new System.Drawing.Point(305, 120);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 29);
-            this.label7.TabIndex = 44;
-            this.label7.Text = "End Time";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(305, 39);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 29);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Start Time";
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label5.Location = new System.Drawing.Point(43, 120);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 29);
-            this.label5.TabIndex = 42;
-            this.label5.Text = "Select Day";
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label4.Location = new System.Drawing.Point(43, 39);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(108, 29);
-            this.label4.TabIndex = 41;
-            this.label4.Text = "Select Room";
-            // 
-            // btnViewN
-            // 
-            this.btnViewN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnViewN.BackColor = System.Drawing.Color.DarkOrange;
-            this.btnViewN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnViewN.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnViewN.Location = new System.Drawing.Point(310, 206);
-            this.btnViewN.Margin = new System.Windows.Forms.Padding(2);
-            this.btnViewN.Name = "btnViewN";
-            this.btnViewN.Size = new System.Drawing.Size(90, 32);
-            this.btnViewN.TabIndex = 29;
-            this.btnViewN.Text = "Clear";
-            this.btnViewN.UseVisualStyleBackColor = false;
-            // 
-            // btnAddN
-            // 
-            this.btnAddN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnAddN.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnAddN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddN.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnAddN.Location = new System.Drawing.Point(188, 206);
-            this.btnAddN.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddN.Name = "btnAddN";
-            this.btnAddN.Size = new System.Drawing.Size(90, 32);
-            this.btnAddN.TabIndex = 28;
-            this.btnAddN.Text = "Add Session";
-            this.btnAddN.UseVisualStyleBackColor = false;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 28);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(633, 246);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Tags";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // btnAddRoom
-            // 
-            this.btnAddRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAddRoom.BackColor = System.Drawing.Color.DarkGreen;
-            this.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddRoom.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnAddRoom.Location = new System.Drawing.Point(151, 176);
-            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAddRoom.Name = "btnAddRoom";
-            this.btnAddRoom.Size = new System.Drawing.Size(120, 44);
-            this.btnAddRoom.TabIndex = 36;
-            this.btnAddRoom.Text = "Add Room";
-            this.btnAddRoom.UseVisualStyleBackColor = false;
-            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRefresh.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnRefresh.Location = new System.Drawing.Point(375, 176);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(120, 44);
-            this.btnRefresh.TabIndex = 38;
-            this.btnRefresh.Text = "Refresh";
-            this.btnRefresh.UseVisualStyleBackColor = false;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 28);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(633, 246);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "Lecturers";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 28);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(633, 246);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "Subjects";
-            this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // dataGridViewSessionRoom
             // 
@@ -487,9 +167,9 @@
             this.dataGridViewSessionRoom.ReadOnly = true;
             this.dataGridViewSessionRoom.RowHeadersVisible = false;
             this.dataGridViewSessionRoom.RowHeadersWidth = 51;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            this.dataGridViewSessionRoom.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewSessionRoom.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.dataGridViewSessionRoom.RowTemplate.Height = 24;
             this.dataGridViewSessionRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewSessionRoom.Size = new System.Drawing.Size(631, 130);
@@ -558,10 +238,279 @@
             this.room.Name = "room";
             this.room.ReadOnly = true;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRefresh.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnRefresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRefresh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefresh.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnRefresh.Location = new System.Drawing.Point(375, 176);
+            this.btnRefresh.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(120, 44);
+            this.btnRefresh.TabIndex = 38;
+            this.btnRefresh.Text = "Refresh";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnAddRoom
+            // 
+            this.btnAddRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAddRoom.BackColor = System.Drawing.Color.DarkGreen;
+            this.btnAddRoom.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddRoom.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnAddRoom.Location = new System.Drawing.Point(151, 176);
+            this.btnAddRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAddRoom.Name = "btnAddRoom";
+            this.btnAddRoom.Size = new System.Drawing.Size(120, 44);
+            this.btnAddRoom.TabIndex = 36;
+            this.btnAddRoom.Text = "Add Room";
+            this.btnAddRoom.UseVisualStyleBackColor = false;
+            this.btnAddRoom.Click += new System.EventHandler(this.btnAddRoom_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(214, 252);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 17);
+            this.label1.TabIndex = 26;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.comboRoom);
+            this.tabPage2.Controls.Add(this.viewConsecRoom);
+            this.tabPage2.Controls.Add(this.addConsecRoom);
+            this.tabPage2.Controls.Add(this.label3);
+            this.tabPage2.Controls.Add(this.dataGridViewSessions);
+            this.tabPage2.Location = new System.Drawing.Point(4, 28);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Size = new System.Drawing.Size(633, 246);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Consecutive";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
+            // 
+            // viewConsecRoom
+            // 
+            this.viewConsecRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.viewConsecRoom.BackColor = System.Drawing.Color.DarkOrange;
+            this.viewConsecRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewConsecRoom.ForeColor = System.Drawing.SystemColors.Info;
+            this.viewConsecRoom.Location = new System.Drawing.Point(471, 193);
+            this.viewConsecRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.viewConsecRoom.Name = "viewConsecRoom";
+            this.viewConsecRoom.Size = new System.Drawing.Size(90, 32);
+            this.viewConsecRoom.TabIndex = 43;
+            this.viewConsecRoom.Text = "View";
+            this.viewConsecRoom.UseVisualStyleBackColor = false;
+            // 
+            // addConsecRoom
+            // 
+            this.addConsecRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.addConsecRoom.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.addConsecRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addConsecRoom.ForeColor = System.Drawing.SystemColors.Info;
+            this.addConsecRoom.Location = new System.Drawing.Point(377, 194);
+            this.addConsecRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.addConsecRoom.Name = "addConsecRoom";
+            this.addConsecRoom.Size = new System.Drawing.Size(90, 32);
+            this.addConsecRoom.TabIndex = 42;
+            this.addConsecRoom.Text = "Add Room";
+            this.addConsecRoom.UseVisualStyleBackColor = false;
+            this.addConsecRoom.Click += new System.EventHandler(this.addConsecRoom_Click);
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label3.Location = new System.Drawing.Point(70, 197);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 29);
+            this.label3.TabIndex = 40;
+            this.label3.Text = "Select Room";
+            // 
+            // dataGridViewSessions
+            // 
+            this.dataGridViewSessions.AllowUserToAddRows = false;
+            this.dataGridViewSessions.AllowUserToDeleteRows = false;
+            this.dataGridViewSessions.AllowUserToResizeColumns = false;
+            this.dataGridViewSessions.AllowUserToResizeRows = false;
+            this.dataGridViewSessions.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewSessions.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dataGridViewSessions.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridViewSessions.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewSessions.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.con1,
+            this.con2});
+            this.dataGridViewSessions.Location = new System.Drawing.Point(6, 2);
+            this.dataGridViewSessions.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewSessions.MultiSelect = false;
+            this.dataGridViewSessions.Name = "dataGridViewSessions";
+            this.dataGridViewSessions.RowHeadersVisible = false;
+            this.dataGridViewSessions.RowHeadersWidth = 51;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            this.dataGridViewSessions.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            this.dataGridViewSessions.RowTemplate.Height = 24;
+            this.dataGridViewSessions.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridViewSessions.Size = new System.Drawing.Size(631, 171);
+            this.dataGridViewSessions.TabIndex = 39;
+            this.dataGridViewSessions.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewSessions_CellContentClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "                      ID";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // con1
+            // 
+            this.con1.HeaderText = "Consecutive Session 1 ID";
+            this.con1.MinimumWidth = 6;
+            this.con1.Name = "con1";
+            this.con1.Width = 225;
+            // 
+            // con2
+            // 
+            this.con2.HeaderText = "Consecutive Session 2 ID";
+            this.con2.MinimumWidth = 6;
+            this.con2.Name = "con2";
+            this.con2.Width = 225;
+            // 
+            // comboRoom
+            // 
+            this.comboRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.comboRoom.Location = new System.Drawing.Point(182, 198);
+            this.comboRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.comboRoom.Name = "comboRoom";
+            this.comboRoom.Size = new System.Drawing.Size(129, 24);
+            this.comboRoom.TabIndex = 44;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnAdd.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnAdd.Location = new System.Drawing.Point(188, 206);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(90, 32);
+            this.btnAdd.TabIndex = 28;
+            this.btnAdd.Text = "Add Session";
+            this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // btnViewN
+            // 
+            this.btnViewN.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnViewN.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnViewN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewN.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnViewN.Location = new System.Drawing.Point(310, 206);
+            this.btnViewN.Margin = new System.Windows.Forms.Padding(2);
+            this.btnViewN.Name = "btnViewN";
+            this.btnViewN.Size = new System.Drawing.Size(90, 32);
+            this.btnViewN.TabIndex = 29;
+            this.btnViewN.Text = "Clear";
+            this.btnViewN.UseVisualStyleBackColor = false;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label4.Location = new System.Drawing.Point(43, 39);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(0, 29);
+            this.label4.TabIndex = 41;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label5.Location = new System.Drawing.Point(43, 120);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(0, 29);
+            this.label5.TabIndex = 42;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label6.Location = new System.Drawing.Point(305, 39);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(0, 29);
+            this.label6.TabIndex = 43;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label7.Location = new System.Drawing.Point(305, 120);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 29);
+            this.label7.TabIndex = 44;
+            // 
+            // comboBoxDay
+            // 
+            this.comboBoxDay.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.comboBoxDay.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBoxDay.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxDay.FormattingEnabled = true;
+            this.comboBoxDay.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"});
+            this.comboBoxDay.Location = new System.Drawing.Point(155, 121);
+            this.comboBoxDay.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBoxDay.Name = "comboBoxDay";
+            this.comboBoxDay.Size = new System.Drawing.Size(123, 28);
+            this.comboBoxDay.TabIndex = 46;
+            // 
+            // txtStartTime
+            // 
+            this.txtStartTime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtStartTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtStartTime.Location = new System.Drawing.Point(441, 39);
+            this.txtStartTime.Margin = new System.Windows.Forms.Padding(2);
+            this.txtStartTime.Name = "txtStartTime";
+            this.txtStartTime.Size = new System.Drawing.Size(123, 26);
+            this.txtStartTime.TabIndex = 47;
+            this.txtStartTime.TextChanged += new System.EventHandler(this.txtStartTime_TextChanged);
+            // 
             // txtEndTime
             // 
+            this.txtEndTime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEndTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndTime.Location = new System.Drawing.Point(394, 123);
+            this.txtEndTime.Location = new System.Drawing.Point(441, 126);
             this.txtEndTime.Margin = new System.Windows.Forms.Padding(2);
             this.txtEndTime.Name = "txtEndTime";
             this.txtEndTime.Size = new System.Drawing.Size(123, 26);
@@ -569,12 +518,93 @@
             // 
             // txtRoom
             // 
+            this.txtRoom.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRoom.Location = new System.Drawing.Point(155, 37);
             this.txtRoom.Margin = new System.Windows.Forms.Padding(2);
             this.txtRoom.Name = "txtRoom";
             this.txtRoom.Size = new System.Drawing.Size(123, 26);
             this.txtRoom.TabIndex = 49;
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.label10);
+            this.tabPage3.Controls.Add(this.label9);
+            this.tabPage3.Controls.Add(this.label8);
+            this.tabPage3.Controls.Add(this.label2);
+            this.tabPage3.Controls.Add(this.txtRoom);
+            this.tabPage3.Controls.Add(this.txtEndTime);
+            this.tabPage3.Controls.Add(this.txtStartTime);
+            this.tabPage3.Controls.Add(this.comboBoxDay);
+            this.tabPage3.Controls.Add(this.label7);
+            this.tabPage3.Controls.Add(this.label6);
+            this.tabPage3.Controls.Add(this.label5);
+            this.tabPage3.Controls.Add(this.label4);
+            this.tabPage3.Controls.Add(this.btnViewN);
+            this.tabPage3.Controls.Add(this.btnAdd);
+            this.tabPage3.Location = new System.Drawing.Point(4, 28);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(633, 246);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Not Available Times";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label2.Location = new System.Drawing.Point(18, 37);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 29);
+            this.label2.TabIndex = 50;
+            this.label2.Text = "Select Room";
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label8.Location = new System.Drawing.Point(18, 123);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 29);
+            this.label8.TabIndex = 51;
+            this.label8.Text = "Select Day";
+            // 
+            // label9
+            // 
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label9.Location = new System.Drawing.Point(321, 41);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 29);
+            this.label9.TabIndex = 52;
+            this.label9.Text = "Start Time";
+            // 
+            // label10
+            // 
+            this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Myanmar Text", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.label10.Location = new System.Drawing.Point(321, 126);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(84, 29);
+            this.label10.TabIndex = 53;
+            this.label10.Text = "End Time";
             // 
             // AllocateLocationMain
             // 
@@ -590,12 +620,13 @@
             this.tabControl.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessionRoom)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessions)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewSessionRoom)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -609,28 +640,15 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Button btnViewN;
-        private System.Windows.Forms.Button btnAddN;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.DataGridView dataGridViewSessions;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn con1;
         private System.Windows.Forms.DataGridViewTextBoxColumn con2;
         private System.Windows.Forms.Button viewConsecRoom;
         private System.Windows.Forms.Button addConsecRoom;
-        private System.Windows.Forms.ComboBox comboBoxloc;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBoxDay;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtStartTime;
         private System.Windows.Forms.Button btnAddRoom;
         private System.Windows.Forms.Button btnRefresh;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.DataGridView dataGridViewSessionRoom;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn lec1;
@@ -640,7 +658,22 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn group_id;
         private System.Windows.Forms.DataGridViewTextBoxColumn tag;
         private System.Windows.Forms.DataGridViewTextBoxColumn room;
+        private System.Windows.Forms.TextBox comboRoom;
+        private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox txtRoom;
         private System.Windows.Forms.TextBox txtEndTime;
+        private System.Windows.Forms.TextBox txtStartTime;
+        private System.Windows.Forms.ComboBox comboBoxDay;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnViewN;
+        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label2;
     }
 }
