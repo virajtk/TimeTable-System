@@ -115,6 +115,24 @@
     <Compile Include="Lecturers\ManageLecturers.Designer.cs">
       <DependentUpon>ManageLecturers.cs</DependentUpon>
     </Compile>
+    <Compile Include="LocationAllocation\AllocateLocationMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationAllocation\AllocateLocationMain.Designer.cs">
+      <DependentUpon>AllocateLocationMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationAllocation\ManageSessionRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationAllocation\ManageSessionRoom.Designer.cs">
+      <DependentUpon>ManageSessionRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LocationAllocation\ManageUnavailableRooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LocationAllocation\ManageUnavailableRooms.Designer.cs">
+      <DependentUpon>ManageUnavailableRooms.cs</DependentUpon>
+    </Compile>
     <Compile Include="Locations\AddLocations.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,9 +174,11 @@
     <Compile Include="Models\Lecturer.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Models\SessionDTO.cs" />
+    <Compile Include="Models\SessionRoom.cs" />
     <Compile Include="Models\Student.cs" />
     <Compile Include="Models\Subject.cs" />
     <Compile Include="Models\Tag.cs" />
+    <Compile Include="Models\Unavailable.cs" />
     <Compile Include="Services\ConsecutiveService.cs" />
     <Compile Include="Services\DashBoardService.cs" />
     <Compile Include="Services\IConsecutiveService.cs" />
@@ -167,19 +187,23 @@
     <Compile Include="Models\WorkingDaysHours.cs" />
     <Compile Include="Services\ILecturerService.cs" />
     <Compile Include="Services\ILocationService.cs" />
+    <Compile Include="Services\ISessionRoomService.cs" />
     <Compile Include="Services\ISessionService.cs" />
     <Compile Include="Services\IStudentService.cs" />
     <Compile Include="Services\ISubjectService.cs" />
     <Compile Include="Services\ITimeSlotService.cs" />
+    <Compile Include="Services\IUnavailableService.cs" />
     <Compile Include="Services\IWorkingDaysHoursService.cs" />
     <Compile Include="Services\LecturerService.cs" />
     <Compile Include="Services\ITagService.cs" />
     <Compile Include="Services\LocationService.cs" />
+    <Compile Include="Services\SessionRoomService.cs" />
     <Compile Include="Services\SessionService.cs" />
     <Compile Include="Services\StudentService.cs" />
     <Compile Include="Services\SubjectService.cs" />
     <Compile Include="Services\TagService.cs" />
     <Compile Include="Services\TimeSlotService.cs" />
+    <Compile Include="Services\UnavailableService.cs" />
     <Compile Include="Services\WorkingDaysHoursService.cs" />
     <Compile Include="Session\ManageSessions.cs">
       <SubType>Form</SubType>
@@ -284,6 +308,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Lecturers\ManageLecturers.resx">
       <DependentUpon>ManageLecturers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationAllocation\AllocateLocationMain.resx">
+      <DependentUpon>AllocateLocationMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationAllocation\ManageSessionRoom.resx">
+      <DependentUpon>ManageSessionRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LocationAllocation\ManageUnavailableRooms.resx">
+      <DependentUpon>ManageUnavailableRooms.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Locations\AddLocations.resx">
       <DependentUpon>AddLocations.cs</DependentUpon>
@@ -408,6 +441,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

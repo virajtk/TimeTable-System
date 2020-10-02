@@ -183,5 +183,15 @@ namespace Time_Table_Management_System.Session
             }
 
         }
+
+        private void groupBoxStep1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtSelectedLec_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

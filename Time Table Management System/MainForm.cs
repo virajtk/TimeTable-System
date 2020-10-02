@@ -16,6 +16,8 @@ using Time_Table_Management_System.Session;
 using Time_Table_Management_System.Messages;
 using Time_Table_Management_System.Generate;
 using Time_Table_Management_System.Allocations;
+using Time_Table_Management_System.LocationAllocation;
+
 
 namespace Time_Table_Management_System
 {
@@ -344,6 +346,19 @@ namespace Time_Table_Management_System
             btnAddSession.BackColor = Color.FromArgb(224, 224, 224);
 
             openChildForm(new AllocateSession());
+            //..
+            // your code
+            //..
+
+            hideSubMenu();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            defaultBtn();
+            button7.BackColor = Color.FromArgb(224, 224, 224);
+
+            openChildForm(new AllocateLocationMain());
             //..
             // your code
             //..
