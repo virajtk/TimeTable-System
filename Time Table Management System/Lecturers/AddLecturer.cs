@@ -183,5 +183,10 @@ namespace Time_Table_Management_System.Lecturers
             }
             textBoxDepartment.Items.AddRange(items.ToArray());
         }
+
+        private void textBoxDepartment_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -57,7 +57,7 @@ namespace Time_Table_Management_System.Services
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
-                string query = "DELETE FROM locations WHERE id = @id";
+                string query = "DELETE FROM location WHERE id = @id";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
