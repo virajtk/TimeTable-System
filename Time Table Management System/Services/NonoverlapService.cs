@@ -8,23 +8,23 @@ using System.Data.SQLite;
 
 namespace Time_Table_Management_System.Services
 {
-    class ConsecutiveService : IConsecutiveService
+    class NonoverlapService : INonoverlapService
     {
-            
-        public bool addConsecutive(int conSessionID1 , int conSessionID2)
+        public bool addNonoverlap(int nonSessionID1, int nonSessionID2, int nonSessionID3, int nonSessionID4)
         {
             Boolean result = false;
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
 
-                string query = "INSERT INTO consecutives (con1_id, con2_id) VALUES (@con1_id, @con2_id)";
+                string query = "INSERT INTO nonoverlaps (non1_id, non2_id, non3_id, non4_id) VALUES (@non1_id, @non2_id, @non3_id, @non4_id)";
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
 
-                cmd.Parameters.AddWithValue("@con1_id", conSessionID1);
-                cmd.Parameters.AddWithValue("@con2_id", conSessionID2);
-
+                cmd.Parameters.AddWithValue("@non1_id", nonSessionID1);
+                cmd.Parameters.AddWithValue("@non2_id", nonSessionID2);
+                cmd.Parameters.AddWithValue("@non3_id", nonSessionID3);
+                cmd.Parameters.AddWithValue("@non4_id", nonSessionID4);
 
                 cmd.Prepare();
 
@@ -45,13 +45,13 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public bool deleteConsecutive(int id)
+        public bool deleteNonoverlap(int id)
         {
             Boolean result = false;
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
             try
             {
-                string query = "DELETE FROM consecutives WHERE id = @id";
+                string query = "DELETE FROM nonoverlaps WHERE id = @id";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
@@ -76,28 +76,30 @@ namespace Time_Table_Management_System.Services
             return result;
         }
 
-        public List<Consecutive> getAllConsecutives()
+        public List<Nonoverlap> getAllNonoverlaps()
         {
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            List<Consecutive> arrayConsecutives = null;
+            List<Nonoverlap> arrayNonoverlaps = null;
 
             try
             {
-                string query = "SELECT * FROM consecutives";
+                string query = "SELECT * FROM nonoverlaps";
 
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 SQLiteDataReader rdr = cmd.ExecuteReader();
-                arrayConsecutives = new List<Consecutive>();
+                arrayNonoverlaps = new List<Nonoverlap>();
 
                 while (rdr.Read())
                 {
-                    Consecutive consecutive = new Consecutive();
-                    consecutive.Id = rdr.GetInt32(0);
-                    consecutive.Con1_id = rdr.GetInt32(1);
+                    Nonoverlap nonoverlap = new Nonoverlap();
+                    nonoverlap.Id = rdr.GetInt32(0);
+                    nonoverlap.Non1_id = rdr.GetInt32(1);
                     try
                     {
-                        consecutive.Con2_id = rdr.GetInt32(2);
+                        nonoverlap.Non2_id = rdr.GetInt32(2);
+                        nonoverlap.Non3_id = rdr.GetInt32(3);
+                        nonoverlap.Non4_id = rdr.GetInt32(4);
                     }
                     catch (Exception er)
                     {
@@ -108,7 +110,7 @@ namespace Time_Table_Management_System.Services
                     }
 
 
-                    arrayConsecutives.Add(consecutive);
+                    arrayNonoverlaps.Add(nonoverlap);
                 }
             }
             catch (Exception e)
@@ -120,19 +122,17 @@ namespace Time_Table_Management_System.Services
                 conn.Close();
             }
 
-            return arrayConsecutives;
-
-
+            return arrayNonoverlaps;
         }
 
-        public Consecutive GetConsecutive(int id)
+        public Nonoverlap GetNonoverlap(int id)
         {
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            Consecutive consecutive = new Consecutive();
+            Nonoverlap nonoverlap = new Nonoverlap();
 
             try
             {
-                string query = "SELECT * FROM consecutives WHERE id = @id";
+                string query = "SELECT * FROM nonoverlaps WHERE id = @id";
                 conn.Open();
                 SQLiteCommand cmd = new SQLiteCommand(query, conn);
                 cmd.Parameters.AddWithValue("@id", id);
@@ -140,11 +140,13 @@ namespace Time_Table_Management_System.Services
 
                 while (rdr.Read())
                 {
-                    consecutive.Id = rdr.GetInt32(0);
-                    consecutive.Con1_id = rdr.GetInt32(1);
+                    nonoverlap.Id = rdr.GetInt32(0);
+                    nonoverlap.Non1_id = rdr.GetInt32(1);
                     try
                     {
-                        consecutive.Con2_id = rdr.GetInt32(2);
+                        nonoverlap.Non2_id = rdr.GetInt32(2);
+                        nonoverlap.Non3_id = rdr.GetInt32(3);
+                        nonoverlap.Non4_id = rdr.GetInt32(4);
                     }
                     catch (Exception er)
                     {
@@ -153,7 +155,7 @@ namespace Time_Table_Management_System.Services
 
                         }
                     }
-                  
+
                 }
             }
             catch (Exception e)
@@ -165,35 +167,38 @@ namespace Time_Table_Management_System.Services
                 conn.Close();
             }
 
-            return consecutive;
+            return nonoverlap;
+
         }
 
-        public List<Consecutive> searchConsecutive(string key, string type)
+        public List<Nonoverlap> searchNonoverlap(string key, string type)
         {
             SQLiteConnection conn = new SQLiteConnection("Data Source=database.db;Version=3;");
-            List<Consecutive> arrayConsecutives = null;
+            List<Nonoverlap> arrayNonoverlaps = null;
 
             try
             {
-                    string query = "SELECT * FROM consecutives WHERE " + type + " LIKE '%" + key + "%'";
-                    conn.Open();
-                    SQLiteCommand cmd = new SQLiteCommand(query, conn);
-                    cmd.Parameters.AddWithValue("@type", type);
-                    SQLiteDataReader rdr = cmd.ExecuteReader();
-                    arrayConsecutives = new List<Consecutive>();
+                string query = "SELECT * FROM nonoverlaps WHERE " + type + " LIKE '%" + key + "%'";
+                conn.Open();
+                SQLiteCommand cmd = new SQLiteCommand(query, conn);
+                cmd.Parameters.AddWithValue("@type", type);
+                SQLiteDataReader rdr = cmd.ExecuteReader();
+                arrayNonoverlaps = new List<Nonoverlap>();
 
-                    while (rdr.Read())
-                    {
-                        Consecutive consecutive = new Consecutive();
-                        consecutive.Id = rdr.GetInt32(0);
-                        consecutive.Con1_id = rdr.GetInt32(1);
-                        consecutive.Con2_id = rdr.GetInt32(2);
-          
+                while (rdr.Read())
+                {
+                    Nonoverlap nonoverlap = new Nonoverlap();
+                    nonoverlap.Id = rdr.GetInt32(0);
+                    nonoverlap.Non1_id = rdr.GetInt32(1);
+                    nonoverlap.Non2_id = rdr.GetInt32(2);
+                    nonoverlap.Non3_id = rdr.GetInt32(3);
+                    nonoverlap.Non4_id = rdr.GetInt32(4);
 
-                        arrayConsecutives.Add(consecutive);
-                    }
 
-                
+                    arrayNonoverlaps.Add(nonoverlap);
+                }
+
+
             }
             catch (Exception e)
             {
@@ -204,10 +209,10 @@ namespace Time_Table_Management_System.Services
                 conn.Close();
             }
 
-            return arrayConsecutives;
+            return arrayNonoverlaps;
         }
 
-        public bool updateConsecutive(int id, Consecutive consecutive)
+        public bool updateNonoverlap(int id, Nonoverlap nonoverlap)
         {
             throw new NotImplementedException();
         }

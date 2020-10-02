@@ -116,7 +116,7 @@
             this.subCode.Name = "subCode";
             this.subCode.Size = new System.Drawing.Size(225, 28);
             this.subCode.TabIndex = 19;
-            this.subCode.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+          
             // 
             // label3
             // 
@@ -146,7 +146,7 @@
             this.comboBoxRelatedTag.Size = new System.Drawing.Size(225, 30);
             this.comboBoxRelatedTag.TabIndex = 21;
             this.comboBoxRelatedTag.Tag = "";
-            this.comboBoxRelatedTag.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            
             // 
             // btnSave
             // 
