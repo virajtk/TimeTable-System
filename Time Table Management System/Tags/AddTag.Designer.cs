@@ -68,9 +68,9 @@
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
             this.label1.Location = new System.Drawing.Point(258, 122);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(114, 20);
+            this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 15;
-            this.label1.Text = "Subject Name";
+            this.label1.Text = "Tag Name";
             // 
             // title
             // 
@@ -94,9 +94,9 @@
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
             this.label2.Location = new System.Drawing.Point(258, 182);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 20);
+            this.label2.Size = new System.Drawing.Size(81, 20);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Subject Code";
+            this.label2.Text = "Tag Code";
             // 
             // subName
             // 
@@ -116,7 +116,6 @@
             this.subCode.Name = "subCode";
             this.subCode.Size = new System.Drawing.Size(225, 28);
             this.subCode.TabIndex = 19;
-          
             // 
             // label3
             // 
@@ -146,7 +145,6 @@
             this.comboBoxRelatedTag.Size = new System.Drawing.Size(225, 30);
             this.comboBoxRelatedTag.TabIndex = 21;
             this.comboBoxRelatedTag.Tag = "";
-            
             // 
             // btnSave
             // 

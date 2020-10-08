@@ -1,0 +1,50 @@
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\x86\sqlite3.dll
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\x64\sqlite3.dll
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\database.db
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\msvcr100.dll
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\SQLite.Interop.dll
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\Time Table Management System.exe.config
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\Time Table Management System.exe
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\Time Table Management System.pdb
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\BouncyCastle.Crypto.dll
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\itextsharp.dll
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\System.Data.SQLite.dll
+G:\Programming\Projects\Time Table Managment\Time Table Management System\bin\Release\itextsharp.xml
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Allocations.AllocateSession.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Allocations.ManageConsecutives.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Allocations.ManageNonoverlaps.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Allocations.ManageNotavailables.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Allocations.ManageParallels.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.DaysAndHours.AddTimeSlots.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.DaysAndHours.AddWorkingDaysHours.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.DaysAndHours.ManageWorkingDaysHours.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Generate.GenerateTimeTable.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Lecturers.AddLecturer.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Lecturers.ManageLecturers.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.LocationAllocation.AllocateLocationMain.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.LocationAllocation.ManageSessionRoom.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.LocationAllocation.ManageUnavailableRooms.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Locations.AddLocations.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Locations.EditLocations.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Locations.ManageLocations.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Messages.ErrorMessage.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Messages.Info.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Messages.SuccessMessage.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Session.ManageSessions.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Session.ManageSessionsMain.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Session.UpdateSession.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Session.ViewSession.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Students.AddStudent.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Students.ManageStudents.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.AddSubject.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.DashBoard.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.MainForm.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.ManageSubjects.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Properties.Resources.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Tags.AddTag.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time_Table_Management_System.Tags.ManageTags.resources
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time Table Management System.csproj.GenerateResource.cache
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time Table Management System.csproj.CoreCompileInputs.cache
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time Table Management System.csproj.CopyComplete
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time Table Management System.exe
+G:\Programming\Projects\Time Table Managment\Time Table Management System\obj\Release\Time Table Management System.pdb

@@ -326,7 +326,7 @@ namespace Time_Table_Management_System.Generate
                             {
                                 int colNum = getRandom(0, workingDaysHours.NoOfWorkingDays); // 0 1 2 3 4 
                                 int rawNum = getRandom(0, 8); // 0 1 2 3 4 5 6 7
-                                MessageBox.Show(colNum + "," + rawNum);
+                                //MessageBox.Show(colNum + "," + rawNum);
 
                                 while (lec2DArray[rawNum, colNum] != null)
                                 {
@@ -533,7 +533,7 @@ namespace Time_Table_Management_System.Generate
                 {
                     SessionDTO[,] lec2DArray = new SessionDTO[8, workingDaysHours.NoOfWorkingDays];// 8, 5  indexes:0-7, 0-4
                     List<SessionDTO> sessionsArray = sessionService.getAllSessions();
-                    dataGridLec.Rows.Clear();
+                    dataGridLocation.Rows.Clear();
 
                     // set session slots
                     foreach (SessionDTO session in sessionsArray)
