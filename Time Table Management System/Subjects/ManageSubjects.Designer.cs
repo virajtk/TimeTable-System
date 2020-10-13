@@ -119,13 +119,14 @@
             this.labHours,
             this.evaluationHours});
             this.dataGridSubjects.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.dataGridSubjects.Location = new System.Drawing.Point(31, 114);
+            this.dataGridSubjects.Location = new System.Drawing.Point(31, 82);
             this.dataGridSubjects.Name = "dataGridSubjects";
             this.dataGridSubjects.ReadOnly = true;
+            this.dataGridSubjects.RowHeadersVisible = false;
             this.dataGridSubjects.RowHeadersWidth = 51;
             this.dataGridSubjects.RowTemplate.Height = 24;
             this.dataGridSubjects.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridSubjects.Size = new System.Drawing.Size(679, 124);
+            this.dataGridSubjects.Size = new System.Drawing.Size(679, 156);
             this.dataGridSubjects.TabIndex = 5;
             this.dataGridSubjects.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
             // 
@@ -212,7 +213,7 @@
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnClear.Location = new System.Drawing.Point(716, 176);
+            this.btnClear.Location = new System.Drawing.Point(734, 192);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 40);
             this.btnClear.TabIndex = 52;
@@ -228,7 +229,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnDelete.Location = new System.Drawing.Point(716, 129);
+            this.btnDelete.Location = new System.Drawing.Point(734, 137);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 40);
             this.btnDelete.TabIndex = 51;
@@ -244,7 +245,7 @@
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpdate.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnUpdate.Location = new System.Drawing.Point(716, 82);
+            this.btnUpdate.Location = new System.Drawing.Point(734, 82);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(120, 40);
             this.btnUpdate.TabIndex = 50;
@@ -390,7 +391,6 @@
             this.radioButtonSem1.TabStop = true;
             this.radioButtonSem1.Text = "1st Semester";
             this.radioButtonSem1.UseVisualStyleBackColor = true;
-            this.radioButtonSem1.CheckedChanged += new System.EventHandler(this.radioButtonSem1_CheckedChanged);
             // 
             // label5
             // 

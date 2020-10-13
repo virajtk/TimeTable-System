@@ -119,12 +119,12 @@
             this.dataGridLecturers.Location = new System.Drawing.Point(56, 92);
             this.dataGridLecturers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridLecturers.Name = "dataGridLecturers";
+            this.dataGridLecturers.RowHeadersVisible = false;
             this.dataGridLecturers.RowHeadersWidth = 51;
             this.dataGridLecturers.RowTemplate.Height = 24;
             this.dataGridLecturers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridLecturers.Size = new System.Drawing.Size(619, 130);
             this.dataGridLecturers.TabIndex = 17;
-            this.dataGridLecturers.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridLecturers_CellContentClick);
             this.dataGridLecturers.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
             // 
             // id
@@ -413,7 +413,7 @@
             this.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnUpdate.Enabled = false;
             this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUpdate.ForeColor = System.Drawing.SystemColors.Info;
             this.btnUpdate.Location = new System.Drawing.Point(703, 92);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -430,7 +430,7 @@
             this.btnDelete.BackColor = System.Drawing.Color.DarkRed;
             this.btnDelete.Enabled = false;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
             this.btnDelete.Location = new System.Drawing.Point(703, 139);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -446,7 +446,7 @@
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnClear.BackColor = System.Drawing.Color.DarkOrange;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
             this.btnClear.Location = new System.Drawing.Point(703, 186);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -460,13 +460,13 @@
             // btnGenerateRank
             // 
             this.btnGenerateRank.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnGenerateRank.BackColor = System.Drawing.Color.Transparent;
+            this.btnGenerateRank.BackColor = System.Drawing.Color.LightGoldenrodYellow;
             this.btnGenerateRank.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGenerateRank.Image = global::Time_Table_Management_System.Properties.Resources.generate;
-            this.btnGenerateRank.Location = new System.Drawing.Point(801, 377);
+            this.btnGenerateRank.Location = new System.Drawing.Point(802, 378);
             this.btnGenerateRank.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnGenerateRank.Name = "btnGenerateRank";
-            this.btnGenerateRank.Size = new System.Drawing.Size(41, 34);
+            this.btnGenerateRank.Size = new System.Drawing.Size(53, 34);
             this.btnGenerateRank.TabIndex = 50;
             this.btnGenerateRank.UseVisualStyleBackColor = false;
             this.btnGenerateRank.Click += new System.EventHandler(this.btnGenerateRank_Click);

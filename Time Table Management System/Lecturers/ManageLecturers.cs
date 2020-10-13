@@ -72,22 +72,31 @@ namespace Time_Table_Management_System.Lecturers
             if (textBoxLecturerName.Text == String.Empty)
             {
                 textBoxLecturerName.Focus();
-                errorManageLecturers.SetError(textBoxLecturerName, "Please Enter Lecturer Name");
+                //errorManageLecturers.SetError(textBoxLecturerName, "Please Enter Lecturer Name");
+                MessageBox.Show("Please Enter Lecturer Name", "Error");
             }
             else if (comboBoxFaculty.SelectedIndex == -1)
             {
                 comboBoxFaculty.Focus();
-                errorManageLecturers.SetError(comboBoxFaculty, "Please Select Faculty");
+                //errorManageLecturers.SetError(comboBoxFaculty, "Please Select Faculty");
+                MessageBox.Show("Please Select Faculty", "Error");
             }
-            else if (textBoxDepartment.Text == String.Empty)
+            else if (textBoxDepartment.SelectedIndex == -1)
             {
                 textBoxDepartment.Focus();
-                errorManageLecturers.SetError(textBoxDepartment, "Please Enter Department");
+                //errorManageLecturers.SetError(textBoxDepartment, "Please Enter Department");
+                MessageBox.Show("Please Select Department", "Error");
             }
             else if (comboBoxCenter.SelectedIndex == -1)
             {
                 comboBoxCenter.Focus();
-                errorManageLecturers.SetError(comboBoxCenter, "Please Select Center");
+                //errorManageLecturers.SetError(comboBoxCenter, "Please Select Center");
+                MessageBox.Show("Please Select Center", "Error");
+            }
+            else if (comboBoxBuilding.SelectedIndex == -1)
+            {
+                comboBoxBuilding.Focus();
+                MessageBox.Show("Please Select Building", "Error");
             }
             else if (textBoxRank.Text == String.Empty)
             {
@@ -251,7 +260,7 @@ namespace Time_Table_Management_System.Lecturers
         {
             if (lecturerService.deleteLecturer(selectedLec.Id))
             {
-                SuccessMessage sm = new SuccessMessage("Lecturer killed Successfully");
+                SuccessMessage sm = new SuccessMessage("Lecturer Removed Successfully");
                 sm.Show();
                 dataGridLecturers.Rows.Clear();
                 populateData();
@@ -269,12 +278,19 @@ namespace Time_Table_Management_System.Lecturers
             if (textBoxEmployeeID.Text == String.Empty)
             {
                 textBoxEmployeeID.Focus();
-                errorManageLecturers.SetError(textBoxEmployeeID, "Please Enter Employee ID");
+                //errorManageLecturers.SetError(textBoxEmployeeID, "Please Enter Employee ID");
+                MessageBox.Show("Please Enter Employee ID", "Error");
+            }
+            else if (textBoxEmployeeID.Text.Length != 6)
+            {
+                textBoxEmployeeID.Focus();
+                MessageBox.Show("Please Enter Valid Employee ID, Employee ID should be 6 digits", "Error");
             }
             else if (comboBoxLevel.SelectedIndex == -1)
             {
                 comboBoxLevel.Focus();
-                errorManageLecturers.SetError(comboBoxLevel, "Please Select Level");
+                //errorManageLecturers.SetError(comboBoxLevel, "Please Select Level");
+                MessageBox.Show("Please Select Level", "Error");
             }
             else
             {
@@ -283,11 +299,6 @@ namespace Time_Table_Management_System.Lecturers
                 comboBoxLevel.Enabled = false;
                 btnGenerateRank.Enabled = false;
             }
-        }
-
-        private void dataGridLecturers_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void comboBoxFaculty_SelectedIndexChanged(object sender, EventArgs e)

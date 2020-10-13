@@ -60,9 +60,10 @@
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.ForeColor = System.Drawing.SystemColors.Info;
-            this.button1.Location = new System.Drawing.Point(3, 2);
+            this.button1.Location = new System.Drawing.Point(2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 25);
+            this.button1.Size = new System.Drawing.Size(38, 20);
             this.button1.TabIndex = 14;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
@@ -73,21 +74,23 @@
             this.title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 16F, System.Drawing.FontStyle.Bold);
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
             this.title.ForeColor = System.Drawing.Color.SteelBlue;
-            this.title.Location = new System.Drawing.Point(116, 30);
+            this.title.Location = new System.Drawing.Point(87, 24);
+            this.title.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(184, 32);
+            this.title.Size = new System.Drawing.Size(148, 26);
             this.title.TabIndex = 13;
             this.title.Text = "Add Lecturer";
             // 
             // textBoxLecturerName
             // 
             this.textBoxLecturerName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxLecturerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLecturerName.Location = new System.Drawing.Point(187, 105);
+            this.textBoxLecturerName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.textBoxLecturerName.Location = new System.Drawing.Point(140, 85);
+            this.textBoxLecturerName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLecturerName.Name = "textBoxLecturerName";
-            this.textBoxLecturerName.Size = new System.Drawing.Size(222, 27);
+            this.textBoxLecturerName.Size = new System.Drawing.Size(168, 24);
             this.textBoxLecturerName.TabIndex = 16;
             // 
             // label3
@@ -97,19 +100,21 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.Info;
-            this.label3.Location = new System.Drawing.Point(48, 108);
+            this.label3.Location = new System.Drawing.Point(36, 88);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(121, 20);
+            this.label3.Size = new System.Drawing.Size(102, 17);
             this.label3.TabIndex = 15;
             this.label3.Text = "Lecturer Name";
             // 
             // textBoxEmployeeID
             // 
             this.textBoxEmployeeID.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxEmployeeID.Location = new System.Drawing.Point(187, 167);
+            this.textBoxEmployeeID.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.textBoxEmployeeID.Location = new System.Drawing.Point(140, 136);
+            this.textBoxEmployeeID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxEmployeeID.Name = "textBoxEmployeeID";
-            this.textBoxEmployeeID.Size = new System.Drawing.Size(222, 27);
+            this.textBoxEmployeeID.Size = new System.Drawing.Size(168, 24);
             this.textBoxEmployeeID.TabIndex = 18;
             // 
             // label1
@@ -119,9 +124,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Info;
-            this.label1.Location = new System.Drawing.Point(48, 170);
+            this.label1.Location = new System.Drawing.Point(36, 138);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 20);
+            this.label1.Size = new System.Drawing.Size(87, 17);
             this.label1.TabIndex = 17;
             this.label1.Text = "Employee ID";
             // 
@@ -129,7 +135,7 @@
             // 
             this.comboBoxFaculty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxFaculty.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxFaculty.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxFaculty.FormattingEnabled = true;
             this.comboBoxFaculty.Items.AddRange(new object[] {
             "Computing",
@@ -138,9 +144,10 @@
             "Humanities & Sciences",
             "Architecture",
             "Hospitality & Culinary"});
-            this.comboBoxFaculty.Location = new System.Drawing.Point(187, 232);
+            this.comboBoxFaculty.Location = new System.Drawing.Point(140, 188);
+            this.comboBoxFaculty.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxFaculty.Name = "comboBoxFaculty";
-            this.comboBoxFaculty.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxFaculty.Size = new System.Drawing.Size(168, 26);
             this.comboBoxFaculty.TabIndex = 20;
             this.comboBoxFaculty.SelectedIndexChanged += new System.EventHandler(this.comboBoxFaculty_SelectedIndexChanged);
             // 
@@ -151,9 +158,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Info;
-            this.label2.Location = new System.Drawing.Point(48, 236);
+            this.label2.Location = new System.Drawing.Point(36, 192);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
+            this.label2.Size = new System.Drawing.Size(53, 17);
             this.label2.TabIndex = 19;
             this.label2.Text = "Faculty";
             // 
@@ -164,9 +172,10 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Info;
-            this.label4.Location = new System.Drawing.Point(48, 297);
+            this.label4.Location = new System.Drawing.Point(36, 241);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(97, 20);
+            this.label4.Size = new System.Drawing.Size(82, 17);
             this.label4.TabIndex = 21;
             this.label4.Text = "Department";
             // 
@@ -174,7 +183,7 @@
             // 
             this.comboBoxCenter.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxCenter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxCenter.FormattingEnabled = true;
             this.comboBoxCenter.Items.AddRange(new object[] {
             "Malabe",
@@ -183,9 +192,10 @@
             "Kandy",
             "Kurunagala",
             "Jaffna"});
-            this.comboBoxCenter.Location = new System.Drawing.Point(597, 104);
+            this.comboBoxCenter.Location = new System.Drawing.Point(448, 84);
+            this.comboBoxCenter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxCenter.Name = "comboBoxCenter";
-            this.comboBoxCenter.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxCenter.Size = new System.Drawing.Size(168, 26);
             this.comboBoxCenter.TabIndex = 24;
             // 
             // label5
@@ -195,9 +205,10 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.Info;
-            this.label5.Location = new System.Drawing.Point(451, 108);
+            this.label5.Location = new System.Drawing.Point(338, 88);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.Size = new System.Drawing.Size(50, 17);
             this.label5.TabIndex = 23;
             this.label5.Text = "Center";
             // 
@@ -205,7 +216,7 @@
             // 
             this.comboBoxBuilding.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxBuilding.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBuilding.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxBuilding.FormattingEnabled = true;
             this.comboBoxBuilding.Items.AddRange(new object[] {
             "New building",
@@ -214,9 +225,10 @@
             "C-block",
             "D-block",
             "E-block"});
-            this.comboBoxBuilding.Location = new System.Drawing.Point(597, 166);
+            this.comboBoxBuilding.Location = new System.Drawing.Point(448, 135);
+            this.comboBoxBuilding.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxBuilding.Name = "comboBoxBuilding";
-            this.comboBoxBuilding.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxBuilding.Size = new System.Drawing.Size(168, 26);
             this.comboBoxBuilding.TabIndex = 26;
             // 
             // label6
@@ -226,9 +238,10 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.SystemColors.Info;
-            this.label6.Location = new System.Drawing.Point(451, 170);
+            this.label6.Location = new System.Drawing.Point(338, 138);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 20);
+            this.label6.Size = new System.Drawing.Size(58, 17);
             this.label6.TabIndex = 25;
             this.label6.Text = "Building";
             // 
@@ -236,7 +249,7 @@
             // 
             this.comboBoxLevel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.comboBoxLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLevel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxLevel.FormattingEnabled = true;
             this.comboBoxLevel.Items.AddRange(new object[] {
             "1",
@@ -246,9 +259,10 @@
             "5",
             "6",
             "7"});
-            this.comboBoxLevel.Location = new System.Drawing.Point(597, 232);
+            this.comboBoxLevel.Location = new System.Drawing.Point(448, 188);
+            this.comboBoxLevel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxLevel.Name = "comboBoxLevel";
-            this.comboBoxLevel.Size = new System.Drawing.Size(222, 28);
+            this.comboBoxLevel.Size = new System.Drawing.Size(168, 26);
             this.comboBoxLevel.TabIndex = 28;
             // 
             // label7
@@ -258,20 +272,22 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.Info;
-            this.label7.Location = new System.Drawing.Point(451, 236);
+            this.label7.Location = new System.Drawing.Point(338, 192);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(49, 20);
+            this.label7.Size = new System.Drawing.Size(42, 17);
             this.label7.TabIndex = 27;
             this.label7.Text = "Level";
             // 
             // textBoxRank
             // 
             this.textBoxRank.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxRank.Location = new System.Drawing.Point(597, 294);
+            this.textBoxRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.textBoxRank.Location = new System.Drawing.Point(448, 239);
+            this.textBoxRank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxRank.Name = "textBoxRank";
             this.textBoxRank.ReadOnly = true;
-            this.textBoxRank.Size = new System.Drawing.Size(222, 27);
+            this.textBoxRank.Size = new System.Drawing.Size(168, 24);
             this.textBoxRank.TabIndex = 30;
             // 
             // label8
@@ -281,9 +297,10 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.Info;
-            this.label8.Location = new System.Drawing.Point(451, 297);
+            this.label8.Location = new System.Drawing.Point(338, 241);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 20);
+            this.label8.Size = new System.Drawing.Size(45, 17);
             this.label8.TabIndex = 29;
             this.label8.Text = "Rank";
             // 
@@ -292,11 +309,12 @@
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClear.BackColor = System.Drawing.Color.DarkRed;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnClear.Location = new System.Drawing.Point(559, 357);
+            this.btnClear.Location = new System.Drawing.Point(419, 290);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(120, 40);
+            this.btnClear.Size = new System.Drawing.Size(90, 32);
             this.btnClear.TabIndex = 32;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -307,11 +325,12 @@
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnSave.Location = new System.Drawing.Point(701, 357);
+            this.btnSave.Location = new System.Drawing.Point(526, 290);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(120, 40);
+            this.btnSave.Size = new System.Drawing.Size(90, 32);
             this.btnSave.TabIndex = 31;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
@@ -322,11 +341,12 @@
             this.btnGenerateRank.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenerateRank.BackColor = System.Drawing.Color.DarkOrange;
             this.btnGenerateRank.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerateRank.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerateRank.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerateRank.ForeColor = System.Drawing.SystemColors.Info;
-            this.btnGenerateRank.Location = new System.Drawing.Point(332, 357);
+            this.btnGenerateRank.Location = new System.Drawing.Point(249, 290);
+            this.btnGenerateRank.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnGenerateRank.Name = "btnGenerateRank";
-            this.btnGenerateRank.Size = new System.Drawing.Size(205, 40);
+            this.btnGenerateRank.Size = new System.Drawing.Size(154, 32);
             this.btnGenerateRank.TabIndex = 33;
             this.btnGenerateRank.Text = "Generate Rank";
             this.btnGenerateRank.UseVisualStyleBackColor = false;
@@ -340,19 +360,20 @@
             // 
             this.textBoxDepartment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBoxDepartment.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.textBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDepartment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxDepartment.FormattingEnabled = true;
-            this.textBoxDepartment.Location = new System.Drawing.Point(187, 289);
+            this.textBoxDepartment.Location = new System.Drawing.Point(140, 235);
+            this.textBoxDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxDepartment.Name = "textBoxDepartment";
-            this.textBoxDepartment.Size = new System.Drawing.Size(222, 28);
+            this.textBoxDepartment.Size = new System.Drawing.Size(168, 26);
             this.textBoxDepartment.TabIndex = 34;
             // 
             // AddLecturer
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Desktop;
-            this.ClientSize = new System.Drawing.Size(881, 442);
+            this.ClientSize = new System.Drawing.Size(661, 359);
             this.Controls.Add(this.textBoxDepartment);
             this.Controls.Add(this.btnGenerateRank);
             this.Controls.Add(this.btnClear);
@@ -375,6 +396,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.title);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddLecturer";
             this.Text = "AddLecturer";
             ((System.ComponentModel.ISupportInitialize)(this.errorAddLecturer)).EndInit();

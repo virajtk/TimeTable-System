@@ -14,6 +14,10 @@ using Time_Table_Management_System.Locations;
 using Time_Table_Management_System.DaysAndHours;
 using Time_Table_Management_System.Session;
 using Time_Table_Management_System.Messages;
+using Time_Table_Management_System.Generate;
+using Time_Table_Management_System.Allocations;
+using Time_Table_Management_System.LocationAllocation;
+
 
 namespace Time_Table_Management_System
 {
@@ -73,6 +77,7 @@ namespace Time_Table_Management_System
             btnTags.BackColor = Color.FromArgb(11, 7, 17);
             btnLocations.BackColor = Color.FromArgb(11, 7, 17);
             btnAddSession.BackColor = Color.FromArgb(255, 255, 128);
+            btnGenerate.BackColor = Color.FromArgb(255, 255, 128);
         }
         #endregion
 
@@ -323,6 +328,42 @@ namespace Time_Table_Management_System
         {
             Info info = new Info();
             info.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            defaultBtn();
+            btnGenerate.BackColor = Color.FromArgb(224, 224, 224);
+
+            openChildForm(new GenerateTimeTable());
+
+            hideSubMenu();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            defaultBtn();
+            btnAddSession.BackColor = Color.FromArgb(224, 224, 224);
+
+            openChildForm(new AllocateSession());
+            //..
+            // your code
+            //..
+
+            hideSubMenu();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            defaultBtn();
+            button7.BackColor = Color.FromArgb(224, 224, 224);
+
+            openChildForm(new AllocateLocationMain());
+            //..
+            // your code
+            //..
+
+            hideSubMenu();
         }
     }
 }

@@ -69,11 +69,11 @@
             this.title.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.title.AutoSize = true;
             this.title.BackColor = System.Drawing.Color.Transparent;
-            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.title.ForeColor = System.Drawing.SystemColors.Info;
+            this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.SteelBlue;
             this.title.Location = new System.Drawing.Point(116, 30);
             this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(196, 32);
+            this.title.Size = new System.Drawing.Size(209, 32);
             this.title.TabIndex = 16;
             this.title.Text = "Add Locations";
             // 
@@ -120,11 +120,11 @@
             // textBoxRoomName
             // 
             this.textBoxRoomName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxRoomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRoomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxRoomName.Location = new System.Drawing.Point(257, 197);
             this.textBoxRoomName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRoomName.Name = "textBoxRoomName";
-            this.textBoxRoomName.Size = new System.Drawing.Size(248, 27);
+            this.textBoxRoomName.Size = new System.Drawing.Size(248, 28);
             this.textBoxRoomName.TabIndex = 35;
             // 
             // radioButtonLectureHall
@@ -185,37 +185,43 @@
             // textBoxCapacity
             // 
             this.textBoxCapacity.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxCapacity.Location = new System.Drawing.Point(257, 333);
             this.textBoxCapacity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCapacity.Name = "textBoxCapacity";
-            this.textBoxCapacity.Size = new System.Drawing.Size(248, 27);
+            this.textBoxCapacity.Size = new System.Drawing.Size(248, 28);
             this.textBoxCapacity.TabIndex = 40;
             // 
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.Location = new System.Drawing.Point(749, 378);
+            this.btnSave.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnSave.Location = new System.Drawing.Point(709, 378);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(120, 39);
             this.btnSave.TabIndex = 41;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClear
             // 
             this.btnClear.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(597, 378);
+            this.btnClear.BackColor = System.Drawing.Color.DarkRed;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClear.Location = new System.Drawing.Point(560, 378);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 39);
             this.btnClear.TabIndex = 42;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // errorLocation
@@ -229,11 +235,11 @@
             // comboBoxBuildingName
             // 
             this.comboBoxBuildingName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.comboBoxBuildingName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxBuildingName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.comboBoxBuildingName.Location = new System.Drawing.Point(257, 136);
             this.comboBoxBuildingName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxBuildingName.Name = "comboBoxBuildingName";
-            this.comboBoxBuildingName.Size = new System.Drawing.Size(248, 27);
+            this.comboBoxBuildingName.Size = new System.Drawing.Size(248, 28);
             this.comboBoxBuildingName.TabIndex = 43;
             this.comboBoxBuildingName.TextChanged += new System.EventHandler(this.comboBoxBuilduing_TextChanged);
             // 

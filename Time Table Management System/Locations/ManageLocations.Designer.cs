@@ -99,14 +99,15 @@
             this.Column2,
             this.Column3,
             this.Column4});
-            this.dataGridLocations.Location = new System.Drawing.Point(27, 98);
+            this.dataGridLocations.Location = new System.Drawing.Point(50, 98);
             this.dataGridLocations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridLocations.MultiSelect = false;
             this.dataGridLocations.Name = "dataGridLocations";
+            this.dataGridLocations.RowHeadersVisible = false;
             this.dataGridLocations.RowHeadersWidth = 51;
             this.dataGridLocations.RowTemplate.Height = 24;
             this.dataGridLocations.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridLocations.Size = new System.Drawing.Size(527, 154);
+            this.dataGridLocations.Size = new System.Drawing.Size(635, 154);
             this.dataGridLocations.TabIndex = 16;
             this.dataGridLocations.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridLocations_CellContentClick);
             this.dataGridLocations.SelectionChanged += new System.EventHandler(this.dataGrid_Selection);
@@ -149,40 +150,49 @@
             // btnUpdate
             // 
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUpdate.Location = new System.Drawing.Point(735, 98);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnUpdate.Location = new System.Drawing.Point(715, 98);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(120, 39);
             this.btnUpdate.TabIndex = 51;
             this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(735, 154);
+            this.btnDelete.BackColor = System.Drawing.Color.DarkRed;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnDelete.Location = new System.Drawing.Point(715, 154);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(120, 39);
             this.btnDelete.TabIndex = 52;
             this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnClear
             // 
             this.btnClear.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClear.Location = new System.Drawing.Point(735, 213);
+            this.btnClear.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft JhengHei UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.SystemColors.Info;
+            this.btnClear.Location = new System.Drawing.Point(715, 213);
             this.btnClear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(120, 39);
             this.btnClear.TabIndex = 53;
             this.btnClear.Text = "Clear";
-            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.UseVisualStyleBackColor = false;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // label2
@@ -201,11 +211,11 @@
             // textBoxBuildName
             // 
             this.textBoxBuildName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxBuildName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxBuildName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxBuildName.Location = new System.Drawing.Point(175, 302);
             this.textBoxBuildName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxBuildName.Name = "textBoxBuildName";
-            this.textBoxBuildName.Size = new System.Drawing.Size(248, 27);
+            this.textBoxBuildName.Size = new System.Drawing.Size(248, 28);
             this.textBoxBuildName.TabIndex = 55;
             // 
             // label4
@@ -224,11 +234,11 @@
             // textBoxRoomName
             // 
             this.textBoxRoomName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxRoomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxRoomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxRoomName.Location = new System.Drawing.Point(175, 347);
             this.textBoxRoomName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxRoomName.Name = "textBoxRoomName";
-            this.textBoxRoomName.Size = new System.Drawing.Size(248, 27);
+            this.textBoxRoomName.Size = new System.Drawing.Size(248, 28);
             this.textBoxRoomName.TabIndex = 57;
             this.textBoxRoomName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -250,11 +260,12 @@
             // 
             this.radioButtonLectureHall.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButtonLectureHall.AutoSize = true;
+            this.radioButtonLectureHall.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonLectureHall.ForeColor = System.Drawing.SystemColors.Info;
             this.radioButtonLectureHall.Location = new System.Drawing.Point(605, 303);
             this.radioButtonLectureHall.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonLectureHall.Name = "radioButtonLectureHall";
-            this.radioButtonLectureHall.Size = new System.Drawing.Size(105, 21);
+            this.radioButtonLectureHall.Size = new System.Drawing.Size(107, 22);
             this.radioButtonLectureHall.TabIndex = 59;
             this.radioButtonLectureHall.TabStop = true;
             this.radioButtonLectureHall.Text = "Lecture Hall";
@@ -278,11 +289,11 @@
             // textBoxCapacity
             // 
             this.textBoxCapacity.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBoxCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxCapacity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.textBoxCapacity.Location = new System.Drawing.Point(605, 340);
             this.textBoxCapacity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxCapacity.Name = "textBoxCapacity";
-            this.textBoxCapacity.Size = new System.Drawing.Size(248, 27);
+            this.textBoxCapacity.Size = new System.Drawing.Size(248, 28);
             this.textBoxCapacity.TabIndex = 61;
             this.textBoxCapacity.TextChanged += new System.EventHandler(this.textBoxCapacity_TextChanged);
             // 
@@ -290,11 +301,12 @@
             // 
             this.radioButtonLaboratory.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.radioButtonLaboratory.AutoSize = true;
+            this.radioButtonLaboratory.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radioButtonLaboratory.ForeColor = System.Drawing.SystemColors.Info;
             this.radioButtonLaboratory.Location = new System.Drawing.Point(755, 302);
             this.radioButtonLaboratory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.radioButtonLaboratory.Name = "radioButtonLaboratory";
-            this.radioButtonLaboratory.Size = new System.Drawing.Size(98, 21);
+            this.radioButtonLaboratory.Size = new System.Drawing.Size(100, 22);
             this.radioButtonLaboratory.TabIndex = 62;
             this.radioButtonLaboratory.TabStop = true;
             this.radioButtonLaboratory.Text = "Laboratory";
